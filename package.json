@@ -14,6 +14,7 @@
     "scrape:wiki": "npx tsx src/scripts/scrapers/scrape-wiki-fandom.ts",
     "scrape:icons": "npx tsx src/scripts/scrapers/scrape-icons.ts",
     "data:merge": "npx tsx src/scripts/transforms/normalize-and-merge.ts",
+    "data:merge-icons": "npx tsx src/scripts/transforms/merge-icons.ts",
     "data:validate": "npx tsx src/scripts/validators/validate-data.ts",
     "data:cross-validate": "npx tsx src/scripts/validators/cross-validate.ts"
   },
