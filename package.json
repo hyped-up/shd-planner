@@ -6,21 +6,40 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "scrape:all": "npx tsx src/scripts/scrapers/scrape-all.ts",
+    "scrape:mx": "npx tsx src/scripts/scrapers/scrape-mx-builds.ts",
+    "scrape:nightfall": "npx tsx src/scripts/scrapers/scrape-nightfall-guard.ts",
+    "scrape:spreadsheet": "npx tsx src/scripts/scrapers/scrape-community-spreadsheet.ts",
+    "scrape:wiki": "npx tsx src/scripts/scrapers/scrape-wiki-fandom.ts",
+    "scrape:icons": "npx tsx src/scripts/scrapers/scrape-icons.ts",
+    "data:merge": "npx tsx src/scripts/transforms/normalize-and-merge.ts",
+    "data:validate": "npx tsx src/scripts/validators/validate-data.ts",
+    "data:cross-validate": "npx tsx src/scripts/validators/cross-validate.ts"
   },
   "dependencies": {
+    "cheerio": "^1.2.0",
+    "csv-parse": "^6.1.0",
+    "lz-string": "^1.5.0",
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "sharp": "^0.34.5",
+    "zod": "^4.3.6",
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/jest": "^30.0.0",
+    "@types/lz-string": "^1.3.34",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "tsx": "^4.21.0",
+    "typescript": "^5",
+    "vitest": "^4.0.18"
   }
 }
