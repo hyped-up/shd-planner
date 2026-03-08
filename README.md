@@ -1,20 +1,16 @@
 # 🟠 SHD Planner
 
 ```
-  ╔═══════════════════════════════════════════════════════════════════════╗
-  ║                                                                       ║
-  ║     ███████╗██╗  ██╗██████╗     ██████╗ ██╗      █████╗ ███╗   ██╗   ║
-  ║     ██╔════╝██║  ██║██╔══██╗    ██╔══██╗██║     ██╔══██╗████╗  ██║   ║
-  ║     ███████╗███████║██║  ██║    ██████╔╝██║     ███████║██╔██╗ ██║   ║
-  ║     ╚════██║██╔══██║██║  ██║    ██╔═══╝ ██║     ██╔══██║██║╚██╗██║   ║
-  ║     ███████║██║  ██║██████╔╝    ██║     ███████╗██║  ██║██║ ╚████║   ║
-  ║     ╚══════╝╚═╝  ╚═╝╚═════╝     ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝   ║
-  ║                                                                       ║
-  ║  ░░░ STRATEGIC HOMELAND DIVISION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  ║
-  ║  ░░░ BUILD PLANNER v0.2.0  //  ISAC NETWORK ONLINE ░░░░░░░░░░░░░░░  ║
-  ║  ░░░ STATUS: OPERATIONAL  //  KNOWLEDGE BASE: 341 ENTITIES ░░░░░░░  ║
-  ║                                                                       ║
-  ╚═══════════════════════════════════════════════════════════════════════╝
+  ██████╗██╗  ██╗██████╗   ██████╗ ██╗      █████╗ ███╗  ██╗
+  ██╔════╝██║  ██║██╔══██╗  ██╔══██╗██║     ██╔══██╗████╗ ██║
+  ███████╗███████║██║  ██║  ██████╔╝██║     ███████║██╔██╗██║
+  ╚════██║██╔══██║██║  ██║  ██╔═══╝ ██║     ██╔══██║██║╚████║
+  ███████║██║  ██║██████╔╝  ██║     ███████╗██║  ██║██║ ╚███║
+  ╚══════╝╚═╝  ╚═╝╚═════╝   ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚══╝
+
+  ░░ STRATEGIC HOMELAND DIVISION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  ░░ BUILD PLANNER v0.2.0  //  ISAC NETWORK ONLINE ░░░░░░░░░░░
+  ░░ STATUS: OPERATIONAL  //  KNOWLEDGE BASE: 341 ENTITIES ░░░
 ```
 
 > 🎯 **Division 2 build-crafting companion** — plan builds, calculate DPS, browse the complete game database, and share loadouts. All in the browser. No account required.
@@ -24,11 +20,9 @@
 ## 📡 ISAC Systems Online
 
 ```
-  ┌──────────────────────────────────────────────────────────┐
-  │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  100%  ALL ONLINE  │
-  │                                                          │
-  │  🔶 ISAC: "All systems operational, Agent."              │
-  └──────────────────────────────────────────────────────────┘
+  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  100%  ALL ONLINE
+
+  ISAC: "All systems operational, Agent."
 ```
 
 | System | Status | Details |
@@ -57,8 +51,8 @@ docker run -p 3000:3000 shd-planner
 ```
 
 ```
-  🔶 ISAC: "Connection established. Welcome back, Agent."
-  📍 http://localhost:3000
+  ISAC: "Connection established. Welcome back, Agent."
+  >> http://localhost:3000
 ```
 
 ### 💻 Local Development
@@ -88,22 +82,20 @@ docker run -d --name shd-planner --restart unless-stopped -p 3000:3000 your-regi
 ## 🗄️ Knowledge Base
 
 ```
-  ╔══════════════════════════════════════════════════════════╗
-  ║  📡 SCANNING DIVISION NETWORK...                        ║
-  ║                                                          ║
-  ║  🛡️  22 Gear Sets          ████████████████████ 100%    ║
-  ║  🏷️  33 Brand Sets         ████████████████████ 100%    ║
-  ║  ⭐  49 Exotics            ████████████████████ 100%    ║
-  ║  📛  58 Named Items        ████████████████████ 100%    ║
-  ║  🔫  45 Weapon Archetypes  ████████████████████ 100%    ║
-  ║  💠 106 Talents            ████████████████████ 100%    ║
-  ║  ⚡  42 Skill Variants     ████████████████████ 100%    ║
-  ║  🎖️   6 Specializations    ████████████████████ 100%    ║
-  ║                                                          ║
-  ║  📦 TOTAL: 341 entities indexed                          ║
-  ║  🕐 LAST UPDATE: Title Update 21.1                       ║
-  ║  ✅ STATUS: COMPLETE — ALL CATEGORIES AT 100%            ║
-  ╚══════════════════════════════════════════════════════════╝
+  SCANNING DIVISION NETWORK...
+
+   22 Gear Sets          ████████████████████ 100%
+   33 Brand Sets         ████████████████████ 100%
+   49 Exotics            ████████████████████ 100%
+   58 Named Items        ████████████████████ 100%
+   45 Weapon Archetypes  ████████████████████ 100%
+  106 Talents            ████████████████████ 100%
+   42 Skill Variants     ████████████████████ 100%
+    6 Specializations    ████████████████████ 100%
+
+  TOTAL: 341 entities indexed
+  LAST UPDATE: Title Update 21.1
+  STATUS: COMPLETE -- ALL CATEGORIES AT 100%
 ```
 
 📖 Data sourced from the [Division 2 Fandom Wiki](https://thedivision.fandom.com/), community guides, and in-game verification. Maintained via a shared canonical data pipeline with the [SHD Planner MCP Server](https://github.com/hyped-up/shd-planner-cwd).
@@ -113,33 +105,28 @@ docker run -d --name shd-planner --restart unless-stopped -p 3000:3000 your-regi
 ## 🏗️ Architecture
 
 ```
-  ┌───────────────────────────────────────────────────────────────┐
-  │  🟠  S H D   P L A N N E R   W E B   A P P                   │
-  │                                                               │
-  │  ┌───────────┐  ┌───────────┐  ┌──────────┐  ┌───────────┐  │
-  │  │ 🔧 Builder │  │ 🔍 Database│  │ 📊 DPS   │  │ 🔗 Share  │  │
-  │  │   Planner  │  │   Browser  │  │  Calc    │  │   Codec   │  │
-  │  └─────┬─────┘  └─────┬─────┘  └────┬─────┘  └─────┬─────┘  │
-  │        │               │             │               │        │
-  │  ┌─────┴───────────────┴─────────────┴───────────────┴─────┐  │
-  │  │          🧠 Zustand Store + Data Loader                  │  │
-  │  └───────────────────────┬─────────────────────────────────┘  │
-  │                          │                                    │
-  │  ┌───────────────────────┴─────────────────────────────────┐  │
-  │  │         📦 JSON Knowledge Base (341 entities)            │  │
-  │  │   brands / gear sets / exotics / weapons / talents       │  │
-  │  │   skills / specializations / attributes / meta builds    │  │
-  │  └─────────────────────────────────────────────────────────┘  │
-  └───────────────────────────────────────────────────────────────┘
-                             │
-                      🔄 Data Pipeline
-                             │
-  ┌───────────────────────────────────────────────────────────────┐
-  │  🐍  S H D   P L A N N E R   M C P   S E R V E R             │
-  │                                                               │
-  │   Canonical JSON ──→ import-mcp-data.ts ──→ Web App           │
-  │   12 files • 300+ entries • snake_case • _metadata per file   │
-  └───────────────────────────────────────────────────────────────┘
+  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+  ▒  S H D   P L A N N E R   W E B   A P P                               ▒
+  ▒                                                                      ▒
+  ▒   [Builder]    [Database]    [DPS Calc]    [Share Codec]             ▒
+  ▒       |            |            |              |                     ▒
+  ▒       +------------+------------+--------------+                     ▒
+  ▒                         |                                            ▒
+  ▒              Zustand Store + Data Loader                             ▒
+  ▒                         |                                            ▒
+  ▒              JSON Knowledge Base (341 entities)                      ▒
+  ▒              brands / gear sets / exotics / weapons                  ▒
+  ▒              talents / skills / specs / meta builds                  ▒
+  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
+                            |
+                     Data Pipeline
+                            |
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  ░  S H D   P L A N N E R   M C P   S E R V E R                         ░
+  ░                                                                      ░
+  ░   Canonical JSON --> import-mcp-data.ts --> Web App                  ░
+  ░   12 files * 300+ entries * snake_case * _metadata per file          ░
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ```
 
 ---
@@ -163,16 +150,16 @@ docker run -d --name shd-planner --restart unless-stopped -p 3000:3000 your-regi
 ## 🔄 Data Management
 
 ```bash
-# 📥 Import data from the MCP canonical knowledge base
+# Import data from the MCP canonical knowledge base
 npm run data:import-mcp
 
-# 🕷️ Refresh from community sources
+# Refresh from community sources
 npm run scrape:all && npm run data:merge
 
-# 🖼️ Refresh item icons from Fandom Wiki
+# Refresh item icons from Fandom Wiki
 npm run scrape:icons && npm run data:merge-icons
 
-# ✅ Validate data integrity
+# Validate data integrity
 npm run data:validate && npm run data:cross-validate
 ```
 
@@ -184,30 +171,30 @@ npm run data:validate && npm run data:cross-validate
 
 ```
 src/
-├── app/                 # 🖥️ Next.js App Router pages
-│   ├── builder/         #    Build planner page
-│   ├── database/        #    Database browser (gear, weapons, talents, etc.)
-│   └── settings/        #    AI configuration
+├── app/                 # Next.js App Router pages
+│   ├── builder/         #   Build planner page
+│   ├── database/        #   Database browser (gear, weapons, talents, etc.)
+│   └── settings/        #   AI configuration
 ├── components/
-│   ├── builder/         # 🔧 Build planner UI (gear config, stats panel, validation)
-│   ├── database/        # 🔍 Database browser (search, filter, sort)
-│   ├── shared/          # ♻️  Reusable (ItemIcon, Toast, SearchBar, FilterPanel)
-│   └── ai/              # 🤖 AI advisor components
-├── data/                # 📦 JSON knowledge base (341 entities)
-├── hooks/               # 🪝 Zustand store, custom hooks
+│   ├── builder/         # Build planner UI (gear config, stats panel, validation)
+│   ├── database/        # Database browser (search, filter, sort)
+│   ├── shared/          # Reusable (ItemIcon, Toast, SearchBar, FilterPanel)
+│   └── ai/              # AI advisor components
+├── data/                # JSON knowledge base (341 entities)
+├── hooks/               # Zustand store, custom hooks
 ├── lib/
-│   ├── calc/            # 📊 DPS calculator, stat aggregator, build validator
-│   ├── types/           # 📝 TypeScript interfaces for all game entities
-│   ├── schemas/         # ✅ Zod v4 validation schemas
-│   ├── sharing/         # 🔗 URL codec, JSON export, build migration
-│   ├── ai/              # 🤖 AI client, prompts, config
-│   └── export/          # ☁️  Google Drive integration
+│   ├── calc/            # DPS calculator, stat aggregator, build validator
+│   ├── types/           # TypeScript interfaces for all game entities
+│   ├── schemas/         # Zod v4 validation schemas
+│   ├── sharing/         # URL codec, JSON export, build migration
+│   ├── ai/              # AI client, prompts, config
+│   └── export/          # Google Drive integration
 ├── scripts/
-│   ├── scrapers/        # 🕷️ Data + icon scrapers (wiki, community sites)
-│   ├── transforms/      # 🔄 Data normalization, MCP import, icon merge
-│   └── validators/      # ✅ Cross-reference and integrity checks
-public/icons/            # 🖼️ Cached item icons
-tests/                   # 🧪 Vitest test suite
+│   ├── scrapers/        # Data + icon scrapers (wiki, community sites)
+│   ├── transforms/      # Data normalization, MCP import, icon merge
+│   └── validators/      # Cross-reference and integrity checks
+public/icons/            # Cached item icons
+tests/                   # Vitest test suite
 ```
 
 ---
@@ -217,14 +204,14 @@ tests/                   # 🧪 Vitest test suite
 Copy `.env.example` to `.env.local`:
 
 ```bash
-# ✅ Required: None — core app works without any env vars
+# Required: None — core app works without any env vars
 
-# ☁️ Optional: Google Drive backup
+# Optional: Google Drive backup
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 GOOGLE_REDIRECT_URI=http://localhost:3000/api/auth/google/callback
 
-# 🤖 Optional: AI Build Advisor (BYOK — your key, your cost)
+# Optional: AI Build Advisor (BYOK — your key, your cost)
 NEXT_PUBLIC_AI_ENABLED=false
 AI_API_KEY=
 AI_MODEL=claude-sonnet-4-5-20250514
@@ -279,13 +266,12 @@ See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for detailed guides.
 ---
 
 ```
-  ╔═══════════════════════════════════════════════════════════╗
-  ║                                                           ║
-  ║  🔶 ISAC: "Build optimization complete, Agent.            ║
-  ║           Stay safe out there."                           ║
-  ║                                                           ║
-  ║  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  ║
-  ║  ░  "Exotics aren't farmed. They're earned."           ░  ║
-  ║  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  ║
-  ╚═══════════════════════════════════════════════════════════╝
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+  ░                                                                   ░
+  ░   ISAC: "Build optimization complete, Agent.                      ░
+  ░          Stay safe out there."                                    ░
+  ░                                                                   ░
+  ░   "Exotics aren't farmed. They're earned."                        ░
+  ░                                                                   ░
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
 ```
