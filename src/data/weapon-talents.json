@@ -1,0 +1,1165 @@
+[
+  {
+    "id": "talent-ranger",
+    "name": "Ranger",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Every 5 meters you are from the target grants +2% weapon damage. Maximum +40% at 100 meters.",
+    "perfectVersion": {
+      "name": "Perfect Ranger",
+      "description": "Every 4 meters you are from the target grants +2% weapon damage.",
+      "foundOn": "Certain named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-close-personal",
+    "name": "Close & Personal",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Killing a target within 7 meters grants +50% weapon damage for 5 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Close & Personal",
+      "description": "Killing a target within 7 meters grants +65% weapon damage for 5 seconds.",
+      "foundOn": "Various named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-strained",
+    "name": "Strained",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Gain +10% critical hit damage for every 0.5 seconds you are continuously firing. Stacks up to 5 times for a maximum of +50% critical hit damage.",
+    "perfectVersion": {
+      "name": "Perfect Strained",
+      "description": "Gain +10% critical hit damage for every 0.5 seconds you are continuously firing. Stacks up to 8 times for a maximum of +80% critical hit damage.",
+      "foundOn": "Cold Relations (exotic SMG)"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-measured",
+    "name": "Measured",
+    "weaponTypes": [
+      "Assault Rifle",
+      "LMG",
+      "SMG"
+    ],
+    "description": "The top half of the magazine has +15% rate of fire and -20% weapon damage. The bottom half of the magazine has -25% rate of fire and +20% weapon damage.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-flatline",
+    "name": "Flatline",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Amplifies weapon damage by 15% to pulsed enemies. After 3 kills, applies pulse to the next enemy you hit.",
+    "perfectVersion": {
+      "name": "Perfect Flatline",
+      "description": "Amplifies weapon damage by 20% to pulsed enemies. After 2 kills, applies pulse to the next enemy you hit.",
+      "foundOn": "Kingbreaker (assault rifle), Dare (LMG)"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-in-sync",
+    "name": "In Sync",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Hitting an enemy grants +15% skill damage for 5 seconds. Using a non-shield skill or dealing skill damage to an enemy grants +15% weapon damage for 5 seconds. When both buffs are simultaneously active, both bonuses are doubled to +30% each.",
+    "perfectVersion": {
+      "name": "Perfectly In Sync",
+      "description": "Hitting an enemy grants +20% skill damage for 5 seconds. Using a non-shield skill or dealing skill damage grants +20% weapon damage for 5 seconds. Both bonuses double to +40% each when both are active simultaneously.",
+      "foundOn": "Harmony (rifle), Test Subject (assault rifle)"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-pummel",
+    "name": "Pummel",
+    "weaponTypes": [
+      "Shotgun"
+    ],
+    "description": "Three consecutive body shot kills with a shotgun refill the magazine and grant +50% weapon damage for 7 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-killer",
+    "name": "Killer",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Killing an enemy with a critical hit grants +70% critical hit damage for 10 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Killer",
+      "description": "Killing an enemy with a critical hit grants +90% critical hit damage for 10 seconds.",
+      "foundOn": "Dark Winter (exotic SMG)"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-preservation",
+    "name": "Preservation",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Killing an enemy repairs 10% of your armor over 5 seconds. Headshot kills increase this to 20%.",
+    "perfectVersion": {
+      "name": "Perfect Preservation",
+      "description": "Killing an enemy repairs 12% of your armor over 5 seconds. Headshot kills increase this to 24%.",
+      "foundOn": "Various named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-reformation",
+    "name": "Reformation",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Headshot kills increase skill repair and healing applied to you by 30% for 25 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Reformation",
+      "description": "Headshot kills increase skill repair and healing applied to you by 40% for 25 seconds.",
+      "foundOn": "Various named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-boomerang",
+    "name": "Boomerang",
+    "weaponTypes": [
+      "Rifle"
+    ],
+    "description": "Critical hits have a 50% chance to return the bullet to the magazine. The returned bullet deals +20% increased damage.",
+    "perfectVersion": {
+      "name": "Perfect Boomerang",
+      "description": "Critical hits have a 50% chance to return the bullet to the magazine. The returned bullet deals +50% increased damage.",
+      "foundOn": "Various named rifles"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-breadbasket",
+    "name": "Breadbasket",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Landing body shots adds a stack of +5% bonus headshot damage to the next headshot for 10 seconds. Maximum 10 stacks (+50% bonus headshot damage).",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-fast-hands",
+    "name": "Fast Hands",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Critical hits add a 3% reload speed stack for 5 seconds. Maximum 20 stacks (+60% total reload speed).",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-frenzy",
+    "name": "Frenzy",
+    "weaponTypes": [
+      "LMG"
+    ],
+    "description": "Reloading from an empty magazine grants +20% weapon damage and +35% rate of fire for 7 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-first-blood",
+    "name": "First Blood",
+    "weaponTypes": [
+      "Marksman Rifle"
+    ],
+    "description": "Requires 8x or higher scope. The first bullet fired from a full magazine deals headshot damage regardless of where it hits.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-optimist",
+    "name": "Optimist",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Weapon damage is increased by +3% for every 10% of the magazine that is missing. Maximum +30% at an empty magazine.",
+    "perfectVersion": {
+      "name": "Perfect Optimist",
+      "description": "Weapon damage is increased by +4% for every 10% of the magazine that is missing. Maximum +40% at an empty magazine.",
+      "foundOn": "Various named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-spike",
+    "name": "Spike",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Headshot kills grant +25% skill damage for 10 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Spike",
+      "description": "Headshot kills grant +30% skill damage for 10 seconds.",
+      "foundOn": "Various named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-vindictive",
+    "name": "Vindictive",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Killing an enemy with a status effect applied to them grants +20% critical hit chance to you and allies within 15 meters for 10 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-sadist",
+    "name": "Sadist",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Bleeding enemies take +20% weapon damage from this weapon. Hits also have a chance to apply bleed.",
+    "perfectVersion": {
+      "name": "Perfect Sadist",
+      "description": "Bleeding enemies take +25% weapon damage from this weapon. Hits have an increased chance to apply bleed.",
+      "foundOn": "Various named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-ignited",
+    "name": "Ignited",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Burning enemies take +20% weapon damage from this weapon. Hits also have a chance to apply burn.",
+    "perfectVersion": {
+      "name": "Perfect Ignited",
+      "description": "Burning enemies take +25% weapon damage from this weapon. Hits have an increased chance to apply burn.",
+      "foundOn": "Various named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-eyeless",
+    "name": "Eyeless",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Blinded enemies take +20% weapon damage from this weapon. Hits also have a chance to apply blind.",
+    "perfectVersion": {
+      "name": "Perfect Eyeless",
+      "description": "Blinded enemies take +25% weapon damage from this weapon. Hits have an increased chance to apply blind.",
+      "foundOn": "Various named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-perpetuation",
+    "name": "Perpetuation",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Headshot kills grant the next skill you use +5% duration, ammo, and charges. Stacks up to 10 times. Cooldown: 15 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Perpetuation",
+      "description": "Headshot kills grant the next skill you use +5% duration, ammo, and charges. Stacks up to 10 times. Cooldown: 10 seconds.",
+      "foundOn": "Various named weapons"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-rifleman",
+    "name": "Rifleman",
+    "weaponTypes": [
+      "Rifle"
+    ],
+    "description": "Headshots grant a stack of +10% weapon damage for 5 seconds. Maximum 5 stacks (+50% weapon damage).",
+    "perfectVersion": {
+      "name": "Perfect Rifleman",
+      "description": "Headshots grant a stack of +12% weapon damage for 5 seconds. Maximum 5 stacks (+60% weapon damage).",
+      "foundOn": "Various named rifles"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-steady-handed",
+    "name": "Steady Handed",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Landing shots adds a stack of +2% weapon handling. At 15 stacks (+30% handling), the next shot has a 5% chance to refill the magazine.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-on-empty",
+    "name": "On Empty",
+    "weaponTypes": [
+      "Assault Rifle"
+    ],
+    "description": "Reloading from an empty magazine grants +30% weapon handling for 10 seconds.",
+    "perfectVersion": {
+      "name": "Perfect On Empty",
+      "description": "Reloading from an empty magazine grants +40% weapon handling for 10 seconds.",
+      "foundOn": "Various named ARs"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-overflowing",
+    "name": "Overflowing",
+    "weaponTypes": [
+      "Assault Rifle"
+    ],
+    "description": "Every empty magazine reload adds one round to the next magazine. Maximum magazine size increases are uncapped.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-near-sighted",
+    "name": "Near Sighted",
+    "weaponTypes": [
+      "Assault Rifle"
+    ],
+    "description": "Weapon stability is increased by +80%. Critical hit chance range and optimal range are decreased by 20%.",
+    "perfectVersion": {
+      "name": "Perfect Near Sighted",
+      "description": "Weapon stability is increased by +100%. Critical hit chance range and optimal range are decreased by 20%.",
+      "foundOn": "Various named ARs"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-outsider",
+    "name": "Outsider",
+    "weaponTypes": [
+      "SMG"
+    ],
+    "description": "As you fire, weapon accuracy and range decrease while rate of fire increases. Kills reset these changes.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-overwhelming",
+    "name": "Overwhelming",
+    "weaponTypes": [
+      "LMG"
+    ],
+    "description": "Suppressed enemies take +10% weapon damage per stack. Stacks up to 4 times. Applying suppression adds a stack.",
+    "perfectVersion": {
+      "name": "Perfect Overwhelming",
+      "description": "Suppressed enemies take +12% weapon damage per stack. Stacks up to 4 times.",
+      "foundOn": "Various named LMGs"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-unhinged",
+    "name": "Unhinged",
+    "weaponTypes": [
+      "LMG"
+    ],
+    "description": "Grants +25% weapon damage at the cost of -35% weapon handling.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-unwavering",
+    "name": "Unwavering",
+    "weaponTypes": [
+      "SMG"
+    ],
+    "description": "Swapping to this weapon grants maximum weapon handling for 5 seconds. Kills while active refresh the duration.",
+    "perfectVersion": {
+      "name": "Perfect Unwavering",
+      "description": "Swapping to this weapon grants maximum weapon handling for 5 seconds, with increased handling values.",
+      "foundOn": "Various named SMGs"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-finisher",
+    "name": "Finisher",
+    "weaponTypes": [
+      "Pistol"
+    ],
+    "description": "Swapping to this weapon within 3 seconds of a kill grants +30% critical hit chance for 15 seconds. Kills with this weapon while active grant an additional +30% critical hit damage.",
+    "perfectVersion": {
+      "name": "Perfect Finisher",
+      "description": "Swapping to this weapon within 3 seconds of a kill grants +40% critical hit chance for 15 seconds. Kills with this weapon while active grant an additional +50% critical hit damage.",
+      "foundOn": "Various named pistols"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-salvage",
+    "name": "Salvage",
+    "weaponTypes": [
+      "Pistol"
+    ],
+    "description": "Kills with this weapon have a 70% chance to refill the magazine from reserves.",
+    "perfectVersion": {
+      "name": "Perfect Salvage",
+      "description": "Kills with this weapon have an 85% chance to refill the magazine from reserves.",
+      "foundOn": "Various named pistols"
+    },
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-future-perfect",
+    "name": "Future Perfect",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Weapon kills grant +1 skill tier until you reach tier 6, at which point they trigger Skill Overcharge for 15 seconds. Cooldown: 30 seconds for the overcharge.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-lucky-shot",
+    "name": "Lucky Shot",
+    "weaponTypes": [
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "description": "Magazine capacity is increased by 20%. Shots fired from cover have a 25% chance to return to the magazine on a miss.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-naked",
+    "name": "Naked",
+    "weaponTypes": [
+      "Marksman Rifle"
+    ],
+    "description": "Requires 8x scope or higher. While your armor is fully depleted, gain +50% headshot damage.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-premeditated",
+    "name": "Premeditated",
+    "weaponTypes": [
+      "Shotgun"
+    ],
+    "description": "Manually loading shells grants +10% weapon damage per shell loaded, up to +35%. If you load a full magazine, gain an additional +50% weapon damage for 10 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-allegro",
+    "name": "Allegro",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "+10% rate of fire.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-extra",
+    "name": "Extra",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "+20% magazine capacity.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-stable",
+    "name": "Stable",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "+15% stability.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-distance",
+    "name": "Distance",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "+15% optimal range.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-accurate",
+    "name": "Accurate",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "+15% accuracy.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-jazz-hands",
+    "name": "Jazz Hands",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "+10% reload speed.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-optimized",
+    "name": "Optimized",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "+15% weapon handling.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-in-rhythm",
+    "name": "In Rhythm",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Enemy kills have a 5% chance to refresh active skill cooldowns. Holstered talent. Cooldown: 60 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-stop-drop-and-roll",
+    "name": "Stop, Drop, and Roll",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "Rolling removes the burn, bleed, and poisoned status effects. Holstered talent. Cooldown: 60 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-rooted",
+    "name": "Rooted",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "While in cover, skill damage and healing are increased by +25% for 10 seconds. Holstered talent. Cooldown: 25 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-protected-deploy",
+    "name": "Protected Deploy",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "+10% bonus armor while deploying a skill. Holstered talent.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-protected-reload",
+    "name": "Protected Reload",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "+10% bonus armor while reloading. Holstered talent.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-recharged",
+    "name": "Recharged",
+    "weaponTypes": [
+      "Assault Rifle",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "SMG",
+      "LMG"
+    ],
+    "description": "Skills deployed while at full armor have +25% additional duration, charges, and ammo. Holstered talent.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-wascally",
+    "name": "Wascally",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "While holstered, resist 5 ensnare attempts before this talent is consumed. Holstered talent. Cooldown: 60 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-everlasting",
+    "name": "Everlasting",
+    "weaponTypes": [
+      "Assault Rifle",
+      "Rifle",
+      "Marksman Rifle",
+      "SMG",
+      "LMG",
+      "Shotgun"
+    ],
+    "description": "While holstered and in cover, the weapon regenerates 2 ammo every 5 seconds. Holstered talent.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-overlap",
+    "name": "Overlap",
+    "weaponTypes": [
+      "Assault Rifle",
+      "Rifle",
+      "Marksman Rifle",
+      "SMG",
+      "LMG",
+      "Shotgun"
+    ],
+    "description": "While holstered, the equipped weapon gains a weapon-type-specific handling bonus. Holstered talent.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-transmission",
+    "name": "Transmission",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "While holstered, if you are shocked, the shock is transferred to the nearest enemy within 10 meters. Holstered talent. Cooldown: 60 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-greased",
+    "name": "Greased",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "While holstered, weapon swap speed is increased by 10%. Holstered talent.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-double-duty",
+    "name": "Double Duty",
+    "weaponTypes": [
+      "Shotgun",
+      "LMG",
+      "SMG",
+      "Assault Rifle",
+      "Rifle",
+      "Marksman Rifle"
+    ],
+    "description": "While holstered, reloading from an empty magazine grants 20% of the magazine as bonus free ammo once every 30 seconds. Holstered talent.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-zen",
+    "name": "Zen",
+    "weaponTypes": [
+      "Assault Rifle",
+      "SMG",
+      "LMG",
+      "Rifle",
+      "Marksman Rifle",
+      "Shotgun",
+      "Pistol"
+    ],
+    "description": "While equipped and in cover for 3 seconds, removes the blind and disorient status effects from you.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-determined",
+    "name": "Determined",
+    "weaponTypes": [
+      "Rifle",
+      "Marksman Rifle",
+      "Pistol"
+    ],
+    "description": "Headshot kills have a chance to guarantee the next shot is a critical hit.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-pumped-up",
+    "name": "Pumped Up",
+    "weaponTypes": [
+      "Shotgun"
+    ],
+    "description": "Reloading grants +1% weapon damage for 10 seconds.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-sport-mode",
+    "name": "Sport Mode",
+    "weaponTypes": [
+      "Pistol"
+    ],
+    "description": "While this weapon is unholstered, movement speed is increased by 20%. Does not stack with other movement speed bonuses.",
+    "perfectVersion": null,
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]

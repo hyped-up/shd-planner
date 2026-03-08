@@ -1,0 +1,155 @@
+[
+  {
+    "id": "attr-weapon-damage",
+    "stat": "WD",
+    "label": "Weapon Damage",
+    "maxRoll": 15,
+    "unit": "percent",
+    "category": "core_offensive",
+    "description": "Red core attribute. Each adds weapon damage percentage."
+  },
+  {
+    "id": "attr-armor",
+    "stat": "Armor",
+    "label": "Armor",
+    "maxRoll": 170000,
+    "unit": "armor_points",
+    "category": "core_defensive",
+    "description": "Blue core attribute. Each adds flat armor points."
+  },
+  {
+    "id": "attr-skill-tier",
+    "stat": "ST",
+    "label": "Skill Tier",
+    "maxRoll": 1,
+    "unit": "tier",
+    "category": "core_skill",
+    "description": "Yellow core attribute. Each adds 1 skill tier (max 6)."
+  },
+  {
+    "id": "attr-chc",
+    "stat": "CHC",
+    "label": "Critical Hit Chance",
+    "maxRoll": 6,
+    "unit": "percent",
+    "category": "minor_offensive",
+    "description": "Hard cap 60%. Best minor stat for DPS until capped."
+  },
+  {
+    "id": "attr-chd",
+    "stat": "CHD",
+    "label": "Critical Hit Damage",
+    "maxRoll": 12,
+    "unit": "percent",
+    "category": "minor_offensive",
+    "description": "No hard cap. Stack after reaching 60% CHC."
+  },
+  {
+    "id": "attr-hsd",
+    "stat": "HSD",
+    "label": "Headshot Damage",
+    "maxRoll": 10,
+    "unit": "percent",
+    "category": "minor_offensive",
+    "description": "Separate multiplicative bucket on headshots."
+  },
+  {
+    "id": "attr-dta",
+    "stat": "DtA",
+    "label": "Damage to Armor",
+    "maxRoll": 12,
+    "unit": "percent",
+    "category": "minor_offensive",
+    "description": "Multiplicative bonus vs armored enemies."
+  },
+  {
+    "id": "attr-dttooc",
+    "stat": "DtTooC",
+    "label": "Damage to Out of Cover",
+    "maxRoll": 12,
+    "unit": "percent",
+    "category": "minor_offensive",
+    "description": "Multiplicative bonus vs enemies not in cover."
+  },
+  {
+    "id": "attr-dte",
+    "stat": "DtE",
+    "label": "Damage to Elites",
+    "maxRoll": 12,
+    "unit": "percent",
+    "category": "minor_offensive",
+    "description": "Multiplicative bonus vs elite enemies."
+  },
+  {
+    "id": "attr-skill-damage",
+    "stat": "SD",
+    "label": "Skill Damage",
+    "maxRoll": 12,
+    "unit": "percent",
+    "category": "minor_skill",
+    "description": "Increases damage dealt by skills."
+  },
+  {
+    "id": "attr-skill-repair",
+    "stat": "SR",
+    "label": "Skill Repair",
+    "maxRoll": 12,
+    "unit": "percent",
+    "category": "minor_skill",
+    "description": "Increases repair from healing skills."
+  },
+  {
+    "id": "attr-skill-haste",
+    "stat": "SH",
+    "label": "Skill Haste",
+    "maxRoll": 10,
+    "unit": "percent",
+    "category": "minor_skill",
+    "description": "Reduces skill cooldown time."
+  },
+  {
+    "id": "attr-skill-duration",
+    "stat": "SDur",
+    "label": "Skill Duration",
+    "maxRoll": 10,
+    "unit": "percent",
+    "category": "minor_skill",
+    "description": "Increases active duration of deployed skills."
+  },
+  {
+    "id": "attr-health",
+    "stat": "HP",
+    "label": "Health",
+    "maxRoll": 25000,
+    "unit": "hit_points",
+    "category": "minor_defensive",
+    "description": "Increases total health pool."
+  },
+  {
+    "id": "attr-armor-on-kill",
+    "stat": "AoK",
+    "label": "Armor on Kill",
+    "maxRoll": 120000,
+    "unit": "armor_points",
+    "category": "minor_defensive",
+    "description": "Restores armor on enemy kill."
+  },
+  {
+    "id": "attr-incoming-repairs",
+    "stat": "IR",
+    "label": "Incoming Repairs",
+    "maxRoll": 15,
+    "unit": "percent",
+    "category": "minor_defensive",
+    "description": "Increases armor restored by all repair sources."
+  },
+  {
+    "id": "attr-hazard-protection",
+    "stat": "HZP",
+    "label": "Hazard Protection",
+    "maxRoll": 10,
+    "unit": "percent",
+    "category": "minor_defensive",
+    "description": "Reduces hazard damage. Hard cap 100%."
+  }
+]

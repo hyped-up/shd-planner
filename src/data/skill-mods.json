@@ -1,0 +1,121 @@
+[
+  {
+    "id": "mod-turret-damage",
+    "skill": "Turret",
+    "slot": "damage",
+    "stat": "+Skill Damage",
+    "description": "Increases turret damage output."
+  },
+  {
+    "id": "mod-turret-health",
+    "skill": "Turret",
+    "slot": "health",
+    "stat": "+Skill Health",
+    "description": "Increases turret health pool."
+  },
+  {
+    "id": "mod-turret-duration",
+    "skill": "Turret",
+    "slot": "duration",
+    "stat": "+Skill Duration",
+    "description": "Increases turret active time."
+  },
+  {
+    "id": "mod-drone-damage",
+    "skill": "Drone",
+    "slot": "damage",
+    "stat": "+Skill Damage",
+    "description": "Increases drone damage output."
+  },
+  {
+    "id": "mod-drone-health",
+    "skill": "Drone",
+    "slot": "health",
+    "stat": "+Skill Health",
+    "description": "Increases drone health pool."
+  },
+  {
+    "id": "mod-drone-duration",
+    "skill": "Drone",
+    "slot": "duration",
+    "stat": "+Skill Duration",
+    "description": "Increases drone active time."
+  },
+  {
+    "id": "mod-hive-radius",
+    "skill": "Hive",
+    "slot": "radius",
+    "stat": "+Effect Radius",
+    "description": "Increases hive effect radius."
+  },
+  {
+    "id": "mod-hive-charges",
+    "skill": "Hive",
+    "slot": "charges",
+    "stat": "+Charges",
+    "description": "Increases hive drone charges."
+  },
+  {
+    "id": "mod-seeker-damage",
+    "skill": "Seeker Mine",
+    "slot": "damage",
+    "stat": "+Skill Damage",
+    "description": "Increases seeker mine damage."
+  },
+  {
+    "id": "mod-seeker-radius",
+    "skill": "Seeker Mine",
+    "slot": "radius",
+    "stat": "+Blast Radius",
+    "description": "Increases seeker blast radius."
+  },
+  {
+    "id": "mod-shield-health",
+    "skill": "Shield",
+    "slot": "health",
+    "stat": "+Skill Health",
+    "description": "Increases shield health pool."
+  },
+  {
+    "id": "mod-pulse-radius",
+    "skill": "Pulse",
+    "slot": "radius",
+    "stat": "+Effect Radius",
+    "description": "Increases pulse scan radius."
+  },
+  {
+    "id": "mod-pulse-duration",
+    "skill": "Pulse",
+    "slot": "duration",
+    "stat": "+Skill Duration",
+    "description": "Increases pulse scan duration."
+  },
+  {
+    "id": "mod-chem-repair",
+    "skill": "Chem Launcher",
+    "slot": "repair",
+    "stat": "+Repair Amount",
+    "description": "Increases chem launcher repair."
+  },
+  {
+    "id": "mod-chem-charges",
+    "skill": "Chem Launcher",
+    "slot": "charges",
+    "stat": "+Charges",
+    "description": "Increases chem launcher charges."
+  },
+  {
+    "id": "mod-firefly-targets",
+    "skill": "Firefly",
+    "slot": "targets",
+    "stat": "+Target Count",
+    "description": "Increases firefly target count."
+  },
+  {
+    "id": "mod-trap-mines",
+    "skill": "Trap",
+    "slot": "mines",
+    "stat": "+Mine Count",
+    "description": "Increases trap mine count."
+  }
+]

@@ -1,0 +1,154 @@
+{
+  "generatedAt": "2026-03-07T18:35:52.016Z",
+  "totalFiles": 13,
+  "filesFound": 13,
+  "filesMissing": [],
+  "totalIssues": 15,
+  "errors": 0,
+  "warnings": 0,
+  "infos": 15,
+  "issues": [
+    {
+      "file": "gear-brands.json",
+      "severity": "info",
+      "message": "33 entries (exceeds minimum of 22)"
+    },
+    {
+      "file": "gear-sets.json",
+      "severity": "info",
+      "message": "18 entries (meets minimum)"
+    },
+    {
+      "file": "named-items.json",
+      "severity": "info",
+      "message": "35 entries (exceeds minimum of 20)"
+    },
+    {
+      "file": "exotics-gear.json",
+      "severity": "info",
+      "message": "11 entries (exceeds minimum of 10)"
+    },
+    {
+      "file": "exotics-weapons.json",
+      "severity": "info",
+      "message": "17 entries (exceeds minimum of 15)"
+    },
+    {
+      "file": "weapons.json",
+      "severity": "info",
+      "message": "7 entries (meets minimum)"
+    },
+    {
+      "file": "weapon-talents.json",
+      "severity": "info",
+      "message": "32 entries (exceeds minimum of 30)"
+    },
+    {
+      "file": "gear-talents.json",
+      "severity": "info",
+      "message": "31 entries (exceeds minimum of 25)"
+    },
+    {
+      "file": "gear-attributes.json",
+      "severity": "info",
+      "message": "17 entries (exceeds minimum of 15)"
+    },
+    {
+      "file": "skills.json",
+      "severity": "info",
+      "message": "9 entries (meets minimum)"
+    },
+    {
+      "file": "skill-mods.json",
+      "severity": "info",
+      "message": "17 entries (exceeds minimum of 10)"
+    },
+    {
+      "file": "specializations.json",
+      "severity": "info",
+      "message": "6 entries (meets minimum)"
+    },
+    {
+      "file": "shd-watch.json",
+      "severity": "info",
+      "message": "4 entries (meets minimum)"
+    },
+    {
+      "file": "weapons.json",
+      "severity": "info",
+      "message": "28 weapon archetypes found"
+    },
+    {
+      "file": "skills.json",
+      "severity": "info",
+      "message": "33 skill variants found"
+    }
+  ],
+  "entityCounts": {
+    "gear-brands.json": {
+      "expected": 22,
+      "actual": 33,
+      "status": "GOOD"
+    },
+    "gear-sets.json": {
+      "expected": 18,
+      "actual": 18,
+      "status": "OK"
+    },
+    "named-items.json": {
+      "expected": 20,
+      "actual": 35,
+      "status": "GOOD"
+    },
+    "exotics-gear.json": {
+      "expected": 10,
+      "actual": 11,
+      "status": "GOOD"
+    },
+    "exotics-weapons.json": {
+      "expected": 15,
+      "actual": 17,
+      "status": "GOOD"
+    },
+    "weapons.json": {
+      "expected": 7,
+      "actual": 7,
+      "status": "OK"
+    },
+    "weapon-talents.json": {
+      "expected": 30,
+      "actual": 32,
+      "status": "GOOD"
+    },
+    "gear-talents.json": {
+      "expected": 25,
+      "actual": 31,
+      "status": "GOOD"
+    },
+    "gear-attributes.json": {
+      "expected": 15,
+      "actual": 17,
+      "status": "GOOD"
+    },
+    "skills.json": {
+      "expected": 9,
+      "actual": 9,
+      "status": "OK"
+    },
+    "skill-mods.json": {
+      "expected": 10,
+      "actual": 17,
+      "status": "GOOD"
+    },
+    "specializations.json": {
+      "expected": 6,
+      "actual": 6,
+      "status": "OK"
+    },
+    "shd-watch.json": {
+      "expected": 4,
+      "actual": 4,
+      "status": "OK"
+    }
+  }
+}

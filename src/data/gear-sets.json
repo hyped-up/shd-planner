@@ -1,0 +1,728 @@
+[
+  {
+    "id": "gearset-striker-s-battlegear",
+    "name": "Striker's Battlegear",
+    "abbreviation": "SB",
+    "bonuses": {
+      "2pc": "+15% Weapon Handling",
+      "3pc": "+15% Rate of Fire",
+      "4pc": {
+        "name": "Striker's Gamble",
+        "description": "Weapon hits increase total weapon damage by 0.65%, stacking up to 100 times. 1 stack is lost per second between 0 and 50 stacks; 2 stacks lost per second between 51 and 100 stacks."
+      }
+    },
+    "chestTalent": {
+      "name": "Press the Advantage",
+      "description": "Increases Striker's Gamble max stacks from 100 to 200. 3 stacks lost per second between 101 and 200 stacks."
+    },
+    "backpackTalent": {
+      "name": "Risk Management",
+      "description": "Increases total weapon damage gained per stack of Striker's Gamble from 0.65% to 1%."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-eclipse-protocol",
+    "name": "Eclipse Protocol",
+    "abbreviation": "EP",
+    "bonuses": {
+      "2pc": "+15% Status Effects",
+      "3pc": "+15% Skill Haste, +30% Hazard Protection",
+      "4pc": {
+        "name": "Indirect Transmission",
+        "description": "Your status effects now spread on kill to all enemies within 10m and refresh 50% of the duration."
+      }
+    },
+    "chestTalent": {
+      "name": "Proliferation",
+      "description": "Increases Indirect Transmission spread range from 10m to 15m and increases the duration refresh from 50% to 75%."
+    },
+    "backpackTalent": {
+      "name": "Symptom Aggravator",
+      "description": "Amplifies all damage dealt to status-affected targets by 30%."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-hunter-s-fury",
+    "name": "Hunter's Fury",
+    "abbreviation": "HF",
+    "bonuses": {
+      "2pc": "+15% Shotgun Damage, +15% SMG Damage",
+      "3pc": "+20% Armor on Kill, +50% Health on Kill",
+      "4pc": {
+        "name": "Apex Predator",
+        "description": "Enemies within 15m receive a debuff that amplifies your weapon damage against them by 20%. Defeating a debuffed enemy with your weapon disorts nearby enemies within 5m and increases amplified weapon damage by 5% for 10 seconds, stacking up to 5 times."
+      }
+    },
+    "chestTalent": {
+      "name": "Endless Hunger",
+      "description": "Extends the duration of Apex Predator stacks from 10 seconds to 30 seconds."
+    },
+    "backpackTalent": {
+      "name": "Overwhelming Force",
+      "description": "Increases the disorient radius from Apex Predator kills from 5m to 10m."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-negotiator-s-dilemma",
+    "name": "Negotiator's Dilemma",
+    "abbreviation": "ND",
+    "bonuses": {
+      "2pc": "+15% Critical Hit Chance",
+      "3pc": "+20% Critical Hit Damage",
+      "4pc": {
+        "name": "Hostile Negotiations",
+        "description": "Critical hits mark enemies for 20 seconds, up to 3 marks total. When you critically hit a marked enemy, all other marked enemies take 60% of the damage dealt. Whenever a marked enemy dies, gain +2% critical hit damage, stacking up to 20 times until combat ends."
+      }
+    },
+    "chestTalent": {
+      "name": "Target Rich Environment",
+      "description": "Increases Hostile Negotiations mark count from 3 to 5."
+    },
+    "backpackTalent": {
+      "name": "Critical Measures",
+      "description": "Increases Hostile Negotiations damage to additional marked enemies from 60% to 100%."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-ongoing-directive",
+    "name": "Ongoing Directive",
+    "abbreviation": "OD",
+    "bonuses": {
+      "2pc": "+15% Status Effects",
+      "3pc": "+30% Reload Speed",
+      "4pc": {
+        "name": "Hollow-Point Ammo",
+        "description": "Shooting a status-affected enemy marks them for 10 seconds. Killing a marked enemy grants a full clip of Hollow-Point Ammo for your active weapon and half a clip to the rest of the party. Hollow-Point Ammo amplifies weapon damage by 20% and applies bleed on hit."
+      }
+    },
+    "chestTalent": {
+      "name": "Parabellum Rounds",
+      "description": "Increases Hollow-Point Ammo weapon damage amplification from 20% to 35%."
+    },
+    "backpackTalent": {
+      "name": "Trauma Specialist",
+      "description": "Increases the duration of your bleed status effects by 50% and all bleed damage by 100%."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-true-patriot",
+    "name": "True Patriot",
+    "abbreviation": "TP",
+    "bonuses": {
+      "2pc": "+30% Ammo Capacity",
+      "3pc": "+30% Magazine Size",
+      "4pc": {
+        "name": "Red, White, and Blue",
+        "description": "Enemies you shoot receive rotating debuffs that cycle every 2 seconds. Red: Amplifies enemy damage taken by 8%. White: Hitting the enemy restores you and allies' armor by 2% once per second. Blue: Decreases enemy damage output by 8%. Full Flag: Enemies that die while under all three debuffs simultaneously create a 5m explosion dealing damage equal to their total health and armor."
+      }
+    },
+    "chestTalent": {
+      "name": "Waving the Flag",
+      "description": "Increases Red, White, and Blue rotation speed from 2 seconds to 1.5 seconds per cycle."
+    },
+    "backpackTalent": {
+      "name": "Patriotic Boost",
+      "description": "Increases debuff strength: Red increases from 8% to 12% amplified damage taken. White increases armor repair from 2% to 3% per second. Blue increases enemy damage reduction from 8% to 12%."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-future-initiative",
+    "name": "Future Initiative",
+    "abbreviation": "FI",
+    "bonuses": {
+      "2pc": "+30% Repair Skills",
+      "3pc": "+15% Skill Haste, +30% Skill Duration",
+      "4pc": {
+        "name": "Ground Control",
+        "description": "You and all allies gain +15% total weapon and skill damage while at full armor. When you repair an ally, you and all allies within 5m of you are also repaired for 60% of that amount."
+      }
+    },
+    "chestTalent": {
+      "name": "Tactical Superiority",
+      "description": "Increases Ground Control total weapon and skill damage bonus from +15% to +25%."
+    },
+    "backpackTalent": {
+      "name": "Advanced Combat Tactics",
+      "description": "Increases Ground Control proximity armor repair from 60% to 120% of the amount repaired on the primary target."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-foundry-bulwark",
+    "name": "Foundry Bulwark",
+    "abbreviation": "FB",
+    "bonuses": {
+      "2pc": "+10% Total Armor",
+      "3pc": "+1% Armor Regeneration, +50% Shield Health",
+      "4pc": {
+        "name": "Makeshift Repairs",
+        "description": "20% of all damage taken by you and your shield is restored as armor over 15 seconds."
+      }
+    },
+    "chestTalent": {
+      "name": "Process Refinery",
+      "description": "Reduces Makeshift Repairs restoration time from 15 seconds to 10 seconds."
+    },
+    "backpackTalent": {
+      "name": "Improved Materials",
+      "description": "Increases Makeshift Repairs restoration from 20% to 30% of damage taken."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-hard-wired",
+    "name": "Hard Wired",
+    "abbreviation": "HW",
+    "bonuses": {
+      "2pc": "+15% Skill Haste",
+      "3pc": "+30% Repair Skills, +15% Skill Damage",
+      "4pc": {
+        "name": "Feedback Loop",
+        "description": "Whenever you use or cancel a skill, your other skill's cooldown is reduced by 30 seconds and total skill damage and repair increases by 10% for 20 seconds. Feedback Loop can trigger once every 20 seconds."
+      }
+    },
+    "chestTalent": {
+      "name": "Positive Reinforcement",
+      "description": "Increases Feedback Loop skill damage and repair bonus from +10% to +25%."
+    },
+    "backpackTalent": {
+      "name": "Short Circuit",
+      "description": "Decreases Feedback Loop cooldown from 20 seconds to 10 seconds."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-heartbreaker",
+    "name": "Heartbreaker",
+    "abbreviation": "HB",
+    "bonuses": {
+      "2pc": "+15% Assault Rifle Damage, +15% LMG Damage",
+      "3pc": "+15% Weapon Handling",
+      "4pc": {
+        "name": "Heartstopper",
+        "description": "Headshots apply pulse to the target for 5 seconds. Weapon hits on pulsed enemies add a stack of +1% bonus armor and +1% weapon damage to pulsed enemies. Maximum 50 stacks."
+      }
+    },
+    "chestTalent": {
+      "name": "Cardiac Arrest",
+      "description": "Increases Heartstopper maximum stacks from 50 to 100."
+    },
+    "backpackTalent": {
+      "name": "Pulse Check",
+      "description": "Increases total bonus armor gained per stack of Heartstopper from 1% to 2%."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-hotshot",
+    "name": "Hotshot",
+    "abbreviation": "HS",
+    "bonuses": {
+      "2pc": "+30% Marksman Rifle Damage, +30% Weapon Handling",
+      "3pc": "+30% Headshot Damage",
+      "4pc": {
+        "name": "Headache",
+        "description": "First consecutive headshot with a Marksman Rifle increases next headshot damage by 20%. Second consecutive headshot grants +10% bonus armor (up to 50% of max armor). Third consecutive headshot refills the magazine. From the fourth headshot onward, all three bonuses activate simultaneously on each consecutive headshot kill."
+      }
+    },
+    "chestTalent": {
+      "name": "Stand Tall",
+      "description": "Increases Headache bonus armor from 50% to 100% of max armor value."
+    },
+    "backpackTalent": {
+      "name": "Lucky",
+      "description": "Allows you to miss one headshot before resetting the Headache consecutive headshot cycle."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-aces-eights",
+    "name": "Aces & Eights",
+    "abbreviation": "AA",
+    "bonuses": {
+      "2pc": "+15% Marksman Rifle Damage, +15% Rifle Damage",
+      "3pc": "+30% Headshot Damage",
+      "4pc": {
+        "name": "Dead Man's Hand",
+        "description": "Rifle and Marksman Rifle shots flip cards. After revealing five cards, your next shot is amplified by 30% damage. Additional amplified shots are granted based on the poker hand revealed: Aces and Eights (2 shots), Full House (3 shots), Four of a Kind (4 shots). Headshots grant an extra card flip, accelerating hand building."
+      }
+    },
+    "chestTalent": {
+      "name": "No Limit",
+      "description": "Increases Dead Man's Hand damage amplification from 30% to 50%."
+    },
+    "backpackTalent": {
+      "name": "Ace in the Sleeve",
+      "description": "Grants one additional amplified shot when revealing your hand."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-breaking-point",
+    "name": "Breaking Point",
+    "abbreviation": "BP",
+    "bonuses": {
+      "2pc": "+25% Rifle Damage, +25% Marksman Rifle Damage",
+      "3pc": "+30% Headshot Damage, +15% Weapon Handling",
+      "4pc": {
+        "name": "On Point",
+        "description": "Hitting a shot with a Rifle or Marksman Rifle grants a stack. Reloading converts stacks into a temporary buff providing +2% Weapon Handling and +4% Weapon Damage per stack for 10 seconds."
+      }
+    },
+    "chestTalent": {
+      "name": "Point of no Return",
+      "description": "Increases On Point buff duration from 10 seconds to 15 seconds."
+    },
+    "backpackTalent": {
+      "name": "Point of Honor",
+      "description": "Increases On Point Weapon Damage bonus per stack from +4% to +6%."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-system-corruption",
+    "name": "System Corruption",
+    "abbreviation": "SC",
+    "bonuses": {
+      "2pc": "+15% Armor on Kill",
+      "3pc": "+40% Disrupt Resistance, +40% Pulse Resistance",
+      "4pc": {
+        "name": "Hackstep Protocol",
+        "description": "Replaces armor kits with an instant, infinite-use ability on a 20-second cooldown that repairs 20% of your armor, grants 50% bonus armor, and hides your nameplate for 5 seconds. Increases total weapon damage by 1% per 5% bonus armor gained, up to 20%."
+      }
+    },
+    "chestTalent": {
+      "name": "Compiler Optimization",
+      "description": "Decreases Hackstep Protocol cooldown from 20 seconds to 15 seconds."
+    },
+    "backpackTalent": {
+      "name": "Multithreaded Execution",
+      "description": "Increases Hackstep Protocol bonus armor from 50% to 100%."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-tip-of-the-spear",
+    "name": "Tip of the Spear",
+    "abbreviation": "TotS",
+    "bonuses": {
+      "2pc": "+20% Signature Weapon Damage",
+      "3pc": "+10% Weapon Damage",
+      "4pc": {
+        "name": "Aggressive Recon",
+        "description": "Dealing damage with a Signature Weapon increases total weapon damage by 20% for 60 seconds. Automatically generate Specialization ammo every 60 seconds."
+      }
+    },
+    "chestTalent": {
+      "name": "Specialized Destruction",
+      "description": "Increases Aggressive Recon weapon damage bonus from 20% to 40%."
+    },
+    "backpackTalent": {
+      "name": "Signature Moves",
+      "description": "Increases signature weapon damage by 20% and doubles the amount of Specialization ammo generated by Aggressive Recon."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-cavalier",
+    "name": "Cavalier",
+    "abbreviation": "CAV",
+    "bonuses": {
+      "2pc": "+30% Hazard Protection",
+      "3pc": "+40% Repair Skills",
+      "4pc": {
+        "name": "Charging / Charged",
+        "description": "Charging: For each second spent out of cover during combat, gain 5% reduced incoming damage, up to a maximum of 50%. Charged: While fully charged, gain immunity to all movement speed debuffs and share your Hazard Protection and incoming damage reduction with all allies for 10 seconds. After Charged is consumed, Charging resumes if still in combat out of cover."
+      }
+    },
+    "chestTalent": {
+      "name": "Overcharging",
+      "description": "Increases Charging maximum incoming damage protection from 50% to 70%."
+    },
+    "backpackTalent": {
+      "name": "Safe Charging",
+      "description": "Charging accumulates protection at 10% per second instead of 5% per second, halving time to reach maximum charge."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-aegis",
+    "name": "Aegis",
+    "abbreviation": "AG",
+    "bonuses": {
+      "2pc": "+70% Health",
+      "3pc": "+15% Total Armor",
+      "4pc": {
+        "name": "Stoic",
+        "description": "Gain +3% Damage Resistance for every enemy that is targeting you. The bonus is multiplied by 1.X, where X equals the number of agents in your group."
+      }
+    },
+    "chestTalent": {
+      "name": "Deceit",
+      "description": "Enemies targeting your Decoy skill also count towards the Stoic Damage Resistance bonus."
+    },
+    "backpackTalent": {
+      "name": "Polyethylene Plating",
+      "description": "Increases the Stoic Damage Resistance bonus per targeting enemy from 3% to 4%."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-umbra-initiative",
+    "name": "Umbra Initiative",
+    "abbreviation": "UI",
+    "bonuses": {
+      "2pc": "+15% Critical Hit Chance",
+      "3pc": "+30% Reload Speed",
+      "4pc": {
+        "name": "From the Shadows into the Light",
+        "description": "In Cover: Accumulate up to 50 stacks per second; each stack increases critical hit damage by 1% and RPM by 0.3%. The buff does not apply while actively shooting from cover. Out of Cover: Gain 10 stacks per second (up to 50); each stack grants 0.8% armor regeneration consumed at 10 stacks/second when returning to cover."
+      }
+    },
+    "chestTalent": {
+      "name": "From the Shadows",
+      "description": "Increases the out-of-cover stacking to a maximum of 100 stacks (from 50), stack gain from 10 to 20 per second, and stack consumption from 10 to 20 per second."
+    },
+    "backpackTalent": {
+      "name": "Into the Light",
+      "description": "Increases the in-cover stacking to a maximum of 100 stacks (from 50), stack gain from 10 to 20 per second, and stack consumption from 10 to 20 per second."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-rigger",
+    "name": "Rigger",
+    "abbreviation": "RG",
+    "bonuses": {
+      "2pc": "+15% Skill Haste",
+      "3pc": "+15% Skill Duration",
+      "4pc": {
+        "name": "Tend and Befriend",
+        "description": "Interacting with your deployed skills grants that skill +25% skill damage for 10 seconds. Interactions include deploying, using, or changing the skill's target. This buff cannot be refreshed or stacked."
+      }
+    },
+    "chestTalent": {
+      "name": "Best Buds",
+      "description": "Increases the Tend and Befriend skill damage buff from +25% to +50%."
+    },
+    "backpackTalent": {
+      "name": "Complete Uptime",
+      "description": "Cancelling your skills resets their cooldown. If the skill is destroyed instead of cancelled, the reset does not occur."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-ortiz-exuro",
+    "name": "Ortiz: Exuro",
+    "abbreviation": "EX",
+    "bonuses": {
+      "2pc": "+20% Burn Duration, +15% Skill Health",
+      "3pc": "+40% Burn Damage",
+      "4pc": {
+        "name": "Ortiz Incinerator Turret Prototype",
+        "description": "The Incinerator Turret now rotates a full 360 degrees. You are immune to your own Incinerator Turret's fire. The Incinerator Turret explodes when disabled."
+      }
+    },
+    "chestTalent": {
+      "name": "Chain Combustion",
+      "description": "Enemies set ablaze by the Ortiz Incinerator Turret Prototype ignite other enemies within 2m."
+    },
+    "backpackTalent": {
+      "name": "Heatstroke",
+      "description": "Grants +25% weapon damage against burning targets. Additionally grants +25% Ortiz Incinerator Turret Prototype range."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-refactor",
+    "name": "Refactor",
+    "abbreviation": "RF",
+    "bonuses": {
+      "2pc": "+15% Skill Damage, +15% Skill Haste",
+      "3pc": "+30% Skill Duration",
+      "4pc": {
+        "name": "Return to Sender",
+        "description": "PvE: Receive repairs equal to 10% of the damage dealt by your Skills. Allies receive repairs equal to 20% of the damage dealt by your Skills. PvP: Receive repairs equal to 5% of the damage dealt by your Skills. Allies receive repairs equal to 10% of the damage dealt by your Skills."
+      }
+    },
+    "chestTalent": {
+      "name": "Increased Interest",
+      "description": "PvE: Increases repairs received by you from Return to Sender from 10% to 15%, and repairs to allies from 20% to 30%. PvP: Increases repairs to you from 5% to 10%, and to allies from 10% to 20%."
+    },
+    "backpackTalent": {
+      "name": "Over-engineered",
+      "description": "While at full Armor, repairs received from Return to Sender provide Bonus Armor instead, up to 80% of Total Armor. Does not apply to allies."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "gearset-virtuoso",
+    "name": "Virtuoso",
+    "abbreviation": "VT",
+    "bonuses": {
+      "2pc": "+15% Weapon Handling, +15% Magazine Size",
+      "3pc": "+15% Weapon Damage",
+      "4pc": {
+        "name": "Symphony",
+        "description": "Killing an enemy beyond 25m grants: +40% weapon damage to Shotguns, SMGs, and Pistols; +20% weapon damage to ARs and LMGs; +25% Bonus Armor for 15 seconds. Killing an enemy within 25m grants: +40% weapon damage to MMRs and Rifles; +20% weapon damage to ARs and LMGs; +30% Headshot Damage for 15 seconds. Alternating kills from both ranges builds stacks. At 4 stacks, all bonuses are multiplied by 1.5 and triggered simultaneously for 15 seconds."
+      }
+    },
+    "chestTalent": {
+      "name": "Fortissimo",
+      "description": "Doubles all Weapon Damage bonuses granted by Symphony."
+    },
+    "backpackTalent": {
+      "name": "Accelerando",
+      "description": "Decreases the number of alternating-range stacks needed to trigger the Symphony double-buff from 4 to 3."
+    },
+    "gearSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]

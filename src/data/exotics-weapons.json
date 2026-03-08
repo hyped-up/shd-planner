@@ -1,0 +1,362 @@
+[
+  {
+    "id": "exotic-st-elmo-s-engine",
+    "name": "St. Elmo's Engine",
+    "category": "Assault Rifle",
+    "uniqueTalent": {
+      "name": "Actum Est",
+      "description": "Shooting an enemy grants 1 stack per hit, up to 100 stacks. At 100 stacks the next magazine is filled with shock ammo that electrocutes enemies on hit."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-eagle-bearer",
+    "name": "Eagle Bearer",
+    "category": "Assault Rifle",
+    "uniqueTalent": {
+      "name": "Eagle's Strike / Tenacity",
+      "description": "Eagle's Strike: Killing 5 enemies without reloading grants an Accuracy and Stability buff. Tenacity: Delays 20-80% of damage taken. All delayed damage is reduced by each enemy killed while the buff is active, up to 100% reduction with 5 kills."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-strega",
+    "name": "Strega",
+    "category": "Assault Rifle",
+    "uniqueTalent": {
+      "name": "Unnerve",
+      "description": "Killing an enemy applies a mark to every enemy within 20m of the killed target. Multiple marks can be applied to the same enemy (max 5). Each mark amplifies weapon damage by +15% to marked enemies."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-capacitor",
+    "name": "Capacitor",
+    "category": "Assault Rifle",
+    "uniqueTalent": {
+      "name": "Capacitance",
+      "description": "Shooting enemies builds stacks up to 40. Each stack grants +1.5% Skill Damage (max +60%). For each Skill core equipped, gain an additional +7.5% Weapon Damage. After 5 seconds without shooting, stacks decay 1 per second."
+    },
+    "coreAttribute": "skill_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-the-chatterbox",
+    "name": "The Chatterbox",
+    "category": "SMG",
+    "uniqueTalent": {
+      "name": "Incessant Chatter / Box Magazine",
+      "description": "Incessant Chatter: Every shot that hits an enemy increases rate of fire by 1%, stacking up to 60%. Resets on reload. Box Magazine: Kills with this weapon refill 20% of the magazine and apply a 10s buff. While holstered, reloading within 5s after a kill grants +20% rate of fire for 10s."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-lady-death",
+    "name": "Lady Death",
+    "category": "SMG",
+    "uniqueTalent": {
+      "name": "Breathe Free",
+      "description": "Gain 4 stacks per second while moving (8 stacks while sprinting), up to 30 stacks. Each round fired consumes one stack and amplifies weapon damage by 75%. Kills grant +20% movement speed for 10 seconds."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-ouroboros",
+    "name": "Ouroboros",
+    "category": "SMG",
+    "uniqueTalent": {
+      "name": "Rule Them All",
+      "description": "When the agent receives a status effect, 50% of the ammo in the next magazine will apply the same status effect to targets hit."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-nemesis",
+    "name": "Nemesis",
+    "category": "Mmr",
+    "uniqueTalent": {
+      "name": "Electromagnetic Accelerator / The Nemesis",
+      "description": "Electromagnetic Accelerator: Shots deal 0-100% weapon damage based on how long the trigger is held before releasing. The Nemesis: Marks an enemy as your nemesis for 15 seconds; shots to your nemesis gain +5% damage for each second they are marked, up to +50%."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-dread-edict",
+    "name": "Dread Edict",
+    "category": "Mmr",
+    "uniqueTalent": {
+      "name": "Full Stop",
+      "description": "Shooting enemies builds stacks up to 20 (headshots grant 2 stacks). Each stack grants +2% Weapon Damage and +5% Headshot Damage. On reload all stacks clear and you gain 5% of max armor as temporary armor for 10s per stack removed. Headshot kills restore the full magazine (does not count as reload)."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-diamondback",
+    "name": "Diamondback",
+    "category": "Rifle",
+    "uniqueTalent": {
+      "name": "Agonizing Bite",
+      "description": "Randomly marks an enemy within 20m (or closest if none within range). Hitting the marked target consumes the mark, guarantees a critical hit with +20% amplified damage, and triggers 5 seconds of guaranteed critical hits on all subsequent shots. A new enemy is marked after consuming a mark or reloading."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-the-ravenous",
+    "name": "The Ravenous",
+    "category": "Rifle",
+    "uniqueTalent": {
+      "name": "Onslaught",
+      "description": "Fires both barrels simultaneously. Shots from the right shoulder add Offensive Primers; shots from the left shoulder add Defensive Primers. Shots from one shoulder detonate all primers from the opposite shoulder. Each Offensive Primer detonates for 100% weapon damage. Each Defensive Primer grants 4% Bonus Armor and 10% amplified damage to enemy armor plates for 5s."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-merciless",
+    "name": "Merciless",
+    "category": "Rifle",
+    "uniqueTalent": {
+      "name": "Binary Trigger",
+      "description": "Fires on both trigger pull and release. Hitting the same enemy with both bullets grants 1 stack. At 7 stacks, the next shot deals +500% weapon damage and creates a 7m explosion dealing +500% weapon damage, consuming all stacks."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-ruthless",
+    "name": "Ruthless",
+    "category": "Rifle",
+    "uniqueTalent": {
+      "name": "Binary Trigger",
+      "description": "Fires on both trigger pull and release. Hitting the same enemy with both bullets grants 1 stack. At 7 stacks, the next shot deals +500% weapon damage and creates a 7m explosion dealing +500% weapon damage, consuming all stacks."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-vindicator",
+    "name": "Vindicator",
+    "category": "Rifle",
+    "uniqueTalent": {
+      "name": "Ortiz Assault Interface",
+      "description": "While scoped, the weapon highlights a random body section on each visible enemy. Deals +40% Weapon Damage to highlighted body sections."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-pestilence",
+    "name": "Pestilence",
+    "category": "LMG",
+    "uniqueTalent": {
+      "name": "Plague of the Outcasts",
+      "description": "Shots apply a debuff inflicting 100% weapon damage over 10 seconds, stacking up to 50 times. When an enemy dies while debuffed, 100% of their stacks transfer to all nearby enemies within 25m."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-bluescreen",
+    "name": "Bluescreen",
+    "category": "LMG",
+    "uniqueTalent": {
+      "name": "Disruptor Rounds",
+      "description": "Shooting enemies marks them, stacking up to 50 times. Deploying a non-shield skill consumes all stacks and applies effects based on stack count: 1-10 stacks: Pulse marked targets for 5s; 11-25 stacks: Pulse and Disrupt marked targets for 5s; 26-49 stacks: Pulse, Disrupt, and Disorient marked targets for 5s; 50 stacks: Pulse, Disrupt, and Disorient all marked targets and all hostiles within 10m of marked targets for 5s (also triggers immediately if any marked target is killed)."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-iron-lung",
+    "name": "Iron Lung",
+    "category": "LMG",
+    "uniqueTalent": {
+      "name": "Ardent",
+      "description": "Firing heats up the weapon, filling a heat meter equivalent to 50% of the standard magazine size. When full, bullets ignite enemies on hit. The meter depletes when not shooting and fully resets on reload or weapon swap."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-bullet-king",
+    "name": "Bullet King",
+    "category": "LMG",
+    "uniqueTalent": {
+      "name": "King's Ransom",
+      "description": "This weapon never needs to be reloaded. For every 100 bullets that hit an enemy, the wielder and allies replenish a portion of their ammo reserves."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-scorpio",
+    "name": "Scorpio",
+    "category": "Shotgun",
+    "uniqueTalent": {
+      "name": "Septic Shock",
+      "description": "Hits apply venom stacks that escalate in severity: 2 stacks applies Poison; 4 stacks applies Disorient; 6 stacks applies Shock; 9 stacks causes the target to take +20% damage from all sources. Duration of effects scales with percentage of pellets that connect."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-sweet-dreams",
+    "name": "Sweet Dreams",
+    "category": "Shotgun",
+    "uniqueTalent": {
+      "name": "Sweet Dreams / Sandman / Evasive",
+      "description": "Sweet Dreams: Landing a melee attack after swapping to this weapon grants +35% bonus armor. Sandman: Targets hit by this weapon cannot use armor kits or receive healing. Evasive: While this weapon is equipped, dodging reloads 1% of the current weapon magazine."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-lullaby",
+    "name": "Lullaby",
+    "category": "Shotgun",
+    "uniqueTalent": {
+      "name": "Lullaby / Evasive",
+      "description": "Lullaby: Landing a melee attack after swapping to this weapon grants +35% bonus armor and applies the Sandman debuff to the target (prevents healing). Evasive: Dodging reloads 1% of the current weapon magazine. Killing an enemy afflicted with Sandman restores a large amount of bonus armor."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-regulus",
+    "name": "Regulus",
+    "category": "Pistol",
+    "uniqueTalent": {
+      "name": "Regicide",
+      "description": "Headshot kills create a 5m explosion dealing 400% weapon damage and apply bleed to all nearby enemies caught in the explosion."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-liberty",
+    "name": "Liberty",
+    "category": "Pistol",
+    "uniqueTalent": {
+      "name": "Liberty or Death",
+      "description": "Hits grant +2% weapon damage per stack, up to 30 stacks. Headshots consume all stacks and repair your shield by 3% per stack consumed."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-busy-little-bee",
+    "name": "Busy Little Bee",
+    "category": "Pistol",
+    "uniqueTalent": {
+      "name": "Busy Little Bee",
+      "description": "Each shot landing on a different target grants 1 stack, up to 10 stacks. Each stack provides +20% Weapon Damage. Stacks activate when switching weapons and last for 10 seconds. Switching weapons again during those 10 seconds cancels the buff."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]

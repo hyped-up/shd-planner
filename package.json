@@ -16,7 +16,8 @@
     "data:merge": "npx tsx src/scripts/transforms/normalize-and-merge.ts",
     "data:merge-icons": "npx tsx src/scripts/transforms/merge-icons.ts",
     "data:validate": "npx tsx src/scripts/validators/validate-data.ts",
-    "data:cross-validate": "npx tsx src/scripts/validators/cross-validate.ts"
+    "data:cross-validate": "npx tsx src/scripts/validators/cross-validate.ts",
+    "data:import-mcp": "npx tsx src/scripts/transforms/import-mcp-data.ts"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

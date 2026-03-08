@@ -1,0 +1,756 @@
+[
+  {
+    "id": "named-fox-s-prayer",
+    "name": "Fox's Prayer",
+    "brandId": "brand-overlord-armaments",
+    "slot": "kneepads",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "+8% Damage to Targets Out of Cover",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-contractor-s-gloves",
+    "name": "Contractor's Gloves",
+    "brandId": "brand-petrov-defense-group",
+    "slot": "gloves",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "+8% Damage to Armor",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-sacrifice",
+    "name": "The Sacrifice",
+    "brandId": "brand-providence-defense",
+    "slot": "chest",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfect Glass Cannon: +30% Total Weapon Damage, +60% Incoming Damage",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-gift",
+    "name": "The Gift",
+    "brandId": "brand-providence-defense",
+    "slot": "backpack",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfect Vigilance: +25% Weapon Damage, lost for 4s when taking damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-hollow-man",
+    "name": "Hollow Man",
+    "brandId": "brand-douglas-harding",
+    "slot": "mask",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "+8% Damage to Health",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-forge",
+    "name": "Forge",
+    "brandId": "brand-alps-summit-armament",
+    "slot": "holster",
+    "coreAttribute": "skill_tier",
+    "fixedAttribute": "+50% Shield Health (Perfect Vanguard component)",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-chill-out",
+    "name": "Chill Out",
+    "brandId": "brand-gila-guard",
+    "slot": "mask",
+    "coreAttribute": "armor",
+    "fixedAttribute": "+100% Scanner Pulse Haste",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-force-kicker",
+    "name": "Force Kicker",
+    "brandId": "brand-fenris-group-ab",
+    "slot": "chest",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfect Overwatch: +12% Weapon Damage to allies in cover for 10s",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-chainkiller",
+    "name": "Chainkiller",
+    "brandId": "brand-walker-harris-co",
+    "slot": "chest",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfect Headhunter: Headshot kills grant +150% Headshot Damage for next shot (stacks)",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-apartment",
+    "name": "The Apartment",
+    "brandId": "brand-named-weapon",
+    "slot": "SMG",
+    "coreAttribute": "SMG Damage + CHC",
+    "fixedAttribute": "Perfect Measured: Top half of magazine +20% RoF/-20% damage, bottom half -20% RoF/+20% damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-dark-winter",
+    "name": "Dark Winter",
+    "brandId": "brand-named-weapon",
+    "slot": "SMG",
+    "coreAttribute": "SMG Damage + CHC",
+    "fixedAttribute": "Perfect Killer: Killing an enemy with a critical hit grants +50% CHD for 10s",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-virginian",
+    "name": "The Virginian",
+    "brandId": "brand-named-weapon",
+    "slot": "Marksman Rifle",
+    "coreAttribute": "MMR Damage + HSD",
+    "fixedAttribute": "Perfect Boomerang: Critical hits have a 60% chance to return the bullet",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-grudge",
+    "name": "The Grudge",
+    "brandId": "brand-named-weapon",
+    "slot": "SMG",
+    "coreAttribute": "SMG Damage + CHC",
+    "fixedAttribute": "Perfect Vindictive: Killing a status-affected enemy grants +18% CHC and +18% CHD to allies for 10s",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-mop",
+    "name": "The Mop",
+    "brandId": "brand-named-weapon",
+    "slot": "Shotgun",
+    "coreAttribute": "Shotgun Damage",
+    "fixedAttribute": "Perfect Pummel: 3 body shot kills in 30s refills magazine and grants +50% weapon damage for 10s",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-railsplitter",
+    "name": "Railsplitter",
+    "brandId": "brand-named-weapon",
+    "slot": "Assault Rifle",
+    "coreAttribute": "AR Damage + DtA",
+    "fixedAttribute": "Perfect Steady Handed: Every 100 hits refills magazine, grants +25% weapon handling for 20s",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-mechanical-animal",
+    "name": "Mechanical Animal",
+    "brandId": "brand-named-weapon",
+    "slot": "Assault Rifle",
+    "coreAttribute": "AR Damage + DtA",
+    "fixedAttribute": "Perfect Spike: Headshot kills grant +25% Skill Damage for 20s",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-baker-s-dozen",
+    "name": "Baker's Dozen",
+    "brandId": "brand-named-weapon",
+    "slot": "Rifle",
+    "coreAttribute": "Rifle Damage + CHD",
+    "fixedAttribute": "Perfect Lucky Shot: Magazine capacity increased by 100%, missed shots returned to magazine",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-surge",
+    "name": "Surge",
+    "brandId": "brand-named-weapon",
+    "slot": "Rifle",
+    "coreAttribute": "Rifle Damage + CHD",
+    "fixedAttribute": "Perfect Spike: Headshots grant +25% Skill Damage for 20s",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-invisible-hand",
+    "name": "Invisible Hand",
+    "brandId": "brand-named-weapon",
+    "slot": "Pistol",
+    "coreAttribute": "Pistol Damage",
+    "fixedAttribute": "Perfect Finisher: Swapping from this weapon grants +35% weapon damage for 15s",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-reformed",
+    "name": "The Reformed",
+    "brandId": "brand-named-weapon",
+    "slot": "Marksman Rifle",
+    "coreAttribute": "MMR Damage + HSD",
+    "fixedAttribute": "Perfect Reformation: Headshot kills grant +30% Skill Repair and +30% Skill Damage for 20s",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-safety-distance",
+    "name": "Safety Distance",
+    "brandId": "brand-named-weapon",
+    "slot": "Assault Rifle",
+    "coreAttribute": "AR Damage + DtA",
+    "fixedAttribute": "Perfect Ranger: +2% weapon damage for every 5m from target",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-burnout",
+    "name": "The Burnout",
+    "brandId": "brand-named-weapon",
+    "slot": "Assault Rifle",
+    "coreAttribute": "AR Damage + DtA",
+    "fixedAttribute": "Perfect Ignited: +20% weapon damage to burning targets",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-sleigher",
+    "name": "The Sleigher",
+    "brandId": "brand-named-weapon",
+    "slot": "SMG",
+    "coreAttribute": "SMG Damage + CHC",
+    "fixedAttribute": "Perfect Flatline: +15% damage to Pulsed targets (replaces normal Flatline)",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-sawyer-s-kneepads",
+    "name": "Sawyer's Kneepads",
+    "brandId": "brand-named-gear",
+    "slot": "kneepads",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Unique: Standing still for 10s grants up to +30% weapon damage (stacks over time)",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-emperor-s-guard",
+    "name": "Emperor's Guard",
+    "brandId": "brand-murakami-industries",
+    "slot": "kneepads",
+    "coreAttribute": "armor",
+    "fixedAttribute": "+10% Armor Regeneration",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-punch-drunk",
+    "name": "Punch Drunk",
+    "brandId": "brand-5-11-tactical",
+    "slot": "mask",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "+20% Headshot Damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-closer",
+    "name": "The Closer",
+    "brandId": "brand-overlord-armaments",
+    "slot": "backpack",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfect Adrenaline Rush: Within 10m of 2+ hostiles, gain +23% bonus armor for 5s",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-pristine-example",
+    "name": "Pristine Example",
+    "brandId": "brand-airaldi-holdings",
+    "slot": "chest",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfect Focus: +6% weapon damage per second while scoped at 8x+ magnification, up to 60%",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-liquid-engineer",
+    "name": "Liquid Engineer",
+    "brandId": "brand-belstone-armory",
+    "slot": "backpack",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfect Bloodsucker: Killing an enemy adds and refreshes a stack of +12% bonus armor for 10s, stacking up to 10 times",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-setup",
+    "name": "The Setup",
+    "brandId": "brand-uzina-getica",
+    "slot": "backpack",
+    "coreAttribute": "armor",
+    "fixedAttribute": "Perfectly Opportunistic: Enemies hit with shotguns or marksman rifles take 15% amplified damage from all sources for 5s",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-firm-handshake",
+    "name": "Firm Handshake",
+    "brandId": "brand-sokolov-concern",
+    "slot": "gloves",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "+15% Status Effects",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-claws-out",
+    "name": "Claws Out",
+    "brandId": "brand-ceska-vyroba-s-r-o",
+    "slot": "holster",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "+200% Melee Damage",
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-devil-s-due",
+    "name": "Devil's Due",
+    "brandId": "brand-badger-tuff",
+    "slot": "backpack",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfect Bloodsucker: Killing an enemy adds a stack of +12% bonus armor (max 6 stacks)",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-wake",
+    "name": "The Wake",
+    "brandId": "brand-named-weapon",
+    "slot": "LMG",
+    "coreAttribute": "LMG Damage + DtA",
+    "fixedAttribute": "Perfect Unhinged: +23% Weapon Damage, -35% Weapon Handling",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-good-times",
+    "name": "Good Times",
+    "brandId": "brand-named-weapon",
+    "slot": "LMG",
+    "coreAttribute": "LMG Damage + DtA",
+    "fixedAttribute": "Perfect Fast Hands: Critical hits add +7% reload speed (stacks up to 20)",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-dare",
+    "name": "Dare",
+    "brandId": "brand-named-weapon",
+    "slot": "Assault Rifle",
+    "coreAttribute": "AR Damage + DtA",
+    "fixedAttribute": "Perfect Close & Personal: Killing enemies within 7m grants +30% weapon damage for 10s",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-harmony",
+    "name": "Harmony",
+    "brandId": "brand-named-weapon",
+    "slot": "Rifle",
+    "coreAttribute": "Rifle Damage + CHD",
+    "fixedAttribute": "Perfect Spike: Headshots grant +25% Skill Damage for 20s",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-catharsis",
+    "name": "Catharsis",
+    "brandId": "brand-named-gear",
+    "slot": "mask",
+    "coreAttribute": "armor",
+    "fixedAttribute": "Unique: When at full armor, receiving damage repairs 20% armor to all allies within 20m. Cooldown 20s.",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-orbit",
+    "name": "The Orbit",
+    "brandId": "brand-named-weapon",
+    "slot": "Marksman Rifle",
+    "coreAttribute": "MMR Damage + HSD",
+    "fixedAttribute": "Perfect Naked: Headshot kills from over 35m grant +50% Headshot Damage for 5s, stacks up to 3x",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-rock-n-roll",
+    "name": "Rock n' Roll",
+    "brandId": "brand-named-weapon",
+    "slot": "Shotgun",
+    "coreAttribute": "Shotgun Damage",
+    "fixedAttribute": "Perfect Optimist: Weapon damage is increased by +15% for every 10% of your magazine that is empty",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-wicked-vixen",
+    "name": "Wicked Vixen",
+    "brandId": "brand-wyvern-wear",
+    "slot": "mask",
+    "coreAttribute": "skill_tier",
+    "fixedAttribute": "+20% Skill Duration",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-carnage",
+    "name": "Carnage",
+    "brandId": "brand-named-weapon",
+    "slot": "LMG",
+    "coreAttribute": "LMG Damage + DtA",
+    "fixedAttribute": "Perfect Sadist: +20% weapon damage to bleeding targets",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-new-reliable",
+    "name": "New Reliable",
+    "brandId": "brand-named-weapon",
+    "slot": "Rifle",
+    "coreAttribute": "Rifle Damage + CHD",
+    "fixedAttribute": "Perfect Ranger: +2% weapon damage per 5m distance from target",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-the-answer",
+    "name": "The Answer",
+    "brandId": "brand-named-weapon",
+    "slot": "LMG",
+    "coreAttribute": "LMG Damage + DtA",
+    "fixedAttribute": "Perfect Preservation: Killing an enemy repairs 12% armor over 3s, headshot kills repair 24%",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-deathgrips",
+    "name": "Deathgrips",
+    "brandId": "brand-5-11-tactical",
+    "slot": "gloves",
+    "coreAttribute": "armor",
+    "fixedAttribute": "+10% Armor on Kill",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-percussive-maintenance",
+    "name": "Percussive Maintenance",
+    "brandId": "brand-alps-summit-armament",
+    "slot": "backpack",
+    "coreAttribute": "skill_tier",
+    "fixedAttribute": "Perfect Tech Support: +25% skill damage for 27s on skill kills",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-motherly-love",
+    "name": "Motherly Love",
+    "brandId": "brand-alps-summit-armament",
+    "slot": "gloves",
+    "coreAttribute": "skill_tier",
+    "fixedAttribute": "+15% Skill Repair",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-everyday-carrier",
+    "name": "Everyday Carrier",
+    "brandId": "brand-belstone-armory",
+    "slot": "chest",
+    "coreAttribute": "armor",
+    "fixedAttribute": "Perfectly Efficient: 75% chance to not consume armor kit",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-picaro-s-holster",
+    "name": "Picaro's Holster",
+    "brandId": "brand-brazos-de-arcabuz",
+    "slot": "holster",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "+15% Weapon Damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-hermano",
+    "name": "Hermano",
+    "brandId": "brand-brazos-de-arcabuz",
+    "slot": "backpack",
+    "coreAttribute": "skill_tier",
+    "fixedAttribute": "Perfect Overclock",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-battery-pack",
+    "name": "Battery Pack",
+    "brandId": "brand-empress-international",
+    "slot": "backpack",
+    "coreAttribute": "skill_tier",
+    "fixedAttribute": "Perfect Calculated: kills reduce skill cooldowns by 30%",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-pointman",
+    "name": "Pointman",
+    "brandId": "brand-gila-guard",
+    "slot": "chest",
+    "coreAttribute": "armor",
+    "fixedAttribute": "Perfect Vanguard: shield grants +45% bonus armor to allies for 20s",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-nightwatcher",
+    "name": "Nightwatcher",
+    "brandId": "brand-gila-guard",
+    "slot": "mask",
+    "coreAttribute": "armor",
+    "fixedAttribute": "+100% Scanner Pulse Haste",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-carpenter",
+    "name": "Carpenter",
+    "brandId": "brand-lengmo",
+    "slot": "chest",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfectly Mad Bomber: grenade radius +75%, grenade kills refund",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-backbone",
+    "name": "Backbone",
+    "brandId": "brand-lengmo",
+    "slot": "backpack",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfectly Unstoppable Force: +5% weapon damage per kill, max 7 stacks",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-closer",
+    "name": "Closer",
+    "brandId": "brand-uzina-getica",
+    "slot": "chest",
+    "coreAttribute": "armor",
+    "fixedAttribute": "Perfect Spotter: +20% damage to pulsed enemies",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-matador",
+    "name": "Matador",
+    "brandId": "brand-walker-harris-co",
+    "slot": "backpack",
+    "coreAttribute": "weapon_damage",
+    "fixedAttribute": "Perfect Adrenaline Rush: +23% bonus armor within 10m of enemy",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "named-quickstep",
+    "name": "Quickstep",
+    "brandId": "brand-named-weapon",
+    "slot": "Pistol",
+    "coreAttribute": "Pistol Damage",
+    "fixedAttribute": "Sport Mode: +20% Movement Speed while unholstered (does not stack with other movement speed bonuses)",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]

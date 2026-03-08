@@ -1,0 +1,110 @@
+[
+  {
+    "id": "shd-offense",
+    "name": "Offense",
+    "maxLevel": 250,
+    "bonuses": [
+      {
+        "stat": "Weapon Damage",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Headshot Damage",
+        "perLevel": 0.08,
+        "maxBonus": 20
+      },
+      {
+        "stat": "Critical Hit Chance",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Critical Hit Damage",
+        "perLevel": 0.08,
+        "maxBonus": 20
+      }
+    ]
+  },
+  {
+    "id": "shd-defense",
+    "name": "Defense",
+    "maxLevel": 250,
+    "bonuses": [
+      {
+        "stat": "Armor",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Health",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Explosive Resistance",
+        "perLevel": 0.08,
+        "maxBonus": 20
+      },
+      {
+        "stat": "Hazard Protection",
+        "perLevel": 0.08,
+        "maxBonus": 20
+      }
+    ]
+  },
+  {
+    "id": "shd-utility",
+    "name": "Utility",
+    "maxLevel": 250,
+    "bonuses": [
+      {
+        "stat": "Skill Damage",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Skill Haste",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Repair Skills",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Status Effects",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      }
+    ]
+  },
+  {
+    "id": "shd-handling",
+    "name": "Handling",
+    "maxLevel": 250,
+    "bonuses": [
+      {
+        "stat": "Accuracy",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Stability",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Reload Speed",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      },
+      {
+        "stat": "Ammo Capacity",
+        "perLevel": 0.04,
+        "maxBonus": 10
+      }
+    ]
+  }
+]

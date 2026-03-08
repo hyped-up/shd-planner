@@ -1,26 +1,75 @@
 @import "tailwindcss";
 
+/* Division 2 / SHD Planner theme */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Background layers */
+  --background: #0d1117;
+  --background-secondary: #161b22;
+  --background-tertiary: #1c2333;
+
+  /* Surface layers */
+  --surface: #21262d;
+  --surface-hover: #282e38;
+
+  /* Borders */
+  --border: #30363d;
+
+  /* SHD Orange (primary brand) */
+  --shd-orange: #FF6A00;
+  --shd-orange-hover: #FF8533;
+
+  /* Core attribute colors */
+  --core-red: #E5534B;
+  --core-blue: #539BF5;
+  --core-yellow: #DAAA3F;
+
+  /* Text */
+  --foreground: #E6EDF3;
+  --foreground-secondary: #8B949E;
+
+  /* Semantic */
+  --success: #57AB5A;
+  --danger: #E5534B;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-secondary: var(--background-secondary);
+  --color-background-tertiary: var(--background-tertiary);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-shd-orange: var(--shd-orange);
+  --color-shd-orange-hover: var(--shd-orange-hover);
+  --color-core-red: var(--core-red);
+  --color-core-blue: var(--core-blue);
+  --color-core-yellow: var(--core-yellow);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --font-sans: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Scrollbar styling for the dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground-secondary);
 }

@@ -1,0 +1,377 @@
+[
+  {
+    "id": "exotic-vile",
+    "name": "Vile",
+    "slot": "mask",
+    "uniqueTalent": {
+      "name": "Toxic Delivery",
+      "description": "All status effects you apply also deal a damage over time debuff for 10 seconds. Total damage dealt equals 50% of your concussion grenade damage, further increased by status effect attributes."
+    },
+    "coreAttribute": "skill_tier",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-coyote-s-mask",
+    "name": "Coyote's Mask",
+    "slot": "mask",
+    "uniqueTalent": {
+      "name": "Pack Instinct",
+      "description": "You and allies gain bonuses based on the distance of the last enemy you hit: 0-15m grants +25% Critical Hit Damage; 15-25m grants +10% Critical Hit Damage and +10% Critical Hit Chance; 25m+ grants +25% Critical Hit Chance."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-catharsis",
+    "name": "Catharsis",
+    "slot": "mask",
+    "uniqueTalent": {
+      "name": "Vicious Cycle",
+      "description": "Taking damage builds stacks up to 30. Each stack grants +1% Weapon Damage. Taking damage at max stacks triggers a purge: removes all stacks and status effects, drops a healing cloud that restores 5% of max armor per second for 10 seconds to all allies in the cloud."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-tinkerer",
+    "name": "Tinkerer",
+    "slot": "mask",
+    "uniqueTalent": {
+      "name": "Dual Talent",
+      "description": "If your Primary and Secondary weapons are both non-Exotic, non-Named, and of the same weapon type, the Secondary Weapon's talent is also applied to the Primary Weapon. Does not apply to talents that include weapon swapping."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-tardigrade-armor-system",
+    "name": "Tardigrade Armor System",
+    "slot": "vest",
+    "uniqueTalent": {
+      "name": "Ablative Nano-Plating",
+      "description": "Whenever your armor or any ally's armor breaks, they gain 80% of your armor value as bonus armor for 10 seconds. Cooldown: 45 seconds per ally. Killing an enemy with your specialization weapon removes this cooldown for all allies."
+    },
+    "coreAttribute": "armor",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-ridgeway-s-pride",
+    "name": "Ridgeway's Pride",
+    "slot": "vest",
+    "uniqueTalent": {
+      "name": "Bleeding Edge",
+      "description": "Shooting enemies within 15m applies bleed to the target. Repairs 3-48% of your armor per second for every bleeding enemy within 15m: 1 enemy = 3%, 2 = 6%, 3 = 12%, 4 = 24%, 5 = 48% armor regen per second."
+    },
+    "coreAttribute": "armor",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-collector",
+    "name": "Collector",
+    "slot": "vest",
+    "uniqueTalent": {
+      "name": "Hoarder",
+      "description": "+3 Grenade Capacity. +50% Grenade Radius. +35% Grenade Damage. +25% additional Grenade Damage per extra enemy caught in the blast. Auto-regenerates grenades every 30 seconds if you have fewer than 2 grenades."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-provocator",
+    "name": "Provocator",
+    "slot": "vest",
+    "uniqueTalent": {
+      "name": "Challenger",
+      "description": "+25% Damage Resistance from enemies within 20m (PvE). +20% Damage Resistance from enemies within 15m (PvP)."
+    },
+    "coreAttribute": "armor",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-dodge-city-gunslinger-s-holster",
+    "name": "Dodge City Gunslinger's Holster",
+    "slot": "holster",
+    "uniqueTalent": {
+      "name": "Quick Draw",
+      "description": "While your pistol is holstered, gain 1 stack every 0.3 seconds up to 100 stacks. When you swap to your pistol, your first shot consumes all stacks and deals +10% damage per stack (up to +1000%), dealing headshot damage regardless of where the bullet lands."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-imperial-dynasty",
+    "name": "Imperial Dynasty",
+    "slot": "holster",
+    "uniqueTalent": {
+      "name": "Dragon's Glare",
+      "description": "While in combat, applies burn to the enemy closest to you within 20m. Cooldown: 35 seconds."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-waveform",
+    "name": "Waveform",
+    "slot": "holster",
+    "uniqueTalent": {
+      "name": "Alternating Current",
+      "description": "Generate a stack of 3% Skill Damage on one of your skills every second, capping at 10 stacks. After 10 seconds at the cap, all stacks transfer to your other skill. The cycle then repeats indefinitely."
+    },
+    "coreAttribute": "skill_tier",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-nimble",
+    "name": "Nimble",
+    "slot": "holster",
+    "uniqueTalent": {
+      "name": "Bob and Weave",
+      "description": "Receive repairs of 5% of your Total Armor for every 1 meter run in cover-to-cover. Damage taken while performing a cover-to-cover is healed over 10 seconds."
+    },
+    "coreAttribute": "armor",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-shocker-punch",
+    "name": "Shocker Punch",
+    "slot": "holster",
+    "uniqueTalent": {
+      "name": "Shocker Punch",
+      "description": "Shock status effect duration on you is reduced by 50%. Using a shield grants +100% Melee Damage. When paired with St. Elmo's Engine: melee attacks also apply Shock to the target. When using all three items (Shocker Punch holster, St. Elmo's Engine, and a shield): Shock from melee has a 5m AoE radius from the first target."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-centurion-s-scabbard",
+    "name": "Centurion's Scabbard",
+    "slot": "holster",
+    "uniqueTalent": {
+      "name": "Counter",
+      "description": "When swapping weapons, activate sequential bonuses that last 12 seconds (10s in PvP) or until the next weapon swap: First swap: +20% Rate of Fire (10% PvP). Second swap: +20% Weapon Damage (10% PvP). Third swap: +50% Magazine Size (same in PvP). Fourth swap: +50% Reload Speed. Swapping to your sidearm does not trigger the next group of bonuses."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-memento",
+    "name": "Memento",
+    "slot": "backpack",
+    "uniqueTalent": {
+      "name": "Kill Confirmed",
+      "description": "Enemies you kill drop a trophy. Collecting it grants short-term bonuses (10s) based on your core attributes: +5% Weapon Damage per Weapon core, +10% Bonus Armor per Armor core, +5% Skill Efficiency per Skill core. Each trophy also grants a permanent stacking bonus for 300s: +1% Weapon Damage, +1% Skill Efficiency, +0.1% Armor Regeneration per stack (max 30 stacks)."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-acosta-s-go-bag",
+    "name": "Acosta's Go-Bag",
+    "slot": "backpack",
+    "uniqueTalent": {
+      "name": "One in Hand / Two in the Bag",
+      "description": "One in Hand: Throwing a grenade refunds it and grants +1 Skill Tier for 15 seconds. Grants Overcharge if already at Skill Tier 6. Two in the Bag: +1 armor kit capacity, +3 grenade capacity, +25% ammo capacity, +10% repair skills, +10% status effects."
+    },
+    "coreAttribute": "skill_tier",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-ninjabike-messenger-bag",
+    "name": "NinjaBike Messenger Bag",
+    "slot": "backpack",
+    "uniqueTalent": {
+      "name": "Resourceful",
+      "description": "Slots in with any equipped Gear Set and/or Brand Set items to fulfill a requirement towards unlocking a Gear Set's bonus. Can simultaneously unlock bonuses from multiple gear sets at once."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-birdie-s-quick-fix-pack",
+    "name": "Birdie's Quick Fix Pack",
+    "slot": "backpack",
+    "uniqueTalent": {
+      "name": "Combat Medic",
+      "description": "Both agents gain 50% incoming damage resistance while reviving or being revived, and for 5 seconds after a successful revive. A successful revive grants +1 Skill Tier for 30 seconds. Reviving at Skill Tier 6 grants Overcharge for 15 seconds."
+    },
+    "coreAttribute": "skill_tier",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-btsu-datagloves",
+    "name": "BTSU Datagloves",
+    "slot": "gloves",
+    "uniqueTalent": {
+      "name": "Frontline Protocols",
+      "description": "Grants +15% Hive skill haste per Skill Tier equipped. Detonating a Hive refreshes your skill cooldowns and grants Overcharge for 15 seconds. If at Skill Tier 6, this effect also applies to all allies."
+    },
+    "coreAttribute": "skill_tier",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-bloody-knuckles",
+    "name": "Bloody Knuckles",
+    "slot": "gloves",
+    "uniqueTalent": {
+      "name": "Over the Top",
+      "description": "Damaging an enemy with a grenade or striking an enemy with a melee attack activates 'Seeing Red', granting +25% Weapon Damage and +100% Melee Damage for 20 seconds. Cooldown: 60 seconds. During cooldown, landing a grenade hit or melee strike instantly completes the cooldown."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-rugged-gauntlets",
+    "name": "Rugged Gauntlets",
+    "slot": "gloves",
+    "uniqueTalent": {
+      "name": "Iron Grip",
+      "description": "Rewards hip fire and firing from behind cover. Amplifies weapon damage based on hip fire accuracy and blind-fire accuracy, incentivizing aggressive unsighted shooting."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-overdogs",
+    "name": "Overdogs",
+    "slot": "gloves",
+    "uniqueTalent": {
+      "name": "Weakest Link",
+      "description": "Amplifies Weapon Damage by +30% to the lowest ranking enemy tier in the current encounter. Enemy tiers: Tier 1 (Hunters, Rogues, Leaders, Tanks, etc.), Tier 2 (Supports, Engineers, Medics, etc.), Tier 3 (all other enemies and skill proxies)."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-sawyer-s-kneepads",
+    "name": "Sawyer's Kneepads",
+    "slot": "kneepads",
+    "uniqueTalent": {
+      "name": "Stand Your Ground",
+      "description": "Cannot be staggered by explosions. Gain 1 stack per second while stationary, each stack granting +3% Weapon Damage, up to 10 stacks (+30% total). Stacks stop accumulating when moving and are lost after 10 seconds of movement."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-ninjabike-messenger-kneepads",
+    "name": "NinjaBike Messenger Kneepads",
+    "slot": "kneepads",
+    "uniqueTalent": {
+      "name": "Parkour!",
+      "description": "Performing a cover-to-cover maneuver or vaulting reloads your drawn weapon and grants +25% Bonus Armor for 5 seconds."
+    },
+    "coreAttribute": "armor",
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "exotic-acosta-s-kneepads",
+    "name": "Acosta's Kneepads",
+    "slot": "kneepads",
+    "uniqueTalent": {
+      "name": "Momentum",
+      "description": "Vaulting, climbing, or dropping from an object grants +10% Movement Speed for 3 seconds. After not moving for 5 seconds, gain +20% Movement Speed for 5 seconds. When affected by a Status Effect, gain +10% Movement Speed for 5 seconds. Maximum Movement Speed bonus is capped at +20%."
+    },
+    "coreAttribute": "armor",
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]

@@ -1,0 +1,762 @@
+[
+  {
+    "id": "a1b2c3d4-e5f6-4a7b-8c9d-0e1f2a3b4c5d",
+    "name": "Heartbreaker DPS",
+    "description": "High-sustain DPS build using 4pc Heartbreaker with Kingbreaker exotic AR. Stack heart stacks via crits to gain weapon damage and bonus armor simultaneously. Technician provides the 6th skill tier for better skill uptime on the pulse. Best for Heroic and Legendary PvE content where sustained damage matters more than burst.",
+    "gear": {
+      "Mask": {
+        "slotId": "Mask",
+        "source": "gearset",
+        "itemId": "heartbreaker",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Backpack": {
+        "slotId": "Backpack",
+        "source": "gearset",
+        "itemId": "heartbreaker",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": { "modId": "chd_mod", "value": 12.0 },
+        "talent": { "talentId": "Heartbreaker Backpack" }
+      },
+      "Chest": {
+        "slotId": "Chest",
+        "source": "gearset",
+        "itemId": "heartbreaker",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": { "modId": "chd_mod", "value": 12.0 },
+        "talent": { "talentId": "Heartbreaker Chest" }
+      },
+      "Gloves": {
+        "slotId": "Gloves",
+        "source": "gearset",
+        "itemId": "heartbreaker",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Holster": {
+        "slotId": "Holster",
+        "source": "brand",
+        "itemId": "grupo_sombra",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Kneepads": {
+        "slotId": "Kneepads",
+        "source": "brand",
+        "itemId": "foxs_prayer",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitDamage", "value": 12.0 },
+          { "attributeId": "damageToOutOfCover", "value": 8.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      }
+    },
+    "weapons": {
+      "primary": {
+        "slotId": "primary",
+        "weaponId": "kingbreaker",
+        "talent": { "talentId": "Heartstopper" },
+        "mods": {
+          "optic": "c79_scope",
+          "magazine": "large_pouch",
+          "muzzle": "osprey_suppressor",
+          "underbarrel": "laser_pointer"
+        }
+      },
+      "secondary": {
+        "slotId": "secondary",
+        "weaponId": "famas_2010",
+        "talent": { "talentId": "Strained" },
+        "mods": {}
+      },
+      "sidearm": {
+        "slotId": "sidearm",
+        "weaponId": "d50",
+        "talent": { "talentId": "Finisher" },
+        "mods": {}
+      }
+    },
+    "skills": {
+      "skill1": {
+        "slotId": "skill1",
+        "skillVariantId": "crusader_shield",
+        "mods": []
+      },
+      "skill2": {
+        "slotId": "skill2",
+        "skillVariantId": "scanner_pulse",
+        "mods": []
+      }
+    },
+    "specialization": "Technician",
+    "shdWatch": {
+      "weaponDamage": 10,
+      "armor": 0,
+      "skillTier": 0,
+      "criticalHitChance": 0,
+      "criticalHitDamage": 20,
+      "headshotDamage": 20,
+      "health": 0
+    },
+    "createdAt": "2026-03-07T00:00:00.000Z",
+    "updatedAt": "2026-03-07T00:00:00.000Z",
+    "dataVersion": "0.1.0"
+  },
+  {
+    "id": "b2c3d4e5-f6a7-4b8c-9d0e-1f2a3b4c5d6e",
+    "name": "All-Red Providence",
+    "description": "Classic all-red crit DPS build. 3pc Providence for CHC+CHD+HSD, 1pc Grupo for CHD, 1pc Ceska for CHC, 1pc Fenris for AR damage. Glass Cannon chest amplifies all damage by 25% and Vigilance backpack adds 25% weapon damage when not taking fire. The gold standard for group DPS in Legendary and Raid content.",
+    "gear": {
+      "Mask": {
+        "slotId": "Mask",
+        "source": "brand",
+        "itemId": "providence_defense",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitDamage", "value": 12.0 },
+          { "attributeId": "headshotDamage", "value": 10.0 }
+        ],
+        "modSlot": { "modId": "chc_mod", "value": 6.0 },
+        "talent": null
+      },
+      "Backpack": {
+        "slotId": "Backpack",
+        "source": "brand",
+        "itemId": "providence_defense",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": { "modId": "chd_mod", "value": 12.0 },
+        "talent": { "talentId": "Vigilance" }
+      },
+      "Chest": {
+        "slotId": "Chest",
+        "source": "brand",
+        "itemId": "providence_defense",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": { "modId": "chd_mod", "value": 12.0 },
+        "talent": { "talentId": "Glass Cannon" }
+      },
+      "Gloves": {
+        "slotId": "Gloves",
+        "source": "brand",
+        "itemId": "grupo_sombra",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Holster": {
+        "slotId": "Holster",
+        "source": "brand",
+        "itemId": "ceska_vyroba",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Kneepads": {
+        "slotId": "Kneepads",
+        "source": "brand",
+        "itemId": "fenris_group",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      }
+    },
+    "weapons": {
+      "primary": {
+        "slotId": "primary",
+        "weaponId": "police_m4",
+        "talent": { "talentId": "Ranger" },
+        "mods": {
+          "optic": "acog_scope",
+          "magazine": "sturdy_extended_mag",
+          "muzzle": "compensator",
+          "underbarrel": "handstop"
+        }
+      },
+      "secondary": {
+        "slotId": "secondary",
+        "weaponId": "baker_dozen",
+        "talent": { "talentId": "Lucky Shot" },
+        "mods": {}
+      },
+      "sidearm": {
+        "slotId": "sidearm",
+        "weaponId": "m1911",
+        "talent": { "talentId": "Finisher" },
+        "mods": {}
+      }
+    },
+    "skills": {
+      "skill1": {
+        "slotId": "skill1",
+        "skillVariantId": "reviver_hive",
+        "mods": []
+      },
+      "skill2": {
+        "slotId": "skill2",
+        "skillVariantId": "fixer_drone",
+        "mods": []
+      }
+    },
+    "specialization": "Sharpshooter",
+    "shdWatch": {
+      "weaponDamage": 10,
+      "armor": 0,
+      "skillTier": 0,
+      "criticalHitChance": 0,
+      "criticalHitDamage": 20,
+      "headshotDamage": 20,
+      "health": 0
+    },
+    "createdAt": "2026-03-07T00:00:00.000Z",
+    "updatedAt": "2026-03-07T00:00:00.000Z",
+    "dataVersion": "0.1.0"
+  },
+  {
+    "id": "c3d4e5f6-a7b8-4c9d-0e1f-2a3b4c5d6e7f",
+    "name": "Hunter's Fury CQB",
+    "description": "Close-quarters brawler build using 4pc Hunter's Fury for confusion and bonus armor on kills. Lady Death exotic SMG grants massive movement-based damage buffs. Intimidate on chest with Adrenaline Rush on backpack creates a deadly loop: rush in, gain bonus armor from proximity, then deal amplified damage. Gunner specialization adds armor on kill sustain.",
+    "gear": {
+      "Mask": {
+        "slotId": "Mask",
+        "source": "gearset",
+        "itemId": "hunters_fury",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Backpack": {
+        "slotId": "Backpack",
+        "source": "brand",
+        "itemId": "sokolov_concern",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": { "modId": "chd_mod", "value": 12.0 },
+        "talent": { "talentId": "Adrenaline Rush" }
+      },
+      "Chest": {
+        "slotId": "Chest",
+        "source": "gearset",
+        "itemId": "hunters_fury",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": { "modId": "chd_mod", "value": 12.0 },
+        "talent": { "talentId": "Hunter's Fury Chest" }
+      },
+      "Gloves": {
+        "slotId": "Gloves",
+        "source": "gearset",
+        "itemId": "hunters_fury",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Holster": {
+        "slotId": "Holster",
+        "source": "gearset",
+        "itemId": "hunters_fury",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitChance", "value": 6.0 },
+          { "attributeId": "criticalHitDamage", "value": 12.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Kneepads": {
+        "slotId": "Kneepads",
+        "source": "brand",
+        "itemId": "grupo_sombra",
+        "coreAttribute": { "type": "weaponDamage", "value": 15 },
+        "minorAttributes": [
+          { "attributeId": "criticalHitDamage", "value": 12.0 },
+          { "attributeId": "criticalHitChance", "value": 6.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      }
+    },
+    "weapons": {
+      "primary": {
+        "slotId": "primary",
+        "weaponId": "lady_death",
+        "talent": { "talentId": "Breathe Free" },
+        "mods": {}
+      },
+      "secondary": {
+        "slotId": "secondary",
+        "weaponId": "vector_sbr",
+        "talent": { "talentId": "Close & Personal" },
+        "mods": {
+          "magazine": "extended_9mm_mag",
+          "muzzle": "loud_vent_brake"
+        }
+      },
+      "sidearm": {
+        "slotId": "sidearm",
+        "weaponId": "d50",
+        "talent": { "talentId": "Finisher" },
+        "mods": {}
+      }
+    },
+    "skills": {
+      "skill1": {
+        "slotId": "skill1",
+        "skillVariantId": "striker_shield",
+        "mods": []
+      },
+      "skill2": {
+        "slotId": "skill2",
+        "skillVariantId": "reviver_hive",
+        "mods": []
+      }
+    },
+    "specialization": "Gunner",
+    "shdWatch": {
+      "weaponDamage": 10,
+      "armor": 0,
+      "skillTier": 0,
+      "criticalHitChance": 0,
+      "criticalHitDamage": 20,
+      "headshotDamage": 20,
+      "health": 0
+    },
+    "createdAt": "2026-03-07T00:00:00.000Z",
+    "updatedAt": "2026-03-07T00:00:00.000Z",
+    "dataVersion": "0.1.0"
+  },
+  {
+    "id": "d4e5f6a7-b8c9-4d0e-1f2a-3b4c5d6e7f8a",
+    "name": "Eclipse Protocol Status",
+    "description": "Status effect build using 4pc Eclipse Protocol to spread status effects on kill. Vile exotic mask adds a damaging debuff to all status-affected enemies. Survivalist specialization grants team-wide damage bonus to status-affected targets and the crossbow applies bleed. Use fire chem launcher + riot foam to lock down entire rooms. Extremely effective for Heroic crowd control.",
+    "gear": {
+      "Mask": {
+        "slotId": "Mask",
+        "source": "exotic",
+        "itemId": "vile",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "statusEffects", "value": 10.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": null,
+        "talent": { "talentId": "Vile" }
+      },
+      "Backpack": {
+        "slotId": "Backpack",
+        "source": "gearset",
+        "itemId": "eclipse_protocol",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "statusEffects", "value": 10.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": { "modId": "status_effects_mod", "value": 10.0 },
+        "talent": { "talentId": "Eclipse Protocol Backpack" }
+      },
+      "Chest": {
+        "slotId": "Chest",
+        "source": "gearset",
+        "itemId": "eclipse_protocol",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "statusEffects", "value": 10.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": { "modId": "status_effects_mod", "value": 10.0 },
+        "talent": { "talentId": "Eclipse Protocol Chest" }
+      },
+      "Gloves": {
+        "slotId": "Gloves",
+        "source": "gearset",
+        "itemId": "eclipse_protocol",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "statusEffects", "value": 10.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Holster": {
+        "slotId": "Holster",
+        "source": "gearset",
+        "itemId": "eclipse_protocol",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "statusEffects", "value": 10.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Kneepads": {
+        "slotId": "Kneepads",
+        "source": "brand",
+        "itemId": "golan_gear",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "statusEffects", "value": 10.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      }
+    },
+    "weapons": {
+      "primary": {
+        "slotId": "primary",
+        "weaponId": "scorpio",
+        "talent": { "talentId": "Septic Shock" },
+        "mods": {}
+      },
+      "secondary": {
+        "slotId": "secondary",
+        "weaponId": "everlasting_gaze",
+        "talent": { "talentId": "Perpetuation" },
+        "mods": {}
+      },
+      "sidearm": {
+        "slotId": "sidearm",
+        "weaponId": "m1911",
+        "talent": { "talentId": "Finisher" },
+        "mods": {}
+      }
+    },
+    "skills": {
+      "skill1": {
+        "slotId": "skill1",
+        "skillVariantId": "firestarter_chem_launcher",
+        "mods": []
+      },
+      "skill2": {
+        "slotId": "skill2",
+        "skillVariantId": "riot_foam_chem_launcher",
+        "mods": []
+      }
+    },
+    "specialization": "Survivalist",
+    "shdWatch": {
+      "weaponDamage": 0,
+      "armor": 0,
+      "skillTier": 0,
+      "criticalHitChance": 0,
+      "criticalHitDamage": 0,
+      "headshotDamage": 0,
+      "health": 0
+    },
+    "createdAt": "2026-03-07T00:00:00.000Z",
+    "updatedAt": "2026-03-07T00:00:00.000Z",
+    "dataVersion": "0.1.0"
+  },
+  {
+    "id": "e5f6a7b8-c9d0-4e1f-2a3b-4c5d6e7f8a9b",
+    "name": "Future Initiative Healer",
+    "description": "Full healer build using 4pc Future Initiative to amplify team damage when allies are at full armor. BTSU Datagloves exotic overcharges all deployed hive skills, boosting healing output. Survivalist provides the Crossbow for CC and a 10% damage bonus to status-affected targets for the whole team. Run restorer hive + reinforcer chem launcher for maximum healing uptime. Essential for Raid groups.",
+    "gear": {
+      "Mask": {
+        "slotId": "Mask",
+        "source": "gearset",
+        "itemId": "future_initiative",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "repairSkills", "value": 20.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Backpack": {
+        "slotId": "Backpack",
+        "source": "gearset",
+        "itemId": "future_initiative",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "repairSkills", "value": 20.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": { "modId": "repair_skills_mod", "value": 20.0 },
+        "talent": { "talentId": "Future Initiative Backpack" }
+      },
+      "Chest": {
+        "slotId": "Chest",
+        "source": "gearset",
+        "itemId": "future_initiative",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "repairSkills", "value": 20.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": { "modId": "repair_skills_mod", "value": 20.0 },
+        "talent": { "talentId": "Future Initiative Chest" }
+      },
+      "Gloves": {
+        "slotId": "Gloves",
+        "source": "exotic",
+        "itemId": "btsu_datagloves",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "skillDamage", "value": 10.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": null,
+        "talent": { "talentId": "BTSU" }
+      },
+      "Holster": {
+        "slotId": "Holster",
+        "source": "gearset",
+        "itemId": "future_initiative",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "repairSkills", "value": 20.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Kneepads": {
+        "slotId": "Kneepads",
+        "source": "brand",
+        "itemId": "alps_summit",
+        "coreAttribute": { "type": "skillTier", "value": 1 },
+        "minorAttributes": [
+          { "attributeId": "repairSkills", "value": 20.0 },
+          { "attributeId": "skillHaste", "value": 10.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      }
+    },
+    "weapons": {
+      "primary": {
+        "slotId": "primary",
+        "weaponId": "m700_carbon",
+        "talent": { "talentId": "In Sync" },
+        "mods": {}
+      },
+      "secondary": {
+        "slotId": "secondary",
+        "weaponId": "mk16",
+        "talent": { "talentId": "In Sync" },
+        "mods": {}
+      },
+      "sidearm": {
+        "slotId": "sidearm",
+        "weaponId": "m1911",
+        "talent": { "talentId": "In Sync" },
+        "mods": {}
+      }
+    },
+    "skills": {
+      "skill1": {
+        "slotId": "skill1",
+        "skillVariantId": "restorer_hive",
+        "mods": []
+      },
+      "skill2": {
+        "slotId": "skill2",
+        "skillVariantId": "reinforcer_chem_launcher",
+        "mods": []
+      }
+    },
+    "specialization": "Survivalist",
+    "shdWatch": {
+      "weaponDamage": 0,
+      "armor": 0,
+      "skillTier": 0,
+      "criticalHitChance": 0,
+      "criticalHitDamage": 0,
+      "headshotDamage": 0,
+      "health": 0
+    },
+    "createdAt": "2026-03-07T00:00:00.000Z",
+    "updatedAt": "2026-03-07T00:00:00.000Z",
+    "dataVersion": "0.1.0"
+  },
+  {
+    "id": "f6a7b8c9-d0e1-4f2a-3b4c-5d6e7f8a9b0c",
+    "name": "True Patriot Tank",
+    "description": "Full tank build using 4pc True Patriot to debuff enemies with red/white/blue flags that reduce damage dealt, repair allies, and amplify incoming damage respectively. Tardigrade exotic chest provides team-wide bonus armor when any team member drops low. Firewall specialization for the shield charge and close-combat damage. Designed to hold aggro and support the team in Legendary missions and Raids.",
+    "gear": {
+      "Mask": {
+        "slotId": "Mask",
+        "source": "gearset",
+        "itemId": "true_patriot",
+        "coreAttribute": { "type": "armor", "value": 170000 },
+        "minorAttributes": [
+          { "attributeId": "hazardProtection", "value": 10.0 },
+          { "attributeId": "health", "value": 18835 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Backpack": {
+        "slotId": "Backpack",
+        "source": "gearset",
+        "itemId": "true_patriot",
+        "coreAttribute": { "type": "armor", "value": 170000 },
+        "minorAttributes": [
+          { "attributeId": "hazardProtection", "value": 10.0 },
+          { "attributeId": "armorRegeneration", "value": 4925 }
+        ],
+        "modSlot": { "modId": "protection_from_elites_mod", "value": 12.0 },
+        "talent": { "talentId": "True Patriot Backpack" }
+      },
+      "Chest": {
+        "slotId": "Chest",
+        "source": "exotic",
+        "itemId": "tardigrade",
+        "coreAttribute": { "type": "armor", "value": 170000 },
+        "minorAttributes": [
+          { "attributeId": "hazardProtection", "value": 10.0 },
+          { "attributeId": "explosiveResistance", "value": 10.0 }
+        ],
+        "modSlot": { "modId": "protection_from_elites_mod", "value": 12.0 },
+        "talent": { "talentId": "Ablative Nano-Platelets" }
+      },
+      "Gloves": {
+        "slotId": "Gloves",
+        "source": "gearset",
+        "itemId": "true_patriot",
+        "coreAttribute": { "type": "armor", "value": 170000 },
+        "minorAttributes": [
+          { "attributeId": "hazardProtection", "value": 10.0 },
+          { "attributeId": "health", "value": 18835 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Holster": {
+        "slotId": "Holster",
+        "source": "gearset",
+        "itemId": "true_patriot",
+        "coreAttribute": { "type": "armor", "value": 170000 },
+        "minorAttributes": [
+          { "attributeId": "hazardProtection", "value": 10.0 },
+          { "attributeId": "armorRegeneration", "value": 4925 }
+        ],
+        "modSlot": null,
+        "talent": null
+      },
+      "Kneepads": {
+        "slotId": "Kneepads",
+        "source": "brand",
+        "itemId": "gila_guard",
+        "coreAttribute": { "type": "armor", "value": 170000 },
+        "minorAttributes": [
+          { "attributeId": "hazardProtection", "value": 10.0 },
+          { "attributeId": "explosiveResistance", "value": 10.0 }
+        ],
+        "modSlot": null,
+        "talent": null
+      }
+    },
+    "weapons": {
+      "primary": {
+        "slotId": "primary",
+        "weaponId": "mg5",
+        "talent": { "talentId": "Preservation" },
+        "mods": {
+          "optic": "russian_red_dot",
+          "muzzle": "compensator"
+        }
+      },
+      "secondary": {
+        "slotId": "secondary",
+        "weaponId": "acs12",
+        "talent": { "talentId": "Pummel" },
+        "mods": {}
+      },
+      "sidearm": {
+        "slotId": "sidearm",
+        "weaponId": "liberty",
+        "talent": { "talentId": "Liberty" },
+        "mods": {}
+      }
+    },
+    "skills": {
+      "skill1": {
+        "slotId": "skill1",
+        "skillVariantId": "bulwark_shield",
+        "mods": []
+      },
+      "skill2": {
+        "slotId": "skill2",
+        "skillVariantId": "artificer_hive",
+        "mods": []
+      }
+    },
+    "specialization": "Firewall",
+    "shdWatch": {
+      "weaponDamage": 0,
+      "armor": 20,
+      "skillTier": 0,
+      "criticalHitChance": 0,
+      "criticalHitDamage": 0,
+      "headshotDamage": 0,
+      "health": 20
+    },
+    "createdAt": "2026-03-07T00:00:00.000Z",
+    "updatedAt": "2026-03-07T00:00:00.000Z",
+    "dataVersion": "0.1.0"
+  }
+]

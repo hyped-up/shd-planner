@@ -1,0 +1,622 @@
+[
+  {
+    "id": "talent-obliterate",
+    "name": "Obliterate",
+    "slot": "chest",
+    "description": "Critical hits increase total weapon damage by 1% for 5 seconds. Stacks up to 25 times.",
+    "perfectVersion": {
+      "name": "Perfect Obliterate",
+      "description": "Critical hits increase total weapon damage by 1% for 10 seconds. Stacks up to 24 times.",
+      "foundOn": "Equalizer (named chest)"
+    },
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-glass-cannon",
+    "name": "Glass Cannon",
+    "slot": "chest",
+    "description": "All damage you deal is amplified by 25%. All damage you take is amplified by 50%.",
+    "perfectVersion": {
+      "name": "Perfect Glass Cannon",
+      "description": "All damage you deal is amplified by 30%. All damage you take is amplified by 60%.",
+      "foundOn": "Petrov Defense Group named chest items"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-intimidate",
+    "name": "Intimidate",
+    "slot": "chest",
+    "description": "While you have bonus armor, amplifies total weapon damage by 35% to enemies within 10 meters.",
+    "perfectVersion": {
+      "name": "Perfect Intimidate",
+      "description": "While you have bonus armor, amplifies total weapon damage by 40% to enemies within 10 meters.",
+      "foundOn": "Various named chests"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-spotter",
+    "name": "Spotter",
+    "slot": "chest",
+    "description": "Amplifies total weapon and skill damage by 15% to pulsed enemies.",
+    "perfectVersion": {
+      "name": "Perfect Spotter",
+      "description": "Amplifies total weapon and skill damage by 20% to pulsed enemies.",
+      "foundOn": "Closer (named chest)"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-unbreakable",
+    "name": "Unbreakable",
+    "slot": "chest",
+    "description": "When your armor is depleted, repair 95% of your armor. Cooldown: 60 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Unbreakable",
+      "description": "When your armor is depleted, repair 100% of your armor. Cooldown: 55 seconds.",
+      "foundOn": "Zero F's (named chest)"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-overwatch",
+    "name": "Overwatch",
+    "slot": "chest",
+    "description": "After staying in cover for 10 seconds, you and your allies within 30 meters gain 12% bonus weapon and skill damage as long as you remain in cover or perform cover-to-cover movements.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-kinetic-momentum",
+    "name": "Kinetic Momentum",
+    "slot": "chest",
+    "description": "While in combat, each skill active or not on cooldown generates stacks. Each stack increases skill damage by 1% and skill repair by 2% up to 15 stacks per skill. Stacks are lost when the skill goes on cooldown.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-headhunter",
+    "name": "Headhunter",
+    "slot": "chest",
+    "description": "After killing an enemy with a headshot, your next weapon hit within 45 seconds deals an additional 125% of that killing blow's damage, capped at 800% weapon damage. This cap is raised to 1250% if your headshot damage is greater than 150%.",
+    "perfectVersion": {
+      "name": "Perfect Headhunter",
+      "description": "After killing an enemy with a headshot, your next weapon hit within 45 seconds deals an additional 125% of that killing blow's damage, capped at 1250% weapon damage (always, regardless of headshot damage stat).",
+      "foundOn": "Chainkiller (named chest)"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-vanguard",
+    "name": "Vanguard",
+    "slot": "chest",
+    "description": "Deploying your shield grants 45% bonus armor to you and all allies within 20 meters for 20 seconds. Cooldown: 25 seconds.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-braced",
+    "name": "Braced",
+    "slot": "chest",
+    "description": "While in cover, weapon handling is increased by 45%.",
+    "perfectVersion": {
+      "name": "Perfect Braced",
+      "description": "While in cover, weapon handling is increased by 50%.",
+      "foundOn": "Certain named chests"
+    },
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-efficient",
+    "name": "Efficient",
+    "slot": "chest",
+    "description": "Using an armor kit has a 50% chance to not consume the armor kit. Specialization armor kit bonuses are increased by 100%.",
+    "perfectVersion": {
+      "name": "Perfect Efficient",
+      "description": "Using an armor kit has a 75% chance to not consume the armor kit. Specialization armor kit bonuses are increased by 100%.",
+      "foundOn": "Various named chests"
+    },
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-empathic-resolve",
+    "name": "Empathic Resolve",
+    "slot": "chest",
+    "description": "Repairing an ally grants them a damage bonus. The bonus scales from 3% at skill tier 0 to 15% at skill tier 6.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-entrench",
+    "name": "Entrench",
+    "slot": "chest",
+    "description": "Headshots from cover repair 20% of your armor. Cooldown: 20 seconds.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-explosive-delivery",
+    "name": "Explosive Delivery",
+    "slot": "chest",
+    "description": "When you deploy a skill it lands with a bang, dealing explosive damage in an area. Damage scales with skill tier from 25% to 100% of the skill's damage.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-focus",
+    "name": "Focus",
+    "slot": "chest",
+    "description": "While aiming, gain +5% weapon damage every second, up to a maximum of +45%. Buff is lost when you stop aiming.",
+    "perfectVersion": {
+      "name": "Perfect Focus",
+      "description": "While aiming, gain +6% weapon damage every second, up to a maximum of +54%.",
+      "foundOn": "Various named chests"
+    },
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-gunslinger",
+    "name": "Gunslinger",
+    "slot": "chest",
+    "description": "Swapping weapons grants +20% weapon damage for 5 seconds. The buff is removed if you swap again.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-mad-bomber",
+    "name": "Mad Bomber",
+    "slot": "chest",
+    "description": "Grenades have +2m radius and can be cooked. Lethal grenades refund the grenade on a kill.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-reassigned",
+    "name": "Reassigned",
+    "slot": "chest",
+    "description": "Killing an enemy adds special ammo to your sidearm: armor-piercing, incendiary, or hollow point. Cooldown: 15 seconds.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-skilled",
+    "name": "Skilled",
+    "slot": "chest",
+    "description": "Skill kills have a 25% chance to reset skill cooldowns. If the skill is already active, this refreshes its duration instead.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-spark",
+    "name": "Spark",
+    "slot": "chest",
+    "description": "Dealing skill damage to an enemy increases total weapon damage by 15% for 15 seconds.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-tag-team",
+    "name": "Tag Team",
+    "slot": "chest",
+    "description": "Hitting an enemy with a skill marks them for 5 seconds. Shooting a marked enemy with a weapon reduces the skill's remaining cooldown by 6 seconds.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-tamper-proof",
+    "name": "Tamper Proof",
+    "slot": "chest",
+    "description": "Enemies who approach within 4 meters of your deployed skills are shocked for 2 seconds. Cooldown: 10 seconds per skill.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-trauma",
+    "name": "Trauma",
+    "slot": "chest",
+    "description": "Headshots apply blind to the target for 3 seconds (cooldown: 30 seconds). Chest shots apply bleed to the target for 10 seconds (cooldown: 30 seconds).",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-protected-reload",
+    "name": "Protected Reload",
+    "slot": "chest",
+    "description": "Reloading grants 20% bonus armor for 5 seconds. Allies within 10 meters also receive 0-18% bonus armor based on your defensive core attributes.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-vigilance",
+    "name": "Vigilance",
+    "slot": "backpack",
+    "description": "Increases total weapon damage by 25%. Taking damage removes this buff for 4 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Vigilance",
+      "description": "Increases total weapon damage by 25%. Taking damage removes this buff for 3 seconds.",
+      "foundOn": "The Gift (named backpack by Providence Defense)"
+    },
+    "metaRating": "S",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-adrenaline-rush",
+    "name": "Adrenaline Rush",
+    "slot": "backpack",
+    "description": "When within 10 meters of an enemy, gain stacking bonus armor. Each stack grants 20% bonus armor, up to 3 stacks. Stacks are applied every 2 seconds while the condition is met.",
+    "perfectVersion": {
+      "name": "Perfect Adrenaline Rush",
+      "description": "When within 10 meters of an enemy, gain stacking bonus armor. Each stack grants 23% bonus armor, up to 3 stacks.",
+      "foundOn": "Various named backpacks"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-wicked",
+    "name": "Wicked",
+    "slot": "backpack",
+    "description": "Applying a status effect increases total weapon damage by 18% for 20 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Wicked",
+      "description": "Applying a status effect increases total weapon damage by 18% for 23 seconds.",
+      "foundOn": "Anarchist's Cookbook (named backpack)"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-opportunistic",
+    "name": "Opportunistic",
+    "slot": "backpack",
+    "description": "Enemies hit with a shotgun or marksman rifle amplify damage from all sources to that enemy by 10% for 5 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Opportunistic",
+      "description": "Enemies hit with a shotgun or marksman rifle amplify damage from all sources by 15% for 5 seconds.",
+      "foundOn": "Various named backpacks"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-combined-arms",
+    "name": "Combined Arms",
+    "slot": "backpack",
+    "description": "Shooting an enemy increases total skill damage and healing by 25% for 3 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Combined Arms",
+      "description": "Shooting an enemy increases total skill damage and healing by 30% for 3 seconds.",
+      "foundOn": "Various named backpacks"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-tech-support",
+    "name": "Tech Support",
+    "slot": "backpack",
+    "description": "Skill kills increase total skill damage by 25% for 20 seconds.",
+    "perfectVersion": {
+      "name": "Perfect Tech Support",
+      "description": "Skill kills increase total skill damage by 25% for 27 seconds.",
+      "foundOn": "Various named backpacks"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-composure",
+    "name": "Composure",
+    "slot": "backpack",
+    "description": "While in cover, increases total weapon damage by 15%.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-companion",
+    "name": "Companion",
+    "slot": "backpack",
+    "description": "When within 10 meters of an ally or a deployed skill, gain +15% weapon damage.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-bloodsucker",
+    "name": "Bloodsucker",
+    "slot": "backpack",
+    "description": "Killing an enemy adds and refreshes a stack of +10% bonus armor for 10 seconds. Maximum 10 stacks.",
+    "perfectVersion": {
+      "name": "Perfect Bloodsucker",
+      "description": "Killing an enemy adds and refreshes a stack of +12% bonus armor for 10 seconds. Maximum 10 stacks.",
+      "foundOn": "Liquid Engineer (named backpack)"
+    },
+    "metaRating": "A",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-clutch",
+    "name": "Clutch",
+    "slot": "backpack",
+    "description": "While your armor is below 15%, critical hits repair 2% of your max armor. Kills while below 15% armor fully repair your armor over 4-10 seconds based on offensive cores.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-calculated",
+    "name": "Calculated",
+    "slot": "backpack",
+    "description": "Killing an enemy from cover reduces the cooldown of your skills by 10-15% based on skill tier.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-creeping-death",
+    "name": "Creeping Death",
+    "slot": "backpack",
+    "description": "Applying a status effect to an enemy spreads it to all enemies within 5 meters. Cooldown: 15 seconds.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-energize",
+    "name": "Energize",
+    "slot": "backpack",
+    "description": "Using an armor kit increases your skill tier by 1 for 20 seconds, or triggers Skill Overcharge if already at tier 6. Cooldown: 60 seconds.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-leadership",
+    "name": "Leadership",
+    "slot": "backpack",
+    "description": "Performing a cover-to-cover movement grants 15% of your armor as bonus armor to you and all allies within 30 meters. The bonus is tripled if you end within 10 meters of an enemy.",
+    "perfectVersion": {
+      "name": "Perfect Leadership",
+      "description": "Performing cover-to-cover grants 20% of your armor as bonus armor to you and all allies within 30 meters. The bonus is tripled if you end within 10 meters of an enemy.",
+      "foundOn": "Cap'n (named backpack)"
+    },
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-overclock",
+    "name": "Overclock",
+    "slot": "backpack",
+    "description": "Deploying a skill increases reload speed by 15% and reduces skill cooldowns by 15% for all allies within 10 meters for 15 seconds.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-protector",
+    "name": "Protector",
+    "slot": "backpack",
+    "description": "When your shield takes damage, grant 15% of your shield's max armor as bonus armor to all allies within 10 meters. Cooldown: 3 seconds.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-safeguard",
+    "name": "Safeguard",
+    "slot": "backpack",
+    "description": "While at full armor, skill repair and healing to you is doubled.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-shock-and-awe",
+    "name": "Shock and Awe",
+    "slot": "backpack",
+    "description": "Applying a status effect to an enemy increases total skill damage and repair by 20% for 20 seconds.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-unstoppable-force",
+    "name": "Unstoppable Force",
+    "slot": "backpack",
+    "description": "Kills grant +5% total weapon damage for 15 seconds. Stacks up to 5 times.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-versatile",
+    "name": "Versatile",
+    "slot": "backpack",
+    "description": "Swapping weapons grants +35% weapon damage at close range to the weapon you swap to, scaling down to +10% at maximum range. Duration: 5 seconds.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-concussion",
+    "name": "Concussion",
+    "slot": "backpack",
+    "description": "Headshots grant +15% weapon damage for 10 seconds. Marksman rifle or rifle kills reset the duration.",
+    "perfectVersion": null,
+    "metaRating": "B",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "talent-galvanize",
+    "name": "Galvanize",
+    "slot": "backpack",
+    "description": "Applying blind, ensnare, or confused to an enemy grants 40% bonus armor to you and allies within 10 meters.",
+    "perfectVersion": null,
+    "metaRating": "C",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]

@@ -1,0 +1,1007 @@
+[
+  {
+    "id": "weapon-type-assault-rifles",
+    "class": "Assault Rifles",
+    "coreBonus": "Weapon Damage (Health Damage)",
+    "archetypes": [
+      {
+        "id": "weapon-assault-rifles-pof-p416",
+        "name": "POF P416",
+        "type": "Assault Rifles",
+        "rpm": 850,
+        "magazine": 30,
+        "reloadSeconds": 2.34,
+        "optimalRangeMeters": 26,
+        "variants": [
+          "Military P416",
+          "Custom P416 G3"
+        ],
+        "namedVariant": "Glory Daze",
+        "exoticVariant": "Eagle Bearer",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-assault-rifles-m4",
+        "name": "M4",
+        "type": "Assault Rifles",
+        "rpm": 850,
+        "magazine": 30,
+        "reloadSeconds": 2.24,
+        "optimalRangeMeters": 31,
+        "variants": [
+          "Police M4",
+          "Lexington (Named)",
+          "Pyromaniac (Named)"
+        ],
+        "namedVariant": "Lexington",
+        "exoticVariant": null,
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-assault-rifles-g36",
+        "name": "G36",
+        "type": "Assault Rifles",
+        "rpm": 750,
+        "magazine": 30,
+        "reloadSeconds": 2.34,
+        "optimalRangeMeters": 35,
+        "variants": [
+          "Military G36",
+          "G36C",
+          "G36 Enhanced",
+          "Born Great (Named)"
+        ],
+        "namedVariant": "Born Great",
+        "exoticVariant": null,
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-assault-rifles-ak-m",
+        "name": "AK-M",
+        "type": "Assault Rifles",
+        "rpm": 600,
+        "magazine": 30,
+        "reloadSeconds": 2.5,
+        "optimalRangeMeters": 35,
+        "variants": [
+          "AK-M",
+          "Military AK-M",
+          "Black Market AK-M"
+        ],
+        "namedVariant": null,
+        "exoticVariant": "Merciless",
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-assault-rifles-pdr-c",
+        "name": "PDR-C",
+        "type": "Assault Rifles",
+        "rpm": 700,
+        "magazine": 30,
+        "reloadSeconds": 2.04,
+        "optimalRangeMeters": 31,
+        "variants": [
+          "PDR-C",
+          "Test Subject (Named)"
+        ],
+        "namedVariant": "Test Subject",
+        "exoticVariant": "Capacitor",
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-assault-rifles-lvoa-c-rifle-platform",
+        "name": "LVOA-C (Rifle Platform)",
+        "type": "Assault Rifles",
+        "rpm": 380,
+        "magazine": 30,
+        "reloadSeconds": 2.08,
+        "optimalRangeMeters": 55,
+        "variants": [
+          "LVOA-C",
+          "Surge (Named)"
+        ],
+        "namedVariant": "Surge",
+        "exoticVariant": "St. Elmo's Engine",
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-assault-rifles-chameleon",
+        "name": "Chameleon",
+        "type": "Assault Rifles",
+        "rpm": 900,
+        "magazine": 30,
+        "reloadSeconds": 2.4,
+        "optimalRangeMeters": 20,
+        "variants": [],
+        "namedVariant": null,
+        "exoticVariant": "Chameleon",
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-assault-rifles-fal-sa-58",
+        "name": "FAL SA-58",
+        "type": "Assault Rifles",
+        "rpm": 450,
+        "magazine": 20,
+        "reloadSeconds": 2.8,
+        "optimalRangeMeters": 32,
+        "variants": [
+          "FAL",
+          "FAL SA-58",
+          "FAL SA-58 Para",
+          "Goalie (Named)"
+        ],
+        "namedVariant": "Goalie",
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "weapon-type-submachine-guns",
+    "class": "Submachine Guns",
+    "coreBonus": "Critical Hit Chance",
+    "archetypes": [
+      {
+        "id": "weapon-submachine-guns-sig-mpx",
+        "name": "SIG MPX",
+        "type": "Submachine Guns",
+        "rpm": 850,
+        "magazine": 30,
+        "reloadSeconds": 2.09,
+        "optimalRangeMeters": 22,
+        "variants": [
+          "MPX",
+          "MPX (Specialized)",
+          "The Apartment (Named)",
+          "Safety Distance (Named)"
+        ],
+        "namedVariant": "The Apartment",
+        "exoticVariant": "Backfire",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-submachine-guns-cmmg-banshee",
+        "name": "CMMG Banshee",
+        "type": "Submachine Guns",
+        "rpm": 900,
+        "magazine": 32,
+        "reloadSeconds": 1.92,
+        "optimalRangeMeters": 21,
+        "variants": [
+          "CMMG Banshee",
+          "The Grudge (Named)"
+        ],
+        "namedVariant": "The Grudge",
+        "exoticVariant": "Lady Death",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-submachine-guns-p90",
+        "name": "P90",
+        "type": "Submachine Guns",
+        "rpm": 1100,
+        "magazine": 50,
+        "reloadSeconds": 1.57,
+        "optimalRangeMeters": 21,
+        "variants": [
+          "P90",
+          "Emeline's Guard (Named)"
+        ],
+        "namedVariant": "Emeline's Guard",
+        "exoticVariant": "The Chatterbox",
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-submachine-guns-mp7",
+        "name": "MP7",
+        "type": "Submachine Guns",
+        "rpm": 950,
+        "magazine": 40,
+        "reloadSeconds": 1.6,
+        "optimalRangeMeters": 21,
+        "variants": [
+          "MP7",
+          "Swap Chain (Named)"
+        ],
+        "namedVariant": "Swap Chain",
+        "exoticVariant": "Oxpecker",
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-submachine-guns-pp-19",
+        "name": "PP-19",
+        "type": "Submachine Guns",
+        "rpm": 700,
+        "magazine": 53,
+        "reloadSeconds": 1.46,
+        "optimalRangeMeters": 21,
+        "variants": [
+          "PP-19",
+          "Enhanced PP-19",
+          "Cold Relations (Named)"
+        ],
+        "namedVariant": "Cold Relations",
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-submachine-guns-mp5",
+        "name": "MP5",
+        "type": "Submachine Guns",
+        "rpm": 800,
+        "magazine": 30,
+        "reloadSeconds": 2.1,
+        "optimalRangeMeters": 20,
+        "variants": [
+          "Navy MP5 N",
+          "Burst Fire MP-5 A4",
+          "MP5 ST"
+        ],
+        "namedVariant": null,
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-submachine-guns-aug-a3-para",
+        "name": "AUG A3 Para",
+        "type": "Submachine Guns",
+        "rpm": 700,
+        "magazine": 25,
+        "reloadSeconds": 2,
+        "optimalRangeMeters": 22,
+        "variants": [
+          "AUG A3 Para XS",
+          "Tactical AUG A3 Para",
+          "Tactical AUG A3 M"
+        ],
+        "namedVariant": null,
+        "exoticVariant": null,
+        "metaTier": "C",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "weapon-type-light-machine-guns",
+    "class": "Light Machine Guns",
+    "coreBonus": "Damage to Targets out of Cover",
+    "archetypes": [
+      {
+        "id": "weapon-light-machine-guns-m249-b-mk46",
+        "name": "M249 B / Mk46",
+        "type": "Light Machine Guns",
+        "rpm": 850,
+        "magazine": 100,
+        "reloadSeconds": 4.54,
+        "optimalRangeMeters": 35,
+        "variants": [
+          "M249 B",
+          "Military Mk46",
+          "Black Friday (Named)",
+          "The Stinger (Named)"
+        ],
+        "namedVariant": "Black Friday",
+        "exoticVariant": "Pestilence",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-light-machine-guns-mg5",
+        "name": "MG5",
+        "type": "Light Machine Guns",
+        "rpm": 800,
+        "magazine": 50,
+        "reloadSeconds": 2.96,
+        "optimalRangeMeters": 35,
+        "variants": [
+          "MG5",
+          "Infantry MG5",
+          "Big Show (Named)",
+          "Sleipnir (Named)"
+        ],
+        "namedVariant": "Big Show",
+        "exoticVariant": "Iron Lung",
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-light-machine-guns-m60",
+        "name": "M60",
+        "type": "Light Machine Guns",
+        "rpm": 600,
+        "magazine": 100,
+        "reloadSeconds": 3.75,
+        "optimalRangeMeters": 40,
+        "variants": [
+          "Classic M60",
+          "Military M60 E4",
+          "Black Market M60 E6",
+          "Good Times (Named)"
+        ],
+        "namedVariant": "Good Times",
+        "exoticVariant": null,
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-light-machine-guns-negev-ng7",
+        "name": "Negev NG7",
+        "type": "Light Machine Guns",
+        "rpm": 850,
+        "magazine": 150,
+        "reloadSeconds": 5.2,
+        "optimalRangeMeters": 35,
+        "variants": [
+          "Negev NG7",
+          "Black Market Negev NG7"
+        ],
+        "namedVariant": null,
+        "exoticVariant": "Bullet King",
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "weapon-type-rifles",
+    "class": "Rifles",
+    "coreBonus": "Critical Hit Damage",
+    "archetypes": [
+      {
+        "id": "weapon-rifles-1886",
+        "name": "1886",
+        "type": "Rifles",
+        "rpm": 100,
+        "magazine": 8,
+        "reloadSeconds": 3.47,
+        "optimalRangeMeters": 35,
+        "variants": [
+          "1886",
+          "The Virginian (Named)"
+        ],
+        "namedVariant": "The Virginian",
+        "exoticVariant": "Diamondback",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-rifles-sig-716",
+        "name": "SIG 716",
+        "type": "Rifles",
+        "rpm": 320,
+        "magazine": 20,
+        "reloadSeconds": 2.68,
+        "optimalRangeMeters": 45,
+        "variants": [
+          "SIG 716",
+          "SIG 716 CQB",
+          "Artist's Tool (Named)"
+        ],
+        "namedVariant": "Artist's Tool",
+        "exoticVariant": null,
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-rifles-lvoa-c",
+        "name": "LVOA-C",
+        "type": "Rifles",
+        "rpm": 380,
+        "magazine": 30,
+        "reloadSeconds": 2.08,
+        "optimalRangeMeters": 55,
+        "variants": [
+          "LVOA-C",
+          "Surge (Named)"
+        ],
+        "namedVariant": "Surge",
+        "exoticVariant": "St. Elmo's Engine",
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-rifles-lightweight-m4",
+        "name": "Lightweight M4",
+        "type": "Rifles",
+        "rpm": 360,
+        "magazine": 30,
+        "reloadSeconds": 2.03,
+        "optimalRangeMeters": 55,
+        "variants": [
+          "Lightweight M4",
+          "Competition Lightweight M4"
+        ],
+        "namedVariant": null,
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-rifles-ak-m-rifle-merciless-ruthless",
+        "name": "AK-M Rifle (Merciless / Ruthless)",
+        "type": "Rifles",
+        "rpm": 400,
+        "magazine": 30,
+        "reloadSeconds": 2.17,
+        "optimalRangeMeters": 35,
+        "variants": [
+          "AK-M (base for exotic)"
+        ],
+        "namedVariant": null,
+        "exoticVariant": "Merciless / Ruthless",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-rifles-the-ravenous-custom-p416-g3-rifle",
+        "name": "The Ravenous (Custom P416 G3 Rifle)",
+        "type": "Rifles",
+        "rpm": 240,
+        "magazine": 60,
+        "reloadSeconds": 2.4,
+        "optimalRangeMeters": 50,
+        "variants": [],
+        "namedVariant": null,
+        "exoticVariant": "The Ravenous",
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-rifles-acr-ss",
+        "name": "ACR SS",
+        "type": "Rifles",
+        "rpm": 400,
+        "magazine": 30,
+        "reloadSeconds": 2.2,
+        "optimalRangeMeters": 50,
+        "variants": [
+          "ACR",
+          "ACR SS",
+          "Military ACR"
+        ],
+        "namedVariant": null,
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "weapon-type-marksman-rifles",
+    "class": "Marksman Rifles",
+    "coreBonus": "Headshot Damage",
+    "archetypes": [
+      {
+        "id": "weapon-marksman-rifles-m700-model-700",
+        "name": "M700 / Model 700",
+        "type": "Marksman Rifles",
+        "rpm": 55,
+        "magazine": 7,
+        "reloadSeconds": 7.05,
+        "optimalRangeMeters": 50,
+        "variants": [
+          "Model 700",
+          "M700 Tactical",
+          "M700 Carbon",
+          "Ekim's Long Stick (Named)",
+          "Brutus (Named)"
+        ],
+        "namedVariant": "Ekim's Long Stick",
+        "exoticVariant": null,
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-marksman-rifles-sr-1",
+        "name": "SR-1",
+        "type": "Marksman Rifles",
+        "rpm": 60,
+        "magazine": 5,
+        "reloadSeconds": 3.15,
+        "optimalRangeMeters": 50,
+        "variants": [
+          "SR-1",
+          "Designated Hitter (Named)",
+          "Adrestia SR-1 (Named, craft component)"
+        ],
+        "namedVariant": "Designated Hitter",
+        "exoticVariant": "Nemesis",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-marksman-rifles-m44",
+        "name": "M44",
+        "type": "Marksman Rifles",
+        "rpm": 55,
+        "magazine": 5,
+        "reloadSeconds": 4.2,
+        "optimalRangeMeters": 60,
+        "variants": [
+          "Classic M44 Carbine",
+          "Hunting M44 Carbine",
+          "Custom M44"
+        ],
+        "namedVariant": null,
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-marksman-rifles-m1a",
+        "name": "M1A",
+        "type": "Marksman Rifles",
+        "rpm": 180,
+        "magazine": 10,
+        "reloadSeconds": 3.5,
+        "optimalRangeMeters": 60,
+        "variants": [
+          "M1A",
+          "Military M1A",
+          "Classic M1A CQB",
+          "Blind Justice (Named)",
+          "Shield Splitter (Named)"
+        ],
+        "namedVariant": "Blind Justice",
+        "exoticVariant": null,
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-marksman-rifles-srs-a1",
+        "name": "SRS A1",
+        "type": "Marksman Rifles",
+        "rpm": 45,
+        "magazine": 10,
+        "reloadSeconds": 4,
+        "optimalRangeMeters": 50,
+        "variants": [
+          "SRS A1",
+          "Custom SRS",
+          "Hide and Seek (Named)"
+        ],
+        "namedVariant": "Hide and Seek",
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-marksman-rifles-g28",
+        "name": "G28",
+        "type": "Marksman Rifles",
+        "rpm": 180,
+        "magazine": 20,
+        "reloadSeconds": 2.5,
+        "optimalRangeMeters": 45,
+        "variants": [
+          "G28",
+          "Military G28",
+          "Future Perfect (Named)"
+        ],
+        "namedVariant": "Future Perfect",
+        "exoticVariant": null,
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-marksman-rifles-coil",
+        "name": "Coil",
+        "type": "Marksman Rifles",
+        "rpm": 60,
+        "magazine": 6,
+        "reloadSeconds": 3,
+        "optimalRangeMeters": 50,
+        "variants": [],
+        "namedVariant": null,
+        "exoticVariant": "Coil",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "weapon-type-shotguns",
+    "class": "Shotguns",
+    "coreBonus": "Melee Damage",
+    "archetypes": [
+      {
+        "id": "weapon-shotguns-spas-12",
+        "name": "SPAS-12",
+        "type": "Shotguns",
+        "rpm": 70,
+        "magazine": 8,
+        "reloadSeconds": 5.5,
+        "optimalRangeMeters": 16,
+        "variants": [
+          "SPAS-12",
+          "Thorn (Named)"
+        ],
+        "namedVariant": "Thorn",
+        "exoticVariant": "Sweet Dreams / Lullaby",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-shotguns-m870",
+        "name": "M870",
+        "type": "Shotguns",
+        "rpm": 75,
+        "magazine": 5,
+        "reloadSeconds": 3.35,
+        "optimalRangeMeters": 11,
+        "variants": [
+          "M870 Express",
+          "Military M870",
+          "Custom M870 MCS",
+          "Cuelébre (Named)"
+        ],
+        "namedVariant": "Cuelébre",
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-shotguns-ksg",
+        "name": "KSG",
+        "type": "Shotguns",
+        "rpm": 70,
+        "magazine": 12,
+        "reloadSeconds": 7.99,
+        "optimalRangeMeters": 16,
+        "variants": [
+          "KSG Shotgun",
+          "The Send-Off (Named)"
+        ],
+        "namedVariant": "The Send-Off",
+        "exoticVariant": "Overlord",
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-shotguns-sasg-12-super-90",
+        "name": "SASG-12 / Super 90",
+        "type": "Shotguns",
+        "rpm": 180,
+        "magazine": 8,
+        "reloadSeconds": 3.2,
+        "optimalRangeMeters": 16,
+        "variants": [
+          "SASG-12",
+          "SASG-12 S",
+          "Kard Custom (Named)"
+        ],
+        "namedVariant": "Kard Custom",
+        "exoticVariant": null,
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-shotguns-double-barrel-shotgun",
+        "name": "Double Barrel Shotgun",
+        "type": "Shotguns",
+        "rpm": 200,
+        "magazine": 2,
+        "reloadSeconds": 2.2,
+        "optimalRangeMeters": 11,
+        "variants": [
+          "Double Barrel Shotgun",
+          "Sawed-Off Shotgun"
+        ],
+        "namedVariant": null,
+        "exoticVariant": "Cassidy / Defiler",
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "weapon-type-pistols",
+    "class": "Pistols",
+    "coreBonus": "Damage to Targets out of Cover (varies by variant)",
+    "archetypes": [
+      {
+        "id": "weapon-pistols-d50",
+        "name": "D50",
+        "type": "Pistols",
+        "rpm": 200,
+        "magazine": 8,
+        "reloadSeconds": 2.24,
+        "optimalRangeMeters": 18,
+        "variants": [
+          "D50",
+          "Survivalist D50 (Named)"
+        ],
+        "namedVariant": "Survivalist D50",
+        "exoticVariant": "Liberty",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-pistols-model-686-magnum",
+        "name": "Model 686 Magnum",
+        "type": "Pistols",
+        "rpm": 160,
+        "magazine": 6,
+        "reloadSeconds": 2.54,
+        "optimalRangeMeters": 16,
+        "variants": [
+          "Police 686 Magnum",
+          "586 Magnum",
+          "The Harvest (Named)",
+          "Orbit (Named)",
+          "Prophet (Named)"
+        ],
+        "namedVariant": "The Harvest",
+        "exoticVariant": "Regulus",
+        "metaTier": "S",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-pistols-m9",
+        "name": "M9",
+        "type": "Pistols",
+        "rpm": 350,
+        "magazine": 15,
+        "reloadSeconds": 1.9,
+        "optimalRangeMeters": 16,
+        "variants": [
+          "Military M9",
+          "Officer's M9 A1"
+        ],
+        "namedVariant": null,
+        "exoticVariant": "Mosquito",
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-pistols-m1911",
+        "name": "M1911",
+        "type": "Pistols",
+        "rpm": 310,
+        "magazine": 7,
+        "reloadSeconds": 2.24,
+        "optimalRangeMeters": 12,
+        "variants": [
+          "M1911",
+          "Tactical M1911",
+          "M45A1",
+          "Mozambique Special (Named)"
+        ],
+        "namedVariant": "Mozambique Special",
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-pistols-93r",
+        "name": "93R",
+        "type": "Pistols",
+        "rpm": 1100,
+        "magazine": 20,
+        "reloadSeconds": 1.6,
+        "optimalRangeMeters": 19,
+        "variants": [
+          "93R",
+          "Custom 93R"
+        ],
+        "namedVariant": null,
+        "exoticVariant": null,
+        "metaTier": "A",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-pistols-pf45",
+        "name": "PF45",
+        "type": "Pistols",
+        "rpm": 320,
+        "magazine": 15,
+        "reloadSeconds": 2,
+        "optimalRangeMeters": 16,
+        "variants": [
+          "PF45",
+          "Military PF45",
+          "Banshee (Named)"
+        ],
+        "namedVariant": "Banshee",
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "weapon-pistols-p320-xcompact",
+        "name": "P320 XCompact",
+        "type": "Pistols",
+        "rpm": 400,
+        "magazine": 17,
+        "reloadSeconds": 1.8,
+        "optimalRangeMeters": 16,
+        "variants": [
+          "P320 XCompact",
+          "Tactical P320 XCompact"
+        ],
+        "namedVariant": null,
+        "exoticVariant": null,
+        "metaTier": "B",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]

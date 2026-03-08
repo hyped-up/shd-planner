@@ -1,0 +1,719 @@
+[
+  {
+    "id": "brand-5-11-tactical",
+    "name": "5.11 Tactical",
+    "bonuses": {
+      "1pc": "+30% Health",
+      "2pc": "+30% Incoming Repairs",
+      "3pc": "+30% Hazard Protection"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "tank",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-airaldi-holdings",
+    "name": "Airaldi Holdings",
+    "bonuses": {
+      "1pc": "+10% Marksman Rifle Damage",
+      "2pc": "+13% Headshot Damage",
+      "3pc": "+5% Damage to Armor"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-alps-summit-armament",
+    "name": "Alps Summit Armament",
+    "bonuses": {
+      "1pc": "+18% Skill Repair",
+      "2pc": "+30% Skill Duration",
+      "3pc": "+30% Skill Haste"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "skill",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-badger-tuff",
+    "name": "Badger Tuff",
+    "bonuses": {
+      "1pc": "+10% Shotgun Damage",
+      "2pc": "+5% Total Armor",
+      "3pc": "+15% Armor on Kill"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "gloves"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-belstone-armory",
+    "name": "Belstone Armory",
+    "bonuses": {
+      "1pc": "+1% Armor Regen",
+      "2pc": "+10% Armor on Kill",
+      "3pc": "+45% Incoming Repairs"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "tank",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-brazos-de-arcabuz",
+    "name": "Brazos de Arcabuz",
+    "bonuses": {
+      "1pc": "+10% Skill Haste",
+      "2pc": "+1 Skill Tier",
+      "3pc": "+50% Magazine Size"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "hybrid",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-ceska-vyroba-s-r-o",
+    "name": "Česká Výroba S.R.O.",
+    "bonuses": {
+      "1pc": "+8% Critical Hit Chance",
+      "2pc": "+20% Hazard Protection",
+      "3pc": "+90% Health"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-china-light-industries-corporation",
+    "name": "China Light Industries Corporation",
+    "bonuses": {
+      "1pc": "+15% Explosive Damage",
+      "2pc": "+20% Skill Haste",
+      "3pc": "+25% Status Effects"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "skill",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-douglas-harding",
+    "name": "Douglas & Harding",
+    "bonuses": {
+      "1pc": "+20% Pistol Damage",
+      "2pc": "+30% Stability",
+      "3pc": "+50% Accuracy"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-electrique",
+    "name": "Electrique",
+    "bonuses": {
+      "1pc": "+10% Status Effects",
+      "2pc": "+20% Shock Resistance",
+      "3pc": "+30% SMG Damage"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-empress-international",
+    "name": "Empress International",
+    "bonuses": {
+      "1pc": "+10% Skill Health",
+      "2pc": "+10% Skill Damage",
+      "3pc": "+8% Skill Efficiency"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "skill",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-fenris-group-ab",
+    "name": "Fenris Group AB",
+    "bonuses": {
+      "1pc": "+10% Assault Rifle Damage",
+      "2pc": "+30% Reload Speed",
+      "3pc": "+50% Stability"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-gila-guard",
+    "name": "Gila Guard",
+    "bonuses": {
+      "1pc": "+5% Total Armor",
+      "2pc": "+60% Health",
+      "3pc": "+2% Armor Regeneration"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "tank",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-golan-gear-ltd",
+    "name": "Golan Gear Ltd.",
+    "bonuses": {
+      "1pc": "+10% Status Effects",
+      "2pc": "+1.5% Armor Regeneration",
+      "3pc": "+10% Total Armor"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "hybrid",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-grupo-sombra-s-a",
+    "name": "Grupo Sombra S.A.",
+    "bonuses": {
+      "1pc": "+13% Critical Hit Damage",
+      "2pc": "+20% Explosives Damage",
+      "3pc": "+13% Headshot Damage"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-habsburg-guard",
+    "name": "Habsburg Guard",
+    "bonuses": {
+      "1pc": "+13% Headshot Damage",
+      "2pc": "+20% Marksman Rifle Damage",
+      "3pc": "+25% Status Effects"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-hana-u-corporation",
+    "name": "Hana-U Corporation",
+    "bonuses": {
+      "1pc": "+10% Skill Haste",
+      "2pc": "+10% Skill Damage",
+      "3pc": "+15% Weapon Damage"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "hybrid",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-imminence-armaments",
+    "name": "Imminence Armaments",
+    "bonuses": {
+      "1pc": "+5% Weapon Damage",
+      "2pc": "+100% Increased Threat",
+      "3pc": "+60% Pistol Damage"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "tank",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-legatus-s-p-a",
+    "name": "Legatus S.p.A.",
+    "bonuses": {
+      "1pc": "+30% Swap Speed",
+      "2pc": "+70% Optimal Range",
+      "3pc": "+15% Weapon Damage"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-lengmo",
+    "name": "Lengmo",
+    "bonuses": {
+      "1pc": "+20% Explosive Resistance",
+      "2pc": "+20% Skill Health",
+      "3pc": "+30% LMG Damage"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-murakami-industries",
+    "name": "Murakami Industries",
+    "bonuses": {
+      "1pc": "+15% Skill Duration",
+      "2pc": "+35% Skill Repair",
+      "3pc": "+18% Skill Damage"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "skill",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-overlord-armaments",
+    "name": "Overlord Armaments",
+    "bonuses": {
+      "1pc": "+10% Rifle Damage",
+      "2pc": "+20% Accuracy",
+      "3pc": "+10% Weapon Handling"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-palisade-steelworks",
+    "name": "Palisade Steelworks",
+    "bonuses": {
+      "1pc": "+10% Armor on Kill",
+      "2pc": "+60% Health",
+      "3pc": "+1 Skill Tier"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "hybrid",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-petrov-defense-group",
+    "name": "Petrov Defense Group",
+    "bonuses": {
+      "1pc": "+10% LMG Damage",
+      "2pc": "+10% Weapon Handling",
+      "3pc": "+20% Ammo Capacity"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-providence-defense",
+    "name": "Providence Defense",
+    "bonuses": {
+      "1pc": "+13% Headshot Damage",
+      "2pc": "+8% Critical Hit Chance",
+      "3pc": "+13% Critical Hit Damage"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-richter-kaiser-gmbh",
+    "name": "Richter & Kaiser GmbH",
+    "bonuses": {
+      "1pc": "+15% Extra Incoming Repairs",
+      "2pc": "+25% Explosive Resistance",
+      "3pc": "+40% Skill Repair"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "holster"
+    ],
+    "coreFocus": "skill",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-shiny-monkey-gear",
+    "name": "Shiny Monkey Gear",
+    "bonuses": {
+      "1pc": "+15% Skill Duration",
+      "2pc": "+5% Skill Efficiency",
+      "3pc": "+52% Repair Skills"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "skill",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-sokolov-concern",
+    "name": "Sokolov Concern",
+    "bonuses": {
+      "1pc": "+10% SMG Damage",
+      "2pc": "+13% Critical Hit Damage",
+      "3pc": "+8% Critical Hit Chance"
+    },
+    "availableSlots": [
+      "mask",
+      "chest",
+      "kneepads"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-uzina-getica",
+    "name": "Uzina Getica",
+    "bonuses": {
+      "1pc": "+5% Armor",
+      "2pc": "+10% Armor on Kill",
+      "3pc": "+30% Hazard Protection"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "tank",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-walker-harris-co",
+    "name": "Walker, Harris & Co.",
+    "bonuses": {
+      "1pc": "+5% Weapon Damage",
+      "2pc": "+5% Damage to Armor",
+      "3pc": "+10% Damage to Health"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-yaahl-gear",
+    "name": "Yaahl Gear",
+    "bonuses": {
+      "1pc": "+10% Hazard Protection",
+      "2pc": "+10% Weapon Damage",
+      "3pc": "+40% Pulse Resistance"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "utility",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-wyvern-wear",
+    "name": "Wyvern Wear",
+    "bonuses": {
+      "1pc": "+8% Skill Damage",
+      "2pc": "+18% Status Effects",
+      "3pc": "+45% Skill Duration"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "skill",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "brand-zwiadowka-sp-z-o-o",
+    "name": "Zwiadowka SP. z o.o.",
+    "bonuses": {
+      "1pc": "+15% Magazine Size",
+      "2pc": "+20% Rifle Damage",
+      "3pc": "+30% Weapon Handling"
+    },
+    "availableSlots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "coreFocus": "dps",
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]

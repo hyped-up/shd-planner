@@ -1,0 +1,192 @@
+[
+  {
+    "id": "spec-survivalist",
+    "name": "Survivalist",
+    "signatureWeapon": {
+      "name": "Explosive-Tipped Crossbow",
+      "description": "A silent crossbow that fires explosive bolts. Can penetrate cover and detonate on impact or after a short delay. Low noise profile makes it suitable for tactical engagements."
+    },
+    "uniqueSkill": "Mender Seeker Mine",
+    "grenade": "Incendiary Grenade — applies Burn status effect to enemies in the blast area",
+    "keyPassives": [
+      "E.M.I. — 15% increased Assault Rifle damage",
+      "Running The Gun — 15% increased Shotgun damage",
+      "Gunslinger — 10% increased Sidearm damage",
+      "Signature Weapon Damage — up to 145% increased signature weapon damage (multi-tier)",
+      "Survivalist Tactical Link — teammates deal 10% bonus damage to targets affected by status effects",
+      "Elite Defense — 20% increased Protection from Elites",
+      "Triage Specialist — 15% increased outgoing healing",
+      "Crunch Time — 10% skill cooldown reduction while in cover"
+    ],
+    "bonusSkillTier": false,
+    "weaponDamageBonus": "Assault Rifles (+15%), Shotguns (+15%)",
+    "bestFor": [
+      "status effect builds",
+      "assault rifle DPS",
+      "shotgun CQC builds",
+      "group support and debuffing",
+      "Mender Mine healing synergy"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "spec-demolitionist",
+    "name": "Demolitionist",
+    "signatureWeapon": {
+      "name": "M32A1 Multi-shot Grenade Launcher",
+      "description": "A six-round revolver-style grenade launcher that fires explosive grenades. Deals heavy area damage and can knock enemies out of cover. Each hit restores ammo to the signature weapon bar."
+    },
+    "uniqueSkill": "Artillery Turret",
+    "grenade": "Fragmentation Grenade — applies Bleed status effect on detonation",
+    "keyPassives": [
+      "Spray and Pray — 15% increased SMG damage",
+      "Onslaught — 15% increased LMG damage",
+      "Gunslinger — 10% increased Sidearm damage",
+      "Signature Weapon Damage — up to 145% increased signature weapon damage (multi-tier)",
+      "Explosive Ordnance — 25% increased Explosive damage",
+      "Demolitionist Tactical Link — teammates gain 5% damage bonus to targets out of cover",
+      "Incombustible — 20% increased Burn resistance"
+    ],
+    "bonusSkillTier": false,
+    "weaponDamageBonus": "SMGs (+15%), LMGs (+15%)",
+    "bestFor": [
+      "LMG DPS builds",
+      "SMG builds",
+      "explosive damage builds",
+      "area denial",
+      "Artillery Turret area control"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "spec-sharpshooter",
+    "name": "Sharpshooter",
+    "signatureWeapon": {
+      "name": "TAC-50 C Rifle",
+      "description": "A .50 caliber anti-material sniper rifle capable of penetrating multiple targets with a single shot. Deals extreme damage and can destroy enemy equipment in one hit. Awarded as the Sharpshooter's primary signature weapon."
+    },
+    "uniqueSkill": "Tactician Drone",
+    "grenade": "Flashbang Grenade — blinds and stuns enemies in the blast radius",
+    "keyPassives": [
+      "One In The Head — 25% increased Headshot damage",
+      "Sharpshooter Tactical Link — all teammates closer to the enemy than the Sharpshooter gain 10% Headshot damage bonus",
+      "Deft Hands — 30% increased Reload Speed",
+      "Breath Control — 30% increased Weapon Stability",
+      "Gunslinger — 10% increased Sidearm damage",
+      "Signature Weapon Damage — up to 145% increased signature weapon damage (multi-tier)"
+    ],
+    "bonusSkillTier": false,
+    "weaponDamageBonus": "Rifles and Marksman Rifles (+15%)",
+    "bestFor": [
+      "sniper builds",
+      "headshot damage builds",
+      "marksman rifle DPS",
+      "long-range combat",
+      "group headshot damage buffing"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "spec-gunner",
+    "name": "Gunner",
+    "signatureWeapon": {
+      "name": "Minigun",
+      "description": "A belt-fed, multi-barrel rotary machine gun with an extremely high rate of fire. While the signature weapon is active, each bullet hit restores 1% armor to the player, up to a maximum of 50%. Requires a spin-up period before reaching full fire rate."
+    },
+    "uniqueSkill": "Banshee Pulse",
+    "grenade": "Riot Foam Grenade — immobilizes enemies by covering them in adhesive foam (applies Ensnare)",
+    "keyPassives": [
+      "Incessant — 5% armor on kill (stacking with each tier)",
+      "Hardened Armor — armor kits restore 50% bonus armor on top of normal 100% repair for 10 seconds",
+      "Supply Line — generates 10% of total ammo pool every 60 seconds; gives teammates 5%",
+      "Signature Weapon Damage — up to 40% increased signature weapon damage per tier (4 tiers)",
+      "Gunner Tactical Link — (ammo and resilience focused team passive)",
+      "Armor per Minigun Bullet — each active bullet hit restores 1% armor up to 50% max"
+    ],
+    "bonusSkillTier": false,
+    "weaponDamageBonus": "LMGs are the primary pairing; minigun armor-on-hit mechanic rewards sustained fire with any weapon",
+    "bestFor": [
+      "LMG sustain builds",
+      "tank DPS builds",
+      "frontline sustained fire",
+      "minigun power fantasy",
+      "crowd control via Banshee Pulse"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "spec-technician",
+    "name": "Technician",
+    "signatureWeapon": {
+      "name": "P-017 Missile Launcher",
+      "description": "A guided missile launcher capable of locking onto and targeting up to 6 enemies simultaneously before firing a salvo. Each missile homes in on its designated target. Excellent for clearing multiple priority targets or eliminating enemy skill proxies."
+    },
+    "uniqueSkill": "Artificer Hive",
+    "grenade": "EMP Grenade — damages and disrupts enemy technology, applying Disrupt status effect to all electronics in the blast radius",
+    "keyPassives": [
+      "Amped — grants +1 Skill Tier (a defining and unique passive among all specializations)",
+      "Overclocked CPU — 10% increased Skill Damage",
+      "Dismantling — increased damage against robotic enemies (drones, dogs, Warhounds)",
+      "Emergency Patch — armor kits also repair and restore friendly skill proxies in range",
+      "Technician Tactical Link — teammates can benefit from Artificer Hive skill efficiency boost",
+      "Signature Weapon Damage — up to 145% increased signature weapon damage (multi-tier)"
+    ],
+    "bonusSkillTier": true,
+    "weaponDamageBonus": "Pistols/Sidearms (secondary focus); primary value is the +1 Skill Tier passive rather than weapon damage bonuses",
+    "bestFor": [
+      "skill builds at max skill tier",
+      "support and tech builds",
+      "hybrid weapon-skill builds needing extra skill tier",
+      "anti-robotics content",
+      "team skill buff compositions"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "spec-firewall",
+    "name": "Firewall",
+    "signatureWeapon": {
+      "name": "K8-JetStream Flamethrower",
+      "description": "A military-grade flamethrower with a 15-meter arc of fire. Deals continuous fire damage and applies Burn status effect to all enemies in the cone. Functions exclusively in conjunction with the Striker Shield, requiring it to be active to use the flamethrower effectively."
+    },
+    "uniqueSkill": "Striker Shield",
+    "grenade": "Cluster Grenade — splits on detonation into multiple smaller explosive bursts covering a wider area",
+    "keyPassives": [
+      "Firewall Tactical Link — allies deal 10% more damage to all enemies within 10 meters of the Firewall agent",
+      "Fiery Response — apply Burn to enemies within 5 meters when the Firewall agent's armor breaks",
+      "Firestarter Shotgun — increases the probability of enemies igniting on fire from shotgun shots",
+      "Ammo Acquisition — killing enemies within 10 meters adds 3 rounds to the signature weapon ammo bar",
+      "Shock Hardened Frame — adds a health bonus to the Striker Shield",
+      "High-Octane Gasoline Mixture — enhances flamethrower volatility and damage",
+      "Signature Weapon Damage — up to 40% increased signature weapon damage per tier (4 tiers)"
+    ],
+    "bonusSkillTier": false,
+    "weaponDamageBonus": "Shotguns (via Firestarter Shotgun passive) and close-range weapons benefit most from the 10m tactical link radius",
+    "bestFor": [
+      "close-quarters combat",
+      "burn/fire status builds",
+      "aggressive frontline play",
+      "team damage buffing in CQC",
+      "Striker Shield tank builds"
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]

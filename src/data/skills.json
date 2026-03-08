@@ -1,0 +1,1357 @@
+[
+  {
+    "id": "skill-pulse",
+    "name": "Pulse",
+    "description": "Emits a detection or disruption wave that interacts with hostiles and their equipment. Variants range from passive scanning to active electronic warfare.",
+    "variants": [
+      {
+        "id": "skill-pulse-scanner-pulse",
+        "name": "Scanner Pulse",
+        "damageType": "utility",
+        "scaling": "skill tier (increases scan radius and duration)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 30
+        },
+        "mods": [
+          "radius",
+          "duration",
+          "cooldown"
+        ],
+        "bestFor": [
+          "group play",
+          "threat assessment",
+          "any build"
+        ],
+        "notes": "Default starting variant. Highlights all hostiles on HUD in range. Strong in all content for situational awareness.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-pulse-remote-pulse",
+        "name": "Remote Pulse",
+        "damageType": "utility",
+        "scaling": "skill tier (increases scan radius and duration)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 30
+        },
+        "mods": [
+          "radius",
+          "duration",
+          "cooldown"
+        ],
+        "bestFor": [
+          "solo play",
+          "scouting ahead",
+          "any build"
+        ],
+        "notes": "Deployed as a throwable device rather than a personal pulse. Useful for scanning rooms before entry.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-pulse-jammer-pulse",
+        "name": "Jammer Pulse",
+        "damageType": "utility",
+        "scaling": "skill tier (increases disruption radius and duration)",
+        "cooldownRange": {
+          "tier0": 45,
+          "tier6": 22
+        },
+        "durationRange": {
+          "tier0": 8,
+          "tier6": 14
+        },
+        "mods": [
+          "radius",
+          "duration",
+          "cooldown"
+        ],
+        "bestFor": [
+          "tech-heavy content",
+          "Black Tusk enemies",
+          "group support"
+        ],
+        "notes": "Applies Disrupt status to all hostile electronics in radius. Shuts down enemy turrets, drones, and skills. Invaluable in endgame content against Black Tusk.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-pulse-banshee-pulse",
+        "name": "Banshee Pulse",
+        "damageType": "utility",
+        "scaling": "skill tier (increases range and Disorient duration)",
+        "cooldownRange": {
+          "tier0": 40,
+          "tier6": 20
+        },
+        "durationRange": {
+          "tier0": 6,
+          "tier6": 12
+        },
+        "mods": [
+          "radius",
+          "duration",
+          "cooldown"
+        ],
+        "bestFor": [
+          "crowd control",
+          "Gunner specialization builds"
+        ],
+        "notes": "Exclusive to Gunner specialization. Ignores cover geometry and applies Disorient, causing enemies to stumble and fire randomly. Powerful crowd control tool.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-pulse-achilles-pulse",
+        "name": "Achilles Pulse",
+        "damageType": "utility",
+        "scaling": "skill tier (increases damage bonus to marked target)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 15,
+          "tier6": 25
+        },
+        "mods": [
+          "duration",
+          "cooldown",
+          "damage_bonus"
+        ],
+        "bestFor": [
+          "DPS builds",
+          "elite and named enemy focus",
+          "group play"
+        ],
+        "notes": "Season 4 reward variant. Marks a single target and highlights weakpoints; headshots to weakpoints deal amplified damage. Excellent for boss encounters.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-turret",
+    "name": "Turret",
+    "description": "A deployable stationary weapon system that automatically targets and engages hostiles. Variants cover multiple damage types from ballistic to incendiary.",
+    "variants": [
+      {
+        "id": "skill-turret-assault-turret",
+        "name": "Assault Turret",
+        "damageType": "ballistic",
+        "scaling": "skill tier (increases damage, health, and target acquisition speed)",
+        "cooldownRange": {
+          "tier0": 90,
+          "tier6": 45
+        },
+        "durationRange": {
+          "tier0": 180,
+          "tier6": 300
+        },
+        "mods": [
+          "damage",
+          "health",
+          "duration",
+          "ammo"
+        ],
+        "bestFor": [
+          "skill builds",
+          "area control",
+          "solo play"
+        ],
+        "notes": "Armed with an SMG. Most versatile turret variant. Automatically acquires and engages nearby targets. Strong at skill tier 6 where damage becomes significant.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-turret-incinerator-turret",
+        "name": "Incinerator Turret",
+        "damageType": "fire",
+        "scaling": "skill tier (increases burn damage and radius)",
+        "cooldownRange": {
+          "tier0": 90,
+          "tier6": 45
+        },
+        "durationRange": {
+          "tier0": 180,
+          "tier6": 300
+        },
+        "mods": [
+          "damage",
+          "health",
+          "duration",
+          "burn_duration"
+        ],
+        "bestFor": [
+          "status effect builds",
+          "crowd control",
+          "Burn synergy"
+        ],
+        "notes": "Short-range flamethrower. Applies Burn status to enemies in cone. Pairs well with fire damage amplification gear. Limited by short range.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-turret-sniper-turret",
+        "name": "Sniper Turret",
+        "damageType": "ballistic",
+        "scaling": "skill tier (increases headshot damage and effective range)",
+        "cooldownRange": {
+          "tier0": 90,
+          "tier6": 45
+        },
+        "durationRange": {
+          "tier0": 180,
+          "tier6": 300
+        },
+        "mods": [
+          "damage",
+          "health",
+          "duration",
+          "headshot_damage"
+        ],
+        "bestFor": [
+          "player-directed fire",
+          "elite sniping",
+          "skill builds"
+        ],
+        "notes": "Manually aimed with marksman rifle. Requires direct player input to fire. Low rate of fire but high single-shot damage. Best used against priority targets.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-turret-artillery-turret",
+        "name": "Artillery Turret",
+        "damageType": "explosive",
+        "scaling": "skill tier (increases mortar damage and blast radius)",
+        "cooldownRange": {
+          "tier0": 90,
+          "tier6": 45
+        },
+        "durationRange": {
+          "tier0": 180,
+          "tier6": 300
+        },
+        "mods": [
+          "damage",
+          "health",
+          "duration",
+          "blast_radius"
+        ],
+        "bestFor": [
+          "area denial",
+          "Demolitionist specialization",
+          "group DPS"
+        ],
+        "notes": "Exclusive to Demolitionist specialization. Fires explosive mortars at targeted locations. Excellent area denial and AoE damage. The Demolitionist Tactical Link amplifies this.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-seeker-mine",
+    "name": "Seeker Mine",
+    "description": "A rolling self-propelled device that seeks out targets or allies. Can deal damage, apply status effects, or provide healing depending on variant.",
+    "variants": [
+      {
+        "id": "skill-seeker-mine-explosive-seeker-mine",
+        "name": "Explosive Seeker Mine",
+        "damageType": "explosive",
+        "scaling": "skill tier (increases damage and blast radius)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "damage",
+          "blast_radius",
+          "proximity_fuse"
+        ],
+        "bestFor": [
+          "DPS",
+          "status effect builds",
+          "area burst damage"
+        ],
+        "notes": "Tracks nearest enemy and detonates on contact, also applies Bleed. High burst damage at skill tier 6. Can be combo'd with other status effects for amplified damage.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-seeker-mine-airburst-seeker-mine",
+        "name": "Airburst Seeker Mine",
+        "damageType": "fire",
+        "scaling": "skill tier (increases burn damage and radius)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "damage",
+          "blast_radius",
+          "burn_duration"
+        ],
+        "bestFor": [
+          "Burn builds",
+          "crowd control",
+          "status effect procs"
+        ],
+        "notes": "Detonates in the air above the target, raining fire and applying Burn to enemies in the affected area. Good for breaking enemy cover.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-seeker-mine-cluster-seeker-mine",
+        "name": "Cluster Seeker Mine",
+        "damageType": "explosive",
+        "scaling": "skill tier (increases number of submines and damage per mine)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "damage",
+          "blast_radius",
+          "cluster_count"
+        ],
+        "bestFor": [
+          "crowd control",
+          "grouped enemies",
+          "AoE builds"
+        ],
+        "notes": "Splits into multiple smaller mines that each seek individual targets. Best against tightly grouped enemies. Damage per individual mine is lower than Explosive variant.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-seeker-mine-mender-seeker-mine",
+        "name": "Mender Seeker Mine",
+        "damageType": "utility",
+        "scaling": "skill tier (increases armor repaired per tick)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 35
+        },
+        "mods": [
+          "repair_amount",
+          "duration",
+          "radius"
+        ],
+        "bestFor": [
+          "support builds",
+          "Survivalist specialization",
+          "group healing"
+        ],
+        "notes": "Exclusive to Survivalist specialization. Follows injured allies and releases healing gas to repair armor. Excellent for group content. The Survivalist Tactical Link boosts this further with status effect synergies.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-ballistic-shield",
+    "name": "Ballistic Shield",
+    "description": "A deployable defensive shield that absorbs incoming fire. Variants differ in coverage, weapon compatibility, and offensive capability.",
+    "variants": [
+      {
+        "id": "skill-ballistic-shield-bulwark-shield",
+        "name": "Bulwark Shield",
+        "damageType": "utility",
+        "scaling": "skill tier (increases shield health)",
+        "cooldownRange": {
+          "tier0": 40,
+          "tier6": 20
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "health",
+          "pistol_damage",
+          "cooldown"
+        ],
+        "bestFor": [
+          "tank builds",
+          "frontline defense",
+          "absorbing damage"
+        ],
+        "notes": "Full-body coverage shield. Restricts user to sidearms only. Highest health pool of non-specialist shields. After the cooldown reduction patch, base cooldown lowered from 240s to 40s.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-ballistic-shield-crusader-shield",
+        "name": "Crusader Shield",
+        "damageType": "utility",
+        "scaling": "skill tier (increases shield health)",
+        "cooldownRange": {
+          "tier0": 40,
+          "tier6": 20
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "health",
+          "weapon_damage",
+          "cooldown"
+        ],
+        "bestFor": [
+          "offensive shield builds",
+          "pushing positions",
+          "solo play"
+        ],
+        "notes": "Allows use of primary weapons while shielding. Head and legs remain exposed. Balances offense and defense. Best choice for players who want shield functionality without giving up primary weapons.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-ballistic-shield-deflector-shield",
+        "name": "Deflector Shield",
+        "damageType": "ballistic",
+        "scaling": "skill tier (increases reflected damage and shield health)",
+        "cooldownRange": {
+          "tier0": 40,
+          "tier6": 20
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "health",
+          "ricochet_damage",
+          "cooldown"
+        ],
+        "bestFor": [
+          "skill builds",
+          "turning enemy damage against them"
+        ],
+        "notes": "Ricochets incoming bullets at highlighted enemy targets. At high skill tier the reflected damage becomes substantial. Unique mechanic that rewards aggressive positioning.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-ballistic-shield-striker-shield",
+        "name": "Striker Shield",
+        "damageType": "utility",
+        "scaling": "skill tier (increases damage buff to self and allies)",
+        "cooldownRange": {
+          "tier0": 40,
+          "tier6": 20
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "health",
+          "damage_buff",
+          "cooldown"
+        ],
+        "bestFor": [
+          "Firewall specialization",
+          "group DPS buffing",
+          "close-quarters"
+        ],
+        "notes": "Exclusive to Firewall specialization. Compatible with the K8-JetStream Flamethrower signature weapon. Provides a stacking damage buff to the user and allies who take cover behind the shield based on enemy count in front.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-chem-launcher",
+    "name": "Chem Launcher",
+    "description": "A grenade launcher that fires canisters of chemical payloads. Variants cover support, crowd control, damage over time, and corrosive effects.",
+    "variants": [
+      {
+        "id": "skill-chem-launcher-reinforcer-chem-launcher",
+        "name": "Reinforcer Chem Launcher",
+        "damageType": "utility",
+        "scaling": "skill tier (increases armor repair amount per charge)",
+        "cooldownRange": {
+          "tier0": 18,
+          "tier6": 8
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "repair_amount",
+          "charge_count",
+          "radius"
+        ],
+        "bestFor": [
+          "support builds",
+          "group healing",
+          "medic roles"
+        ],
+        "notes": "Fires green canisters that repair and reinforce ally armor on contact. Comes with 3 charges with under 20s cooldown base. Minimum cooldown cap is 8s. Best group support skill in the game.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-chem-launcher-firestarter-chem-launcher",
+        "name": "Firestarter Chem Launcher",
+        "damageType": "fire",
+        "scaling": "skill tier (increases gas cloud size and burn damage when ignited)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 15,
+          "tier6": 25
+        },
+        "mods": [
+          "damage",
+          "cloud_radius",
+          "duration"
+        ],
+        "bestFor": [
+          "Burn builds",
+          "combo setups",
+          "area denial"
+        ],
+        "notes": "Creates an ignitable gas cloud (red canisters). Does not burn on its own — requires ignition from another fire source or a second shot. Pairs with Incinerator Turret or any fire source for devastating combos.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-chem-launcher-riot-foam-chem-launcher",
+        "name": "Riot Foam Chem Launcher",
+        "damageType": "utility",
+        "scaling": "skill tier (increases foam duration and radius)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 8,
+          "tier6": 15
+        },
+        "mods": [
+          "duration",
+          "radius",
+          "cooldown"
+        ],
+        "bestFor": [
+          "crowd control",
+          "Ensnare builds",
+          "stopping rushers"
+        ],
+        "notes": "Fires foam that immobilizes targets (applies Ensnare). Dark beige canisters. Excellent for stopping enemy rushes or holding priority targets in place for teammates. Does no direct damage.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-chem-launcher-oxidizer-chem-launcher",
+        "name": "Oxidizer Chem Launcher",
+        "damageType": "explosive",
+        "scaling": "skill tier (increases corrosive damage and cloud size)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 10,
+          "tier6": 20
+        },
+        "mods": [
+          "damage",
+          "cloud_radius",
+          "duration"
+        ],
+        "bestFor": [
+          "armor destruction",
+          "DoT builds",
+          "high-armor enemies"
+        ],
+        "notes": "Fires a canister of corrosive chemicals that damages armor and deals damage over time. Particularly effective against heavily armored enemies. Does not apply a discrete status effect but continuously strips armor.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-drone",
+    "name": "Drone",
+    "description": "An aerial skill device that provides combat or support roles. Variants cover offense, defense, repair, reconnaissance, and bombing.",
+    "variants": [
+      {
+        "id": "skill-drone-striker-drone",
+        "name": "Striker Drone",
+        "damageType": "ballistic",
+        "scaling": "skill tier (increases damage per burst and target acquisition speed)",
+        "cooldownRange": {
+          "tier0": 60,
+          "tier6": 30
+        },
+        "durationRange": {
+          "tier0": 30,
+          "tier6": 60
+        },
+        "mods": [
+          "damage",
+          "health",
+          "duration",
+          "ammo"
+        ],
+        "bestFor": [
+          "skill builds",
+          "continuous DPS",
+          "solo play"
+        ],
+        "notes": "Hovers near player and fires SMG bursts at targeted enemies. One of the strongest DPS skills at skill tier 6. Constantly active during its duration providing supplemental damage.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-drone-defender-drone",
+        "name": "Defender Drone",
+        "damageType": "utility",
+        "scaling": "skill tier (increases deflection strength and coverage angle)",
+        "cooldownRange": {
+          "tier0": 60,
+          "tier6": 30
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 40
+        },
+        "mods": [
+          "health",
+          "deflection_efficiency",
+          "duration"
+        ],
+        "bestFor": [
+          "tank builds",
+          "shield synergy",
+          "surviving heavy fire"
+        ],
+        "notes": "Uses microwave deflection to redirect incoming projectiles away from the player. Does not absorb but actively deflects. Excellent combined with Ballistic Shield variants for maximum survivability.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-drone-bombardier-drone",
+        "name": "Bombardier Drone",
+        "damageType": "explosive",
+        "scaling": "skill tier (increases bomb damage and blast radius)",
+        "cooldownRange": {
+          "tier0": 45,
+          "tier6": 22
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "damage",
+          "blast_radius",
+          "health"
+        ],
+        "bestFor": [
+          "burst AoE damage",
+          "grouped enemies",
+          "skill builds"
+        ],
+        "notes": "Deploys to a targeted two-point area and drops explosive payloads. High burst AoE capability. Good for clearing grouped enemies and dealing with heavy enemies when combined with skill damage stats.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-drone-fixer-drone",
+        "name": "Fixer Drone",
+        "damageType": "utility",
+        "scaling": "skill tier (increases armor repair rate)",
+        "cooldownRange": {
+          "tier0": 60,
+          "tier6": 30
+        },
+        "durationRange": {
+          "tier0": 30,
+          "tier6": 60
+        },
+        "mods": [
+          "repair_amount",
+          "health",
+          "duration"
+        ],
+        "bestFor": [
+          "self-sustain builds",
+          "solo play",
+          "support"
+        ],
+        "notes": "Hovers near player or ally and continuously repairs armor. Reliable passive healing for solo builds. Less impactful in group play where Reinforcer Chem Launcher may be preferred.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-drone-tactician-drone",
+        "name": "Tactician Drone",
+        "damageType": "utility",
+        "scaling": "skill tier (increases mark range and number of targets)",
+        "cooldownRange": {
+          "tier0": 45,
+          "tier6": 22
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 40
+        },
+        "mods": [
+          "health",
+          "mark_range",
+          "duration"
+        ],
+        "bestFor": [
+          "Sharpshooter specialization",
+          "group coordination",
+          "recon"
+        ],
+        "notes": "Exclusive to Sharpshooter specialization. Scouts an area and marks all hostile targets within range. All marked targets take bonus damage from team members. Excellent group synergy skill.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-firefly",
+    "name": "Firefly",
+    "description": "A small aerial device launched at a targeted enemy or object. Variants can blind, detonate explosive charges, or destroy weakpoints and skill proxies.",
+    "variants": [
+      {
+        "id": "skill-firefly-blinder-firefly",
+        "name": "Blinder Firefly",
+        "damageType": "utility",
+        "scaling": "skill tier (increases Blind duration and number of targets)",
+        "cooldownRange": {
+          "tier0": 25,
+          "tier6": 12
+        },
+        "durationRange": {
+          "tier0": 5,
+          "tier6": 10
+        },
+        "mods": [
+          "duration",
+          "cooldown",
+          "target_count"
+        ],
+        "bestFor": [
+          "crowd control",
+          "PvP",
+          "creating openings"
+        ],
+        "notes": "Applies Blind status effect, preventing enemies from shooting accurately. Good crowd control. At higher skill tiers can target multiple enemies in sequence. Useful in both PvE and PvP.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-firefly-burster-firefly",
+        "name": "Burster Firefly",
+        "damageType": "explosive",
+        "scaling": "skill tier (increases charge damage and explosion radius)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "damage",
+          "blast_radius",
+          "charge_count"
+        ],
+        "bestFor": [
+          "burst damage",
+          "DPS builds",
+          "grouped targets"
+        ],
+        "notes": "Attaches multiple explosive charges to the target that detonate simultaneously. High single-target burst damage potential. Pairs well with other debuffs that amplify damage.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-firefly-demolisher-firefly",
+        "name": "Demolisher Firefly",
+        "damageType": "utility",
+        "scaling": "skill tier (increases weakpoint damage and number of targets)",
+        "cooldownRange": {
+          "tier0": 25,
+          "tier6": 12
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "damage",
+          "cooldown",
+          "target_count"
+        ],
+        "bestFor": [
+          "weakpoint destruction",
+          "counter-skill play",
+          "skill proxy removal"
+        ],
+        "notes": "Specifically targets and destroys enemy weakpoints and hostile skill proxies (turrets, drones, etc.). Invaluable for destroying Black Tusk heavy units' weak spots and eliminating enemy deployed skills rapidly.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-hive",
+    "name": "Hive",
+    "description": "A deployable cluster of micro-drones placed on the ground. Variants provide repair, attack, revival, buffs, or skill enhancement depending on configuration.",
+    "variants": [
+      {
+        "id": "skill-hive-restorer-hive",
+        "name": "Restorer Hive",
+        "damageType": "utility",
+        "scaling": "skill tier (increases repair amount per drone and drone count)",
+        "cooldownRange": {
+          "tier0": 60,
+          "tier6": 30
+        },
+        "durationRange": {
+          "tier0": 30,
+          "tier6": 60
+        },
+        "mods": [
+          "repair_amount",
+          "health",
+          "duration",
+          "radius"
+        ],
+        "bestFor": [
+          "group support",
+          "area healing",
+          "sustained fights"
+        ],
+        "notes": "Deploys repair micro-drones that fly to injured allies in range and restore armor. Reliable AoE armor repair. Place near chokepoints for consistent group sustain.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-hive-stinger-hive",
+        "name": "Stinger Hive",
+        "damageType": "utility",
+        "scaling": "skill tier (increases damage per sting and drone speed)",
+        "cooldownRange": {
+          "tier0": 45,
+          "tier6": 22
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 40
+        },
+        "mods": [
+          "damage",
+          "health",
+          "duration",
+          "radius"
+        ],
+        "bestFor": [
+          "crowd control",
+          "anti-rush",
+          "area denial"
+        ],
+        "notes": "Deploys attack drones that sting approaching enemies, applying Bleed and disrupting their actions. Enemies under attack from the hive are prevented from effectively attacking. Good defensive perimeter tool. Drone speed gains +5% per skill tier.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-hive-reviver-hive",
+        "name": "Reviver Hive",
+        "damageType": "utility",
+        "scaling": "skill tier (increases revive speed and number of charges)",
+        "cooldownRange": {
+          "tier0": 180,
+          "tier6": 90
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "health",
+          "revive_speed",
+          "charge_count"
+        ],
+        "bestFor": [
+          "group play",
+          "self-revive setups",
+          "hardcore content"
+        ],
+        "notes": "Revives downed allies within radius. Base cooldown was reduced from 240s to 180s in a prior patch. Can be set up to self-revive when downed. Nearly mandatory skill in challenging group content.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-hive-booster-hive",
+        "name": "Booster Hive",
+        "damageType": "utility",
+        "scaling": "skill tier (increases buff strength, adds +4 charges per tier)",
+        "cooldownRange": {
+          "tier0": 45,
+          "tier6": 22
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 30
+        },
+        "mods": [
+          "buff_strength",
+          "duration",
+          "radius"
+        ],
+        "bestFor": [
+          "DPS builds",
+          "melee builds",
+          "buffing groups"
+        ],
+        "notes": "Releases stimulant that buffs weapon handling, melee damage, and hazard protection for 20 seconds. Buff amount increased from +10% to +20% at skill tier 0 in a balance patch. Gains +4 charges per skill tier.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-hive-artificer-hive",
+        "name": "Artificer Hive",
+        "damageType": "utility",
+        "scaling": "skill tier (increases skill efficiency bonus and duration)",
+        "cooldownRange": {
+          "tier0": 45,
+          "tier6": 22
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 40
+        },
+        "mods": [
+          "buff_strength",
+          "duration",
+          "radius"
+        ],
+        "bestFor": [
+          "Technician specialization",
+          "skill builds",
+          "group skill buffing"
+        ],
+        "notes": "Exclusive to Technician specialization. Boosts the skill efficiency of all friendly skill proxies in range, increasing their damage output, repair amounts, and other stats. Stacks with Emergency Patch talent from Technician tree.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-sticky-bomb",
+    "name": "Sticky Bomb",
+    "description": "A Warlords of New York skill that launches an adhesive explosive payload. Functions as a targeted grenade alternative that sticks to surfaces and enemies before remote detonation.",
+    "variants": [
+      {
+        "id": "skill-sticky-bomb-sticky-bomb-burn",
+        "name": "Sticky Bomb (Burn)",
+        "damageType": "fire",
+        "scaling": "skill tier (increases burn damage and duration)",
+        "cooldownRange": {
+          "tier0": 54,
+          "tier6": 27
+        },
+        "durationRange": {
+          "tier0": 12,
+          "tier6": 20
+        },
+        "mods": [
+          "damage",
+          "duration",
+          "radius"
+        ],
+        "bestFor": [
+          "Burn builds",
+          "status effect builds",
+          "DoT damage"
+        ],
+        "notes": "Sticks to target then detonates to create a persistent flame. Base damage approximately 1,094,977. Applies continuous Burn. Best used by sticking directly to enemies before detonation for maximum effect.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-sticky-bomb-sticky-bomb-emp",
+        "name": "Sticky Bomb (EMP)",
+        "damageType": "utility",
+        "scaling": "skill tier (increases disruption radius and duration)",
+        "cooldownRange": {
+          "tier0": 27,
+          "tier6": 13
+        },
+        "durationRange": {
+          "tier0": 9.6,
+          "tier6": 16
+        },
+        "mods": [
+          "radius",
+          "duration",
+          "cooldown"
+        ],
+        "bestFor": [
+          "tech disruption",
+          "Black Tusk content",
+          "skill denial"
+        ],
+        "notes": "Adheres to target then detonates as a large EMP blast with 4-meter radius, applying Disrupt to all affected electronics and enemies. Shorter cooldown than other variants. Excellent against Black Tusk faction.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-sticky-bomb-sticky-bomb-explosive",
+        "name": "Sticky Bomb (Explosive)",
+        "damageType": "explosive",
+        "scaling": "skill tier (increases damage and blast radius)",
+        "cooldownRange": {
+          "tier0": 54,
+          "tier6": 27
+        },
+        "durationRange": {
+          "tier0": null,
+          "tier6": null
+        },
+        "mods": [
+          "damage",
+          "blast_radius",
+          "cooldown"
+        ],
+        "bestFor": [
+          "burst damage",
+          "elite kills",
+          "skill builds"
+        ],
+        "notes": "Causes panic and high impact damage with 3-meter blast radius. Base damage approximately 1,459,970. Stick directly to enemy for full damage. Causes Panic status effect on nearby enemies in blast radius.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-trap",
+    "name": "Trap",
+    "description": "A Warlords of New York skill that scatters a minefield of small devices across an area. Variants trigger on enemy proximity or provide healing to allies.",
+    "variants": [
+      {
+        "id": "skill-trap-shock-trap",
+        "name": "Shock Trap",
+        "damageType": "shock",
+        "scaling": "skill tier (increases shock duration and number of mines deployed)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 30,
+          "tier6": 60
+        },
+        "mods": [
+          "shock_duration",
+          "mine_count",
+          "trigger_radius"
+        ],
+        "bestFor": [
+          "crowd control",
+          "area denial",
+          "Shock status builds"
+        ],
+        "notes": "Scatters electric mines that shock approaching enemies. Shocked targets are forced out of cover and move slowly. Excellent for denying chokepoints. Applies Shock status effect causing enemies to stumble and become vulnerable.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-trap-repair-trap",
+        "name": "Repair Trap",
+        "damageType": "utility",
+        "scaling": "skill tier (increases armor repair amount per mine)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 30,
+          "tier6": 60
+        },
+        "mods": [
+          "repair_amount",
+          "mine_count",
+          "trigger_radius"
+        ],
+        "bestFor": [
+          "support builds",
+          "group healing",
+          "sustained defense"
+        ],
+        "notes": "Scatters repair mines that activate when friendly agents walk over them, repairing armor. When in Overcharge mode (triggered by Technician Artificer Hive), grants Status Effect Immunity for 10 seconds to triggered allies.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-decoy",
+    "name": "Decoy",
+    "description": "A Warlords of New York skill that projects a holographic distraction designed to draw hostile attention away from the player and their team.",
+    "variants": [
+      {
+        "id": "skill-decoy-holographic-decoy",
+        "name": "Holographic Decoy",
+        "damageType": "utility",
+        "scaling": "skill tier (increases decoy health and distraction duration)",
+        "cooldownRange": {
+          "tier0": 35,
+          "tier6": 17
+        },
+        "durationRange": {
+          "tier0": 15,
+          "tier6": 30
+        },
+        "mods": [
+          "health",
+          "duration",
+          "cooldown"
+        ],
+        "bestFor": [
+          "solo survivability",
+          "repositioning",
+          "drawing aggro"
+        ],
+        "notes": "Creates a lifelike holographic projection that draws hostile AI and skill proxies (turrets, homing mines) away from the player. AI enemies and enemy homing skills automatically target the Decoy over real players. Invaluable for repositioning under fire or solo play survivability.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  },
+  {
+    "id": "skill-smart-cover",
+    "name": "Smart Cover",
+    "description": "A Battle for Brooklyn skill that deploys a small device onto a surface that creates an enhanced cover zone. Variants offer either survivability or damage amplification.",
+    "variants": [
+      {
+        "id": "skill-smart-cover-fortified-smart-cover",
+        "name": "Fortified Smart Cover",
+        "damageType": "utility",
+        "scaling": "skill tier (increases bonus armor percentage and resistance values)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 40
+        },
+        "mods": [
+          "bonus_armor",
+          "resistance",
+          "duration"
+        ],
+        "bestFor": [
+          "tank builds",
+          "survivability",
+          "high-difficulty content"
+        ],
+        "notes": "Sticks to a surface and enhances survivability for agents using that cover, granting Bonus Armor, Pulse Resistance, and Explosive Resistance. Excellent for defending a position in endgame content.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      },
+      {
+        "id": "skill-smart-cover-precision-smart-cover",
+        "name": "Precision Smart Cover",
+        "damageType": "utility",
+        "scaling": "skill tier (increases damage bonus and weapon handling bonus)",
+        "cooldownRange": {
+          "tier0": 30,
+          "tier6": 15
+        },
+        "durationRange": {
+          "tier0": 20,
+          "tier6": 40
+        },
+        "mods": [
+          "damage_bonus",
+          "weapon_handling",
+          "duration"
+        ],
+        "bestFor": [
+          "DPS builds",
+          "sharpshooter builds",
+          "damage amplification"
+        ],
+        "notes": "Sticks to a surface and enhances damage potential for agents in cover range, granting additional Weapon Handling and Damage to Targets Out of Cover. Best paired with builds that frequently engage targets out of cover.",
+        "_verified": false,
+        "_sources": [
+          "mcp-import"
+        ]
+      }
+    ],
+    "_verified": false,
+    "_sources": [
+      "mcp-import"
+    ]
+  }
+]
