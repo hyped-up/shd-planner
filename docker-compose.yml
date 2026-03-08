@@ -1,0 +1,22 @@
+# SHD Planner — Division 2 Build Planner Web App
+# Usage: docker compose up -d
+# Optional: copy .env.example to .env and configure Google Drive / AI settings
+
+services:
+  shd-planner:
+    build: .
+    container_name: shd-planner
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
