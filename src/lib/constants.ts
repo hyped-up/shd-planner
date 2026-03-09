@@ -10,13 +10,13 @@ export const GEAR_SLOTS = [
 
 // Weapon types
 export const WEAPON_TYPES = [
-  "Assault Rifle",
-  "LMG",
-  "SMG",
-  "Rifle",
-  "Marksman Rifle",
-  "Shotgun",
-  "Pistol",
+  "Assault Rifles",
+  "Submachine Guns",
+  "Light Machine Guns",
+  "Rifles",
+  "Marksman Rifles",
+  "Shotguns",
+  "Pistols",
 ] as const;
 
 // Core attribute types with display colors
@@ -49,15 +49,18 @@ export const SKILL_SLOTS = ["skill1", "skill2"] as const;
 
 // Skill categories
 export const SKILL_CATEGORIES = [
+  "Ballistic Shield",
   "Chem Launcher",
+  "Decoy",
   "Drone",
   "Firefly",
   "Hive",
-  "Seeker Mine",
-  "Shield",
-  "Turret",
   "Pulse",
+  "Seeker Mine",
+  "Smart Cover",
+  "Sticky Bomb",
   "Trap",
+  "Turret",
 ] as const;
 
 // Specializations

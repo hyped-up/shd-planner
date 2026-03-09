@@ -4,6 +4,17 @@
 import { useState, useEffect, useCallback } from "react";
 import type { GearSlot, CoreAttributeType, IBuildGearPiece } from "@/lib/types";
 import { useBuildStore } from "@/hooks/use-build-store";
+import SearchableSelect from "@/components/shared/SearchableSelect";
+import type { SearchableSelectOption } from "@/components/shared/SearchableSelect";
+import {
+  getAllBrands,
+  getAllGearSets,
+  getAllNamedItems,
+  getAllExoticGear,
+  getGearTalentsBySlot,
+  getAllMinorAttributes,
+} from "@/lib/data-loader";
+import type { IGearAttribute } from "@/lib/types";
 
 interface GearConfigPanelProps {
   isOpen: boolean;
@@ -35,22 +46,6 @@ const CORE_MAX_VALUES: Record<CoreAttributeType, number> = {
   skillTier: 1,
 };
 
-// Placeholder minor attribute options (will be populated from database in later phases)
-const MINOR_ATTRIBUTES = [
-  { id: "crit_chance", name: "Critical Hit Chance", maxValue: 6, unit: "%" },
-  { id: "crit_damage", name: "Critical Hit Damage", maxValue: 12, unit: "%" },
-  { id: "headshot_damage", name: "Headshot Damage", maxValue: 10, unit: "%" },
-  { id: "weapon_handling", name: "Weapon Handling", maxValue: 8, unit: "%" },
-  { id: "armor_regen", name: "Armor Regeneration", maxValue: 4925, unit: "" },
-  { id: "health", name: "Health", maxValue: 18935, unit: "" },
-  { id: "explosive_resistance", name: "Explosive Resistance", maxValue: 10, unit: "%" },
-  { id: "hazard_protection", name: "Hazard Protection", maxValue: 10, unit: "%" },
-  { id: "skill_haste", name: "Skill Haste", maxValue: 12, unit: "%" },
-  { id: "skill_damage", name: "Skill Damage", maxValue: 10, unit: "%" },
-  { id: "repair_skills", name: "Repair Skills", maxValue: 15, unit: "%" },
-  { id: "skill_duration", name: "Skill Duration", maxValue: 12, unit: "%" },
-  { id: "status_effects", name: "Status Effects", maxValue: 10, unit: "%" },
-];
 
 /**
  * Inner component that initializes state from the current gear piece.
@@ -74,6 +69,73 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
 
   // Talent slot eligibility (only Chest and Backpack)
   const hasTalentSlot = slot === "Chest" || slot === "Backpack";
+
+  const [itemOptions, setItemOptions] = useState<SearchableSelectOption[]>([]);
+  const [talentOptions, setTalentOptions] = useState<SearchableSelectOption[]>([]);
+  const [minorAttributeData, setMinorAttributeData] = useState<IGearAttribute[]>([]);
+
+  // Load item options when source tab changes
+  useEffect(() => {
+    async function loadItems() {
+      let options: SearchableSelectOption[] = [];
+      switch (source) {
+        case "brand": {
+          const brands = await getAllBrands();
+          options = brands.map((b) => ({ id: b.id, name: b.name }));
+          break;
+        }
+        case "gearset": {
+          const sets = await getAllGearSets();
+          options = sets.map((s) => ({ id: s.id, name: s.name }));
+          break;
+        }
+        case "named": {
+          const items = await getAllNamedItems();
+          const slotItems = items.filter((i) => i.slot === slot);
+          options = slotItems.map((i) => ({ id: i.id, name: i.name, subtitle: i.brand }));
+          break;
+        }
+        case "exotic": {
+          const exotics = await getAllExoticGear();
+          const slotExotics = exotics.filter((e) => e.slot === slot);
+          options = slotExotics.map((e) => ({
+            id: e.id,
+            name: e.name,
+            subtitle: e.talent.name,
+          }));
+          break;
+        }
+      }
+      setItemOptions(options);
+    }
+    loadItems();
+  }, [source, slot]);
+
+  // Load talent options (chest/backpack only)
+  useEffect(() => {
+    if (!hasTalentSlot) return;
+    async function loadTalents() {
+      const talentSlot = slot.toLowerCase() as "chest" | "backpack";
+      const talents = await getGearTalentsBySlot(talentSlot);
+      setTalentOptions(
+        talents.map((t) => ({
+          id: t.id,
+          name: t.name,
+          subtitle: t.description.slice(0, 60) + (t.description.length > 60 ? "..." : ""),
+        }))
+      );
+    }
+    loadTalents();
+  }, [slot, hasTalentSlot]);
+
+  // Load minor attributes from data
+  useEffect(() => {
+    async function loadAttrs() {
+      const attrs = await getAllMinorAttributes();
+      setMinorAttributeData(attrs);
+    }
+    loadAttrs();
+  }, []);
 
   // Close on Escape
   const handleKeyDown = useCallback(
@@ -125,7 +187,7 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
 
   // Find the max value for the selected minor attribute
   function getMinorMax(attrId: string): number {
-    return MINOR_ATTRIBUTES.find((a) => a.id === attrId)?.maxValue ?? 100;
+    return minorAttributeData.find((a) => a.id === attrId)?.maxRoll ?? 100;
   }
 
   return (
@@ -175,16 +237,12 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
           {/* Step 2: Item selection */}
           <div>
             <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Step 2: Select Item</div>
-            <input
-              type="text"
+            <SearchableSelect
+              options={itemOptions}
               value={itemId}
-              onChange={(e) => setItemId(e.target.value)}
-              placeholder={`Enter ${source} name or ID...`}
-              className="w-full rounded border border-border bg-background-tertiary text-foreground text-sm px-3 py-2 placeholder:text-foreground-secondary focus:outline-none focus:border-shd-orange transition-colors"
+              onChange={(id) => setItemId(id)}
+              placeholder={`Search ${source} items...`}
             />
-            <p className="text-xs text-foreground-secondary mt-1">
-              Item database integration coming in a future phase. Enter the item name manually for now.
-            </p>
           </div>
 
           {/* Step 3: Core attribute */}
@@ -268,7 +326,7 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
 
             {minorAttrs.map((attr, index) => {
               const maxVal = getMinorMax(attr.attributeId);
-              const attrDef = MINOR_ATTRIBUTES.find((a) => a.id === attr.attributeId);
+              const attrDef = minorAttributeData.find((a) => a.id === attr.attributeId);
               return (
                 <div key={index} className="space-y-2 mb-3 p-2 rounded bg-surface border border-border">
                   <div className="flex items-center gap-2">
@@ -283,9 +341,9 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
                       className="flex-1 rounded border border-border bg-background-tertiary text-foreground text-xs px-2 py-1.5 focus:outline-none focus:border-shd-orange cursor-pointer"
                     >
                       <option value="">Select attribute...</option>
-                      {MINOR_ATTRIBUTES.map((a) => (
+                      {minorAttributeData.map((a) => (
                         <option key={a.id} value={a.id}>
-                          {a.name}
+                          {a.label}
                         </option>
                       ))}
                     </select>
@@ -311,7 +369,7 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
                           className="flex-1 accent-shd-orange"
                         />
                         <span className="text-xs text-foreground font-medium w-16 text-right">
-                          {attrDef?.unit === "%"
+                          {attrDef?.unit === "percent"
                             ? `${attr.value.toFixed(1)}%`
                             : attr.value.toLocaleString()}
                         </span>
@@ -352,16 +410,12 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
           {hasTalentSlot && (
             <div>
               <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Talent</div>
-              <input
-                type="text"
+              <SearchableSelect
+                options={talentOptions}
                 value={talentId}
-                onChange={(e) => setTalentId(e.target.value)}
-                placeholder="Enter talent name..."
-                className="w-full rounded border border-border bg-background-tertiary text-foreground text-sm px-3 py-2 placeholder:text-foreground-secondary focus:outline-none focus:border-shd-orange transition-colors"
+                onChange={(id) => setTalentId(id)}
+                placeholder="Search talents..."
               />
-              <p className="text-xs text-foreground-secondary mt-1">
-                Talent database integration coming in a future phase.
-              </p>
             </div>
           )}
         </div>

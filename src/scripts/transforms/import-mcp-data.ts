@@ -62,20 +62,20 @@ function addProvenance<T extends Record<string, unknown>>(entity: T): T & { _ver
 
 /** Map weapon category snake_case to display name */
 const WEAPON_CATEGORY_DISPLAY: Record<string, string> = {
-  assault_rifles: "Assault Rifle",
-  assault_rifle: "Assault Rifle",
-  smg: "SMG",
-  smgs: "SMG",
-  lmg: "LMG",
-  lmgs: "LMG",
-  rifle: "Rifle",
-  rifles: "Rifle",
-  marksman_rifles: "Marksman Rifle",
-  marksman_rifle: "Marksman Rifle",
-  shotgun: "Shotgun",
-  shotguns: "Shotgun",
-  pistol: "Pistol",
-  pistols: "Pistol",
+  assault_rifles: "Assault Rifles",
+  assault_rifle: "Assault Rifles",
+  smg: "Submachine Guns",
+  smgs: "Submachine Guns",
+  lmg: "Light Machine Guns",
+  lmgs: "Light Machine Guns",
+  rifle: "Rifles",
+  rifles: "Rifles",
+  marksman_rifles: "Marksman Rifles",
+  marksman_rifle: "Marksman Rifles",
+  shotgun: "Shotguns",
+  shotguns: "Shotguns",
+  pistol: "Pistols",
+  pistols: "Pistols",
 };
 
 /** Convert a snake_case weapon type to display name */

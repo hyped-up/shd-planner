@@ -19,24 +19,24 @@ interface Weapon {
 }
 
 const WEAPONS: Weapon[] = [
-  { id: "police_m4", name: "Police M4", type: "Assault Rifle", rpm: 780, magSize: 30, baseDamage: "44,892", isExotic: false },
-  { id: "mpx", name: "MPX", type: "SMG", rpm: 850, magSize: 30, baseDamage: "38,214", isExotic: false },
-  { id: "m60", name: "M60", type: "LMG", rpm: 500, magSize: 100, baseDamage: "49,721", isExotic: false },
-  { id: "m1a_cqb", name: "M1A CQB", type: "Rifle", rpm: 320, magSize: 20, baseDamage: "104,533", isExotic: false },
-  { id: "nemesis", name: "Nemesis", type: "Marksman Rifle", rpm: 30, magSize: 7, baseDamage: "489,120", isExotic: true },
-  { id: "m870_express", name: "M870 Express", type: "Shotgun", rpm: 75, magSize: 8, baseDamage: "218,907", isExotic: false },
-  { id: "diceros_special", name: "Diceros Special", type: "Pistol", rpm: 150, magSize: 6, baseDamage: "156,330", isExotic: false },
+  { id: "police_m4", name: "Police M4", type: "Assault Rifles", rpm: 780, magSize: 30, baseDamage: "44,892", isExotic: false },
+  { id: "mpx", name: "MPX", type: "Submachine Guns", rpm: 850, magSize: 30, baseDamage: "38,214", isExotic: false },
+  { id: "m60", name: "M60", type: "Light Machine Guns", rpm: 500, magSize: 100, baseDamage: "49,721", isExotic: false },
+  { id: "m1a_cqb", name: "M1A CQB", type: "Rifles", rpm: 320, magSize: 20, baseDamage: "104,533", isExotic: false },
+  { id: "nemesis", name: "Nemesis", type: "Marksman Rifles", rpm: 30, magSize: 7, baseDamage: "489,120", isExotic: true },
+  { id: "m870_express", name: "M870 Express", type: "Shotguns", rpm: 75, magSize: 8, baseDamage: "218,907", isExotic: false },
+  { id: "diceros_special", name: "Diceros Special", type: "Pistols", rpm: 150, magSize: 6, baseDamage: "156,330", isExotic: false },
 ];
 
 const WEAPON_TYPES = [
   "All",
-  "Assault Rifle",
-  "SMG",
-  "LMG",
-  "Rifle",
-  "Marksman Rifle",
-  "Shotgun",
-  "Pistol",
+  "Assault Rifles",
+  "Submachine Guns",
+  "Light Machine Guns",
+  "Rifles",
+  "Marksman Rifles",
+  "Shotguns",
+  "Pistols",
 ];
 
 const SORT_OPTIONS = [

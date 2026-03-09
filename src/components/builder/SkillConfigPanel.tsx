@@ -5,6 +5,9 @@ import { useState, useEffect, useCallback } from "react";
 import type { IBuildSkill, SkillCategory } from "@/lib/types";
 import { SKILL_CATEGORIES } from "@/lib/constants";
 import { useBuildStore } from "@/hooks/use-build-store";
+import SearchableSelect from "@/components/shared/SearchableSelect";
+import type { SearchableSelectOption } from "@/components/shared/SearchableSelect";
+import { getAllSkills } from "@/lib/data-loader";
 
 interface SkillConfigPanelProps {
   isOpen: boolean;
@@ -32,6 +35,27 @@ function SkillConfigPanelInner({ slot, onClose }: { slot: "skill1" | "skill2"; o
   );
   const [variantId, setVariantId] = useState(currentSkill?.skillVariantId ?? "");
   const [mods, setMods] = useState<string[]>(currentSkill?.mods ?? []);
+  const [variantOptions, setVariantOptions] = useState<SearchableSelectOption[]>([]);
+
+  useEffect(() => {
+    if (!category) return;
+    async function loadVariants() {
+      const skills = await getAllSkills();
+      const skill = skills.find((s) => s.name === category);
+      if (!skill) {
+        setVariantOptions([]);
+        return;
+      }
+      setVariantOptions(
+        skill.variants.map((v) => ({
+          id: v.id,
+          name: v.name,
+          subtitle: v.description.slice(0, 60) + (v.description.length > 60 ? "..." : ""),
+        }))
+      );
+    }
+    loadVariants();
+  }, [category]);
 
   // Close on Escape
   const handleKeyDown = useCallback(
@@ -133,16 +157,13 @@ function SkillConfigPanelInner({ slot, onClose }: { slot: "skill1" | "skill2"; o
           {/* Step 2: Variant Selection */}
           <div>
             <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Step 2: Choose Variant</div>
-            <input
-              type="text"
+            <SearchableSelect
+              options={variantOptions}
               value={variantId}
-              onChange={(e) => setVariantId(e.target.value)}
-              placeholder={category ? `Enter ${category} variant...` : "Select a category first..."}
-              className="w-full rounded border border-border bg-background-tertiary text-foreground text-sm px-3 py-2 placeholder:text-foreground-secondary focus:outline-none focus:border-shd-orange transition-colors"
+              onChange={(id) => setVariantId(id)}
+              placeholder={category ? `Search ${category} variants...` : "Select a category first..."}
+              disabled={!category}
             />
-            <p className="text-xs text-foreground-secondary mt-1">
-              Skill database integration coming in a future phase. Enter the variant name manually.
-            </p>
           </div>
 
           {/* Skill Mods */}

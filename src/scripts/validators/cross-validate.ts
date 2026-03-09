@@ -67,7 +67,7 @@ function main(): void {
   const gearSetIds = new Set(gearSets.map((g) => g.id));
   const validSlots = new Set(["mask", "backpack", "chest", "gloves", "holster", "kneepads"]);
   const validCoreAttributes = new Set(["weapon_damage", "armor", "skill_tier", "skill_damage"]);
-  const validWeaponTypes = new Set(["Assault Rifle", "SMG", "LMG", "Rifle", "Marksman Rifle", "Shotgun", "Pistol"]);
+  const validWeaponTypes = new Set(["Assault Rifles", "Submachine Guns", "Light Machine Guns", "Rifles", "Marksman Rifles", "Shotguns", "Pistols"]);
   const validGearTalentSlots = new Set(["chest", "backpack"]);
 
   // --- Check 1: No duplicate IDs across all entities ---

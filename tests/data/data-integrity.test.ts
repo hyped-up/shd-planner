@@ -171,7 +171,7 @@ describe("Data loader return types", () => {
   });
 
   test("getWeaponTalentsByWeaponType returns an array", async () => {
-    const result = await getWeaponTalentsByWeaponType("Assault Rifle");
+    const result = await getWeaponTalentsByWeaponType("Assault Rifles");
     expect(Array.isArray(result)).toBe(true);
   });
 

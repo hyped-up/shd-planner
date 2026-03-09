@@ -83,8 +83,14 @@ export interface IGearTalent {
 /** Gear minor attribute definition with max roll value */
 export interface IGearAttribute {
   id: string;
-  name: string;
-  maxValue: number;
+  /** Short stat code (e.g., "CHC", "CHD") */
+  stat: string;
+  /** Human-readable label (e.g., "Critical Hit Chance") */
+  label: string;
+  /** Maximum roll value for this attribute */
+  maxRoll: number;
+  /** Unit of measurement (e.g., "percent", "flat", "tier") */
   unit: string;
+  /** Attribute category (e.g., "minor_offensive", "core_defensive") */
   category: AttributeCategory;
 }

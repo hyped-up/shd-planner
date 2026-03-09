@@ -5,6 +5,13 @@ import { useState, useEffect, useCallback } from "react";
 import type { WeaponSlot, WeaponType, IBuildWeapon } from "@/lib/types";
 import { WEAPON_TYPES } from "@/lib/constants";
 import { useBuildStore } from "@/hooks/use-build-store";
+import SearchableSelect from "@/components/shared/SearchableSelect";
+import type { SearchableSelectOption } from "@/components/shared/SearchableSelect";
+import {
+  getWeaponsByType,
+  getWeaponTalentsByWeaponType,
+  getAllExoticWeapons,
+} from "@/lib/data-loader";
 
 interface WeaponConfigPanelProps {
   isOpen: boolean;
@@ -46,6 +53,50 @@ function WeaponConfigPanelInner({ slot, onClose }: { slot: WeaponSlot; onClose: 
     muzzle: currentWeapon?.mods?.muzzle ?? "",
     underbarrel: currentWeapon?.mods?.underbarrel ?? "",
   });
+
+  // Data-loading state for weapon and talent dropdowns
+  const [weaponOptions, setWeaponOptions] = useState<SearchableSelectOption[]>([]);
+  const [talentOptions, setTalentOptions] = useState<SearchableSelectOption[]>([]);
+
+  useEffect(() => {
+    if (!weaponType) return;
+    async function loadWeapons() {
+      const [weapons, exotics] = await Promise.all([
+        getWeaponsByType(weaponType as WeaponType),
+        getAllExoticWeapons(),
+      ]);
+      const typeExotics = exotics.filter((e) => e.type === weaponType);
+      const options: SearchableSelectOption[] = [
+        ...weapons.map((w) => ({
+          id: w.id,
+          name: w.name,
+          subtitle: `${w.rpm} RPM / ${w.magSize} mag`,
+        })),
+        ...typeExotics.map((e) => ({
+          id: e.id,
+          name: e.name,
+          subtitle: `Exotic — ${e.talent.name}`,
+        })),
+      ];
+      setWeaponOptions(options);
+    }
+    loadWeapons();
+  }, [weaponType]);
+
+  useEffect(() => {
+    if (!weaponType) return;
+    async function loadTalents() {
+      const talents = await getWeaponTalentsByWeaponType(weaponType as WeaponType);
+      setTalentOptions(
+        talents.map((t) => ({
+          id: t.id,
+          name: t.name,
+          subtitle: t.description.slice(0, 60) + (t.description.length > 60 ? "..." : ""),
+        }))
+      );
+    }
+    loadTalents();
+  }, [weaponType]);
 
   // Close on Escape
   const handleKeyDown = useCallback(
@@ -126,31 +177,25 @@ function WeaponConfigPanelInner({ slot, onClose }: { slot: WeaponSlot; onClose: 
           {/* Step 2: Specific Weapon */}
           <div>
             <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Step 2: Select Weapon</div>
-            <input
-              type="text"
+            <SearchableSelect
+              options={weaponOptions}
               value={weaponId}
-              onChange={(e) => setWeaponId(e.target.value)}
-              placeholder="Enter weapon name or ID..."
-              className="w-full rounded border border-border bg-background-tertiary text-foreground text-sm px-3 py-2 placeholder:text-foreground-secondary focus:outline-none focus:border-shd-orange transition-colors"
+              onChange={(id) => setWeaponId(id)}
+              placeholder={weaponType ? `Search ${weaponType}...` : "Select a weapon type first..."}
+              disabled={!weaponType}
             />
-            <p className="text-xs text-foreground-secondary mt-1">
-              Weapon database integration coming in a future phase. Enter the weapon name manually.
-            </p>
           </div>
 
           {/* Step 3: Talent */}
           <div>
             <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Step 3: Choose Talent</div>
-            <input
-              type="text"
+            <SearchableSelect
+              options={talentOptions}
               value={talentId}
-              onChange={(e) => setTalentId(e.target.value)}
-              placeholder="Enter talent name..."
-              className="w-full rounded border border-border bg-background-tertiary text-foreground text-sm px-3 py-2 placeholder:text-foreground-secondary focus:outline-none focus:border-shd-orange transition-colors"
+              onChange={(id) => setTalentId(id)}
+              placeholder={weaponType ? "Search weapon talents..." : "Select a weapon type first..."}
+              disabled={!weaponType}
             />
-            <p className="text-xs text-foreground-secondary mt-1">
-              Talent database integration coming in a future phase.
-            </p>
           </div>
 
           {/* Step 4: Weapon Mods */}

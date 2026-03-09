@@ -8,31 +8,37 @@ export type WeaponSlot = "primary" | "secondary" | "sidearm";
 
 /** Weapon archetypes */
 export type WeaponType =
-  | "Assault Rifle"
-  | "LMG"
-  | "SMG"
-  | "Rifle"
-  | "Marksman Rifle"
-  | "Shotgun"
-  | "Pistol";
+  | "Assault Rifles"
+  | "Submachine Guns"
+  | "Light Machine Guns"
+  | "Rifles"
+  | "Marksman Rifles"
+  | "Shotguns"
+  | "Pistols";
 
 /** Core attribute categories (red/blue/yellow) */
 export type CoreAttributeType = "weaponDamage" | "armor" | "skillTier";
 
-/** Minor attribute categories */
-export type AttributeCategory = "offensive" | "defensive" | "utility" | "skill";
+/** Attribute categories (core and minor) */
+export type AttributeCategory =
+  | "offensive" | "defensive" | "utility" | "skill"
+  | "core_offensive" | "core_defensive" | "core_skill"
+  | "minor_offensive" | "minor_defensive" | "minor_utility";
 
 /** Skill family categories */
 export type SkillCategory =
+  | "Ballistic Shield"
   | "Chem Launcher"
+  | "Decoy"
   | "Drone"
   | "Firefly"
   | "Hive"
-  | "Seeker Mine"
-  | "Shield"
-  | "Turret"
   | "Pulse"
-  | "Trap";
+  | "Seeker Mine"
+  | "Smart Cover"
+  | "Sticky Bomb"
+  | "Trap"
+  | "Turret";
 
 /** Agent specialization trees */
 export type SpecializationType =

@@ -9,13 +9,13 @@ const gearSlotSchema = z.enum(["Mask", "Backpack", "Chest", "Gloves", "Holster",
 
 // Weapon type enum schema
 const weaponTypeSchema = z.enum([
-  "Assault Rifle",
-  "LMG",
-  "SMG",
-  "Rifle",
-  "Marksman Rifle",
-  "Shotgun",
-  "Pistol",
+  "Assault Rifles",
+  "Submachine Guns",
+  "Light Machine Guns",
+  "Rifles",
+  "Marksman Rifles",
+  "Shotguns",
+  "Pistols",
 ]);
 
 // Core attribute type enum schema
@@ -32,15 +32,18 @@ const damageTypeSchema = z.enum(["additive", "amplified"]);
 
 // Skill category enum schema
 const skillCategorySchema = z.enum([
+  "Ballistic Shield",
   "Chem Launcher",
+  "Decoy",
   "Drone",
   "Firefly",
   "Hive",
-  "Seeker Mine",
-  "Shield",
-  "Turret",
   "Pulse",
+  "Seeker Mine",
+  "Smart Cover",
+  "Sticky Bomb",
   "Trap",
+  "Turret",
 ]);
 
 // Specialization type enum schema

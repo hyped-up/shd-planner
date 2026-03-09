@@ -18,7 +18,7 @@ function makeTestWeapon(overrides?: Partial<IWeapon>): IWeapon {
   return {
     id: "test_ar",
     name: "Test AR",
-    type: "Assault Rifle",
+    type: "Assault Rifles",
     rpm: 600,
     magSize: 30,
     reloadSpeed: 2,

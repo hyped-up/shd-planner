@@ -154,7 +154,7 @@ export async function getAllWeapons(): Promise<IWeapon[]> {
   return weapons;
 }
 
-/** Get weapons by type (e.g., "Assault Rifle") */
+/** Get weapons by type (e.g., "Assault Rifles") */
 export async function getWeaponsByType(type: WeaponType): Promise<IWeapon[]> {
   const weapons = await getAllWeapons();
   return weapons.filter((w) => w.type === type);
@@ -288,7 +288,7 @@ export async function getAllExoticWeapons(): Promise<IExoticWeapon[]> {
     id: e.id,
     name: e.name,
     iconUrl: e.iconUrl,
-    type: (e.category ?? "Assault Rifle") as WeaponType,
+    type: (e.category ?? "Assault Rifles") as WeaponType,
     rpm: e.rpm ?? 0,
     magSize: e.magSize ?? 0,
     baseDamage: e.baseDamage ?? 0,
@@ -380,6 +380,21 @@ export async function getAttributeMaxValue(
     (a: RawJson) => a.id === attributeId || a.stat === attributeId
   );
   return attr?.maxRoll ?? undefined;
+}
+
+/** Get all minor attributes (excludes core attributes) */
+export async function getAllMinorAttributes(): Promise<IGearAttribute[]> {
+  const data = await import("@/data/gear-attributes.json");
+  return (data.default as RawJson[])
+    .filter((a) => a.category?.startsWith("minor_"))
+    .map((a) => ({
+      id: a.id,
+      stat: a.stat ?? "",
+      label: a.label ?? a.id,
+      maxRoll: a.maxRoll ?? 0,
+      unit: a.unit ?? "percent",
+      category: a.category ?? "minor_offensive",
+    }));
 }
 
 // --- Search ---

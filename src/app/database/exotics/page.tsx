@@ -54,7 +54,7 @@ const EXOTICS: ExoticItem[] = [
     id: "eagle_bearer",
     name: "Eagle Bearer",
     category: "weapon",
-    slotOrType: "Assault Rifle",
+    slotOrType: "Assault Rifles",
     talentName: "Eagle's Strike",
     talentDescription:
       "Accuracy increases as you continuously fire. Headshots grant stacks of +2% weapon damage for 10s, stacking up to 100 times. Missing a headshot resets stacks. On kill, repair 10% armor.",
@@ -64,7 +64,7 @@ const EXOTICS: ExoticItem[] = [
     id: "the_bighorn",
     name: "The Bighorn",
     category: "weapon",
-    slotOrType: "Assault Rifle",
+    slotOrType: "Assault Rifles",
     talentName: "Big Game Hunter",
     talentDescription:
       "Weapon switches between full-auto and semi-auto modes. Full auto: standard AR. Semi-auto: fires high-damage rounds. Headshot kills in semi-auto grant bonus armor.",
@@ -74,7 +74,7 @@ const EXOTICS: ExoticItem[] = [
     id: "lady_death",
     name: "Lady Death",
     category: "weapon",
-    slotOrType: "SMG",
+    slotOrType: "Submachine Guns",
     talentName: "Breathless",
     talentDescription:
       "Sprinting builds stacks. Each stack grants +4% weapon damage for 10s when you stop sprinting or start shooting. Max 32 stacks (+128% weapon damage).",
@@ -84,7 +84,7 @@ const EXOTICS: ExoticItem[] = [
     id: "nemesis_exotic",
     name: "Nemesis",
     category: "weapon",
-    slotOrType: "Marksman Rifle",
+    slotOrType: "Marksman Rifles",
     talentName: "Preparation / Counter-Sniper",
     talentDescription:
       "Hold to charge the shot. A fully charged shot deals massive bonus damage. Scoping an enemy marks them, granting 5% headshot damage to marked target for all group members.",
