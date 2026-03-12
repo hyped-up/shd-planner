@@ -9,7 +9,7 @@
   ╚══════╝╚═╝  ╚═╝╚═════╝   ╚═╝     ╚══════╝╚═╝  ╚═╝╚═╝  ╚══╝
 
   ░░ STRATEGIC HOMELAND DIVISION ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-  ░░ BUILD PLANNER v0.2.0  //  ISAC NETWORK ONLINE ░░░░░░░░░░░
+  ░░ BUILD PLANNER v1.0.0  //  ISAC NETWORK ONLINE ░░░░░░░░░░░
   ░░ STATUS: OPERATIONAL  //  KNOWLEDGE BASE: 341 ENTITIES ░░░
 ```
 
@@ -36,6 +36,10 @@
 | ☁️ Google Drive | 🟡 `STANDBY` | Optional OAuth-based backup/restore |
 | 🤖 AI Advisor | 🟡 `STANDBY` | BYOK streaming (Anthropic/OpenAI) — disabled by default |
 | 🏆 Meta Templates | 🟢 `ONLINE` | Pre-built loadouts for DPS, tank, healer, skill roles |
+| ⚡ Loadout Optimizer | 🟢 `ONLINE` | Heuristic gear optimizer with DPS/Armor/Skill/Balanced targets |
+| 📈 Build Compare | 🟢 `ONLINE` | Side-by-side comparison of up to 3 builds with color-coded diffs |
+| 🩺 Health Check | 🟢 `ONLINE` | `/api/health` endpoint for Docker and monitoring |
+| 🔄 CI/CD Pipeline | 🟢 `ONLINE` | GitHub Actions: lint, test, build, Docker image |
 
 ---
 
@@ -161,6 +165,9 @@ npm run scrape:icons && npm run data:merge-icons
 
 # Validate data integrity
 npm run data:validate && npm run data:cross-validate
+
+# Full pipeline: scrape → merge → validate → build
+npm run data:update
 ```
 
 > 📡 The canonical data source is [shd-planner-cwd](https://github.com/hyped-up/shd-planner-cwd) (Python MCP server). Run `npm run data:import-mcp` to sync. This transforms snake_case MCP data into camelCase TypeScript-friendly JSON, splits exotics by type, prefixes IDs, and updates the manifest.
@@ -173,8 +180,12 @@ npm run data:validate && npm run data:cross-validate
 src/
 ├── app/                 # Next.js App Router pages
 │   ├── builder/         #   Build planner page
+│   │   └── compare/     #   Side-by-side build comparison
 │   ├── database/        #   Database browser (gear, weapons, talents, etc.)
-│   └── settings/        #   AI configuration
+│   │   ├── search/      #   Global cross-entity search page
+│   │   └── */[id]/      #   SSG detail pages for each entity type
+│   ├── api/health/      #   Health check endpoint
+│   └── settings/        #   AI configuration + preferences
 ├── components/
 │   ├── builder/         # Build planner UI (gear config, stats panel, validation)
 │   ├── database/        # Database browser (search, filter, sort)

@@ -14,6 +14,7 @@ import type {
   WeaponSlot,
   SpecializationType,
 } from "@/lib/types";
+import { validateBuild } from "@/lib/calc/build-validator";
 
 // Maximum number of undo states to keep in memory
 const MAX_UNDO_STACK = 50;
@@ -149,6 +150,12 @@ function touch(build: IBuild): IBuild {
   return { ...build, updatedAt: new Date().toISOString() };
 }
 
+/** Run the build validator and return the validation errors for spreading into state */
+function revalidate(build: IBuild): { validationErrors: IValidationError[] } {
+  const { errors } = validateBuild(build);
+  return { validationErrors: errors };
+}
+
 // Gear slot names for type narrowing
 const GEAR_SLOT_SET = new Set<string>(["Mask", "Backpack", "Chest", "Gloves", "Holster", "Kneepads"]);
 const WEAPON_SLOT_SET = new Set<string>(["primary", "secondary", "sidearm"]);
@@ -175,51 +182,61 @@ export const useBuildStore = create<BuildStore>()(
           } else {
             delete gear[slot];
           }
+          const newBuild = touch({ ...state.currentBuild, gear });
           return {
             ...undo,
-            currentBuild: touch({ ...state.currentBuild, gear }),
+            currentBuild: newBuild,
+            ...revalidate(newBuild),
           };
         }),
 
       setWeapon: (slot, weapon) =>
         set((state) => {
           const undo = pushUndo(state);
+          const newBuild = touch({
+            ...state.currentBuild,
+            weapons: { ...state.currentBuild.weapons, [slot]: weapon },
+          });
           return {
             ...undo,
-            currentBuild: touch({
-              ...state.currentBuild,
-              weapons: { ...state.currentBuild.weapons, [slot]: weapon },
-            }),
+            currentBuild: newBuild,
+            ...revalidate(newBuild),
           };
         }),
 
       setSkill: (slot, skill) =>
         set((state) => {
           const undo = pushUndo(state);
+          const newBuild = touch({
+            ...state.currentBuild,
+            skills: { ...state.currentBuild.skills, [slot]: skill },
+          });
           return {
             ...undo,
-            currentBuild: touch({
-              ...state.currentBuild,
-              skills: { ...state.currentBuild.skills, [slot]: skill },
-            }),
+            currentBuild: newBuild,
+            ...revalidate(newBuild),
           };
         }),
 
       setSpecialization: (spec) =>
         set((state) => {
           const undo = pushUndo(state);
+          const newBuild = touch({ ...state.currentBuild, specialization: spec });
           return {
             ...undo,
-            currentBuild: touch({ ...state.currentBuild, specialization: spec }),
+            currentBuild: newBuild,
+            ...revalidate(newBuild),
           };
         }),
 
       setSHDWatch: (config) =>
         set((state) => {
           const undo = pushUndo(state);
+          const newBuild = touch({ ...state.currentBuild, shdWatch: config });
           return {
             ...undo,
-            currentBuild: touch({ ...state.currentBuild, shdWatch: config }),
+            currentBuild: newBuild,
+            ...revalidate(newBuild),
           };
         }),
 
@@ -271,9 +288,11 @@ export const useBuildStore = create<BuildStore>()(
           const build = state.savedBuilds.find((b) => b.id === id);
           if (!build) return state;
           const undo = pushUndo(state);
+          const newBuild = structuredClone(build);
           return {
             ...undo,
-            currentBuild: structuredClone(build),
+            currentBuild: newBuild,
+            ...revalidate(newBuild),
             isDirty: false,
           };
         }),
@@ -331,9 +350,11 @@ export const useBuildStore = create<BuildStore>()(
       importBuild: (build) =>
         set((state) => {
           const undo = pushUndo(state);
+          const newBuild = structuredClone(build);
           return {
             ...undo,
-            currentBuild: structuredClone(build),
+            currentBuild: newBuild,
+            ...revalidate(newBuild),
           };
         }),
 

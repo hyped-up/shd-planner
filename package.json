@@ -1,6 +1,6 @@
 {
   "name": "shd-planner",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,7 +17,9 @@
     "data:merge-icons": "npx tsx src/scripts/transforms/merge-icons.ts",
     "data:validate": "npx tsx src/scripts/validators/validate-data.ts",
     "data:cross-validate": "npx tsx src/scripts/validators/cross-validate.ts",
-    "data:import-mcp": "npx tsx src/scripts/transforms/import-mcp-data.ts"
+    "data:import-mcp": "npx tsx src/scripts/transforms/import-mcp-data.ts",
+    "data:update": "npm run scrape:all && npm run data:merge && npm run data:validate && npm run build",
+    "test": "vitest run"
   },
   "dependencies": {
     "cheerio": "^1.2.0",

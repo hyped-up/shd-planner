@@ -1,117 +1,34 @@
+// Brand Sets & Named Items database page — loads real data from data-loader
 "use client";
 
-import { useState, useMemo, Suspense } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { SearchBar, FilterPanel } from "@/components/shared";
 import { EntityCard, UseInBuilderButton } from "@/components/database";
-
-// --- Placeholder Data ---
-
-type CoreType = "red" | "blue" | "yellow";
-
-interface NamedItem {
-  id: string;
-  name: string;
-  slot: string;
-  talent: string;
-}
-
-interface BrandSet {
-  id: string;
-  name: string;
-  coreType: CoreType;
-  slots: string[];
-  bonuses: { pieces: number; bonus: string }[];
-  namedItems: NamedItem[];
-  iconUrl?: string;
-}
-
-const BRAND_SETS: BrandSet[] = [
-  {
-    id: "providence_defense",
-    name: "Providence Defense",
-    coreType: "red",
-    slots: ["Mask", "Backpack", "Chest", "Gloves", "Holster", "Kneepads"],
-    bonuses: [
-      { pieces: 1, bonus: "15% Headshot Damage" },
-      { pieces: 2, bonus: "10% Critical Hit Damage" },
-      { pieces: 3, bonus: "10% Critical Hit Chance" },
-    ],
-    namedItems: [
-      { id: "contractors_gloves", name: "Contractor's Gloves", slot: "Gloves", talent: "11% Damage to Armor" },
-      { id: "foxs_prayer", name: "Fox's Prayer", slot: "Kneepads", talent: "8% Damage to Out of Cover" },
-    ],
-  },
-  {
-    id: "ceska_vyroba",
-    name: "Ceska Vyroba s.r.o.",
-    coreType: "red",
-    slots: ["Mask", "Backpack", "Chest", "Gloves", "Holster", "Kneepads"],
-    bonuses: [
-      { pieces: 1, bonus: "10% Critical Hit Chance" },
-      { pieces: 2, bonus: "10% Critical Hit Damage" },
-      { pieces: 3, bonus: "10% Headshot Damage" },
-    ],
-    namedItems: [
-      { id: "hollow_man", name: "Hollow Man", slot: "Mask", talent: "21% Damage to Health" },
-    ],
-  },
-  {
-    id: "walker_harris",
-    name: "Walker, Harris & Co.",
-    coreType: "red",
-    slots: ["Mask", "Backpack", "Chest", "Gloves", "Holster", "Kneepads"],
-    bonuses: [
-      { pieces: 1, bonus: "5% Weapon Damage" },
-      { pieces: 2, bonus: "5% Damage to Armor" },
-      { pieces: 3, bonus: "5% Damage to Out of Cover" },
-    ],
-    namedItems: [
-      { id: "the_sacrifice", name: "The Sacrifice", slot: "Chest", talent: "Glass Cannon (named variant)" },
-    ],
-  },
-  {
-    id: "sokolov_concern",
-    name: "Sokolov Concern",
-    coreType: "red",
-    slots: ["Mask", "Backpack", "Chest", "Gloves", "Holster", "Kneepads"],
-    bonuses: [
-      { pieces: 1, bonus: "10% SMG Damage" },
-      { pieces: 2, bonus: "15% Critical Hit Damage" },
-      { pieces: 3, bonus: "10% Critical Hit Chance" },
-    ],
-    namedItems: [
-      { id: "the_apartment", name: "The Apartment", slot: "Backpack", talent: "Perfectly Vigilance" },
-    ],
-  },
-  {
-    id: "grupo_sombra",
-    name: "Grupo Sombra S.A.",
-    coreType: "yellow",
-    slots: ["Mask", "Backpack", "Chest", "Gloves", "Holster", "Kneepads"],
-    bonuses: [
-      { pieces: 1, bonus: "15% Explosive Damage" },
-      { pieces: 2, bonus: "15% Explosive Damage" },
-      { pieces: 3, bonus: "15% Explosive Damage" },
-    ],
-    namedItems: [
-      { id: "china_light_vest", name: "Wicked (Named Chest)", slot: "Chest", talent: "Perfectly Wicked" },
-    ],
-  },
-];
+import { Badge } from "@/components/ui";
+import { getAllBrands, getAllNamedItems } from "@/lib/data-loader";
+import type { IBrandSet, INamedItem, CoreAttributeType } from "@/lib/types";
 
 // Color mappings for core attribute badges
-const coreColors: Record<CoreType, { bg: string; text: string; label: string }> = {
-  red: { bg: "bg-core-red/20", text: "text-core-red", label: "Weapon Damage" },
-  blue: { bg: "bg-core-blue/20", text: "text-core-blue", label: "Armor" },
-  yellow: { bg: "bg-core-yellow/20", text: "text-core-yellow", label: "Skill Tier" },
+const coreColors: Record<CoreAttributeType, { bg: string; text: string; label: string }> = {
+  weaponDamage: { bg: "bg-core-red/20", text: "text-core-red", label: "Weapon Damage" },
+  armor: { bg: "bg-core-blue/20", text: "text-core-blue", label: "Armor" },
+  skillTier: { bg: "bg-core-yellow/20", text: "text-core-yellow", label: "Skill Tier" },
 };
 
 const CORE_FILTER_OPTIONS = ["Weapon Damage", "Armor", "Skill Tier"];
 
+// Map display labels back to core type keys
+function coreTypeFromLabel(label: string): CoreAttributeType | null {
+  if (label === "Weapon Damage") return "weaponDamage";
+  if (label === "Armor") return "armor";
+  if (label === "Skill Tier") return "skillTier";
+  return null;
+}
+
 export default function GearPageWrapper() {
   return (
-    <Suspense fallback={<div className="min-h-screen bg-background p-8 text-foreground-secondary">Loading...</div>}>
+    <Suspense fallback={<div className="min-h-screen bg-background p-8 text-foreground-secondary">Loading gear...</div>}>
       <GearPage />
     </Suspense>
   );
@@ -120,6 +37,19 @@ export default function GearPageWrapper() {
 function GearPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
+
+  // Load real data
+  const [brands, setBrands] = useState<IBrandSet[]>([]);
+  const [namedItems, setNamedItems] = useState<INamedItem[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    Promise.all([getAllBrands(), getAllNamedItems()]).then(([b, n]) => {
+      setBrands(b);
+      setNamedItems(n);
+      setLoading(false);
+    });
+  }, []);
 
   // Read URL state
   const initialCore = searchParams.get("core")?.split(",").filter(Boolean) || [];
@@ -148,32 +78,45 @@ function GearPage() {
     updateUrl(search, selected);
   };
 
-  // Map display labels back to core type keys
-  const coreTypeFromLabel = (label: string): CoreType | null => {
-    if (label === "Weapon Damage") return "red";
-    if (label === "Armor") return "blue";
-    if (label === "Skill Tier") return "yellow";
-    return null;
-  };
+  // Get named items for a specific brand
+  const getNamedForBrand = (brandId: string) =>
+    namedItems.filter((ni) => ni.brand === brandId);
 
   // Filter brand sets
   const filtered = useMemo(() => {
-    return BRAND_SETS.filter((brand) => {
-      // Search filter
+    return brands.filter((brand) => {
+      // Search filter — match brand name or named item names
       const q = search.toLowerCase();
+      const brandNamedItems = getNamedForBrand(brand.id);
       const matchesSearch =
         !q ||
         brand.name.toLowerCase().includes(q) ||
-        brand.namedItems.some((ni) => ni.name.toLowerCase().includes(q));
+        brandNamedItems.some((ni) => ni.name.toLowerCase().includes(q));
 
       // Core attribute filter
       const matchesCore =
         coreFilter.length === 0 ||
-        coreFilter.some((label) => coreTypeFromLabel(label) === brand.coreType);
+        coreFilter.some((label) => coreTypeFromLabel(label) === brand.coreAttribute);
 
       return matchesSearch && matchesCore;
     });
-  }, [search, coreFilter]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [brands, namedItems, search, coreFilter]);
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background p-8">
+        <div className="mx-auto max-w-6xl animate-pulse space-y-4">
+          <div className="h-8 w-64 rounded bg-surface" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="h-40 rounded-lg bg-surface" />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-background">
@@ -182,7 +125,7 @@ function GearPage() {
         <div className="mb-6">
           <h1 className="text-3xl font-bold text-foreground">Brand Sets & Named Items</h1>
           <p className="mt-2 text-foreground-secondary">
-            {BRAND_SETS.length} brand sets with their piece bonuses and associated named items.
+            {brands.length} brand sets with their piece bonuses and {namedItems.length} associated named items.
           </p>
         </div>
 
@@ -208,13 +151,14 @@ function GearPage() {
 
             {/* Results count */}
             <p className="text-sm text-foreground-secondary">
-              Showing {filtered.length} of {BRAND_SETS.length} brand sets
+              Showing {filtered.length} of {brands.length} brand sets
             </p>
 
             {/* Brand set cards */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {filtered.map((brand) => {
-                const core = coreColors[brand.coreType];
+                const core = coreColors[brand.coreAttribute];
+                const brandNamedItems = getNamedForBrand(brand.id);
                 return (
                   <EntityCard
                     key={brand.id}
@@ -234,23 +178,37 @@ function GearPage() {
                       <h4 className="text-xs font-semibold text-foreground-secondary uppercase tracking-wider">
                         Set Bonuses
                       </h4>
-                      {brand.bonuses.map((b) => (
-                        <div key={b.pieces} className="flex items-baseline gap-2">
+                      {Object.entries(brand.bonuses).map(([pc, bonus]) => (
+                        <div key={pc} className="flex items-baseline gap-2">
                           <span className="text-xs font-mono text-shd-orange w-4">
-                            {b.pieces}
+                            {pc}
                           </span>
-                          <span className="text-sm text-foreground">{b.bonus}</span>
+                          <span className="text-sm text-foreground">
+                            {typeof bonus === "string" ? bonus : bonus.stat}
+                          </span>
                         </div>
                       ))}
                     </div>
 
+                    {/* Available slots */}
+                    <div className="mb-4">
+                      <h4 className="text-xs font-semibold text-foreground-secondary uppercase tracking-wider mb-2">
+                        Available Slots
+                      </h4>
+                      <div className="flex flex-wrap gap-1">
+                        {brand.slots.map((slot) => (
+                          <Badge key={slot} variant="default">{slot}</Badge>
+                        ))}
+                      </div>
+                    </div>
+
                     {/* Named items */}
-                    {brand.namedItems.length > 0 && (
+                    {brandNamedItems.length > 0 && (
                       <div className="space-y-2">
                         <h4 className="text-xs font-semibold text-foreground-secondary uppercase tracking-wider">
                           Named Items
                         </h4>
-                        {brand.namedItems.map((item) => (
+                        {brandNamedItems.map((item) => (
                           <div
                             key={item.id}
                             className="flex items-center justify-between rounded-md bg-background-secondary px-3 py-2"
@@ -260,7 +218,8 @@ function GearPage() {
                                 {item.name}
                               </span>
                               <span className="text-xs text-foreground-secondary ml-2">
-                                ({item.slot}) — {item.talent}
+                                ({item.slot})
+                                {item.uniqueAttributes[0] && ` — ${item.uniqueAttributes[0]}`}
                               </span>
                             </div>
                             <UseInBuilderButton itemId={item.id} />

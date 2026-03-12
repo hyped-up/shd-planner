@@ -1,7 +1,8 @@
 // Data integrity tests for the data loader
 // Verifies function signatures exist and return expected types
-// TODO: Add data-dependent tests once Phase 1 data files are populated
+// Tests data-dependent integrity across all entity types
 
+import { describe, test, expect } from "vitest";
 import {
   getManifest,
   getAllBrands,
@@ -191,34 +192,301 @@ describe("Data loader return types", () => {
   });
 });
 
-// --- TODO: Data-dependent tests (uncomment when Phase 1 data exists) ---
+// --- Data-dependent tests ---
 
-// describe("Data integrity - brand sets", () => {
-//   test("all brand sets have valid IDs and names", async () => {
-//     const brands = await getAllBrands();
-//     for (const brand of brands) {
-//       expect(brand.id).toBeTruthy();
-//       expect(brand.name).toBeTruthy();
-//       expect(brand.slots.length).toBeGreaterThan(0);
-//     }
-//   });
-// });
+// Valid gear slot values for cross-checking brand slot data
+const VALID_GEAR_SLOTS = ["Mask", "Backpack", "Chest", "Gloves", "Holster", "Kneepads"];
 
-// describe("Data integrity - gear sets", () => {
-//   test("all gear sets have at least 2 bonuses", async () => {
-//     const sets = await getAllGearSets();
-//     for (const set of sets) {
-//       expect(Object.keys(set.bonuses).length).toBeGreaterThanOrEqual(2);
-//     }
-//   });
-// });
+// Valid weapon type values for cross-checking weapon type data
+const VALID_WEAPON_TYPES = [
+  "Assault Rifles",
+  "Submachine Guns",
+  "Light Machine Guns",
+  "Rifles",
+  "Marksman Rifles",
+  "Shotguns",
+  "Pistols",
+];
 
-// describe("Data integrity - cross-references", () => {
-//   test("named items reference valid brand IDs", async () => {
-//     const [items, brands] = await Promise.all([getAllNamedItems(), getAllBrands()]);
-//     const brandIds = new Set(brands.map((b) => b.id));
-//     for (const item of items) {
-//       expect(brandIds.has(item.brand)).toBe(true);
-//     }
-//   });
-// });
+describe("Data integrity - brand sets", () => {
+  // Verify all brand sets have valid IDs and names
+  test("all brand sets have valid IDs and names", async () => {
+    const brands = await getAllBrands();
+    for (const brand of brands) {
+      expect(brand.id).toBeTruthy();
+      expect(brand.name).toBeTruthy();
+      expect(brand.slots.length).toBeGreaterThan(0);
+    }
+  });
+
+  // Verify all brand IDs are unique
+  test("all brands have unique IDs", async () => {
+    const brands = await getAllBrands();
+    const ids = brands.map((b) => b.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length);
+  });
+
+  // Verify all brands have a non-empty name
+  test("all brands have non-empty name", async () => {
+    const brands = await getAllBrands();
+    for (const brand of brands) {
+      expect(brand.name.trim().length).toBeGreaterThan(0);
+    }
+  });
+
+  // Verify all brands have at least 1 slot
+  test("all brands have at least 1 slot", async () => {
+    const brands = await getAllBrands();
+    for (const brand of brands) {
+      expect(brand.slots.length).toBeGreaterThanOrEqual(1);
+    }
+  });
+
+  // Verify brand slots are valid GearSlot values
+  test("brand slots are valid GearSlot values", async () => {
+    const brands = await getAllBrands();
+    for (const brand of brands) {
+      for (const slot of brand.slots) {
+        expect(VALID_GEAR_SLOTS).toContain(slot);
+      }
+    }
+  });
+});
+
+describe("Data integrity - gear sets", () => {
+  // Verify all gear sets have at least 2 bonuses
+  test("all gear sets have at least 2 bonuses", async () => {
+    const sets = await getAllGearSets();
+    for (const set of sets) {
+      expect(Object.keys(set.bonuses).length).toBeGreaterThanOrEqual(2);
+    }
+  });
+
+  // Verify all gear set IDs are unique
+  test("all gear sets have unique IDs", async () => {
+    const sets = await getAllGearSets();
+    const ids = sets.map((s) => s.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length);
+  });
+
+  // Verify all gear sets have a non-empty name
+  test("all gear sets have non-empty name", async () => {
+    const sets = await getAllGearSets();
+    for (const set of sets) {
+      expect(set.name.trim().length).toBeGreaterThan(0);
+    }
+  });
+
+  // Verify gear sets have chest and/or backpack talent info
+  test("gear sets have chest and/or backpack talent info", async () => {
+    const sets = await getAllGearSets();
+    for (const set of sets) {
+      // Every gear set should define at least one of chestTalent or backpackTalent
+      const hasChest = set.chestTalent !== undefined;
+      const hasBackpack = set.backpackTalent !== undefined;
+      expect(hasChest || hasBackpack).toBe(true);
+    }
+  });
+});
+
+describe("Data integrity - weapons", () => {
+  // Verify all weapon IDs are unique
+  test("all weapons have unique IDs", async () => {
+    const weapons = await getAllWeapons();
+    const ids = weapons.map((w) => w.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length);
+  });
+
+  // Verify all weapons have positive RPM
+  test("all weapons have positive RPM", async () => {
+    const weapons = await getAllWeapons();
+    for (const weapon of weapons) {
+      expect(weapon.rpm).toBeGreaterThan(0);
+    }
+  });
+
+  // Verify all weapons have non-negative base damage (0 allowed for unverified entries)
+  test("all weapons have non-negative base damage", async () => {
+    const weapons = await getAllWeapons();
+    for (const weapon of weapons) {
+      expect(weapon.baseDamage).toBeGreaterThanOrEqual(0);
+    }
+  });
+
+  // Verify all weapons have positive magazine size
+  test("all weapons have positive mag size", async () => {
+    const weapons = await getAllWeapons();
+    for (const weapon of weapons) {
+      expect(weapon.magSize).toBeGreaterThan(0);
+    }
+  });
+
+  // Verify weapon types are valid WeaponType values
+  test("weapon types are valid WeaponType values", async () => {
+    const weapons = await getAllWeapons();
+    for (const weapon of weapons) {
+      expect(VALID_WEAPON_TYPES).toContain(weapon.type);
+    }
+  });
+});
+
+describe("Data integrity - talents", () => {
+  // Verify all gear talents have unique IDs
+  test("all gear talents have unique IDs", async () => {
+    const { gear } = await getAllTalents();
+    const ids = gear.map((t) => t.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length);
+  });
+
+  // Verify all weapon talents have unique IDs
+  test("all weapon talents have unique IDs", async () => {
+    const { weapon } = await getAllTalents();
+    const ids = weapon.map((t) => t.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length);
+  });
+
+  // Verify gear talents have non-empty names and descriptions
+  test("gear talents have non-empty names and descriptions", async () => {
+    const { gear } = await getAllTalents();
+    for (const talent of gear) {
+      expect(talent.name.trim().length).toBeGreaterThan(0);
+      expect(talent.description.trim().length).toBeGreaterThan(0);
+    }
+  });
+
+  // Verify weapon talents have non-empty names and descriptions
+  test("weapon talents have non-empty names and descriptions", async () => {
+    const { weapon } = await getAllTalents();
+    for (const talent of weapon) {
+      expect(talent.name.trim().length).toBeGreaterThan(0);
+      expect(talent.description.trim().length).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe("Data integrity - skills", () => {
+  // Verify all skills have unique IDs
+  test("all skills have unique IDs", async () => {
+    const skills = await getAllSkills();
+    const ids = skills.map((s) => s.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length);
+  });
+
+  // Verify skills have non-empty names
+  test("skills have non-empty names", async () => {
+    const skills = await getAllSkills();
+    for (const skill of skills) {
+      expect(skill.name.trim().length).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe("Data integrity - exotics", () => {
+  // Verify all exotic gear has unique IDs
+  test("all exotic gear has unique IDs", async () => {
+    const exotics = await getAllExoticGear();
+    const ids = exotics.map((e) => e.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length);
+  });
+
+  // Verify all exotic weapons have unique IDs
+  test("all exotic weapons have unique IDs", async () => {
+    const exotics = await getAllExoticWeapons();
+    const ids = exotics.map((e) => e.id);
+    const uniqueIds = new Set(ids);
+    expect(uniqueIds.size).toBe(ids.length);
+  });
+
+  // Verify exotic gear has non-empty names
+  test("exotic gear has non-empty names", async () => {
+    const exotics = await getAllExoticGear();
+    for (const exotic of exotics) {
+      expect(exotic.name.trim().length).toBeGreaterThan(0);
+    }
+  });
+
+  // Verify exotic weapons have non-empty names
+  test("exotic weapons have non-empty names", async () => {
+    const exotics = await getAllExoticWeapons();
+    for (const exotic of exotics) {
+      expect(exotic.name.trim().length).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe("Data integrity - cross-references", () => {
+  // Verify named gear items (non-weapon) reference valid brand IDs
+  test("named gear items reference valid brand IDs", async () => {
+    const [items, brands] = await Promise.all([getAllNamedItems(), getAllBrands()]);
+    const brandIds = new Set(brands.map((b) => b.id));
+    // Filter out items with placeholder brand IDs (named-weapon, named-gear)
+    const gearItems = items.filter(
+      (i) => i.brand && i.brand.trim() !== "" && !i.brand.startsWith("brand-named-")
+    );
+    for (const item of gearItems) {
+      expect(brandIds.has(item.brand)).toBe(true);
+    }
+  });
+
+  // Verify named items reference existing brands via getNamedItemsByBrand
+  test("named items reference existing brands", async () => {
+    const brands = await getAllBrands();
+    // Each brand that has named items should return them correctly
+    for (const brand of brands) {
+      const items = await getNamedItemsByBrand(brand.id);
+      expect(Array.isArray(items)).toBe(true);
+      for (const item of items) {
+        expect(item.brand).toBe(brand.id);
+      }
+    }
+  });
+
+  // Verify search returns results for known entities
+  test("search returns results for known entities", async () => {
+    const brands = await getAllBrands();
+    if (brands.length > 0) {
+      // Search for the first brand name and expect at least 1 result
+      const results = await searchEntities(brands[0].name);
+      expect(results.length).toBeGreaterThan(0);
+    }
+  });
+});
+
+describe("Data integrity - search", () => {
+  // Verify search with query "Providence" returns results
+  test('search with query "Providence" returns results', async () => {
+    const results = await searchEntities("Providence");
+    expect(results.length).toBeGreaterThan(0);
+    // All returned results should have a positive score
+    for (const result of results) {
+      expect(result.score).toBeGreaterThan(0);
+    }
+  });
+
+  // Verify search with empty query returns empty array
+  test('search with query "" returns empty', async () => {
+    const results = await searchEntities("");
+    expect(results).toHaveLength(0);
+  });
+
+  // Verify search is case-insensitive
+  test("search is case-insensitive", async () => {
+    const upperResults = await searchEntities("PROVIDENCE");
+    const lowerResults = await searchEntities("providence");
+    const mixedResults = await searchEntities("Providence");
+    // All three searches should return the same number of results
+    expect(upperResults.length).toBe(lowerResults.length);
+    expect(upperResults.length).toBe(mixedResults.length);
+    // Results should contain the same IDs
+    const upperIds = new Set(upperResults.map((r) => r.id));
+    const lowerIds = new Set(lowerResults.map((r) => r.id));
+    expect(upperIds).toEqual(lowerIds);
+  });
+});

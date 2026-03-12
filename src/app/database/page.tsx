@@ -1,51 +1,53 @@
+// Database hub page — shows categories with real entity counts
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { SearchBar } from "@/components/shared";
+import { getManifest } from "@/lib/data-loader";
 
-// Placeholder category data with sample counts
-const categories = [
+// Category definitions with routing info
+const categoryDefs = [
   {
     name: "Brand Sets & Named Items",
     href: "/database/gear",
     description: "Browse all brand sets with their 1/2/3-piece bonuses and associated named items.",
-    count: 22,
+    countKey: "brands",
     icon: "shield",
   },
   {
     name: "Gear Sets",
     href: "/database/sets",
     description: "View gear set bonuses, chest and backpack talents, and 4-piece effects.",
-    count: 18,
+    countKey: "gearSets",
     icon: "layers",
   },
   {
     name: "Weapons",
     href: "/database/weapons",
     description: "All weapon archetypes with RPM, magazine size, and base damage stats.",
-    count: 45,
+    countKey: "weapons",
     icon: "crosshair",
   },
   {
     name: "Talents",
     href: "/database/talents",
     description: "Gear and weapon talents with descriptions, slot restrictions, and damage types.",
-    count: 62,
+    countKey: "talents",
     icon: "zap",
   },
   {
     name: "Skills",
     href: "/database/skills",
     description: "Skill categories, variants, and tier scaling tables.",
-    count: 36,
+    countKey: "skills",
     icon: "cpu",
   },
   {
     name: "Exotics",
     href: "/database/exotics",
     description: "Exotic gear and weapons with unique talents and how-to-obtain info.",
-    count: 28,
+    countKey: "exotics",
     icon: "star",
   },
 ];
@@ -92,6 +94,22 @@ function CategoryIcon({ icon }: { icon: string }) {
 
 export default function DatabasePage() {
   const [search, setSearch] = useState("");
+  const [entityCounts, setEntityCounts] = useState<Record<string, number>>({});
+
+  // Load manifest for real entity counts
+  useEffect(() => {
+    getManifest().then((manifest) => {
+      if (manifest?.entityCounts) {
+        setEntityCounts(manifest.entityCounts);
+      }
+    });
+  }, []);
+
+  // Build categories with real counts
+  const categories = categoryDefs.map((cat) => ({
+    ...cat,
+    count: entityCounts[cat.countKey] ?? 0,
+  }));
 
   // Filter categories by search term
   const filtered = categories.filter(
@@ -110,7 +128,7 @@ export default function DatabasePage() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-foreground">Game Database</h1>
           <p className="mt-2 text-foreground-secondary">
-            Browse {totalItems}+ items across {categories.length} categories. All Division 2 gear, weapons, talents, skills, and exotics.
+            Browse {totalItems > 0 ? `${totalItems}+` : ""} items across {categories.length} categories. All Division 2 gear, weapons, talents, skills, and exotics.
           </p>
         </div>
 
@@ -133,9 +151,11 @@ export default function DatabasePage() {
               <div className="flex items-start justify-between">
                 <CategoryIcon icon={cat.icon} />
                 {/* Count badge */}
-                <span className="inline-flex items-center rounded-full bg-shd-orange/15 px-2.5 py-0.5 text-xs font-semibold text-shd-orange">
-                  {cat.count}
-                </span>
+                {cat.count > 0 && (
+                  <span className="inline-flex items-center rounded-full bg-shd-orange/15 px-2.5 py-0.5 text-xs font-semibold text-shd-orange">
+                    {cat.count}
+                  </span>
+                )}
               </div>
               <h2 className="mt-4 text-lg font-semibold text-foreground group-hover:text-shd-orange transition-colors">
                 {cat.name}

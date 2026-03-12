@@ -19,6 +19,7 @@ import type {
   ISpecialization,
   IGearAttribute,
 } from "./types";
+import { cachedLoader } from "./data-cache";
 
 // --- Helpers ---
 
@@ -54,19 +55,19 @@ interface IManifest {
 }
 
 /** Load the data manifest */
-export async function getManifest(): Promise<IManifest | null> {
+export const getManifest: () => Promise<IManifest | null> = cachedLoader("manifest", async () => {
   try {
     const data = await import("@/data/manifest.json");
     return data.default as IManifest;
   } catch {
     return null;
   }
-}
+});
 
 // --- Brand Sets ---
 
 /** Get all brand sets */
-export async function getAllBrands(): Promise<IBrandSet[]> {
+export const getAllBrands: () => Promise<IBrandSet[]> = cachedLoader("brands", async () => {
   const data = await import("@/data/gear-brands.json");
   return (data.default as RawJson[]).map((b) => ({
     id: b.id,
@@ -83,7 +84,7 @@ export async function getAllBrands(): Promise<IBrandSet[]> {
     _verified: b._verified ?? false,
     _sources: b._sources ?? [],
   }));
-}
+});
 
 /** Get a brand set by its ID */
 export async function getBrandById(id: string): Promise<IBrandSet | undefined> {
@@ -100,7 +101,7 @@ export async function getBrandsBySlot(slot: GearSlot): Promise<IBrandSet[]> {
 // --- Gear Sets ---
 
 /** Get all gear sets */
-export async function getAllGearSets(): Promise<IGearSet[]> {
+export const getAllGearSets: () => Promise<IGearSet[]> = cachedLoader("gearsets", async () => {
   const data = await import("@/data/gear-sets.json");
   return (data.default as RawJson[]).map((g) => ({
     id: g.id,
@@ -119,7 +120,7 @@ export async function getAllGearSets(): Promise<IGearSet[]> {
     _verified: g._verified ?? false,
     _sources: g._sources ?? [],
   }));
-}
+});
 
 /** Get a gear set by its ID */
 export async function getGearSetById(id: string): Promise<IGearSet | undefined> {
@@ -130,7 +131,7 @@ export async function getGearSetById(id: string): Promise<IGearSet | undefined> 
 // --- Weapons ---
 
 /** Get all weapons (flattened from class/archetype structure) */
-export async function getAllWeapons(): Promise<IWeapon[]> {
+export const getAllWeapons: () => Promise<IWeapon[]> = cachedLoader("weapons", async () => {
   const data = await import("@/data/weapons.json");
   const weapons: IWeapon[] = [];
   for (const cls of data.default as RawJson[]) {
@@ -152,7 +153,7 @@ export async function getAllWeapons(): Promise<IWeapon[]> {
     }
   }
   return weapons;
-}
+});
 
 /** Get weapons by type (e.g., "Assault Rifles") */
 export async function getWeaponsByType(type: WeaponType): Promise<IWeapon[]> {
@@ -169,10 +170,7 @@ export async function getWeaponById(id: string): Promise<IWeapon | undefined> {
 // --- Talents ---
 
 /** Get all gear and weapon talents */
-export async function getAllTalents(): Promise<{
-  gear: IGearTalent[];
-  weapon: IWeaponTalent[];
-}> {
+export const getAllTalents: () => Promise<{ gear: IGearTalent[]; weapon: IWeaponTalent[] }> = cachedLoader("talents", async () => {
   const [gearData, weaponData] = await Promise.all([
     import("@/data/gear-talents.json"),
     import("@/data/weapon-talents.json"),
@@ -202,7 +200,7 @@ export async function getAllTalents(): Promise<{
   }));
 
   return { gear, weapon };
-}
+});
 
 /** Get gear talents filtered by slot (chest or backpack) */
 export async function getGearTalentsBySlot(slot: TalentSlot): Promise<IGearTalent[]> {
@@ -223,7 +221,7 @@ export async function getWeaponTalentsByWeaponType(
 // --- Skills ---
 
 /** Get all skills */
-export async function getAllSkills(): Promise<ISkill[]> {
+export const getAllSkills: () => Promise<ISkill[]> = cachedLoader("skills", async () => {
   const data = await import("@/data/skills.json");
   return (data.default as RawJson[]).map((s) => ({
     id: s.id,
@@ -246,7 +244,7 @@ export async function getAllSkills(): Promise<ISkill[]> {
     _verified: s._verified ?? false,
     _sources: s._sources ?? [],
   }));
-}
+});
 
 /** Get a skill by its ID */
 export async function getSkillById(id: string): Promise<ISkill | undefined> {
@@ -263,7 +261,7 @@ export async function getSkillVariants(skillId: string): Promise<ISkillVariant[]
 // --- Exotics ---
 
 /** Get all exotic gear pieces */
-export async function getAllExoticGear(): Promise<IExoticGear[]> {
+export const getAllExoticGear: () => Promise<IExoticGear[]> = cachedLoader("exoticGear", async () => {
   const data = await import("@/data/exotics-gear.json");
   return (data.default as RawJson[]).map((e) => ({
     id: e.id,
@@ -279,10 +277,10 @@ export async function getAllExoticGear(): Promise<IExoticGear[]> {
     _verified: e._verified ?? false,
     _sources: e._sources ?? [],
   }));
-}
+});
 
 /** Get all exotic weapons */
-export async function getAllExoticWeapons(): Promise<IExoticWeapon[]> {
+export const getAllExoticWeapons: () => Promise<IExoticWeapon[]> = cachedLoader("exoticWeapons", async () => {
   const data = await import("@/data/exotics-weapons.json");
   return (data.default as RawJson[]).map((e) => ({
     id: e.id,
@@ -300,7 +298,7 @@ export async function getAllExoticWeapons(): Promise<IExoticWeapon[]> {
     _verified: e._verified ?? false,
     _sources: e._sources ?? [],
   }));
-}
+});
 
 /** Get an exotic by its ID (searches both gear and weapons) */
 export async function getExoticById(
@@ -313,7 +311,7 @@ export async function getExoticById(
 // --- Named Items ---
 
 /** Get all named items */
-export async function getAllNamedItems(): Promise<INamedItem[]> {
+export const getAllNamedItems: () => Promise<INamedItem[]> = cachedLoader("namedItems", async () => {
   const data = await import("@/data/named-items.json");
   return (data.default as RawJson[]).map((n) => ({
     id: n.id,
@@ -329,7 +327,7 @@ export async function getAllNamedItems(): Promise<INamedItem[]> {
     _verified: n._verified ?? false,
     _sources: n._sources ?? [],
   }));
-}
+});
 
 /** Get named items that belong to a specific brand */
 export async function getNamedItemsByBrand(brandId: string): Promise<INamedItem[]> {
@@ -354,7 +352,7 @@ export async function getSpecializationById(
 }
 
 /** Get all specializations */
-export async function getAllSpecializations(): Promise<ISpecialization[]> {
+export const getAllSpecializations: () => Promise<ISpecialization[]> = cachedLoader("specializations", async () => {
   const data = await import("@/data/specializations.json");
   return (data.default as RawJson[]).map((s) => ({
     id: s.id,
@@ -367,7 +365,7 @@ export async function getAllSpecializations(): Promise<ISpecialization[]> {
     _verified: s._verified ?? false,
     _sources: s._sources ?? [],
   }));
-}
+});
 
 // --- Attributes ---
 
@@ -383,7 +381,7 @@ export async function getAttributeMaxValue(
 }
 
 /** Get all minor attributes (excludes core attributes) */
-export async function getAllMinorAttributes(): Promise<IGearAttribute[]> {
+export const getAllMinorAttributes: () => Promise<IGearAttribute[]> = cachedLoader("minorAttributes", async () => {
   const data = await import("@/data/gear-attributes.json");
   return (data.default as RawJson[])
     .filter((a) => a.category?.startsWith("minor_"))
@@ -395,7 +393,7 @@ export async function getAllMinorAttributes(): Promise<IGearAttribute[]> {
       unit: a.unit ?? "percent",
       category: a.category ?? "minor_offensive",
     }));
-}
+});
 
 // --- Search ---
 

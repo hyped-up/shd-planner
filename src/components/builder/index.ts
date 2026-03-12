@@ -9,3 +9,4 @@ export { default as WeaponConfigPanel } from "./WeaponConfigPanel";
 export { default as SkillConfigPanel } from "./SkillConfigPanel";
 export { default as ValidationBar } from "./ValidationBar";
 export { default as BuildLibrary } from "./BuildLibrary";
+export { default as OptimizerPanel } from "./OptimizerPanel";

@@ -14,9 +14,24 @@ services:
         required: false
     environment:
       - NODE_ENV=production
+    # Resource limits to prevent runaway memory/CPU usage
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: "1.0"
+        reservations:
+          memory: 128M
+    # Health check using the dedicated health endpoint
     healthcheck:
-      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/"]
+      test: ["CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:3000/api/health"]
       interval: 30s
       timeout: 5s
       retries: 3
-      start_period: 10s
+      start_period: 15s
+    # JSON logging driver for structured log output
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
