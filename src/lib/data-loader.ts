@@ -1,5 +1,7 @@
 // Data loader for Division 2 game data JSON files
-// Loads from src/data/ JSON and adapts to TypeScript interfaces
+// Uses fs.readFile on server (supports hot-reload via clearDataCache)
+// Uses fetch() on client (loads from public data endpoint or bundled JSON)
+// DATA_DIR env var configures the server-side path (Docker: /app/data)
 
 import type {
   GearSlot,
@@ -26,6 +28,30 @@ import { cachedLoader } from "./data-cache";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type RawJson = any;
 
+// Detect server vs client at module load time
+const isServer = typeof window === "undefined";
+
+/**
+ * Read and parse a JSON data file.
+ * Server: uses fs.readFile from DATA_DIR (supports hot-reload when cache cleared)
+ * Client: uses dynamic import (bundled by Next.js at build time)
+ */
+async function readDataFile<T>(filename: string): Promise<T> {
+  if (isServer) {
+    // Dynamic import of fs to avoid bundler issues on client
+    const fs = await import("fs/promises");
+    const path = await import("path");
+    const dataDir = process.env.DATA_DIR ?? path.resolve(process.cwd(), "src/data");
+    const filePath = path.join(dataDir, filename);
+    const raw = await fs.readFile(filePath, "utf-8");
+    return JSON.parse(raw) as T;
+  } else {
+    // Client-side: use dynamic import which Next.js handles at build time
+    const mod = await import(`@/data/${filename}`);
+    return mod.default as T;
+  }
+}
+
 /** Convert lowercase slot ("mask") to PascalCase GearSlot ("Mask") */
 function toGearSlot(s: string): GearSlot {
   return (s.charAt(0).toUpperCase() + s.slice(1)) as GearSlot;
@@ -46,7 +72,7 @@ function toCoreAttribute(focus: string): "weaponDamage" | "armor" | "skillTier" 
 // --- Manifest ---
 
 /** Data manifest shape */
-interface IManifest {
+export interface IManifest {
   version: string;
   gameVersion: string;
   lastDataUpdate: string;
@@ -57,8 +83,7 @@ interface IManifest {
 /** Load the data manifest */
 export const getManifest: () => Promise<IManifest | null> = cachedLoader("manifest", async () => {
   try {
-    const data = await import("@/data/manifest.json");
-    return data.default as IManifest;
+    return await readDataFile<IManifest>("manifest.json");
   } catch {
     return null;
   }
@@ -68,8 +93,8 @@ export const getManifest: () => Promise<IManifest | null> = cachedLoader("manife
 
 /** Get all brand sets */
 export const getAllBrands: () => Promise<IBrandSet[]> = cachedLoader("brands", async () => {
-  const data = await import("@/data/gear-brands.json");
-  return (data.default as RawJson[]).map((b) => ({
+  const data = await readDataFile<RawJson[]>("gear-brands.json");
+  return data.map((b) => ({
     id: b.id,
     name: b.name,
     iconUrl: b.iconUrl,
@@ -102,8 +127,8 @@ export async function getBrandsBySlot(slot: GearSlot): Promise<IBrandSet[]> {
 
 /** Get all gear sets */
 export const getAllGearSets: () => Promise<IGearSet[]> = cachedLoader("gearsets", async () => {
-  const data = await import("@/data/gear-sets.json");
-  return (data.default as RawJson[]).map((g) => ({
+  const data = await readDataFile<RawJson[]>("gear-sets.json");
+  return data.map((g) => ({
     id: g.id,
     name: g.name,
     iconUrl: g.iconUrl,
@@ -132,9 +157,9 @@ export async function getGearSetById(id: string): Promise<IGearSet | undefined> 
 
 /** Get all weapons (flattened from class/archetype structure) */
 export const getAllWeapons: () => Promise<IWeapon[]> = cachedLoader("weapons", async () => {
-  const data = await import("@/data/weapons.json");
+  const data = await readDataFile<RawJson[]>("weapons.json");
   const weapons: IWeapon[] = [];
-  for (const cls of data.default as RawJson[]) {
+  for (const cls of data) {
     for (const arch of cls.archetypes ?? []) {
       weapons.push({
         id: arch.id,
@@ -172,11 +197,11 @@ export async function getWeaponById(id: string): Promise<IWeapon | undefined> {
 /** Get all gear and weapon talents */
 export const getAllTalents: () => Promise<{ gear: IGearTalent[]; weapon: IWeaponTalent[] }> = cachedLoader("talents", async () => {
   const [gearData, weaponData] = await Promise.all([
-    import("@/data/gear-talents.json"),
-    import("@/data/weapon-talents.json"),
+    readDataFile<RawJson[]>("gear-talents.json"),
+    readDataFile<RawJson[]>("weapon-talents.json"),
   ]);
 
-  const gear: IGearTalent[] = (gearData.default as RawJson[]).map((t) => ({
+  const gear: IGearTalent[] = gearData.map((t) => ({
     id: t.id,
     name: t.name,
     iconUrl: t.iconUrl,
@@ -189,7 +214,7 @@ export const getAllTalents: () => Promise<{ gear: IGearTalent[]; weapon: IWeapon
     _sources: t._sources ?? [],
   }));
 
-  const weapon: IWeaponTalent[] = (weaponData.default as RawJson[]).map((t) => ({
+  const weapon: IWeaponTalent[] = weaponData.map((t) => ({
     id: t.id,
     name: t.name,
     iconUrl: t.iconUrl,
@@ -222,8 +247,8 @@ export async function getWeaponTalentsByWeaponType(
 
 /** Get all skills */
 export const getAllSkills: () => Promise<ISkill[]> = cachedLoader("skills", async () => {
-  const data = await import("@/data/skills.json");
-  return (data.default as RawJson[]).map((s) => ({
+  const data = await readDataFile<RawJson[]>("skills.json");
+  return data.map((s) => ({
     id: s.id,
     name: s.name,
     iconUrl: s.iconUrl,
@@ -262,8 +287,8 @@ export async function getSkillVariants(skillId: string): Promise<ISkillVariant[]
 
 /** Get all exotic gear pieces */
 export const getAllExoticGear: () => Promise<IExoticGear[]> = cachedLoader("exoticGear", async () => {
-  const data = await import("@/data/exotics-gear.json");
-  return (data.default as RawJson[]).map((e) => ({
+  const data = await readDataFile<RawJson[]>("exotics-gear.json");
+  return data.map((e) => ({
     id: e.id,
     name: e.name,
     iconUrl: e.iconUrl,
@@ -281,8 +306,8 @@ export const getAllExoticGear: () => Promise<IExoticGear[]> = cachedLoader("exot
 
 /** Get all exotic weapons */
 export const getAllExoticWeapons: () => Promise<IExoticWeapon[]> = cachedLoader("exoticWeapons", async () => {
-  const data = await import("@/data/exotics-weapons.json");
-  return (data.default as RawJson[]).map((e) => ({
+  const data = await readDataFile<RawJson[]>("exotics-weapons.json");
+  return data.map((e) => ({
     id: e.id,
     name: e.name,
     iconUrl: e.iconUrl,
@@ -312,8 +337,8 @@ export async function getExoticById(
 
 /** Get all named items */
 export const getAllNamedItems: () => Promise<INamedItem[]> = cachedLoader("namedItems", async () => {
-  const data = await import("@/data/named-items.json");
-  return (data.default as RawJson[]).map((n) => ({
+  const data = await readDataFile<RawJson[]>("named-items.json");
+  return data.map((n) => ({
     id: n.id,
     name: n.name,
     iconUrl: n.iconUrl,
@@ -353,8 +378,8 @@ export async function getSpecializationById(
 
 /** Get all specializations */
 export const getAllSpecializations: () => Promise<ISpecialization[]> = cachedLoader("specializations", async () => {
-  const data = await import("@/data/specializations.json");
-  return (data.default as RawJson[]).map((s) => ({
+  const data = await readDataFile<RawJson[]>("specializations.json");
+  return data.map((s) => ({
     id: s.id,
     name: s.name,
     iconUrl: s.iconUrl,
@@ -373,8 +398,8 @@ export const getAllSpecializations: () => Promise<ISpecialization[]> = cachedLoa
 export async function getAttributeMaxValue(
   attributeId: string
 ): Promise<number | undefined> {
-  const data = await import("@/data/gear-attributes.json");
-  const attr = (data.default as RawJson[]).find(
+  const data = await readDataFile<RawJson[]>("gear-attributes.json");
+  const attr = data.find(
     (a: RawJson) => a.id === attributeId || a.stat === attributeId
   );
   return attr?.maxRoll ?? undefined;
@@ -382,8 +407,8 @@ export async function getAttributeMaxValue(
 
 /** Get all minor attributes (excludes core attributes) */
 export const getAllMinorAttributes: () => Promise<IGearAttribute[]> = cachedLoader("minorAttributes", async () => {
-  const data = await import("@/data/gear-attributes.json");
-  return (data.default as RawJson[])
+  const data = await readDataFile<RawJson[]>("gear-attributes.json");
+  return data
     .filter((a) => a.category?.startsWith("minor_"))
     .map((a) => ({
       id: a.id,

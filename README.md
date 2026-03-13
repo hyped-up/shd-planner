@@ -38,6 +38,7 @@
 | 🏆 Meta Templates | 🟢 `ONLINE` | Pre-built loadouts for DPS, tank, healer, skill roles |
 | ⚡ Loadout Optimizer | 🟢 `ONLINE` | Heuristic gear optimizer with DPS/Armor/Skill/Balanced targets |
 | 📈 Build Compare | 🟢 `ONLINE` | Side-by-side comparison of up to 3 builds with color-coded diffs |
+| 🔄 Auto-Updates | 🟢 `ONLINE` | Weekly game data refresh via cron — scrape, merge, hot-reload (Docker) |
 | 🩺 Health Check | 🟢 `ONLINE` | `/api/health` endpoint for Docker and monitoring |
 | 🔄 CI/CD Pipeline | 🟢 `ONLINE` | GitHub Actions: lint, test, build, Docker image |
 
@@ -50,9 +51,17 @@
 ```bash
 git clone https://github.com/hyped-up/shd-planner.git
 cd shd-planner
-docker build -t shd-planner .
-docker run -p 3000:3000 shd-planner
+docker compose up -d
 ```
+
+Auto-updates are enabled by default (weekly). Configure via environment:
+
+```bash
+# docker-compose.yml environment section
+DATA_UPDATE_INTERVAL=7d  # Options: 1d, 7d, 14d, 30d
+```
+
+Game data persists across container restarts via the `shd-data` Docker volume.
 
 ```
   ISAC: "Connection established. Welcome back, Agent."

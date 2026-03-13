@@ -14,11 +14,17 @@ services:
         required: false
     environment:
       - NODE_ENV=production
-    # Resource limits to prevent runaway memory/CPU usage
+      - DATA_DIR=/app/data
+      - RAW_DIR=/app/raw
+      - DATA_UPDATE_INTERVAL=7d
+    # Persistent volume for updated game data
+    volumes:
+      - shd-data:/app/data
+    # Resource limits — raised to 768M for scraper headroom
     deploy:
       resources:
         limits:
-          memory: 512M
+          memory: 768M
           cpus: "1.0"
         reservations:
           memory: 128M
@@ -35,3 +41,6 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+
+volumes:
+  shd-data:

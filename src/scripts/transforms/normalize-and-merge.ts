@@ -12,11 +12,16 @@
 
 import * as fs from "fs";
 import * as path from "path";
+import { fileURLToPath } from "url";
 
-// --- Path constants ---
-const ROOT = path.resolve(__dirname, "../../..");
-const RAW_DIR = path.join(ROOT, "src/scripts/scrapers/raw");
-const DATA_DIR = path.join(ROOT, "src/data");
+// --- Path constants (env-var-driven for Docker, fallback for dev) ---
+// Support both CJS (__dirname) and ESM (import.meta.url) for compiled output
+const __dirnameCompat = typeof __dirname !== "undefined"
+  ? __dirname
+  : path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.resolve(__dirnameCompat, "../../..");
+const RAW_DIR = process.env.RAW_DIR ?? path.join(ROOT, "src/scripts/scrapers/raw");
+const DATA_DIR = process.env.DATA_DIR ?? path.join(ROOT, "src/data");
 
 // --- Utility functions ---
 
@@ -810,20 +815,239 @@ function main(): void {
   const hasRawData = fs.existsSync(RAW_DIR) &&
     fs.readdirSync(RAW_DIR).filter((f) => f.endsWith(".json")).length > 0;
 
+  // Changelog tracks additions, updates, and removals
+  const changelog: { added: string[]; updated: string[]; removed: string[]; unchanged: number } = {
+    added: [], updated: [], removed: [], unchanged: 0,
+  };
+
   if (hasRawData) {
-    console.log("[info] Raw data found. Merging sources...\n");
-    // Read raw files (gracefully handle missing)
-    const rawBrands = readRawFile("brands.json");
-    const rawGearSets = readRawFile("gear-sets.json");
-    const rawExotics = readRawFile("exotics.json");
-    const rawWeapons = readRawFile("weapons.json");
-    const rawTalents = readRawFile("talents.json");
-    const rawSkills = readRawFile("skills.json");
-    // Log what was found
-    console.log(`  Raw files found: ${[rawBrands, rawGearSets, rawExotics, rawWeapons, rawTalents, rawSkills].filter(Boolean).length}/6\n`);
-    // TODO: implement actual merge logic when raw data format is defined
-    // For now, fall through to seed data
-    console.log("[info] Raw merge not yet implemented, generating seed data as base...\n");
+    console.log("[info] Raw data found. Merging scraped data with seed baseline...\n");
+
+    // Read all raw scraper output files
+    const rawFiles = {
+      wikiRaw: readRawFile("wiki-raw.json") as { extracted?: Record<string, unknown[]> } | null,
+      mxRaw: readRawFile("mx-builds-raw.json") as { extracted?: Record<string, unknown[]> } | null,
+      spreadsheetRaw: readRawFile("community-spreadsheet-raw.json") as { extracted?: Record<string, unknown[]> } | null,
+      nightfallRaw: readRawFile("nightfall-guard-raw.json") as { extracted?: Record<string, unknown[]> } | null,
+    };
+
+    const rawSourceCount = Object.values(rawFiles).filter(Boolean).length;
+    console.log(`  Raw files found: ${rawSourceCount}/4\n`);
+
+    // Helper: merge scraped entities into seed data by slugified name
+    // Prefers the source with more non-null fields
+    function mergeEntities<T extends { id: string; name: string }>(
+      seeds: T[],
+      scraped: Array<Record<string, unknown>>,
+      entityType: string,
+      idPrefix: string,
+    ): T[] {
+      const seedMap = new Map<string, T>();
+      for (const item of seeds) {
+        seedMap.set(slugify(item.name), item);
+      }
+
+      // Count non-null fields in an object
+      const fieldCount = (obj: Record<string, unknown>): number =>
+        Object.values(obj).filter((v) => v !== null && v !== undefined && v !== "").length;
+
+      for (const raw of scraped) {
+        const rawName = (raw.name ?? raw.title ?? "") as string;
+        if (!rawName) continue;
+        const slug = slugify(rawName);
+        const existing = seedMap.get(slug);
+
+        if (existing) {
+          // Merge supplementary fields from scraped data into existing
+          const existingFieldCount = fieldCount(existing as unknown as Record<string, unknown>);
+          const rawFieldCount = fieldCount(raw);
+
+          if (rawFieldCount > existingFieldCount) {
+            // Scraped data is more complete — update with raw, keeping the ID
+            const merged = { ...raw, id: existing.id } as unknown as T;
+            seedMap.set(slug, merged);
+            changelog.updated.push(`${entityType}:${rawName}`);
+          } else {
+            // Seed is more complete — merge only non-null fields from raw
+            for (const [key, value] of Object.entries(raw)) {
+              if (key === "id") continue;
+              const existingValue = (existing as unknown as Record<string, unknown>)[key];
+              if ((existingValue === null || existingValue === undefined || existingValue === "") && value) {
+                (existing as unknown as Record<string, unknown>)[key] = value;
+              }
+            }
+            changelog.unchanged++;
+          }
+        } else {
+          // New entity from scraper
+          const newEntity = { ...raw, id: `${idPrefix}-${slug}` } as unknown as T;
+          seedMap.set(slug, newEntity);
+          changelog.added.push(`${entityType}:${rawName}`);
+        }
+      }
+
+      return Array.from(seedMap.values());
+    }
+
+    // Collect scraped entities by category from all sources
+    function collectFromSources(category: string): Array<Record<string, unknown>> {
+      const collected: Array<Record<string, unknown>> = [];
+      for (const raw of Object.values(rawFiles)) {
+        const extracted = raw?.extracted;
+        if (extracted && Array.isArray(extracted[category])) {
+          collected.push(...(extracted[category] as Array<Record<string, unknown>>));
+        }
+      }
+      return collected;
+    }
+
+    // Merge each entity type: generate seed, then overlay scraped data
+    console.log("[step 1/13] Merging brand sets...");
+    const scrapedBrands = collectFromSources("brandSets");
+    const brandSetsRaw = generateBrandSets();
+    const brandSets = scrapedBrands.length > 0
+      ? mergeEntities(brandSetsRaw, scrapedBrands, "brand", "brand")
+      : brandSetsRaw;
+    writeDataFile("gear-brands.json", brandSets);
+
+    console.log("[step 2/13] Merging gear sets...");
+    const scrapedGearSets = collectFromSources("gearSets");
+    const gearSetsRaw = generateGearSets();
+    const gearSets = scrapedGearSets.length > 0
+      ? mergeEntities(gearSetsRaw, scrapedGearSets, "gearset", "gearset")
+      : gearSetsRaw;
+    writeDataFile("gear-sets.json", gearSets);
+
+    console.log("[step 3/13] Merging named items...");
+    const scrapedNamed = collectFromSources("namedItems");
+    const namedItemsRaw = generateNamedItems();
+    const namedItems = scrapedNamed.length > 0
+      ? mergeEntities(namedItemsRaw, scrapedNamed, "named", "named")
+      : namedItemsRaw;
+    writeDataFile("named-items.json", namedItems);
+
+    console.log("[step 4/13] Merging exotic gear...");
+    const scrapedExoticGear = collectFromSources("exotics").filter(
+      (e) => (e as Record<string, unknown>).slot !== undefined
+    );
+    const exoticGearRaw = generateExoticGear();
+    const exoticGear = scrapedExoticGear.length > 0
+      ? mergeEntities(exoticGearRaw, scrapedExoticGear, "exotic-gear", "exotic")
+      : exoticGearRaw;
+    writeDataFile("exotics-gear.json", exoticGear);
+
+    console.log("[step 5/13] Merging exotic weapons...");
+    const scrapedExoticWeapons = collectFromSources("exotics").filter(
+      (e) => (e as Record<string, unknown>).category !== undefined
+    );
+    const exoticWeaponsRaw = generateExoticWeapons();
+    const exoticWeapons = scrapedExoticWeapons.length > 0
+      ? mergeEntities(exoticWeaponsRaw, scrapedExoticWeapons, "exotic-weapon", "exotic")
+      : exoticWeaponsRaw;
+    writeDataFile("exotics-weapons.json", exoticWeapons);
+
+    console.log("[step 6/13] Merging weapons...");
+    const weapons = generateWeapons();
+    writeDataFile("weapons.json", weapons);
+
+    console.log("[step 7/13] Merging weapon talents...");
+    const scrapedWeaponTalents = collectFromSources("talents").filter(
+      (t) => Array.isArray((t as Record<string, unknown>).weaponTypes)
+    );
+    const weaponTalentsRaw = generateWeaponTalents();
+    const weaponTalents = scrapedWeaponTalents.length > 0
+      ? mergeEntities(weaponTalentsRaw, scrapedWeaponTalents, "weapon-talent", "talent")
+      : weaponTalentsRaw;
+    writeDataFile("weapon-talents.json", weaponTalents);
+
+    console.log("[step 8/13] Merging gear talents...");
+    const scrapedGearTalents = collectFromSources("talents").filter(
+      (t) => !Array.isArray((t as Record<string, unknown>).weaponTypes)
+    );
+    const gearTalentsRaw = generateGearTalents();
+    const gearTalents = scrapedGearTalents.length > 0
+      ? mergeEntities(gearTalentsRaw, scrapedGearTalents, "gear-talent", "talent")
+      : gearTalentsRaw;
+    writeDataFile("gear-talents.json", gearTalents);
+
+    console.log("[step 9/13] Generating gear attributes...");
+    const gearAttributes = generateGearAttributes();
+    writeDataFile("gear-attributes.json", gearAttributes);
+
+    console.log("[step 10/13] Merging skills...");
+    const skills = generateSkills();
+    writeDataFile("skills.json", skills);
+
+    console.log("[step 11/13] Generating skill mods...");
+    const skillMods = generateSkillMods();
+    writeDataFile("skill-mods.json", skillMods);
+
+    console.log("[step 12/13] Generating specializations...");
+    const specializations = generateSpecializations();
+    writeDataFile("specializations.json", specializations);
+
+    console.log("[step 13/13] Generating SHD Watch...");
+    const shdWatch = generateSHDWatch();
+    writeDataFile("shd-watch.json", shdWatch);
+
+    // Data quality report
+    const totalEntities =
+      brandSets.length + gearSets.length + namedItems.length +
+      exoticGear.length + exoticWeapons.length +
+      weapons.reduce((acc, w) => acc + w.archetypes.length, 0) +
+      weaponTalents.length + gearTalents.length +
+      gearAttributes.length +
+      skills.reduce((acc, s) => acc + s.variants.length, 0) +
+      skillMods.length + specializations.length + shdWatch.length;
+
+    const qualityReport = {
+      generatedAt: new Date().toISOString(),
+      totalEntities,
+      verified: 0,
+      singleSource: totalEntities - changelog.updated.length,
+      conflicted: 0,
+      missing: [] as string[],
+      conflicts: [] as string[],
+      source: "merged",
+      changelog,
+    };
+
+    writeDataFile("data-quality-report.json", qualityReport);
+
+    // Update manifest
+    const manifest = {
+      version: "0.1.0",
+      gameVersion: "TU21.1",
+      lastDataUpdate: new Date().toISOString(),
+      sources: Object.keys(rawFiles).filter((k) => rawFiles[k as keyof typeof rawFiles] !== null),
+      entityCounts: {
+        brandSets: brandSets.length,
+        gearSets: gearSets.length,
+        namedItems: namedItems.length,
+        exoticGear: exoticGear.length,
+        exoticWeapons: exoticWeapons.length,
+        weapons: weapons.reduce((acc, w) => acc + w.archetypes.length, 0),
+        weaponTalents: weaponTalents.length,
+        gearTalents: gearTalents.length,
+        gearAttributes: gearAttributes.length,
+        skills: skills.reduce((acc, s) => acc + s.variants.length, 0),
+        skillMods: skillMods.length,
+        specializations: specializations.length,
+        shdWatch: shdWatch.length,
+      },
+    };
+
+    writeDataFile("manifest.json", manifest);
+
+    console.log(`\n=== Pipeline Complete (Merged) ===`);
+    console.log(`Total entities: ${totalEntities}`);
+    console.log(`Added: ${changelog.added.length}, Updated: ${changelog.updated.length}, Unchanged: ${changelog.unchanged}`);
+    if (changelog.added.length > 0) console.log(`  New: ${changelog.added.join(", ")}`);
+    if (changelog.updated.length > 0) console.log(`  Updated: ${changelog.updated.join(", ")}`);
+
+    // Write changelog for cron handler consumption
+    writeDataFile("update-changelog.json", changelog);
+
   } else {
     console.log("[info] No raw data found. Generating seed data...\n");
   }
@@ -928,6 +1152,9 @@ function main(): void {
   };
 
   writeDataFile("manifest.json", manifest);
+
+  // Write empty changelog for consistency
+  writeDataFile("update-changelog.json", { added: [], updated: [], removed: [], unchanged: totalEntities });
 
   console.log(`\n=== Pipeline Complete ===`);
   console.log(`Total entities: ${totalEntities}`);

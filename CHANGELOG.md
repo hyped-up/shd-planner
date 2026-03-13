@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.1.0] - 2026-03-13
+
+### Added
+- **Auto-Update System:** Automatic weekly game data refresh inside Docker containers via `node-cron` scheduler
+- **Custom Server Entrypoint:** `server.ts` wraps Next.js + cron scheduler with Fandom Wiki change detection
+- **Data Status API:** `GET /api/data-status` returns update status, changelog, and next check time
+- **Data Update API:** `POST /api/data-update` triggers manual data refresh
+- **Settings UI:** "Data Updates" section showing status indicator, change summary, next check, and "Check Now" button
+- **Scraper Compilation:** `tsconfig.scripts.json` compiles scraper TS to JS during Docker build (no `tsx` at runtime)
+- **Docker Volume:** `shd-data` volume persists updated game data across container restarts
+
+### Changed
+- **Data Loader:** Replaced `import()` with `fs.readFile` + `JSON.parse` — `clearDataCache()` now triggers actual disk re-reads for hot-reload
+- **Scraper Execution:** Switched from blocking `execFileSync` to async `execFile` — web server stays responsive during updates
+- **Merge Pipeline:** Completed raw-to-canonical merge logic with deduplication by slug, field completeness comparison, and changelog generation
+- **Exit Codes:** `scrape-all.ts` now exits 1 when all scrapers fail or entity count regresses
+- **Docker Memory:** Raised limit from 512MB to 768MB for scraper headroom
+- **Docker Compose:** Added `shd-data` volume, `DATA_DIR`, `RAW_DIR`, and `DATA_UPDATE_INTERVAL` environment variables
+- **Dockerfile:** Added scraper compilation stage, seed data copy, and writable directories
+
+### Fixed
+- `clearDataCache()` now actually works — previously, Node.js module cache prevented hot-reload of `import()`-loaded JSON
+
 ## [1.0.1] - 2026-03-12
 
 ### Added

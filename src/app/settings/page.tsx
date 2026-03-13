@@ -302,16 +302,164 @@ export default function SettingsPage() {
             </div>
           </Card>
 
-          {/* --- Data Info --- */}
+          {/* --- Section 4: Data Updates --- */}
           <Card>
-            <h2 className="text-lg font-semibold text-foreground mb-1">Data Information</h2>
+            <h2 className="text-lg font-semibold text-foreground mb-1">Data Updates</h2>
             <p className="text-sm text-foreground-secondary mb-4">
-              Game data is bundled with the app and updated when new game patches release.
+              Game data is bundled with the app and can auto-update in Docker deployments.
             </p>
             <DataInfo />
+            <DataUpdateStatus />
           </Card>
         </div>
       </div>
+    </div>
+  );
+}
+
+/** Data update status and "Check Now" button for Docker deployments */
+function DataUpdateStatus() {
+  const [updateStatus, setUpdateStatus] = useState<{
+    lastUpdate: string | null;
+    nextCheck: string | null;
+    status: string;
+    lastResult: {
+      success: boolean;
+      changelog: { added: string[]; updated: string[]; removed: string[]; unchanged: number };
+      duration: number;
+      timestamp: string;
+    } | null;
+    error?: string;
+    autoUpdateAvailable: boolean;
+  } | null>(null);
+  const [triggering, setTriggering] = useState(false);
+
+  // Fetch update status on mount and poll every 10s while updating
+  const fetchStatus = useCallback(async () => {
+    try {
+      const res = await fetch("/api/data-status");
+      if (res.ok) {
+        setUpdateStatus(await res.json());
+      }
+    } catch {
+      // Silently ignore — endpoint may not exist in dev
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchStatus();
+  }, [fetchStatus]);
+
+  // Poll while status is "checking" or "updating"
+  useEffect(() => {
+    if (updateStatus?.status === "checking" || updateStatus?.status === "updating") {
+      const interval = setInterval(fetchStatus, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [updateStatus?.status, fetchStatus]);
+
+  // Trigger manual update
+  const handleCheckNow = async () => {
+    setTriggering(true);
+    try {
+      const res = await fetch("/api/data-update", { method: "POST" });
+      if (res.ok) {
+        // Re-fetch status after a short delay
+        setTimeout(fetchStatus, 1000);
+      }
+    } catch {
+      // Ignore
+    } finally {
+      setTriggering(false);
+    }
+  };
+
+  // Don't show if auto-updates aren't available (dev mode)
+  if (updateStatus === null) return null;
+  if (!updateStatus.autoUpdateAvailable) return null;
+
+  const statusLabels: Record<string, { text: string; color: string }> = {
+    idle: { text: "Idle", color: "text-foreground-secondary" },
+    checking: { text: "Checking for updates...", color: "text-shd-orange" },
+    updating: { text: "Updating data...", color: "text-shd-orange" },
+    error: { text: "Error", color: "text-core-red" },
+  };
+
+  const statusInfo = statusLabels[updateStatus.status] ?? statusLabels.idle;
+
+  return (
+    <div className="mt-4 space-y-3">
+      {/* Status row */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <span className={`text-sm font-medium ${statusInfo.color}`}>
+            {statusInfo.text}
+          </span>
+          {updateStatus.error && (
+            <span className="text-xs text-core-red">
+              ({updateStatus.error.substring(0, 60)})
+            </span>
+          )}
+        </div>
+        <Button
+          variant="secondary"
+          size="sm"
+          onClick={handleCheckNow}
+          disabled={triggering || updateStatus.status === "checking" || updateStatus.status === "updating"}
+        >
+          {triggering ? "Starting..." : "Check Now"}
+        </Button>
+      </div>
+
+      {/* Update details */}
+      <div className="grid grid-cols-2 gap-3">
+        {updateStatus.lastUpdate && (
+          <div className="rounded bg-background-tertiary px-3 py-2">
+            <p className="text-[10px] text-foreground-secondary uppercase">Last Updated</p>
+            <p className="text-sm font-mono text-foreground">
+              {new Date(updateStatus.lastUpdate).toLocaleDateString()} {new Date(updateStatus.lastUpdate).toLocaleTimeString()}
+            </p>
+          </div>
+        )}
+        {updateStatus.nextCheck && (
+          <div className="rounded bg-background-tertiary px-3 py-2">
+            <p className="text-[10px] text-foreground-secondary uppercase">Next Check</p>
+            <p className="text-sm font-mono text-foreground">
+              {new Date(updateStatus.nextCheck).toLocaleDateString()} {new Date(updateStatus.nextCheck).toLocaleTimeString()}
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* Change summary from last update */}
+      {updateStatus.lastResult && (
+        <div className={`rounded-md p-3 text-sm ${
+          updateStatus.lastResult.success
+            ? "bg-success/10 text-success border border-success/20"
+            : "bg-core-red/10 text-core-red border border-core-red/20"
+        }`}>
+          {updateStatus.lastResult.success ? (
+            <>
+              <span className="font-medium">Last update successful</span>
+              {" "}({(updateStatus.lastResult.duration / 1000).toFixed(0)}s)
+              {(updateStatus.lastResult.changelog.added.length > 0 ||
+                updateStatus.lastResult.changelog.updated.length > 0) && (
+                <span className="block mt-1 text-xs">
+                  {updateStatus.lastResult.changelog.added.length > 0 &&
+                    `${updateStatus.lastResult.changelog.added.length} added`}
+                  {updateStatus.lastResult.changelog.added.length > 0 &&
+                    updateStatus.lastResult.changelog.updated.length > 0 && ", "}
+                  {updateStatus.lastResult.changelog.updated.length > 0 &&
+                    `${updateStatus.lastResult.changelog.updated.length} updated`}
+                  {`, ${updateStatus.lastResult.changelog.unchanged} unchanged`}
+                </span>
+              )}
+            </>
+          ) : (
+            <span className="font-medium">Last update failed</span>
+          )}
+        </div>
+      )}
     </div>
   );
 }

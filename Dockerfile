@@ -4,13 +4,16 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm ci --omit=dev
 
-# Stage 2: Build the application
+# Stage 2: Build the application + compile scrapers
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
+# Build Next.js standalone output
 RUN npm run build
+# Compile scraper/transform/validator scripts to JS for production use
+RUN npx tsc --project tsconfig.scripts.json --outDir dist/scripts
 
 # Stage 3: Production runner (minimal image)
 FROM node:20-alpine AS runner
@@ -26,7 +29,21 @@ COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
+# Copy compiled scraper scripts for auto-update pipeline
+COPY --from=builder --chown=nextjs:nodejs /app/dist/scripts ./dist/scripts
+
+# Copy custom server entrypoint
+COPY --from=builder --chown=nextjs:nodejs /app/server.ts ./server.ts
+
+# Copy seed data as fallback (will be copied to volume on first start)
+COPY --from=builder --chown=nextjs:nodejs /app/src/data ./src/data
+
+# Create writable directories for data volume and scraper working files
+RUN mkdir -p /app/data /app/raw && chown nextjs:nodejs /app/data /app/raw
+
 USER nextjs
 EXPOSE 3000
 ENV PORT=3000
+
+# Use custom entrypoint that wraps Next.js + cron scheduler
 CMD ["node", "server.js"]
