@@ -61,13 +61,8 @@ services:
       - "traefik.http.services.shd-planner.loadbalancer.server.port=3000"
       - "traefik.docker.network=proxy"
 
-  shd-planner-mcp:
-    build: ./services/shd-planner-mcp
-    container_name: shd-planner-mcp
-    restart: unless-stopped
-    command: ["sh", "-c", "tail -f /dev/null"]
-    networks:
-      - proxy
+  # NOTE: shd-planner-mcp container removed — was running idle (tail -f /dev/null).
+  # MCP data is now mounted directly as a host bind mount in shd-planner-data-cron.
 
   shd-planner-data-cron:
     build:
@@ -77,10 +72,11 @@ services:
     restart: unless-stopped
     networks:
       - proxy
-    depends_on:
-      - shd-planner-mcp
     environment:
       - GOOGLE_APPLICATION_CREDENTIALS=/keys/google-sa.json
+      - DIV2_SHEET_ID=1nrPBmOrtpkEW1j5fbcRT7L-AXgsGOqMqxXoVtopsiGM
+      - DIV2_SHEET_URL=https://docs.google.com/spreadsheets/d/1nrPBmOrtpkEW1j5fbcRT7L-AXgsGOqMqxXoVtopsiGM/edit
+      - DIV2_PRIMARY_GID=1380412817
     volumes:
       - shd-data:/app/data
       - /opt/docker/shd-planner/services/shd-planner-mcp:/shd-planner-cwd:ro

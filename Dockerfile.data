@@ -12,5 +12,5 @@ COPY services/shd-planner-mcp ./services/shd-planner-mcp
 
 ENV NODE_ENV=production
 
-# Daily pipeline: check patch notes + scrape drive, merge, validate, then refresh /app/data
-CMD ["sh", "-c", "while true; do npm run scrape:patch-notes && npm run scrape:google-drive-builds && npm run data:merge && npm run data:validate && cp -a /app/src/data/. /app/data/; sleep 86400; done"]
+# Daily pipeline: primary sheet + patch notes trigger + drive metadata, then merge/validate/refresh
+CMD ["sh", "-c", "while true; do npm run scrape:spreadsheet && npm run scrape:patch-notes && npm run scrape:google-drive-builds && npm run data:merge && npm run data:validate && cp -a /app/src/data/. /app/data/; sleep 86400; done"]
