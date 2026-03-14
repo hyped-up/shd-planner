@@ -65,6 +65,7 @@ services:
     build: ./services/shd-planner-mcp
     container_name: shd-planner-mcp
     restart: unless-stopped
+    command: ["sh", "-c", "tail -f /dev/null"]
     networks:
       - proxy
 
