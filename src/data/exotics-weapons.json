@@ -358,5 +358,37 @@
     "_sources": [
       "mcp-import"
     ]
+  },
+  {
+    "id": "exotic-big-alejandro",
+    "name": "Big Alejandro",
+    "category": "Light Machine Gun",
+    "uniqueTalent": {
+      "name": "Unknown",
+      "description": "Talent details pending verification."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "manual",
+      "needs-verification"
+    ]
+  },
+  {
+    "id": "exotic-sheriff",
+    "name": "Sheriff",
+    "category": "Shotgun",
+    "uniqueTalent": {
+      "name": "Unknown",
+      "description": "Talent details pending verification."
+    },
+    "coreAttribute": "weapon_damage",
+    "metaRating": null,
+    "_verified": false,
+    "_sources": [
+      "manual",
+      "needs-verification"
+    ]
   }
 ]
