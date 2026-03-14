@@ -1,5 +1,5 @@
 /**
- * server.ts — Custom entrypoint for SHD Planner Docker container
+ * custom-server.ts — Custom entrypoint for SHD Planner Docker container
  *
  * Wraps the Next.js standalone server and adds:
  * - node-cron scheduler for automatic data updates
@@ -26,6 +26,7 @@ const RAW_DIR = process.env.RAW_DIR ?? path.resolve(process.cwd(), "src/scripts/
 const SCRIPTS_DIR = path.resolve(process.cwd(), "dist/scripts");
 const LOCK_FILE = path.join(DATA_DIR, ".update-lock");
 const STATUS_FILE = path.join(DATA_DIR, "update-status.json");
+const TRIGGER_FILE = path.join(DATA_DIR, ".update-trigger");
 const SEED_DATA_DIR = path.resolve(process.cwd(), ".next/standalone/src/data");
 
 // Retry backoff intervals (1h, 4h, 24h)
@@ -68,7 +69,7 @@ function intervalToCron(interval: string): string {
 }
 
 /** Calculate next cron execution time for display */
-function getNextCheckTime(_cronExpression: string): string {
+function getNextCheckTime(): string {
   // Simple approximation based on interval
   const interval = process.env.DATA_UPDATE_INTERVAL ?? "7d";
   const days = parseInt(interval) || 7;
@@ -430,6 +431,20 @@ async function main(): Promise<void> {
     console.log(`[auto-update] Cron triggered at ${new Date().toISOString()}`);
     runUpdate();
   });
+
+  // Step 6: Poll for manual trigger file (written by POST /api/data-update)
+  const TRIGGER_POLL_MS = 5_000;
+  setInterval(() => {
+    try {
+      if (fs.existsSync(TRIGGER_FILE)) {
+        fs.unlinkSync(TRIGGER_FILE);
+        console.log("[auto-update] Manual trigger detected via API");
+        runUpdate();
+      }
+    } catch {
+      // Ignore — file may have been removed between check and unlink
+    }
+  }, TRIGGER_POLL_MS);
 
   // Write initial status
   const status = readStatus();

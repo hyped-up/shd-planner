@@ -25,8 +25,7 @@ import { cachedLoader } from "./data-cache";
 
 // --- Helpers ---
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type RawJson = any;
+type RawJson = Record<string, unknown>;
 
 // Detect server vs client at module load time
 const isServer = typeof window === "undefined";
@@ -47,7 +46,8 @@ async function readDataFile<T>(filename: string): Promise<T> {
     return JSON.parse(raw) as T;
   } else {
     // Client-side: use dynamic import which Next.js handles at build time
-    const mod = await import(`@/data/${filename}`);
+    const base = filename.endsWith(".json") ? filename.slice(0, -5) : filename;
+    const mod = await import(`@/data/${base}.json`);
     return mod.default as T;
   }
 }

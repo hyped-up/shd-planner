@@ -7,7 +7,7 @@
  * that was corrected during migration.
  */
 
-import { describe, it, expect, beforeEach } from "vitest";
+import { describe, it, expect } from "vitest";
 import { migrateBuild } from "@/lib/sharing/build-migrator";
 
 // ---------------------------------------------------------------------------

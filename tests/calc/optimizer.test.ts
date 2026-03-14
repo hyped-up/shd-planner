@@ -10,8 +10,6 @@ import { describe, it, expect, vi } from "vitest";
 import {
   optimizeBuild,
   type OptimizationTarget,
-  type OptimizerConstraints,
-  type OptimizerResult,
   type ProgressCallback,
 } from "@/lib/calc/optimizer";
 import type { IBuild, IBuildGearPiece } from "@/lib/types";
@@ -155,7 +153,7 @@ describe("optimizeBuild", () => {
   // Progress should reach 100 when optimization completes
   it("progress reaches 100 when complete", () => {
     const progressValues: number[] = [];
-    const progressFn: ProgressCallback = (progress, _message) => {
+    const progressFn: ProgressCallback = (progress) => {
       progressValues.push(progress);
     };
 

@@ -119,7 +119,7 @@ export function optimizeBuild(
       source: "brand",
       itemId: brand.brandId,
       coreAttribute: { type: core, value: getCoreMaxValue(core) },
-      minorAttributes: getOptimalMinorAttributes(target, slot),
+      minorAttributes: getOptimalMinorAttributes(target),
       modSlot: null,
       talent: null,
     };
@@ -140,7 +140,7 @@ export function optimizeBuild(
       source: "brand",
       itemId: "generic_brand",
       coreAttribute: { type: core, value: getCoreMaxValue(core) },
-      minorAttributes: getOptimalMinorAttributes(target, slot),
+      minorAttributes: getOptimalMinorAttributes(target),
       modSlot: null,
       talent: null,
     };
@@ -248,8 +248,7 @@ function getCoreMaxValue(core: CoreAttributeType): number {
 
 /** Get optimal minor attributes for a slot based on target */
 function getOptimalMinorAttributes(
-  target: OptimizationTarget,
-  _slot: GearSlot
+  target: OptimizationTarget
 ): Array<{ attributeId: string; value: number }> {
   switch (target) {
     case "dps":

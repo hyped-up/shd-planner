@@ -22,7 +22,7 @@ const MCP_DATA_DIR = path.resolve(__dirname, "../../../../shd-planner-cwd/data")
 const WEB_DATA_DIR = path.resolve(__dirname, "../../data");
 
 // --- Tracking for summary table ---
-const summary: Array<{ source: string; target: string; count: number }> = [];
+const summary: Array<{ source: string; target: string; count: number | string }> = [];
 
 // --- Utility functions ---
 
@@ -44,7 +44,8 @@ function readMcpFile(filename: string): Record<string, unknown> {
   }
   const raw = JSON.parse(fs.readFileSync(filePath, "utf-8"));
   // Remove _metadata key — not part of entity data
-  const { _metadata, ...entities } = raw;
+  const { _metadata, ...entities } = raw as Record<string, unknown>;
+  void _metadata;
   return entities;
 }
 
@@ -88,7 +89,7 @@ function weaponTypeDisplay(snakeCase: string): string {
 /** 1. brand_sets.json → gear-brands.json */
 function transformBrandSets(): void {
   const data = readMcpFile("brand_sets.json");
-  const result = Object.values(data).map((entry: any) =>
+  const result = Object.values(data).map((entry: unknown) =>
     addProvenance({
       id: `brand-${slugify(entry.name)}`,
       name: entry.name,
@@ -104,7 +105,7 @@ function transformBrandSets(): void {
 /** 2. gear_sets.json → gear-sets.json */
 function transformGearSets(): void {
   const data = readMcpFile("gear_sets.json");
-  const result = Object.values(data).map((entry: any) =>
+  const result = Object.values(data).map((entry: unknown) =>
     addProvenance({
       id: `gearset-${slugify(entry.name)}`,
       name: entry.name,
@@ -122,10 +123,10 @@ function transformGearSets(): void {
 /** 3. exotics.json → exotics-gear.json + exotics-weapons.json (split by type) */
 function transformExotics(): void {
   const data = readMcpFile("exotics.json");
-  const gearItems: any[] = [];
-  const weaponItems: any[] = [];
+  const gearItems: unknown[] = [];
+  const weaponItems: unknown[] = [];
 
-  for (const entry of Object.values(data) as any[]) {
+  for (const entry of Object.values(data) as unknown[]) {
     if (entry.type === "gear" || entry.type === "armor") {
       gearItems.push(
         addProvenance({
@@ -161,7 +162,7 @@ function transformExotics(): void {
 /** 4. named_items.json → named-items.json */
 function transformNamedItems(): void {
   const data = readMcpFile("named_items.json");
-  const result = Object.values(data).map((entry: any) =>
+  const result = Object.values(data).map((entry: unknown) =>
     addProvenance({
       id: `named-${slugify(entry.name)}`,
       name: entry.name,
@@ -179,9 +180,9 @@ function transformNamedItems(): void {
 /** 5. weapons.json → weapons.json */
 function transformWeapons(): void {
   const data = readMcpFile("weapons.json");
-  const result = Object.entries(data).map(([classKey, classData]: [string, any]) => {
+  const result = Object.entries(data).map(([, classData]: [string, unknown]) => {
     const className = classData.class;
-    const archetypes = Object.entries(classData.archetypes || {}).map(([archKey, arch]: [string, any]) =>
+    const archetypes = Object.entries(classData.archetypes || {}).map(([, arch]: [string, unknown]) =>
       addProvenance({
         id: `weapon-${slugify(className)}-${slugify(arch.name)}`,
         name: arch.name,
@@ -207,13 +208,13 @@ function transformWeapons(): void {
   writeWebFile("weapons.json", result);
   // Count total archetypes across all weapon classes
   const totalArchetypes = result.reduce((sum, wt) => sum + wt.archetypes.length, 0);
-  summary.push({ source: "weapons.json", target: "weapons.json", count: `${result.length} classes / ${totalArchetypes} archetypes` as any });
+  summary.push({ source: "weapons.json", target: "weapons.json", count: `${result.length} classes / ${totalArchetypes} archetypes` });
 }
 
 /** 6. talents_gear.json → gear-talents.json */
 function transformGearTalents(): void {
   const data = readMcpFile("talents_gear.json");
-  const result = Object.values(data).map((entry: any) =>
+  const result = Object.values(data).map((entry: unknown) =>
     addProvenance({
       id: `talent-${slugify(entry.name)}`,
       name: entry.name,
@@ -236,7 +237,7 @@ function transformGearTalents(): void {
 /** 7. talents_weapon.json → weapon-talents.json */
 function transformWeaponTalents(): void {
   const data = readMcpFile("talents_weapon.json");
-  const result = Object.values(data).map((entry: any) =>
+  const result = Object.values(data).map((entry: unknown) =>
     addProvenance({
       id: `talent-${slugify(entry.name)}`,
       name: entry.name,
@@ -259,9 +260,9 @@ function transformWeaponTalents(): void {
 /** 8. skills.json → skills.json */
 function transformSkills(): void {
   const data = readMcpFile("skills.json");
-  const result = Object.entries(data).map(([familyKey, familyData]: [string, any]) => {
+  const result = Object.entries(data).map(([, familyData]: [string, unknown]) => {
     const familyName = familyData.name;
-    const variants = Object.entries(familyData.variants || {}).map(([varKey, variant]: [string, any]) =>
+    const variants = Object.entries(familyData.variants || {}).map(([, variant]: [string, unknown]) =>
       addProvenance({
         id: `skill-${slugify(familyName)}-${slugify(variant.name)}`,
         name: variant.name,
@@ -289,13 +290,13 @@ function transformSkills(): void {
   writeWebFile("skills.json", result);
   // Count total variants across all skill families
   const totalVariants = result.reduce((sum, s) => sum + s.variants.length, 0);
-  summary.push({ source: "skills.json", target: "skills.json", count: `${result.length} families / ${totalVariants} variants` as any });
+  summary.push({ source: "skills.json", target: "skills.json", count: `${result.length} families / ${totalVariants} variants` });
 }
 
 /** 9. specializations.json → specializations.json */
 function transformSpecializations(): void {
   const data = readMcpFile("specializations.json");
-  const result = Object.values(data).map((entry: any) =>
+  const result = Object.values(data).map((entry: unknown) =>
     addProvenance({
       id: `spec-${slugify(entry.name)}`,
       name: entry.name,
@@ -330,12 +331,12 @@ function updateManifest(): void {
   manifest.entityCounts.exoticWeapons = count("exotics-weapons.json");
   // For weapons, count total archetypes across all weapon type objects
   const weaponsData = JSON.parse(fs.readFileSync(path.join(WEB_DATA_DIR, "weapons.json"), "utf-8"));
-  manifest.entityCounts.weapons = weaponsData.reduce((sum: number, wt: any) => sum + wt.archetypes.length, 0);
+  manifest.entityCounts.weapons = weaponsData.reduce((sum: number, wt: unknown) => sum + wt.archetypes.length, 0);
   manifest.entityCounts.weaponTalents = count("weapon-talents.json");
   manifest.entityCounts.gearTalents = count("gear-talents.json");
   // Count skill variants, not families
   const skillsData = JSON.parse(fs.readFileSync(path.join(WEB_DATA_DIR, "skills.json"), "utf-8"));
-  manifest.entityCounts.skills = skillsData.reduce((sum: number, s: any) => sum + s.variants.length, 0);
+  manifest.entityCounts.skills = skillsData.reduce((sum: number, s: unknown) => sum + s.variants.length, 0);
   manifest.entityCounts.specializations = count("specializations.json");
   manifest.lastDataUpdate = new Date().toISOString();
   manifest.sources = [...new Set([...(manifest.sources || []), "mcp-import"])];

@@ -64,7 +64,6 @@ function main(): void {
 
   // Build lookup sets
   const brandIds = new Set(brandSets.map((b) => b.id));
-  const gearSetIds = new Set(gearSets.map((g) => g.id));
   const validSlots = new Set(["mask", "backpack", "chest", "gloves", "holster", "kneepads"]);
   const validCoreAttributes = new Set(["weapon_damage", "armor", "skill_tier", "skill_damage"]);
   const validWeaponTypes = new Set(["Assault Rifles", "Submachine Guns", "Light Machine Guns", "Rifles", "Marksman Rifles", "Shotguns", "Pistols"]);

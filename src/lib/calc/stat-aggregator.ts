@@ -141,24 +141,17 @@ export function aggregateBuildStats(build: IBuild): IBuildStats {
   // -----------------------------------------------------------------------
   // Step 1 & 2: Sum core and minor attributes from gear
   // -----------------------------------------------------------------------
-  let redCores = 0;
-  let blueCores = 0;
-  let yellowCores = 0;
-
   for (const piece of equippedPieces) {
     // Core attributes
     switch (piece.coreAttribute.type) {
       case "weaponDamage":
-        redCores += 1;
         // Value is stored as a percentage (e.g. 15 for 15%)
         stats.totalWeaponDamage += piece.coreAttribute.value / 100;
         break;
       case "armor":
-        blueCores += 1;
         stats.totalArmor += ARMOR_PER_CORE;
         break;
       case "skillTier":
-        yellowCores += 1;
         stats.totalSkillTier += 1;
         break;
     }

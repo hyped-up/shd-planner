@@ -1,0 +1,37 @@
+name: data-pipeline
+on:
+  schedule:
+    - cron: "0 4 * * 0" # weekly
+  workflow_dispatch:
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run scrape:all
+      - run: npm run data:merge
+      - run: npm run data:validate
+      - run: npm run data:cross-validate
+      # Publish to S3/R2 (replace with your script)
+      - name: Publish snapshot
+        run: ./scripts/publish-to-cdn.sh
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
+      # Optional: notify app to refresh cache
+      - name: Notify app
+        if: ${{ secrets.ADMIN_UPDATE_URL != '' }}
+        run: |
+          curl -X POST "$ADMIN_UPDATE_URL" \
+            -H "Authorization: Bearer $ADMIN_TOKEN"
+        env:
+          ADMIN_UPDATE_URL: ${{ secrets.ADMIN_UPDATE_URL }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}

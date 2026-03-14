@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useBuildStore } from "@/hooks/use-build-store";
 import { aggregateBuildStats } from "@/lib/calc";
 import type { IBuild, IBuildStats } from "@/lib/types";
-import { Button, Card, Badge } from "@/components/ui";
+import { Card, Badge } from "@/components/ui";
 
 /** Stat row definition for comparison grid */
 interface StatRow {

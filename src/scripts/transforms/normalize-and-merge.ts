@@ -52,13 +52,6 @@ function writeDataFile(filename: string, data: unknown): void {
   console.log(`  [out] Wrote ${filename}`);
 }
 
-/** Count entities in an array or object */
-function countEntities(data: unknown): number {
-  if (Array.isArray(data)) return data.length;
-  if (typeof data === "object" && data !== null) return Object.keys(data).length;
-  return 0;
-}
-
 // --- Type definitions for output data ---
 
 interface BrandSet {

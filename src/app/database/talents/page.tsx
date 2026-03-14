@@ -10,13 +10,6 @@ import type { IGearTalent, IWeaponTalent } from "@/lib/types";
 
 const SLOT_OPTIONS = ["chest", "backpack"];
 
-// Color mapping for damage type badges
-const damageTypeColors: Record<string, { bg: string; text: string }> = {
-  additive: { bg: "bg-core-blue/20", text: "text-core-blue" },
-  amplified: { bg: "bg-core-red/20", text: "text-core-red" },
-  multiplicative: { bg: "bg-core-yellow/20", text: "text-core-yellow" },
-};
-
 export default function TalentsPageWrapper() {
   return (
     <Suspense fallback={<div className="min-h-screen bg-background p-8 text-foreground-secondary">Loading talents...</div>}>

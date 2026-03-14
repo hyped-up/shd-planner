@@ -18,18 +18,12 @@ services:
       - NODE_ENV=production
       - NEXT_PUBLIC_APP_URL=https://shd-planner.hypebeastin.com
       - HOSTNAME=0.0.0.0
-      - DATA_DIR=/app/data
-      - RAW_DIR=/app/raw
-      - DATA_UPDATE_INTERVAL=7d
-    # Persistent volume for updated game data
-    volumes:
-      - shd-data:/app/data
-    # Resource limits — raised to 768M for scraper headroom
+    # Resource limits to prevent runaway memory/CPU usage
     deploy:
       resources:
         limits:
           cpus: '1.0'
-          memory: 768M
+          memory: 512M
         reservations:
           cpus: '0.25'
           memory: 128M
@@ -64,6 +58,3 @@ services:
 networks:
   proxy:
     external: true
-
-volumes:
-  shd-data:

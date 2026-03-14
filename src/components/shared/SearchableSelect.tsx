@@ -1,7 +1,7 @@
 // Searchable select combobox — filters items as user types, click or keyboard to select
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
+import { useState, useRef, useEffect, useCallback, useMemo } from "react";
 
 export interface SearchableSelectOption {
   id: string;
@@ -42,16 +42,19 @@ export default function SearchableSelect({
       )
     : options;
 
-  useEffect(() => {
-    setHighlightIndex(0);
-  }, [filtered.length]);
+  const safeHighlightIndex = useMemo(() => {
+    if (filtered.length === 0) return 0;
+    return Math.min(highlightIndex, filtered.length - 1);
+  }, [filtered.length, highlightIndex]);
+
+
 
   useEffect(() => {
     if (isOpen && listRef.current) {
-      const el = listRef.current.children[highlightIndex] as HTMLElement;
+      const el = listRef.current.children[safeHighlightIndex] as HTMLElement;
       el?.scrollIntoView({ block: "nearest" });
     }
-  }, [highlightIndex, isOpen]);
+  }, [safeHighlightIndex, isOpen]);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
