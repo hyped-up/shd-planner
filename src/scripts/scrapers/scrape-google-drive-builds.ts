@@ -51,7 +51,7 @@ async function listDriveFolder(folderId: string) {
   const items: any[] = [];
   let pageToken: string | undefined = undefined;
   do {
-    const res = await drive.files.list({
+    const res: any = await drive.files.list({
       q: `'${folderId}' in parents and trashed=false`,
       fields: "nextPageToken, files(id,name,mimeType,modifiedTime,webViewLink,thumbnailLink)",
       pageToken,
