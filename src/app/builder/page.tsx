@@ -32,6 +32,10 @@ export default function BuilderPage() {
   const undo = useBuildStore((s) => s.undo);
   const redo = useBuildStore((s) => s.redo);
   const exportBuild = useBuildStore((s) => s.exportBuild);
+  const [isSuggesting, setIsSuggesting] = useState(false);
+  const [suggestError, setSuggestError] = useState<string | null>(null);
+  const [suggestMeta, setSuggestMeta] = useState<{ role: string; mode: string } | null>(null);
+  const [suggestions, setSuggestions] = useState<Array<Record<string, unknown>>>([]);
 
   // Panel open state (local UI state)
   const [gearConfigSlot, setGearConfigSlot] = useState<GearSlot | null>(null);
@@ -61,6 +65,66 @@ export default function BuilderPage() {
     navigator.clipboard.writeText(json).then(() => {
       alert("Build JSON copied to clipboard!");
     });
+  }
+
+  /** Ask backend MCP bridge for build suggestions */
+  async function handleSuggestImprovements() {
+    setIsSuggesting(true);
+    setSuggestError(null);
+
+    try {
+      const res = await fetch("/api/ai/suggest-build", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ build: exportBuild() }),
+      });
+
+      const data = await res.json() as {
+        success?: boolean;
+        available?: boolean;
+        role?: string;
+        mode?: string;
+        suggestions?: unknown[];
+        message?: string;
+        error?: { message?: string };
+      };
+
+      if (!res.ok || !data.success) {
+        setSuggestions([]);
+        setSuggestMeta(
+          data.role && data.mode
+            ? { role: data.role, mode: data.mode }
+            : null
+        );
+        setSuggestError(
+          data.error?.message
+            ?? data.message
+            ?? (data.available === false
+              ? "Suggestions are unavailable right now."
+              : "Failed to fetch build suggestions.")
+        );
+        return;
+      }
+
+      setSuggestMeta(
+        data.role && data.mode
+          ? { role: data.role, mode: data.mode }
+          : null
+      );
+      setSuggestions(
+        Array.isArray(data.suggestions)
+          ? data.suggestions.filter((item): item is Record<string, unknown> => !!item && typeof item === "object")
+          : []
+      );
+      if ((data.suggestions?.length ?? 0) === 0 && data.message) {
+        setSuggestError(data.message);
+      }
+    } catch {
+      setSuggestions([]);
+      setSuggestError("Suggestion service is unavailable right now.");
+    } finally {
+      setIsSuggesting(false);
+    }
   }
 
   return (
@@ -157,12 +221,69 @@ export default function BuilderPage() {
             >
               Share
             </button>
+
+            {/* AI suggestions */}
+            <button
+              type="button"
+              onClick={handleSuggestImprovements}
+              disabled={isSuggesting}
+              className="rounded border border-border bg-surface hover:bg-surface-hover disabled:opacity-50 disabled:cursor-not-allowed text-foreground text-xs px-3 py-1.5 transition-colors cursor-pointer"
+            >
+              {isSuggesting ? "Suggesting..." : "Suggest improvements"}
+            </button>
           </div>
         </div>
       </div>
 
       {/* Main content — 3 column layout */}
       <div className="max-w-7xl mx-auto p-4">
+        {(suggestions.length > 0 || suggestError) && (
+          <div className="mb-4 rounded border border-border bg-background-secondary p-3">
+            <div className="flex items-center justify-between gap-2">
+              <h2 className="text-sm font-semibold text-foreground">Build Suggestions</h2>
+              {suggestMeta && (
+                <span className="text-xs text-foreground-secondary">
+                  role: {suggestMeta.role} | mode: {suggestMeta.mode}
+                </span>
+              )}
+            </div>
+
+            {suggestError && (
+              <p className="mt-2 text-sm text-core-yellow">{suggestError}</p>
+            )}
+
+            {suggestions.length > 0 && (
+              <ul className="mt-2 space-y-2">
+                {suggestions.map((suggestion, idx) => {
+                  const id = typeof suggestion.id === "string" ? suggestion.id : `Suggestion ${idx + 1}`;
+                  const tier = typeof suggestion.tier === "string" ? suggestion.tier : null;
+                  const notes = typeof suggestion.notes === "string" ? suggestion.notes : null;
+                  const components = Array.isArray(suggestion.components)
+                    ? suggestion.components.filter((c): c is string => typeof c === "string")
+                    : [];
+
+                  return (
+                    <li key={`${id}-${idx}`} className="rounded border border-border bg-surface p-2">
+                      <p className="text-sm text-foreground font-medium">
+                        {id}
+                        {tier ? ` (${tier}-tier)` : ""}
+                      </p>
+                      {notes && (
+                        <p className="text-xs text-foreground-secondary mt-1">{notes}</p>
+                      )}
+                      {components.length > 0 && (
+                        <p className="text-xs text-foreground-secondary mt-1">
+                          Components: {components.join(", ")}
+                        </p>
+                      )}
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
+        )}
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
           {/* LEFT COLUMN — Gear Slots */}
           <div className="lg:col-span-4 space-y-2">

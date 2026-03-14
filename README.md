@@ -36,12 +36,14 @@ npm run dev
 ## ✨ Feature Highlights
 
 - **Build Planner** — 6 gear slots, 3 weapons, 2 skills, specialization, SHD watch.
-- **DPS + Stat Calculator** — CHC/CHD caps, headshot, skill scaling, armor/health.
+- **DPS + Stat Calculator** — CHC/CHD caps, weapon-type headshot multipliers, skill scaling, armor/health.
 - **Database Browser** — brands, gear sets, exotics, named items, weapons, talents, skills.
 - **Build Sharing** — compressed URL sharing + JSON import/export.
 - **Build Compare** — side-by-side diff of up to 3 builds.
 - **Optimizer** — heuristic DPS/Armor/Skill/Balanced optimization.
+- **MCP Build Suggestions** — Builder page `Suggest improvements` button with graceful fallback when MCP is unavailable.
 - **Auto-Updating Data** — scheduled data refresh (Docker).
+- **Runtime Data Validation** — Zod schema validation on all game data at load time.
 
 ---
 
@@ -91,12 +93,20 @@ Copy `.env.example` → `.env.local`.
 NEXT_PUBLIC_AI_ENABLED=false
 AI_API_KEY=
 AI_MODEL=claude-sonnet-4-5-20250514
+AI_SUGGEST_TIMEOUT_MS=8000
 
 # optional: Google Drive backup
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 GOOGLE_REDIRECT_URI=http://localhost:3000/api/auth/google/callback
 ```
+
+## 🔌 API Notes
+
+- `POST /api/ai/suggest-build`
+  - Request: `{ "build": <current build json>, "role?": "dps|tank|healer|skill|hybrid|cc", "mode?": "general|legendary|raid|pvp|countdown|descent", "constraints?": ["itemA"] }`
+  - Response: structured JSON with `success`, `available`, inferred/explicit `role` + `mode`, and `suggestions[]`.
+  - Behavior: returns graceful error payloads (no app crash) when Python/MCP is unavailable or times out.
 
 ---
 
