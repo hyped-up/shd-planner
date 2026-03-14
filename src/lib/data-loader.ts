@@ -25,7 +25,8 @@ import { cachedLoader } from "./data-cache";
 
 // --- Helpers ---
 
-type RawJson = Record<string, unknown>;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type RawJson = any;
 
 // Detect server vs client at module load time
 const isServer = typeof window === "undefined";
