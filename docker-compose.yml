@@ -68,6 +68,20 @@ services:
     networks:
       - proxy
 
+  shd-planner-data-cron:
+    build:
+      context: .
+      dockerfile: Dockerfile.data
+    container_name: shd-planner-data-cron
+    restart: unless-stopped
+    networks:
+      - proxy
+    depends_on:
+      - shd-planner-mcp
+    volumes:
+      - shd-data:/app/data
+      - /opt/docker/shd-planner/services/shd-planner-mcp:/app/services/shd-planner-mcp:ro
+
 networks:
   proxy:
     external: true

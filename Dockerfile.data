@@ -1,0 +1,15 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install deps (tsx lives in devDependencies, so install all)
+COPY package*.json ./
+RUN npm ci
+
+# Copy only what the data importer needs
+COPY src ./src
+COPY services/shd-planner-mcp ./services/shd-planner-mcp
+
+ENV NODE_ENV=production
+
+CMD ["sh", "-c", "while true; do npm run data:import-mcp && cp -a /app/src/data/. /app/data/; sleep 86400; done"]
