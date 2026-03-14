@@ -10,7 +10,7 @@ RUN mkdir -p /app/data
 
 # Install dependencies first (cache layer)
 COPY pyproject.toml uv.lock README.md /app/
-RUN uv sync --frozen
+RUN uv sync --frozen --no-install-project
 
 # Copy the rest of the app
 COPY . /app
