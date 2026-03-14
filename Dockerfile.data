@@ -12,5 +12,5 @@ COPY services/shd-planner-mcp ./services/shd-planner-mcp
 
 ENV NODE_ENV=production
 
-# Daily pipeline: primary sheet + patch notes trigger + drive metadata, then merge/validate/refresh
-CMD ["sh", "-c", "while true; do npm run scrape:spreadsheet && npm run scrape:patch-notes && npm run scrape:google-drive-builds && npm run data:merge && npm run data:validate && cp -a /app/src/data/. /app/data/; sleep 86400; done"]
+# Daily pipeline: primary sheet + patch notes trigger + drive metadata, then merge/validate/publish atomically
+CMD ["sh", "-c", "while true; do RUN_TS=$(date -u +%Y-%m-%dT%H:%M:%SZ) && RUN_ID=$(date -u +%Y%m%dT%H%M%SZ) && export DATA_RUN_TIMESTAMP=$RUN_TS DATA_RUN_ID=$RUN_ID && npm run scrape:spreadsheet && npm run scrape:patch-notes && npm run scrape:google-drive-builds && npm run data:merge && npm run data:validate && STAGE=\"/app/data/.staging-${RUN_ID}\" && rm -rf \"$STAGE\" && mkdir -p \"$STAGE\" && cp -a /app/src/data/. \"$STAGE\"/ && find \"$STAGE\" -maxdepth 1 -type f -name '*.json' -print0 | while IFS= read -r -d '' f; do b=$(basename \"$f\") && mv \"$f\" \"/app/data/$b\"; done && rm -rf \"$STAGE\"; sleep 86400; done"]

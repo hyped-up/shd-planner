@@ -12,7 +12,9 @@
 import * as fs from "fs";
 import * as path from "path";
 
-const DATA_DIR = path.resolve(__dirname, "../../data");
+const DATA_DIR = process.env.DATA_DIR ?? path.resolve(__dirname, "../../data");
+const RUN_TIMESTAMP = process.env.DATA_RUN_TIMESTAMP ?? new Date().toISOString();
+const RUN_ID = process.env.DATA_RUN_ID ?? RUN_TIMESTAMP.replace(/[:.]/g, "-");
 
 // --- Expected minimum counts ---
 const EXPECTED_COUNTS: Record<string, number> = {
@@ -53,6 +55,7 @@ interface ValidationIssue {
 
 interface ValidationReport {
   generatedAt: string;
+  runId: string;
   totalFiles: number;
   filesFound: number;
   filesMissing: string[];
@@ -241,7 +244,8 @@ function main(): void {
   const infos = issues.filter((i) => i.severity === "info").length;
 
   const report: ValidationReport = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: RUN_TIMESTAMP,
+    runId: RUN_ID,
     totalFiles: Object.keys(EXPECTED_COUNTS).length,
     filesFound: Object.keys(EXPECTED_COUNTS).length - filesMissing.length,
     filesMissing,

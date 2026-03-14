@@ -42,7 +42,7 @@ npm run dev
 - **Build Compare** — side-by-side diff of up to 3 builds.
 - **Optimizer** — heuristic DPS/Armor/Skill/Balanced optimization.
 - **MCP Build Suggestions** — Builder page `Suggest improvements` button with graceful fallback when MCP is unavailable.
-- **Auto-Updating Data** — scheduled data refresh (Docker).
+- **Data-Cron Publishing** — dedicated data-cron container refreshes and atomically publishes data (app-side updater disabled by default).
 - **Runtime Data Validation** — Zod schema validation on all game data at load time.
 
 ---
@@ -99,6 +99,14 @@ AI_SUGGEST_TIMEOUT_MS=8000
 GOOGLE_CLIENT_ID=
 GOOGLE_CLIENT_SECRET=
 GOOGLE_REDIRECT_URI=http://localhost:3000/api/auth/google/callback
+
+# optional: data update endpoint auth/rate limit
+DATA_UPDATE_TOKEN=
+DATA_UPDATE_RATE_WINDOW_MS=60000
+DATA_UPDATE_RATE_MAX=5
+
+# optional: legacy app-side updater (disabled by default)
+ENABLE_APP_SIDE_UPDATES=false
 ```
 
 ## 🔌 API Notes
@@ -107,6 +115,10 @@ GOOGLE_REDIRECT_URI=http://localhost:3000/api/auth/google/callback
   - Request: `{ "build": <current build json>, "role?": "dps|tank|healer|skill|hybrid|cc", "mode?": "general|legendary|raid|pvp|countdown|descent", "constraints?": ["itemA"] }`
   - Response: structured JSON with `success`, `available`, inferred/explicit `role` + `mode`, and `suggestions[]`.
   - Behavior: returns graceful error payloads (no app crash) when Python/MCP is unavailable or times out.
+- `POST /api/data-update`
+  - Requires `Authorization: Bearer <DATA_UPDATE_TOKEN>`
+  - Basic in-memory rate limit (defaults: 5 requests / 60s per client IP)
+  - Intended for orchestrated/manual trigger requests; app-side updater remains disabled unless `ENABLE_APP_SIDE_UPDATES=true`.
 
 ---
 

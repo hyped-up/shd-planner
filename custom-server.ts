@@ -32,6 +32,7 @@ const SEED_DATA_DIR = path.resolve(process.cwd(), ".next/standalone/src/data");
 // Retry backoff intervals (1h, 4h, 24h)
 const RETRY_DELAYS_MS = [3_600_000, 14_400_000, 86_400_000];
 const MAX_RETRIES = 3;
+const APP_SIDE_UPDATES_ENABLED = (process.env.ENABLE_APP_SIDE_UPDATES ?? "false").toLowerCase() === "true";
 
 // --- Types ---
 
@@ -180,19 +181,50 @@ function initializeDataVolume(): void {
   console.warn("[auto-update] No seed data found — scrapers will populate data on first run");
 }
 
+/** Check if a PID is still running */
+function isPidAlive(pid: number): boolean {
+  try {
+    process.kill(pid, 0);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /** Clean up stale lock file from a crashed update */
 function cleanStaleLock(): void {
   if (fs.existsSync(LOCK_FILE)) {
     try {
+      const lockContent = fs.readFileSync(LOCK_FILE, "utf-8");
+      const lockData = JSON.parse(lockContent);
+
+      // If the lock contains a PID, check if the process is still running
+      if (lockData.pid && !isPidAlive(lockData.pid)) {
+        fs.unlinkSync(LOCK_FILE);
+        console.log(`[auto-update] Cleaned up lock file from dead process (PID ${lockData.pid})`);
+        return;
+      }
+
+      // Fall back to age-based cleanup for legacy lock files
       const lockTime = fs.statSync(LOCK_FILE).mtimeMs;
       const ageMs = Date.now() - lockTime;
       // If lock is older than 30 minutes, it's stale
       if (ageMs > 30 * 60 * 1000) {
         fs.unlinkSync(LOCK_FILE);
-        console.log("[auto-update] Cleaned up stale lock file");
+        console.log("[auto-update] Cleaned up stale lock file (>30 min old)");
       }
     } catch {
-      // Ignore
+      // If lock file is unparseable, fall back to age check
+      try {
+        const lockTime = fs.statSync(LOCK_FILE).mtimeMs;
+        const ageMs = Date.now() - lockTime;
+        if (ageMs > 30 * 60 * 1000) {
+          fs.unlinkSync(LOCK_FILE);
+          console.log("[auto-update] Cleaned up stale lock file (legacy format)");
+        }
+      } catch {
+        // Ignore
+      }
     }
   }
 }
@@ -216,13 +248,19 @@ function getDataAgeMs(): number {
 
 /** Run the full update pipeline */
 async function runUpdate(): Promise<void> {
+  if (!APP_SIDE_UPDATES_ENABLED) {
+    console.log("[auto-update] App-side updater is disabled; ignoring update request.");
+    return;
+  }
+
   if (isUpdating) {
     console.log("[auto-update] Update already in progress, skipping");
     return;
   }
 
   isUpdating = true;
-  fs.writeFileSync(LOCK_FILE, new Date().toISOString(), "utf-8");
+  // Write PID to lock file so stale locks from OOM kills can be detected on restart
+  fs.writeFileSync(LOCK_FILE, JSON.stringify({ pid: process.pid, timestamp: new Date().toISOString() }), "utf-8");
 
   const cronExpression = intervalToCron(process.env.DATA_UPDATE_INTERVAL ?? "7d");
   const status = readStatus();
@@ -379,6 +417,9 @@ export function getUpdateStatus(): UpdateStatus {
 
 /** Trigger a manual update (called by /api/data-update) */
 export function triggerManualUpdate(): { status: string } {
+  if (!APP_SIDE_UPDATES_ENABLED) {
+    return { status: "disabled" };
+  }
   if (isUpdating) {
     return { status: "already_running" };
   }
@@ -411,40 +452,41 @@ async function main(): Promise<void> {
   console.log("[server] Starting Next.js...");
   await import("./server.js" as string);
 
-  // Step 4: Check if data is stale and needs immediate update
+  // Step 4: App-side updater intentionally disabled by default.
+  // Data updates should be performed by the dedicated data-cron container.
   const interval = process.env.DATA_UPDATE_INTERVAL ?? "7d";
-  const intervalDays = parseInt(interval) || 7;
-  const dataAgeMs = getDataAgeMs();
-  const intervalMs = intervalDays * 24 * 60 * 60 * 1000;
-
-  if (dataAgeMs > intervalMs) {
-    console.log(`[auto-update] Data is ${(dataAgeMs / 86_400_000).toFixed(1)} days old (threshold: ${intervalDays}d). Triggering immediate update.`);
-    // Delay slightly to let the server fully start
-    setTimeout(() => runUpdate(), 10_000);
-  }
-
-  // Step 5: Schedule recurring cron job
   const cronExpression = intervalToCron(interval);
-  console.log(`[auto-update] Scheduling updates: "${cronExpression}" (interval: ${interval})`);
+  if (APP_SIDE_UPDATES_ENABLED) {
+    const intervalDays = parseInt(interval) || 7;
+    const dataAgeMs = getDataAgeMs();
+    const intervalMs = intervalDays * 24 * 60 * 60 * 1000;
 
-  cron.schedule(cronExpression, () => {
-    console.log(`[auto-update] Cron triggered at ${new Date().toISOString()}`);
-    runUpdate();
-  });
-
-  // Step 6: Poll for manual trigger file (written by POST /api/data-update)
-  const TRIGGER_POLL_MS = 5_000;
-  setInterval(() => {
-    try {
-      if (fs.existsSync(TRIGGER_FILE)) {
-        fs.unlinkSync(TRIGGER_FILE);
-        console.log("[auto-update] Manual trigger detected via API");
-        runUpdate();
-      }
-    } catch {
-      // Ignore — file may have been removed between check and unlink
+    if (dataAgeMs > intervalMs) {
+      console.log(`[auto-update] Data is ${(dataAgeMs / 86_400_000).toFixed(1)} days old (threshold: ${intervalDays}d). Triggering immediate update.`);
+      setTimeout(() => runUpdate(), 10_000);
     }
-  }, TRIGGER_POLL_MS);
+
+    console.log(`[auto-update] Scheduling updates: "${cronExpression}" (interval: ${interval})`);
+    cron.schedule(cronExpression, () => {
+      console.log(`[auto-update] Cron triggered at ${new Date().toISOString()}`);
+      runUpdate();
+    });
+
+    const TRIGGER_POLL_MS = 5_000;
+    setInterval(() => {
+      try {
+        if (fs.existsSync(TRIGGER_FILE)) {
+          fs.unlinkSync(TRIGGER_FILE);
+          console.log("[auto-update] Manual trigger detected via API");
+          runUpdate();
+        }
+      } catch {
+        // Ignore — file may have been removed between check and unlink
+      }
+    }, TRIGGER_POLL_MS);
+  } else {
+    console.log("[auto-update] App-side updater disabled; only data-cron should publish data.");
+  }
 
   // Write initial status
   const status = readStatus();

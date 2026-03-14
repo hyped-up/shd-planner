@@ -48,8 +48,8 @@ export async function GET() {
       lastResult: status.lastResult,
       error: status.error,
       retryCount: status.retryCount,
-      // Flag whether auto-updates are available (Docker only)
-      autoUpdateAvailable: !!process.env.DATA_DIR,
+      // Flag whether app-side auto-updates are available
+      autoUpdateAvailable: !!process.env.DATA_DIR && (process.env.ENABLE_APP_SIDE_UPDATES ?? "false").toLowerCase() === "true",
     });
   } catch (err) {
     return NextResponse.json(

@@ -157,7 +157,25 @@ async function discoverSheets(): Promise<
   // Try Sheets API first if creds present
   const apiSheets = await fetchSheetsViaApi();
   if (apiSheets) {
-    return Object.keys(apiSheets).map((name, idx) => ({ name, gid: String(idx) }));
+    try {
+      const creds = JSON.parse(readFileSync(GOOGLE_CREDS!, "utf-8"));
+      const auth = new google.auth.JWT({
+        email: creds.client_email,
+        key: creds.private_key,
+        scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+      });
+      const sheets = google.sheets({ version: "v4", auth });
+      const meta = await sheets.spreadsheets.get({ spreadsheetId: SPREADSHEET_ID });
+      return (meta.data.sheets ?? [])
+        .map((s) => ({
+          name: s.properties?.title ?? "",
+          gid: String(s.properties?.sheetId ?? ""),
+        }))
+        .filter((s) => s.name && s.gid);
+    } catch {
+      // Fall through to best-effort mapping when metadata fetch fails.
+      return Object.keys(apiSheets).map((name) => ({ name, gid: "" }));
+    }
   }
   const html = await fetchText(HTML_URL);
   if (!html) {

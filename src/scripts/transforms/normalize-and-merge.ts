@@ -799,6 +799,9 @@ function generateSkillMods(): Array<{ id: string; skill: string; slot: string; s
 function main(): void {
   console.log("=== SHD Planner: Data Normalize & Merge Pipeline ===\n");
 
+  const runTimestamp = process.env.DATA_RUN_TIMESTAMP ?? new Date().toISOString();
+  const runId = process.env.DATA_RUN_ID ?? runTimestamp.replace(/[:.]/g, "-");
+
   // Ensure output directory exists
   if (!fs.existsSync(DATA_DIR)) {
     fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -827,8 +830,19 @@ function main(): void {
     const rawSourceCount = Object.values(rawFiles).filter(Boolean).length;
     console.log(`  Raw files found: ${rawSourceCount}/4\n`);
 
+    const sourcePriority: Record<string, number> = {
+      "community-spreadsheet": 300,
+      "wiki-fandom": 200,
+      "mcp-import": 100,
+      "mx-builds": 90,
+      "nightfall-guard": 80,
+      seed: 0,
+      unknown: 0,
+    };
+    let conflictCount = 0;
+
     // Helper: merge scraped entities into seed data by slugified name
-    // Prefers the source with more non-null fields
+    // Uses source-priority first, then field-completeness as a tiebreaker.
     function mergeEntities<T extends { id: string; name: string }>(
       seeds: T[],
       scraped: Array<Record<string, unknown>>,
@@ -836,11 +850,15 @@ function main(): void {
       idPrefix: string,
     ): T[] {
       const seedMap = new Map<string, T>();
+      const winnerPriority = new Map<string, number>();
+      const winnerSource = new Map<string, string>();
       for (const item of seeds) {
-        seedMap.set(slugify(item.name), item);
+        const slug = slugify(item.name);
+        seedMap.set(slug, item);
+        winnerPriority.set(slug, sourcePriority.seed);
+        winnerSource.set(slug, "seed");
       }
 
-      // Count non-null fields in an object
       const fieldCount = (obj: Record<string, unknown>): number =>
         Object.values(obj).filter((v) => v !== null && v !== undefined && v !== "").length;
 
@@ -850,45 +868,71 @@ function main(): void {
         const slug = slugify(rawName);
         const existing = seedMap.get(slug);
 
-        if (existing) {
-          // Merge supplementary fields from scraped data into existing
-          const existingFieldCount = fieldCount(existing as unknown as Record<string, unknown>);
-          const rawFieldCount = fieldCount(raw);
+        const sourceName = String((raw._source as string) ?? "unknown");
+        const rawPriority = sourcePriority[sourceName] ?? sourcePriority.unknown;
 
-          if (rawFieldCount > existingFieldCount) {
-            // Scraped data is more complete — update with raw, keeping the ID
-            const merged = { ...raw, id: existing.id } as unknown as T;
-            seedMap.set(slug, merged);
-            changelog.updated.push(`${entityType}:${rawName}`);
-          } else {
-            // Seed is more complete — merge only non-null fields from raw
-            for (const [key, value] of Object.entries(raw)) {
-              if (key === "id") continue;
-              const existingValue = (existing as unknown as Record<string, unknown>)[key];
-              if ((existingValue === null || existingValue === undefined || existingValue === "") && value) {
-                (existing as unknown as Record<string, unknown>)[key] = value;
-              }
-            }
-            changelog.unchanged++;
-          }
-        } else {
-          // New entity from scraper
+        if (!existing) {
           const newEntity = { ...raw, id: `${idPrefix}-${slug}` } as unknown as T;
           seedMap.set(slug, newEntity);
+          winnerPriority.set(slug, rawPriority);
+          winnerSource.set(slug, sourceName);
           changelog.added.push(`${entityType}:${rawName}`);
+          continue;
+        }
+
+        const existingPriority = winnerPriority.get(slug) ?? sourcePriority.seed;
+        const existingSource = winnerSource.get(slug) ?? "seed";
+        const existingFieldCount = fieldCount(existing as unknown as Record<string, unknown>);
+        const rawFieldCount = fieldCount(raw);
+
+        const shouldReplace = rawPriority > existingPriority ||
+          (rawPriority === existingPriority && rawFieldCount > existingFieldCount);
+
+        if (shouldReplace) {
+          if (existingSource !== sourceName && existingSource !== "seed") {
+            conflictCount++;
+          }
+          const merged = { ...raw, id: existing.id } as unknown as T;
+          seedMap.set(slug, merged);
+          winnerPriority.set(slug, rawPriority);
+          winnerSource.set(slug, sourceName);
+          changelog.updated.push(`${entityType}:${rawName}`);
+        } else {
+          for (const [key, value] of Object.entries(raw)) {
+            if (key === "id") continue;
+            const existingValue = (existing as unknown as Record<string, unknown>)[key];
+            if ((existingValue === null || existingValue === undefined || existingValue === "") && value) {
+              (existing as unknown as Record<string, unknown>)[key] = value;
+            }
+          }
+          if (rawPriority === existingPriority && existingSource !== sourceName && existingSource !== "seed") {
+            conflictCount++;
+          }
+          changelog.unchanged++;
         }
       }
 
       return Array.from(seedMap.values());
     }
 
-    // Collect scraped entities by category from all sources
+    // Collect scraped entities by category from all sources, honoring source order.
     function collectFromSources(category: string): Array<Record<string, unknown>> {
+      const sourceOrder: Array<keyof typeof rawFiles> = ["spreadsheetRaw", "wikiRaw", "mxRaw", "nightfallRaw"];
+      const sourceNameMap: Record<string, string> = {
+        spreadsheetRaw: "community-spreadsheet",
+        wikiRaw: "wiki-fandom",
+        mxRaw: "mcp-import",
+        nightfallRaw: "nightfall-guard",
+      };
+
       const collected: Array<Record<string, unknown>> = [];
-      for (const raw of Object.values(rawFiles)) {
+      for (const sourceKey of sourceOrder) {
+        const raw = rawFiles[sourceKey];
         const extracted = raw?.extracted;
         if (extracted && Array.isArray(extracted[category])) {
-          collected.push(...(extracted[category] as Array<Record<string, unknown>>));
+          for (const item of extracted[category] as Array<Record<string, unknown>>) {
+            collected.push({ ...item, _source: sourceNameMap[sourceKey] });
+          }
         }
       }
       return collected;
@@ -1005,13 +1049,15 @@ function main(): void {
       skillMods.length + specializations.length + shdWatch.length;
 
     const qualityReport = {
-      generatedAt: new Date().toISOString(),
+      generatedAt: runTimestamp,
+      runId,
       totalEntities,
       verified: 0,
       singleSource: totalEntities - changelog.updated.length,
-      conflicted: 0,
+      conflicted: conflictCount,
       missing: [] as string[],
       conflicts: [] as string[],
+      conflictCount,
       source: "merged",
       changelog,
     };
@@ -1022,7 +1068,8 @@ function main(): void {
     const manifest = {
       version: "0.1.0",
       gameVersion: "TU21.1",
-      lastDataUpdate: new Date().toISOString(),
+      lastDataUpdate: runTimestamp,
+      runId,
       sources: Object.keys(rawFiles).filter((k) => rawFiles[k as keyof typeof rawFiles] !== null),
       entityCounts: {
         brandSets: brandSets.length,
@@ -1052,6 +1099,7 @@ function main(): void {
 
     // Write changelog for cron handler consumption
     writeDataFile("update-changelog.json", changelog);
+    return;
 
   } else {
     console.log("[info] No raw data found. Generating seed data...\n");
@@ -1132,7 +1180,8 @@ function main(): void {
     skillMods.length + specializations.length + shdWatch.length;
 
   const qualityReport = {
-    generatedAt: new Date().toISOString(),
+    generatedAt: runTimestamp,
+    runId,
     totalEntities,
     verified: 0,
     singleSource: totalEntities,
@@ -1148,7 +1197,8 @@ function main(): void {
   const manifest = {
     version: "0.1.0",
     gameVersion: "TU21.1",
-    lastDataUpdate: new Date().toISOString(),
+    lastDataUpdate: runTimestamp,
+    runId,
     sources: hasRawData ? ["community-spreadsheet", "wiki-scraper"] : ["seed-data"],
     entityCounts: {
       brandSets: brandSets.length,

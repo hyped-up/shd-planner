@@ -83,6 +83,8 @@ const SCRAPERS = [
 ];
 
 const REPORT_PATH = resolve(RAW_DIR, "scrape-report.json");
+const STRICT_PRIMARY = (process.env.DIV2_STRICT_PRIMARY ?? "false").toLowerCase() === "true";
+const PRIMARY_SCRAPER_NAME = process.env.DIV2_PRIMARY_SCRAPER ?? "community-spreadsheet";
 
 // Categories we track across all scrapers
 const ALL_CATEGORIES = [
@@ -315,6 +317,14 @@ async function main(): Promise<void> {
   if (successCount === 0) {
     console.error("\nAll scrapers failed. Exiting with code 1.");
     process.exit(1);
+  }
+
+  if (STRICT_PRIMARY) {
+    const primaryResult = results.find((r) => r.name === PRIMARY_SCRAPER_NAME);
+    if (!primaryResult || primaryResult.status !== "success") {
+      console.error(`\nStrict-primary enabled: required scraper "${PRIMARY_SCRAPER_NAME}" failed or did not run. Exiting with code 1.`);
+      process.exit(1);
+    }
   }
 
   // Check entity count regression
