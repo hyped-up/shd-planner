@@ -308,7 +308,12 @@ async function main(): Promise<void> {
     const csvOverride = apiSheetCsv?.[sheet.name];
     const { info, rows } = csvOverride
       ? {
-          info: { name: sheet.name, gid: sheet.gid, status: "success", rowCount: parseCsv(csvOverride).length },
+          info: {
+            name: sheet.name,
+            gid: sheet.gid,
+            status: "success" as const,
+            rowCount: parseCsv(csvOverride).length,
+          },
           rows: parseCsv(csvOverride),
         }
       : await fetchSheet(sheet.gid, sheet.name);
