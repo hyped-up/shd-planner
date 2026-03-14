@@ -78,8 +78,6 @@ services:
       - proxy
     depends_on:
       - shd-planner-mcp
-    environment:
-      - DIV2_SHEET_URL=https://docs.google.com/spreadsheets/d/1nrPBmOrtpkEW1j5fbcRT7L-AXgsGOqMqxXoVtopsiGM/edit
     volumes:
       - shd-data:/app/data
       - /opt/docker/shd-planner/services/shd-planner-mcp:/app/services/shd-planner-mcp:ro
