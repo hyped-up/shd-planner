@@ -3,6 +3,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import type { GearSlot, CoreAttributeType, IBuildGearPiece } from "@/lib/types";
+import { composeGearSlotOptions, type GearPickerOption, type GearSource } from "@/lib/gear-slot-picker";
 import { useBuildStore } from "@/hooks/use-build-store";
 import SearchableSelect from "@/components/shared/SearchableSelect";
 import type { SearchableSelectOption } from "@/components/shared/SearchableSelect";
@@ -21,16 +22,6 @@ interface GearConfigPanelProps {
   slot: GearSlot;
   onClose: () => void;
 }
-
-// Available source tabs
-type GearSource = "brand" | "gearset" | "named" | "exotic";
-
-const SOURCE_TABS: { key: GearSource; label: string }[] = [
-  { key: "brand", label: "Brand Set" },
-  { key: "gearset", label: "Gear Set" },
-  { key: "named", label: "Named Item" },
-  { key: "exotic", label: "Exotic" },
-];
 
 // Core attribute options
 const CORE_OPTIONS: { key: CoreAttributeType; label: string }[] = [
@@ -70,46 +61,33 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
   // Talent slot eligibility (only Chest and Backpack)
   const hasTalentSlot = slot === "Chest" || slot === "Backpack";
 
-  const [itemOptions, setItemOptions] = useState<SearchableSelectOption[]>([]);
+  const [itemOptions, setItemOptions] = useState<GearPickerOption[]>([]);
   const [talentOptions, setTalentOptions] = useState<SearchableSelectOption[]>([]);
   const [minorAttributeData, setMinorAttributeData] = useState<IGearAttribute[]>([]);
 
-  // Load item options when source tab changes
+  // Load unified item options for this slot
   useEffect(() => {
     async function loadItems() {
-      let options: SearchableSelectOption[] = [];
-      switch (source) {
-        case "brand": {
-          const brands = await getAllBrands();
-          options = brands.map((b) => ({ id: b.id, name: b.name }));
-          break;
-        }
-        case "gearset": {
-          const sets = await getAllGearSets();
-          options = sets.map((s) => ({ id: s.id, name: s.name }));
-          break;
-        }
-        case "named": {
-          const items = await getAllNamedItems();
-          const slotItems = items.filter((i) => i.slot === slot);
-          options = slotItems.map((i) => ({ id: i.id, name: i.name, subtitle: i.brand }));
-          break;
-        }
-        case "exotic": {
-          const exotics = await getAllExoticGear();
-          const slotExotics = exotics.filter((e) => e.slot === slot);
-          options = slotExotics.map((e) => ({
-            id: e.id,
-            name: e.name,
-            subtitle: e.talent.name,
-          }));
-          break;
+      const [brands, sets, namedItems, exotics] = await Promise.all([
+        getAllBrands(),
+        getAllGearSets(),
+        getAllNamedItems(),
+        getAllExoticGear(),
+      ]);
+
+      const options = composeGearSlotOptions(slot, brands, sets, namedItems, exotics);
+      setItemOptions(options);
+
+      // Keep source in sync when selected item exists in the slot list.
+      if (itemId) {
+        const selected = options.find((option) => option.id === itemId);
+        if (selected && selected.source !== source) {
+          setSource(selected.source);
         }
       }
-      setItemOptions(options);
     }
     loadItems();
-  }, [source, slot]);
+  }, [slot, itemId, source]);
 
   // Load talent options (chest/backpack only)
   useEffect(() => {
@@ -213,39 +191,24 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
 
         {/* Content */}
         <div className="flex-1 overflow-y-auto p-4 space-y-5">
-          {/* Step 1: Source type */}
+          {/* Step 1: Item selection */}
           <div>
-            <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Step 1: Source</div>
-            <div className="grid grid-cols-4 gap-1">
-              {SOURCE_TABS.map((tab) => (
-                <button
-                  key={tab.key}
-                  type="button"
-                  onClick={() => setSource(tab.key)}
-                  className={`text-xs font-medium px-2 py-2 rounded transition-colors cursor-pointer ${
-                    source === tab.key
-                      ? "bg-shd-orange text-background"
-                      : "bg-surface text-foreground-secondary hover:bg-surface-hover hover:text-foreground"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Step 2: Item selection */}
-          <div>
-            <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Step 2: Select Item</div>
+            <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Step 1: Select Item</div>
             <SearchableSelect
               options={itemOptions}
               value={itemId}
-              onChange={(id) => setItemId(id)}
-              placeholder={`Search ${source} items...`}
+              onChange={(id) => {
+                setItemId(id);
+                const selected = itemOptions.find((option) => option.id === id);
+                if (selected) {
+                  setSource(selected.source);
+                }
+              }}
+              placeholder="Search all valid items..."
             />
           </div>
 
-          {/* Step 3: Core attribute */}
+          {/* Step 2: Core attribute */}
           <div>
             <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Step 3: Core Attribute</div>
             <div className="space-y-2">
