@@ -1,0 +1,1292 @@
+{
+  "_metadata": {
+    "game_version": "TU21.1",
+    "last_updated": "2026-03-01",
+    "source": "manual"
+  },
+  "strikers_battlegear": {
+    "id": "strikers_battlegear",
+    "name": "Striker's Battlegear",
+    "abbreviation": "SB",
+    "bonuses": {
+      "2pc": "+15% Weapon Handling",
+      "3pc": "+15% Rate of Fire",
+      "4pc": {
+        "name": "Striker's Gamble",
+        "description": "Weapon hits increase total weapon damage by 0.65%, stacking up to 100 times. 1 stack is lost per second between 0 and 50 stacks; 2 stacks lost per second between 51 and 100 stacks."
+      }
+    },
+    "chest_talent": {
+      "name": "Press the Advantage",
+      "description": "Increases Striker's Gamble max stacks from 100 to 200. 3 stacks lost per second between 101 and 200 stacks."
+    },
+    "backpack_talent": {
+      "name": "Risk Management",
+      "description": "Increases total weapon damage gained per stack of Striker's Gamble from 0.65% to 1%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "smg",
+      "lmg"
+    ],
+    "playstyle": [
+      "sustained_dps",
+      "aggro",
+      "stack_building"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "raid",
+      "summit",
+      "pvp"
+    ],
+    "synergies": [
+      "St. Elmo's Engine (AR) for lightning proc sustain",
+      "Coyote's Mask for +15% crit chance to all allies within 30m",
+      "Obliterate talent for additional stacking weapon damage",
+      "Scorpio exotic shotgun for rapid pre-stack before switching",
+      "ACS-12 shotgun to rapidly stack before switching to primary"
+    ],
+    "tips": [
+      "Maintain stacks by staying aggressive and not breaking fire rhythm.",
+      "Full chest + backpack yields up to 200% total weapon damage at max stacks.",
+      "Use ACS-12 or Scorpio to rapidly build stacks, then swap to main weapon.",
+      "Pair with Coyote's Mask to push critical hit chance; aim for 60% CHC.",
+      "Stack decay is fastest above 50 stacks, so keep firing continuously."
+    ]
+  },
+  "eclipse_protocol": {
+    "id": "eclipse_protocol",
+    "name": "Eclipse Protocol",
+    "abbreviation": "EP",
+    "bonuses": {
+      "2pc": "+15% Status Effects",
+      "3pc": "+15% Skill Haste, +30% Hazard Protection",
+      "4pc": {
+        "name": "Indirect Transmission",
+        "description": "Your status effects now spread on kill to all enemies within 10m and refresh 50% of the duration."
+      }
+    },
+    "chest_talent": {
+      "name": "Proliferation",
+      "description": "Increases Indirect Transmission spread range from 10m to 15m and increases the duration refresh from 50% to 75%."
+    },
+    "backpack_talent": {
+      "name": "Symptom Aggravator",
+      "description": "Amplifies all damage dealt to status-affected targets by 30%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "smg",
+      "pistol"
+    ],
+    "playstyle": [
+      "status_effect",
+      "crowd_control",
+      "skill_hybrid"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "countdown",
+      "summit"
+    ],
+    "synergies": [
+      "Vile exotic mask for spreading bleed on status effects",
+      "Firestarter Chem Launcher for fast fire application",
+      "Stinger Hive for bleed spreading",
+      "Pyromaniac AR talent for fire-proc bonus damage",
+      "Technician specialization for bonus red core without losing skill tier",
+      "Ongoing Directive for hollow-point ammo on status kills"
+    ],
+    "tips": [
+      "Apply one status effect and let Indirect Transmission chain-spread on kills.",
+      "Backpack Symptom Aggravator stacks multiplicatively with other damage bonuses.",
+      "Vile mask makes any status effect also apply bleed, compounding the spread.",
+      "Fire and bleed are the strongest damage-dealing status effects to spread.",
+      "Works without weapons: Chem Launcher + Stinger Hive can kill entire rooms."
+    ]
+  },
+  "hunters_fury": {
+    "id": "hunters_fury",
+    "name": "Hunter's Fury",
+    "abbreviation": "HF",
+    "bonuses": {
+      "2pc": "+15% Shotgun Damage, +15% SMG Damage",
+      "3pc": "+20% Armor on Kill, +50% Health on Kill",
+      "4pc": {
+        "name": "Apex Predator",
+        "description": "Enemies within 15m receive a debuff that amplifies your weapon damage against them by 20%. Defeating a debuffed enemy with your weapon disorts nearby enemies within 5m and increases amplified weapon damage by 5% for 10 seconds, stacking up to 5 times."
+      }
+    },
+    "chest_talent": {
+      "name": "Endless Hunger",
+      "description": "Extends the duration of Apex Predator stacks from 10 seconds to 30 seconds."
+    },
+    "backpack_talent": {
+      "name": "Overwhelming Force",
+      "description": "Increases the disorient radius from Apex Predator kills from 5m to 10m."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "shotgun",
+      "smg"
+    ],
+    "playstyle": [
+      "close_range_dps",
+      "aggro",
+      "self_sustain"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "pvp",
+      "countdown",
+      "summit"
+    ],
+    "synergies": [
+      "Scorpio exotic shotgun for status spread and healing",
+      "Exotic SMG Chatterbox for mag refill on kill",
+      "Coyote's Mask or Aces & Eights mask for crit bonuses",
+      "Capacitor SMG for skill-hybrid variants",
+      "Memento exotic backpack (using non-set backpack slot)"
+    ],
+    "tips": [
+      "Stay in close range (under 15m) to ensure Apex Predator debuff is active on all targets.",
+      "Chest talent dramatically improves stack uptime \u2014 highly recommended.",
+      "Backpack talent's wider disorient keeps flanking enemies off you.",
+      "3pc armor/health on kill makes this set nearly self-sustaining in dense fights.",
+      "Pair with Scorpio shotgun for bonus status effects that synergize with the disorient."
+    ]
+  },
+  "negotiators_dilemma": {
+    "id": "negotiators_dilemma",
+    "name": "Negotiator's Dilemma",
+    "abbreviation": "ND",
+    "bonuses": {
+      "2pc": "+15% Critical Hit Chance",
+      "3pc": "+20% Critical Hit Damage",
+      "4pc": {
+        "name": "Hostile Negotiations",
+        "description": "Critical hits mark enemies for 20 seconds, up to 3 marks total. When you critically hit a marked enemy, all other marked enemies take 60% of the damage dealt. Whenever a marked enemy dies, gain +2% critical hit damage, stacking up to 20 times until combat ends."
+      }
+    },
+    "chest_talent": {
+      "name": "Target Rich Environment",
+      "description": "Increases Hostile Negotiations mark count from 3 to 5."
+    },
+    "backpack_talent": {
+      "name": "Critical Measures",
+      "description": "Increases Hostile Negotiations damage to additional marked enemies from 60% to 100%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "lmg",
+      "smg"
+    ],
+    "playstyle": [
+      "sustained_dps",
+      "multi_target",
+      "crit_stacking"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "raid",
+      "summit",
+      "countdown"
+    ],
+    "synergies": [
+      "Coyote's Mask for +15% crit chance boost to group",
+      "Capacitor AR for stacking weapon damage",
+      "Eagle Bearer AR for bonus on kills",
+      "Obliterate talent for additional weapon damage stacking",
+      "Glass Cannon attribute for maximum crit damage scaling"
+    ],
+    "tips": [
+      "With chest + backpack, all 5 marks take 100% splash damage \u2014 effectively 5x your DPS.",
+      "The +2% CHD on mark kills stacks to +40% total bonus CHD across a fight.",
+      "Prioritize targets close together so critical hits proc splash on multiple marks.",
+      "Use high rate-of-fire weapons to maximize critical hit frequency and mark uptime.",
+      "Excellent for raid and legendary content where grouped elites are common."
+    ]
+  },
+  "ongoing_directive": {
+    "id": "ongoing_directive",
+    "name": "Ongoing Directive",
+    "abbreviation": "OD",
+    "bonuses": {
+      "2pc": "+15% Status Effects",
+      "3pc": "+30% Reload Speed",
+      "4pc": {
+        "name": "Hollow-Point Ammo",
+        "description": "Shooting a status-affected enemy marks them for 10 seconds. Killing a marked enemy grants a full clip of Hollow-Point Ammo for your active weapon and half a clip to the rest of the party. Hollow-Point Ammo amplifies weapon damage by 20% and applies bleed on hit."
+      }
+    },
+    "chest_talent": {
+      "name": "Parabellum Rounds",
+      "description": "Increases Hollow-Point Ammo weapon damage amplification from 20% to 35%."
+    },
+    "backpack_talent": {
+      "name": "Trauma Specialist",
+      "description": "Increases the duration of your bleed status effects by 50% and all bleed damage by 100%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "lmg",
+      "smg",
+      "rifle"
+    ],
+    "playstyle": [
+      "status_effect",
+      "sustained_dps",
+      "team_support"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "countdown",
+      "summit"
+    ],
+    "synergies": [
+      "Eclipse Protocol (cross-set status spreading)",
+      "Survivalist specialization for bonus status effect duration",
+      "Firestarter Chem Launcher to apply initial status for mark trigger",
+      "Stinger Hive for persistent bleed application",
+      "Vile mask for bleed-on-status to maintain HP trigger"
+    ],
+    "tips": [
+      "Always apply a status effect before shooting to proc the mark mechanic.",
+      "Hollow-Point Ammo also benefits teammates \u2014 valuable in group play.",
+      "Backpack Trauma Specialist doubles bleed damage, making bleed the preferred status.",
+      "Pairs well with the Survivalist specialization for increased status potency.",
+      "Use fast-firing weapons to generate marks quickly and keep HP ammo flowing."
+    ]
+  },
+  "true_patriot": {
+    "id": "true_patriot",
+    "name": "True Patriot",
+    "abbreviation": "TP",
+    "bonuses": {
+      "2pc": "+30% Ammo Capacity",
+      "3pc": "+30% Magazine Size",
+      "4pc": {
+        "name": "Red, White, and Blue",
+        "description": "Enemies you shoot receive rotating debuffs that cycle every 2 seconds. Red: Amplifies enemy damage taken by 8%. White: Hitting the enemy restores you and allies' armor by 2% once per second. Blue: Decreases enemy damage output by 8%. Full Flag: Enemies that die while under all three debuffs simultaneously create a 5m explosion dealing damage equal to their total health and armor."
+      }
+    },
+    "chest_talent": {
+      "name": "Waving the Flag",
+      "description": "Increases Red, White, and Blue rotation speed from 2 seconds to 1.5 seconds per cycle."
+    },
+    "backpack_talent": {
+      "name": "Patriotic Boost",
+      "description": "Increases debuff strength: Red increases from 8% to 12% amplified damage taken. White increases armor repair from 2% to 3% per second. Blue increases enemy damage reduction from 8% to 12%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "lmg",
+      "smg"
+    ],
+    "playstyle": [
+      "team_support",
+      "debuffer",
+      "self_sustain"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "raid",
+      "countdown"
+    ],
+    "synergies": [
+      "Banshee exotic SMG for suppression synergy",
+      "Future Initiative for layered team healing",
+      "Group compositions benefit from stacked White armor repairs",
+      "Full Flag explosion scales with enemy health \u2014 best on elites and named enemies"
+    ],
+    "tips": [
+      "You must continuously shoot the same enemy to cycle all three colors; focus single targets.",
+      "Full Flag explosion on elite or named enemies can chain-kill nearby groups.",
+      "Chest (faster rotation) and backpack (stronger debuffs) are both highly recommended.",
+      "The White armor restore makes this a passive team healer when targeting elites.",
+      "Blue debuff effectively reduces incoming team damage by 8-12% on focused targets."
+    ]
+  },
+  "future_initiative": {
+    "id": "future_initiative",
+    "name": "Future Initiative",
+    "abbreviation": "FI",
+    "bonuses": {
+      "2pc": "+30% Repair Skills",
+      "3pc": "+15% Skill Haste, +30% Skill Duration",
+      "4pc": {
+        "name": "Ground Control",
+        "description": "You and all allies gain +15% total weapon and skill damage while at full armor. When you repair an ally, you and all allies within 5m of you are also repaired for 60% of that amount."
+      }
+    },
+    "chest_talent": {
+      "name": "Tactical Superiority",
+      "description": "Increases Ground Control total weapon and skill damage bonus from +15% to +25%."
+    },
+    "backpack_talent": {
+      "name": "Advanced Combat Tactics",
+      "description": "Increases Ground Control proximity armor repair from 60% to 120% of the amount repaired on the primary target."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "smg",
+      "pistol"
+    ],
+    "playstyle": [
+      "healer",
+      "team_support",
+      "skill_build"
+    ],
+    "modes": [
+      "raid",
+      "pve_legendary",
+      "countdown",
+      "pve_heroic"
+    ],
+    "synergies": [
+      "Restorer Hive for continuous group healing",
+      "Chem Launcher (Oxidizer or Repair) for area healing",
+      "True Patriot for layered group sustain",
+      "Capacitor or Exotic SMG as secondary for skill damage",
+      "Technician specialization for maximum skill tiers"
+    ],
+    "tips": [
+      "Keep all allies at full armor to maintain the +15-25% damage bonus from Ground Control.",
+      "Backpack doubles nearby ally repair \u2014 position near grouped teammates for maximum effect.",
+      "This is the premier dedicated healer set; pair with high skill tier and Repair Skills rolls.",
+      "Prioritize Skill Haste rolls on gear to maximize repair uptime.",
+      "Works best in 4-player content like raids and Legendary Strongholds."
+    ]
+  },
+  "foundry_bulwark": {
+    "id": "foundry_bulwark",
+    "name": "Foundry Bulwark",
+    "abbreviation": "FB",
+    "bonuses": {
+      "2pc": "+10% Total Armor",
+      "3pc": "+1% Armor Regeneration, +50% Shield Health",
+      "4pc": {
+        "name": "Makeshift Repairs",
+        "description": "20% of all damage taken by you and your shield is restored as armor over 15 seconds."
+      }
+    },
+    "chest_talent": {
+      "name": "Process Refinery",
+      "description": "Reduces Makeshift Repairs restoration time from 15 seconds to 10 seconds."
+    },
+    "backpack_talent": {
+      "name": "Improved Materials",
+      "description": "Increases Makeshift Repairs restoration from 20% to 30% of damage taken."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "smg",
+      "shotgun"
+    ],
+    "playstyle": [
+      "tank",
+      "self_sustain",
+      "shield_user"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "pvp",
+      "countdown"
+    ],
+    "synergies": [
+      "Ballistic Shield skill for maximum armor pool exploitation",
+      "True Patriot for layered tanking and team sustain",
+      "Aegis for stacked damage resistance on same build",
+      "Memento backpack (if not using set backpack) for additional sustain",
+      "Negotiator's mask slot for crit while tanking"
+    ],
+    "tips": [
+      "The self-repair mechanic means higher incoming damage actually sustains you better.",
+      "Prioritize total armor rolls to maximize the armor pool and repair amounts.",
+      "Use with Ballistic Shield for both the shield health bonus and double repair scaling.",
+      "Chest and backpack together restore 30% of damage over 10 seconds \u2014 near-immortal in cover.",
+      "Works well in aggressive frontline play where you absorb hits regularly."
+    ]
+  },
+  "hard_wired": {
+    "id": "hard_wired",
+    "name": "Hard Wired",
+    "abbreviation": "HW",
+    "bonuses": {
+      "2pc": "+15% Skill Haste",
+      "3pc": "+30% Repair Skills, +15% Skill Damage",
+      "4pc": {
+        "name": "Feedback Loop",
+        "description": "Whenever you use or cancel a skill, your other skill's cooldown is reduced by 30 seconds and total skill damage and repair increases by 10% for 20 seconds. Feedback Loop can trigger once every 20 seconds."
+      }
+    },
+    "chest_talent": {
+      "name": "Positive Reinforcement",
+      "description": "Increases Feedback Loop skill damage and repair bonus from +10% to +25%."
+    },
+    "backpack_talent": {
+      "name": "Short Circuit",
+      "description": "Decreases Feedback Loop cooldown from 20 seconds to 10 seconds."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "smg",
+      "assault_rifle",
+      "pistol"
+    ],
+    "playstyle": [
+      "skill_build",
+      "skill_damage",
+      "cooldown_management"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "summit",
+      "countdown"
+    ],
+    "synergies": [
+      "Cluster Mine (cancellable) + Sniper Turret for maximum Feedback Loop uptime",
+      "Capacitor exotic AR scales off skill tiers",
+      "Technician specialization for extra skill tier",
+      "Rigger for stacked skill uptime on same loadout variation",
+      "Dodge City Gunslinger exotic holster for cooldown chain starts"
+    ],
+    "tips": [
+      "Use a cancellable skill (e.g. Cluster Mine exhaust) + long-CD skill to maximize Feedback Loop.",
+      "With backpack, Feedback Loop triggers every 10 seconds \u2014 near-permanent +25% skill damage.",
+      "Best paired with two offensive skills; not ideal for pure healing builds.",
+      "Skill Haste rolls on gear accelerate the overall cooldown loop further.",
+      "Popular for turret/drone builds as cancelling recalls them instantly resets CD."
+    ]
+  },
+  "heartbreaker": {
+    "id": "heartbreaker",
+    "name": "Heartbreaker",
+    "abbreviation": "HB",
+    "bonuses": {
+      "2pc": "+15% Assault Rifle Damage, +15% LMG Damage",
+      "3pc": "+15% Weapon Handling",
+      "4pc": {
+        "name": "Heartstopper",
+        "description": "Headshots apply pulse to the target for 5 seconds. Weapon hits on pulsed enemies add a stack of +1% bonus armor and +1% weapon damage to pulsed enemies. Maximum 50 stacks."
+      }
+    },
+    "chest_talent": {
+      "name": "Cardiac Arrest",
+      "description": "Increases Heartstopper maximum stacks from 50 to 100."
+    },
+    "backpack_talent": {
+      "name": "Pulse Check",
+      "description": "Increases total bonus armor gained per stack of Heartstopper from 1% to 2%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "lmg"
+    ],
+    "playstyle": [
+      "sustained_dps",
+      "self_sustain",
+      "headshot_rewarding"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "pvp",
+      "raid",
+      "summit"
+    ],
+    "synergies": [
+      "Eagle Bearer AR for bonus armor on kill synergy",
+      "Coyote's Mask for critical hit bonus that also helps headshot rate",
+      "BTSU Datagloves for additional skill bonuses if running hybrid",
+      "Scorpio for pulsing enemies from a distance before switching to AR/LMG"
+    ],
+    "tips": [
+      "Aim for the head consistently \u2014 each headshot pulses the target and starts the stack chain.",
+      "With chest (100 stacks) + backpack (2% armor/stack), you can reach 200% bonus armor.",
+      "The pulse from Heartstopper does not require a skill \u2014 it's weapon-native.",
+      "Best on single hard targets like bosses where you can sustain 100 stacks.",
+      "Works in PvP as the pulse reveals enemies and the armor stacking helps survive burst."
+    ]
+  },
+  "hotshot": {
+    "id": "hotshot",
+    "name": "Hotshot",
+    "abbreviation": "HS",
+    "bonuses": {
+      "2pc": "+30% Marksman Rifle Damage, +30% Weapon Handling",
+      "3pc": "+30% Headshot Damage",
+      "4pc": {
+        "name": "Headache",
+        "description": "First consecutive headshot with a Marksman Rifle increases next headshot damage by 20%. Second consecutive headshot grants +10% bonus armor (up to 50% of max armor). Third consecutive headshot refills the magazine. From the fourth headshot onward, all three bonuses activate simultaneously on each consecutive headshot kill."
+      }
+    },
+    "chest_talent": {
+      "name": "Stand Tall",
+      "description": "Increases Headache bonus armor from 50% to 100% of max armor value."
+    },
+    "backpack_talent": {
+      "name": "Lucky",
+      "description": "Allows you to miss one headshot before resetting the Headache consecutive headshot cycle."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "marksman_rifle"
+    ],
+    "playstyle": [
+      "headshot_dps",
+      "precision",
+      "self_sustain"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "summit",
+      "pvp"
+    ],
+    "synergies": [
+      "Obliterate talent for stacking weapon damage on continuous hits",
+      "Coyote's Mask for group-wide crit bonus",
+      "Sharpshooter specialization for bonus headshot damage and MMR ammo",
+      "Ekim's Long Rifle or Classic M44 Carbine for high base damage synergy"
+    ],
+    "tips": [
+      "The backpack Lucky talent is essential for any realistic gameplay \u2014 always equip it.",
+      "Reach the fourth-headshot milestone and maintain it for simultaneous all-bonus activation.",
+      "Magazine auto-refill at third headshot means almost unlimited sustained fire on precision builds.",
+      "Chest Stand Tall at 100% bonus armor makes you nearly unkillable during a sniper streak.",
+      "Effective in both PvE and PvP when headshots are consistent; punishing when they are not."
+    ]
+  },
+  "aces_and_eights": {
+    "id": "aces_and_eights",
+    "name": "Aces & Eights",
+    "abbreviation": "AA",
+    "bonuses": {
+      "2pc": "+15% Marksman Rifle Damage, +15% Rifle Damage",
+      "3pc": "+30% Headshot Damage",
+      "4pc": {
+        "name": "Dead Man's Hand",
+        "description": "Rifle and Marksman Rifle shots flip cards. After revealing five cards, your next shot is amplified by 30% damage. Additional amplified shots are granted based on the poker hand revealed: Aces and Eights (2 shots), Full House (3 shots), Four of a Kind (4 shots). Headshots grant an extra card flip, accelerating hand building."
+      }
+    },
+    "chest_talent": {
+      "name": "No Limit",
+      "description": "Increases Dead Man's Hand damage amplification from 30% to 50%."
+    },
+    "backpack_talent": {
+      "name": "Ace in the Sleeve",
+      "description": "Grants one additional amplified shot when revealing your hand."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "marksman_rifle",
+      "rifle"
+    ],
+    "playstyle": [
+      "burst_dps",
+      "precision",
+      "alternating_fire"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "summit",
+      "pvp"
+    ],
+    "synergies": [
+      "Sharpshooter specialization for headshot damage and free ammo generation",
+      "Obliterate talent for bonus weapon damage stacking per continuous hit",
+      "Hotshot for stacked marksman rifle focused builds",
+      "M1A CQB Rifle for rapid fire card builds"
+    ],
+    "tips": [
+      "Headshots flip an extra card \u2014 always aim for the head to build hands faster.",
+      "Mixing rifles and MMRs lets you build hands from both weapon types.",
+      "Chest + backpack yields 50% damage amplification and an extra empowered shot per hand.",
+      "Four of a Kind hands (4 empowered shots) deal the most sustained burst \u2014 aim for those.",
+      "Great for boss phases where you can fire consistently and trigger many hands."
+    ]
+  },
+  "breaking_point": {
+    "id": "breaking_point",
+    "name": "Breaking Point",
+    "abbreviation": "BP",
+    "bonuses": {
+      "2pc": "+25% Rifle Damage, +25% Marksman Rifle Damage",
+      "3pc": "+30% Headshot Damage, +15% Weapon Handling",
+      "4pc": {
+        "name": "On Point",
+        "description": "Hitting a shot with a Rifle or Marksman Rifle grants a stack. Reloading converts stacks into a temporary buff providing +2% Weapon Handling and +4% Weapon Damage per stack for 10 seconds."
+      }
+    },
+    "chest_talent": {
+      "name": "Point of no Return",
+      "description": "Increases On Point buff duration from 10 seconds to 15 seconds."
+    },
+    "backpack_talent": {
+      "name": "Point of Honor",
+      "description": "Increases On Point Weapon Damage bonus per stack from +4% to +6%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "rifle",
+      "marksman_rifle"
+    ],
+    "playstyle": [
+      "burst_dps",
+      "reload_timing",
+      "precision"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "summit",
+      "pvp"
+    ],
+    "synergies": [
+      "Aces & Eights for dual MMR/Rifle overlap builds",
+      "Sharpshooter specialization for headshot and reload synergy",
+      "Obliterate talent on rifles for additional damage stacking",
+      "One in the Chamber talent (pistol) to maintain damage between reloads"
+    ],
+    "tips": [
+      "Fire full magazines before reloading to maximize stack count for the buff.",
+      "With backpack, each stack grants +6% weapon damage \u2014 a full magazine of hits is massive.",
+      "Chest extends the buff to 15 seconds, giving you more time to spend your stacks.",
+      "Use a fast-firing rifle to build stacks quickly before a reload.",
+      "Best for content with predictable encounter pacing where you can reload at will."
+    ]
+  },
+  "system_corruption": {
+    "id": "system_corruption",
+    "name": "System Corruption",
+    "abbreviation": "SC",
+    "bonuses": {
+      "2pc": "+15% Bonus Armor",
+      "3pc": "+30% Bonus Armor",
+      "4pc": {
+        "name": "Hacktivist",
+        "description": "When you have bonus armor, all weapon and skill damage is amplified by 15%. Headshot kills grant 50% bonus armor for 10s."
+      }
+    },
+    "chest_talent": {
+      "name": "Hacktivist (Chest)",
+      "description": "Hacktivist amplified damage increased to 25%."
+    },
+    "backpack_talent": {
+      "name": "Hacktivist (Backpack)",
+      "description": "Headshot kills grant bonus armor to all team members within 15m."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "smg",
+      "assault_rifle",
+      "pistol"
+    ],
+    "playstyle": [
+      "pvp_survivability",
+      "self_sustain",
+      "anti_scan"
+    ],
+    "modes": [
+      "pvp",
+      "dark_zone",
+      "conflict"
+    ],
+    "synergies": [
+      "High bonus armor talents (Efficient, Composure) to maximize weapon damage scaling",
+      "Striker's Battlegear chest for hybrid DPS tank builds",
+      "Status effect resistance gear for layered PvP defenses",
+      "Banshee SMG for suppression field in PvP"
+    ],
+    "tips": [
+      "The nameplate hide for 5 seconds creates confusion in PvP \u2014 use it aggressively.",
+      "With backpack (100% bonus armor) + chest (15s CD), you can spam near-continuous armor surges.",
+      "The +1% weapon damage per 5% bonus armor scales to +20% \u2014 trigger Hackstep before engaging.",
+      "Pulse and Disrupt Resistance make this nearly immune to common PvP electronics.",
+      "Obtain pieces exclusively from the Dark Zone for the most authentic usage context."
+    ]
+  },
+  "tip_of_the_spear": {
+    "id": "tip_of_the_spear",
+    "name": "Tip of the Spear",
+    "abbreviation": "TotS",
+    "bonuses": {
+      "2pc": "+15% Specialization Weapon Damage",
+      "3pc": "+20% Signature Weapon Damage",
+      "4pc": {
+        "name": "Aggressive Recon",
+        "description": "Hitting enemies with your specialization weapon grants 20% Total Weapon Damage for 60s. Dealing damage with your primary or secondary weapon generates specialization ammo."
+      }
+    },
+    "chest_talent": {
+      "name": "Aggressive Recon (Chest)",
+      "description": "Increases the Aggressive Recon weapon damage buff to 40%."
+    },
+    "backpack_talent": {
+      "name": "Aggressive Recon (Backpack)",
+      "description": "Kills while Aggressive Recon is active generate specialization ammo for the team."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "lmg",
+      "smg"
+    ],
+    "playstyle": [
+      "sustained_dps",
+      "specialization_synergy"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "countdown",
+      "summit"
+    ],
+    "synergies": [
+      "Gunner specialization LMG for continuous ammo generation loop",
+      "Sharpshooter specialization for MMR specialization ammo uptime",
+      "Survivalist crossbow for status proc before weapon swap",
+      "St. Elmo's Engine for lightning stacking alongside weapon damage buff"
+    ],
+    "tips": [
+      "Fire signature weapon at the start of each encounter to trigger the 60-second damage window.",
+      "With auto-generated ammo every 60 seconds, you can sustain Aggressive Recon permanently.",
+      "Chest talent doubles the weapon damage boost to +40% \u2014 makes a significant DPS difference.",
+      "Backpack doubles generated ammo, reducing reliance on kills for specialization ammo.",
+      "Pair with Gunner for the highest LMG damage output in PvE content."
+    ]
+  },
+  "cavalier": {
+    "id": "cavalier",
+    "name": "Cavalier",
+    "abbreviation": "CAV",
+    "bonuses": {
+      "2pc": "+30% Hazard Protection",
+      "3pc": "+40% Repair Skills",
+      "4pc": {
+        "name": "Charging / Charged",
+        "description": "Charging: For each second spent out of cover during combat, gain 5% reduced incoming damage, up to a maximum of 50%. Charged: While fully charged, gain immunity to all movement speed debuffs and share your Hazard Protection and incoming damage reduction with all allies for 10 seconds. After Charged is consumed, Charging resumes if still in combat out of cover."
+      }
+    },
+    "chest_talent": {
+      "name": "Overcharging",
+      "description": "Increases Charging maximum incoming damage protection from 50% to 70%."
+    },
+    "backpack_talent": {
+      "name": "Safe Charging",
+      "description": "Charging accumulates protection at 10% per second instead of 5% per second, halving time to reach maximum charge."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "lmg",
+      "smg"
+    ],
+    "playstyle": [
+      "aggressive_frontline",
+      "team_support",
+      "tank",
+      "movement_focused"
+    ],
+    "modes": [
+      "countdown",
+      "pve_heroic",
+      "pve_legendary"
+    ],
+    "synergies": [
+      "Future Initiative for layered team healing while Charged is shared",
+      "True Patriot for stacked group sustain during aggressive pushes",
+      "High Hazard Protection rolls on gear to maximize the shared bonus",
+      "Stoner LMG or M60 for sustained out-of-cover suppression fire"
+    ],
+    "tips": [
+      "Must be played out of cover to build charges \u2014 aggressive flanking playstyle required.",
+      "With backpack (10%/sec), you reach full charge in 5 seconds; chest extends max to 70%.",
+      "Charged status shares benefits to entire group \u2014 coordinate pushes for team advantage.",
+      "Immunity to movement speed debuffs while Charged is powerful in Countdown.",
+      "High Hazard Protection rolls on gear amplify what gets shared with allies."
+    ]
+  },
+  "aegis": {
+    "id": "aegis",
+    "name": "Aegis",
+    "abbreviation": "AG",
+    "bonuses": {
+      "2pc": "+70% Health",
+      "3pc": "+15% Total Armor",
+      "4pc": {
+        "name": "Stoic",
+        "description": "Gain +3% Damage Resistance for every enemy that is targeting you. The bonus is multiplied by 1.X, where X equals the number of agents in your group."
+      }
+    },
+    "chest_talent": {
+      "name": "Deceit",
+      "description": "Enemies targeting your Decoy skill also count towards the Stoic Damage Resistance bonus."
+    },
+    "backpack_talent": {
+      "name": "Polyethylene Plating",
+      "description": "Increases the Stoic Damage Resistance bonus per targeting enemy from 3% to 4%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "smg",
+      "assault_rifle",
+      "shotgun"
+    ],
+    "playstyle": [
+      "tank",
+      "group_scaling",
+      "crowd_aggro"
+    ],
+    "modes": [
+      "raid",
+      "pve_legendary",
+      "pve_heroic"
+    ],
+    "synergies": [
+      "Decoy skill for generating extra enemy targeting without taking damage",
+      "Foundry Bulwark for layered tanking when running non-set pieces",
+      "True Patriot for team debuffing while tanking",
+      "Taunt mechanics to maximize enemy targeting count",
+      "Group content where more players amplify the group multiplier"
+    ],
+    "tips": [
+      "The Stoic bonus scales with group size \u2014 solo use is weaker than in 4-player groups.",
+      "Chest Deceit extends the value of the Decoy skill dramatically \u2014 use it as a second life.",
+      "Draw enemy aggro intentionally to maximize the targeting count for maximum DR.",
+      "In raids or legendary, 10 enemies targeting you + 4-player group can yield very high DR.",
+      "Combine with Foundry Bulwark repair for near-immortal tanking when positioned correctly."
+    ]
+  },
+  "umbra_initiative": {
+    "id": "umbra_initiative",
+    "name": "Umbra Initiative",
+    "abbreviation": "UI",
+    "bonuses": {
+      "2pc": "+15% Critical Hit Chance",
+      "3pc": "+30% Reload Speed",
+      "4pc": {
+        "name": "From the Shadows into the Light",
+        "description": "In Cover: Accumulate up to 50 stacks per second; each stack increases critical hit damage by 1% and RPM by 0.3%. The buff does not apply while actively shooting from cover. Out of Cover: Gain 10 stacks per second (up to 50); each stack grants 0.8% armor regeneration consumed at 10 stacks/second when returning to cover."
+      }
+    },
+    "chest_talent": {
+      "name": "From the Shadows",
+      "description": "Increases the out-of-cover stacking to a maximum of 100 stacks (from 50), stack gain from 10 to 20 per second, and stack consumption from 10 to 20 per second."
+    },
+    "backpack_talent": {
+      "name": "Into the Light",
+      "description": "Increases the in-cover stacking to a maximum of 100 stacks (from 50), stack gain from 10 to 20 per second, and stack consumption from 10 to 20 per second."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "smg",
+      "shotgun",
+      "assault_rifle"
+    ],
+    "playstyle": [
+      "cover_to_cover_dps",
+      "crit_stacking",
+      "self_sustain"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pvp",
+      "summit",
+      "countdown"
+    ],
+    "synergies": [
+      "Coyote's Mask for additional critical hit chance",
+      "Striker's Battlegear hybrid for stacked damage builds",
+      "Clutch talent on chest for armor-on-crit sustain",
+      "SMG builds with Chameleon or Chatterbox exotics"
+    ],
+    "tips": [
+      "The dual in-cover / out-of-cover stack system rewards fluid cover-to-cover movement.",
+      "Do not shoot while inside cover to preserve and build in-cover stacks.",
+      "Emerge from cover with full crit stacks, fire burst, then re-enter to regen armor from out-of-cover stacks.",
+      "With both chest and backpack, max stacks double to 100 each \u2014 significant damage/sustain boost.",
+      "High base critical hit chance (15% from 2pc) makes it easy to hit crit cap with Coyote's."
+    ]
+  },
+  "rigger": {
+    "id": "rigger",
+    "name": "Rigger",
+    "abbreviation": "RG",
+    "bonuses": {
+      "2pc": "+15% Skill Haste",
+      "3pc": "+15% Skill Damage, +15% Repair Skills",
+      "4pc": {
+        "name": "Mechanical Animal",
+        "description": "When a skill is deployed, it is automatically repaired to full health. If a deployed skill is destroyed, it will be automatically redeployed with a 10s cooldown."
+      }
+    },
+    "chest_talent": {
+      "name": "Mechanical Animal (Chest)",
+      "description": "+25% Skill Damage while a skill is deployed."
+    },
+    "backpack_talent": {
+      "name": "Mechanical Animal (Backpack)",
+      "description": "+25% Repair Skills while a skill is deployed."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "smg",
+      "assault_rifle",
+      "pistol"
+    ],
+    "playstyle": [
+      "skill_damage",
+      "cooldown_management",
+      "drone_turret"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "summit",
+      "countdown"
+    ],
+    "synergies": [
+      "Capacitor exotic AR for massive bonus weapon damage scaling off skill tiers",
+      "Sniper Turret + cancelling for reset-on-demand",
+      "Hard Wired for layered skill cooldown reduction",
+      "Technician specialization for 6th skill tier",
+      "Artillery Turret for long-range skill damage bursts"
+    ],
+    "tips": [
+      "Complete Uptime backpack requires 3 other Rigger pieces to function \u2014 do not run solo.",
+      "Cancel skills before they are destroyed to trigger the cooldown reset.",
+      "Deploy \u2192 interact \u2192 cancel repeatedly to keep skills at near 100% uptime with Best Buds active.",
+      "Best Buds chest doubles the skill damage bonus to 50% \u2014 highly recommended.",
+      "Combine with Hard Wired for total skill CDR synergy in endgame skill builds."
+    ]
+  },
+  "exuro": {
+    "id": "exuro",
+    "name": "Ortiz: Exuro",
+    "abbreviation": "EX",
+    "bonuses": {
+      "2pc": "+20% Burn Duration, +15% Skill Health",
+      "3pc": "+40% Burn Damage",
+      "4pc": {
+        "name": "Ortiz Incinerator Turret Prototype",
+        "description": "The Incinerator Turret now rotates a full 360 degrees. You are immune to your own Incinerator Turret's fire. The Incinerator Turret explodes when disabled."
+      }
+    },
+    "chest_talent": {
+      "name": "Chain Combustion",
+      "description": "Enemies set ablaze by the Ortiz Incinerator Turret Prototype ignite other enemies within 2m."
+    },
+    "backpack_talent": {
+      "name": "Heatstroke",
+      "description": "Grants +25% weapon damage against burning targets. Additionally grants +25% Ortiz Incinerator Turret Prototype range."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "smg",
+      "lmg"
+    ],
+    "playstyle": [
+      "status_effect",
+      "fire_specialist",
+      "area_denial"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "countdown"
+    ],
+    "synergies": [
+      "Eclipse Protocol for spreading fire status on kills",
+      "Pyromaniac talent on AR for bonus damage to burning targets",
+      "Ongoing Directive for hollow-point ammo on burning-enemy kills",
+      "Vile mask for bleed-on-status alongside fire",
+      "Firestarter Chem Launcher for additional fire application area"
+    ],
+    "tips": [
+      "The 360-degree turret rotation means you never need to manually redirect it.",
+      "Self-immunity to own turret fire allows aggressive repositioning around the Incinerator Turret.",
+      "Chain Combustion at 2m radius can chain-ignite tightly packed enemies rapidly.",
+      "Backpack Heatstroke makes your weapons deal 25% more to all burning targets \u2014 keep them burning.",
+      "The exploding turret on disable deals bonus damage; time cancels as a DPS tool."
+    ]
+  },
+  "refactor": {
+    "id": "refactor",
+    "name": "Refactor",
+    "abbreviation": "RF",
+    "bonuses": {
+      "2pc": "+15% Skill Damage, +15% Skill Haste",
+      "3pc": "+30% Skill Duration",
+      "4pc": {
+        "name": "Return to Sender",
+        "description": "PvE: Receive repairs equal to 10% of the damage dealt by your Skills. Allies receive repairs equal to 20% of the damage dealt by your Skills. PvP: Receive repairs equal to 5% of the damage dealt by your Skills. Allies receive repairs equal to 10% of the damage dealt by your Skills."
+      }
+    },
+    "chest_talent": {
+      "name": "Increased Interest",
+      "description": "PvE: Increases repairs received by you from Return to Sender from 10% to 15%, and repairs to allies from 20% to 30%. PvP: Increases repairs to you from 5% to 10%, and to allies from 10% to 20%."
+    },
+    "backpack_talent": {
+      "name": "Over-engineered",
+      "description": "While at full Armor, repairs received from Return to Sender provide Bonus Armor instead, up to 80% of Total Armor. Does not apply to allies."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "smg",
+      "assault_rifle",
+      "pistol"
+    ],
+    "playstyle": [
+      "skill_damage",
+      "skill_support",
+      "healer_hybrid"
+    ],
+    "modes": [
+      "pve_legendary",
+      "raid",
+      "pve_heroic",
+      "countdown"
+    ],
+    "synergies": [
+      "Capacitor exotic AR for weapon damage scaling alongside skill damage",
+      "Technician specialization for maximum skill tier",
+      "Cluster Mine for high burst skill damage triggering large heals",
+      "Explosive Seeker Mine for area skill damage that generates large team heals",
+      "Hard Wired for additional skill cooldown reduction"
+    ],
+    "tips": [
+      "High skill damage is critical \u2014 prioritize skill damage rolls and Skill Tier 6.",
+      "Backpack Over-engineered converts excess healing into bonus armor \u2014 keep your armor full.",
+      "In team play, your skills passively heal all allies just by dealing damage.",
+      "Best paired with high-damage offensive skills like Seeker Mine or Artillery Turret.",
+      "Pairs well with Technician specialization for maximum skill tier and bonus weapon damage slot."
+    ]
+  },
+  "virtuoso": {
+    "id": "virtuoso",
+    "name": "Virtuoso",
+    "abbreviation": "VT",
+    "bonuses": {
+      "2pc": "+15% Weapon Handling, +15% Magazine Size",
+      "3pc": "+15% Weapon Damage",
+      "4pc": {
+        "name": "Symphony",
+        "description": "Killing an enemy beyond 25m grants: +40% weapon damage to Shotguns, SMGs, and Pistols; +20% weapon damage to ARs and LMGs; +25% Bonus Armor for 15 seconds. Killing an enemy within 25m grants: +40% weapon damage to MMRs and Rifles; +20% weapon damage to ARs and LMGs; +30% Headshot Damage for 15 seconds. Alternating kills from both ranges builds stacks. At 4 stacks, all bonuses are multiplied by 1.5 and triggered simultaneously for 15 seconds."
+      }
+    },
+    "chest_talent": {
+      "name": "Fortissimo",
+      "description": "Doubles all Weapon Damage bonuses granted by Symphony."
+    },
+    "backpack_talent": {
+      "name": "Accelerando",
+      "description": "Decreases the number of alternating-range stacks needed to trigger the Symphony double-buff from 4 to 3."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "smg",
+      "marksman_rifle",
+      "rifle"
+    ],
+    "playstyle": [
+      "hybrid_dps",
+      "range_switching",
+      "adaptive_combat"
+    ],
+    "modes": [
+      "pve_heroic",
+      "pve_legendary",
+      "summit",
+      "countdown"
+    ],
+    "synergies": [
+      "AR + SMG loadout for maximum range-switching flexibility",
+      "Rifle + Shotgun for alternating close/long range stacking",
+      "Coyote's Mask for critical hit boost while buffed",
+      "Obliterate talent on AR/SMG for additional stacking damage"
+    ],
+    "tips": [
+      "Alternate between close and long-range kills to build stacks as fast as possible.",
+      "With both chest (2x bonuses) and backpack (3-stack trigger instead of 4), the set becomes extremely powerful.",
+      "At full 4-stack (3 with backpack), all weapon types gain massive boosts simultaneously.",
+      "The +25% bonus armor on far kills is valuable self-sustain during aggressive pushes.",
+      "Best in environments with mixed enemy ranges like Summit or open-world missions."
+    ]
+  }
+}

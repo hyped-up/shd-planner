@@ -1,0 +1,839 @@
+{
+  "_metadata": {
+    "game_version": "TU21.1",
+    "last_updated": "2026-03-01",
+    "source": "manual"
+  },
+  "five_eleven_tactical": {
+    "id": "five_eleven_tactical",
+    "name": "5.11 Tactical",
+    "bonuses": {
+      "1pc": "+30% Health",
+      "2pc": "+30% Incoming Repairs",
+      "3pc": "+30% Hazard Protection"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "tank",
+    "named_items": [
+      {
+        "name": "Punch Drunk",
+        "slot": "mask",
+        "fixed_talent": "Unique attribute: +20% Headshot Damage"
+      },
+      {
+        "name": "Deathgrips",
+        "slot": "gloves",
+        "fixed_talent": "Unique attribute: +10% Armor on Kill (DZ exclusive)"
+      }
+    ],
+    "meta_notes": "Survival and hazard-focused brand. The 1pc +30% Health makes it a staple filler piece in any build that needs raw HP. Not a meta cornerstone but useful for the single-piece health bonus in hybrid loadouts."
+  },
+  "airaldi_holdings": {
+    "id": "airaldi_holdings",
+    "name": "Airaldi Holdings",
+    "bonuses": {
+      "1pc": "+10% Marksman Rifle Damage",
+      "2pc": "+13% Headshot Damage",
+      "3pc": "+5% Damage to Armor"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Pristine Example",
+        "slot": "chest",
+        "fixed_talent": "Perfect Focus: +6% weapon damage per second while scoped at 8x+ magnification, up to 60%"
+      }
+    ],
+    "meta_notes": "Best-in-slot for scoped marksman rifle and sniper builds. The Pristine Example chest with Perfect Focus is a top-tier named item for headshot-centric DPS builds. The 2pc headshot damage bonus pairs well with Providence Defense."
+  },
+  "alps_summit_armament": {
+    "id": "alps_summit_armament",
+    "name": "Alps Summit Armament",
+    "bonuses": {
+      "1pc": "+18% Skill Repair",
+      "2pc": "+30% Skill Duration",
+      "3pc": "+30% Skill Haste"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "skill",
+    "named_items": [
+      {
+        "name": "Forge",
+        "slot": "holster",
+        "fixed_talent": "Unique attribute: +50% Shield Health"
+      },
+      {
+        "name": "Percussive Maintenance",
+        "slot": "backpack",
+        "fixed_talent": "Perfect Tech Support: +25% skill damage for 27s on skill kills"
+      },
+      {
+        "name": "Motherly Love",
+        "slot": "gloves",
+        "fixed_talent": "Unique attribute: +15% Skill Repair"
+      }
+    ],
+    "meta_notes": "Skill repair and cooldown reduction brand. The 3pc Skill Haste reduction is valuable in skill-heavy builds that rely on fast cooldowns. Generally overshadowed by Empress International for pure skill damage, but strong in support roles."
+  },
+  "badger_tuff": {
+    "id": "badger_tuff",
+    "name": "Badger Tuff",
+    "bonuses": {
+      "1pc": "+10% Shotgun Damage",
+      "2pc": "+5% Total Armor",
+      "3pc": "+15% Armor on Kill"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "gloves"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Devil's Due",
+        "slot": "backpack",
+        "fixed_talent": "Perfect Bloodsucker: Killing an enemy adds a stack of +12% bonus armor (max 6 stacks)"
+      }
+    ],
+    "meta_notes": "Shotgun-focused brand with limited slot availability (mask, backpack, gloves only). The 3pc Armor on Kill synergizes with aggressive close-range shotgun play. Used in Hunter's Fury or close-quarters builds."
+  },
+  "belstone_armory": {
+    "id": "belstone_armory",
+    "name": "Belstone Armory",
+    "bonuses": {
+      "1pc": "+1% Armor Regen",
+      "2pc": "+10% Armor on Kill",
+      "3pc": "+45% Incoming Repairs"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "tank",
+    "named_items": [
+      {
+        "name": "Everyday Carrier",
+        "slot": "chest",
+        "fixed_talent": "Perfectly Efficient: Using an armor kit has a 75% chance not to consume it"
+      },
+      {
+        "name": "Liquid Engineer",
+        "slot": "backpack",
+        "fixed_talent": "Perfect Bloodsucker: Killing an enemy adds and refreshes a stack of +12% bonus armor for 10s, stacking up to 10 times"
+      }
+    ],
+    "meta_notes": "Top-tier tank and armor sustain brand. The 1pc armor regen is one of the most popular single-piece bonuses in any survivability build. Liquid Engineer (Perfect Bloodsucker) is a best-in-slot armor stacking piece for tank and hybrid builds."
+  },
+  "brazos_de_arcabuz": {
+    "id": "brazos_de_arcabuz",
+    "name": "Brazos de Arcabuz",
+    "bonuses": {
+      "1pc": "+10% Skill Haste",
+      "2pc": "+1 Skill Tier",
+      "3pc": "+50% Magazine Size"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "hybrid",
+    "named_items": [
+      {
+        "name": "Picaro's Holster",
+        "slot": "holster",
+        "fixed_talent": "Unique attribute: +15% Weapon Damage; grants bonus weapon damage stat instead of a traditional talent"
+      },
+      {
+        "name": "Hermano",
+        "slot": "backpack",
+        "fixed_talent": "Perfect Overclock: Allies within 15m of your deployed skills gain 30% reload speed and reduce their active cooldowns by 0.6s each second"
+      }
+    ],
+    "meta_notes": "Hybrid skill-weapon brand. The 2pc +1 Skill Tier is highly sought after in skill builds to hit Skill Tier 6 without dedicating all core attributes. Picaro's Holster is a popular named item for its flat weapon damage bonus. Strong in hybrid crit-skill builds."
+  },
+  "ceska_vyroba": {
+    "id": "ceska_vyroba",
+    "name": "\u010cesk\u00e1 V\u00fdroba S.R.O.",
+    "bonuses": {
+      "1pc": "+8% Critical Hit Chance",
+      "2pc": "+20% Hazard Protection",
+      "3pc": "+90% Health"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Claws Out",
+        "slot": "holster",
+        "fixed_talent": "Unique attribute: +200% Melee Damage"
+      }
+    ],
+    "meta_notes": "Popular 1pc pick for critical hit chance in crit-based DPS builds. The +8% crit chance from a single piece is one of the best single-piece stat bonuses in the game. Frequently paired with Grupo Sombra and Providence in crit builds."
+  },
+  "china_light_industries": {
+    "id": "china_light_industries",
+    "name": "China Light Industries Corporation",
+    "bonuses": {
+      "1pc": "+15% Explosive Damage",
+      "2pc": "+20% Skill Haste",
+      "3pc": "+25% Status Effects"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "skill",
+    "named_items": [],
+    "meta_notes": "Status effect and explosive-focused brand. Useful in Eclipse Protocol (status effect) builds for the 3pc status bonus. The 1pc explosive damage is a strong single-piece pick for grenadier builds and explosive-skill hybrids."
+  },
+  "douglas_harding": {
+    "id": "douglas_harding",
+    "name": "Douglas & Harding",
+    "bonuses": {
+      "1pc": "+20% Pistol Damage",
+      "2pc": "+30% Stability",
+      "3pc": "+50% Accuracy"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Hollow Man",
+        "slot": "mask",
+        "fixed_talent": "Unique attribute: +21% Damage to Health"
+      }
+    ],
+    "meta_notes": "Pistol and accuracy-focused brand. Niche use in pistol-centric builds or as a handling filler. Not widely used in top-tier PvE meta builds, but relevant for pistol builds and some PvP loadouts where handling matters."
+  },
+  "electrique": {
+    "id": "electrique",
+    "name": "Electrique",
+    "bonuses": {
+      "1pc": "+10% Status Effects",
+      "2pc": "+20% Shock Resistance",
+      "3pc": "+30% SMG Damage"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [],
+    "meta_notes": "SMG-focused brand with shock resistance utility. The 3pc SMG damage pairs well with Striker set for SMG builds. Shock resistance is relevant for certain content like Descent. Generally outperformed by Sokolov for pure SMG damage focus."
+  },
+  "empress_international": {
+    "id": "empress_international",
+    "name": "Empress International",
+    "bonuses": {
+      "1pc": "+10% Skill Health",
+      "2pc": "+10% Skill Damage",
+      "3pc": "+8% Skill Efficiency"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "skill",
+    "named_items": [
+      {
+        "name": "Battery Pack",
+        "slot": "backpack",
+        "fixed_talent": "Perfect Calculated: kills from cover reduce skill cooldowns by 30%"
+      }
+    ],
+    "meta_notes": "Foundation of most skill builds. The 3pc +8% Skill Efficiency simultaneously boosts Skill Damage, Haste, Duration, Health, Repair, and Status Effects, making it the most versatile and potent skill brand. Running two or three Empress pieces is standard in almost every skill build."
+  },
+  "fenris_group_ab": {
+    "id": "fenris_group_ab",
+    "name": "Fenris Group AB",
+    "bonuses": {
+      "1pc": "+10% Assault Rifle Damage",
+      "2pc": "+30% Reload Speed",
+      "3pc": "+50% Stability"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Force Kicker",
+        "slot": "chest",
+        "fixed_talent": "Perfect Overwatch: +12% Weapon Damage to allies in cover for 10s"
+      }
+    ],
+    "meta_notes": "Assault rifle-focused brand. The 1pc AR damage bonus is popular as a filler in AR-heavy builds. The 2pc reload speed is useful in sustained fire builds. Commonly paired with Striker set in AR DPS loadouts."
+  },
+  "gila_guard": {
+    "id": "gila_guard",
+    "name": "Gila Guard",
+    "bonuses": {
+      "1pc": "+5% Total Armor",
+      "2pc": "+60% Health",
+      "3pc": "+2% Armor Regeneration"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "tank",
+    "named_items": [
+      {
+        "name": "Pointman",
+        "slot": "chest",
+        "fixed_talent": "Perfect Vanguard: Deploying a shield makes it invulnerable for 5 seconds and grants 45% of your armor as bonus armor to all other allies for 20 seconds (25s cooldown)"
+      },
+      {
+        "name": "Nightwatcher",
+        "slot": "mask",
+        "fixed_talent": "Unique attribute: +100% Scanner Pulse Haste for near-permanent pulse uptime"
+      },
+      {
+        "name": "Chill Out",
+        "slot": "mask",
+        "fixed_talent": "Unique attribute: +100% Scanner Pulse Haste"
+      }
+    ],
+    "meta_notes": "Top tank brand. The 3pc armor regen is excellent for sustained survivability. Pointman (Perfect Vanguard) is the best-in-slot chest for all shield builds, providing team-wide bonus armor. Essential in Foundry Bulwark or any shield-based setup."
+  },
+  "golan_gear": {
+    "id": "golan_gear",
+    "name": "Golan Gear Ltd.",
+    "bonuses": {
+      "1pc": "+10% Status Effects",
+      "2pc": "+1.5% Armor Regeneration",
+      "3pc": "+10% Total Armor"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "hybrid",
+    "named_items": [],
+    "meta_notes": "Hybrid status and survivability brand. Provides both armor regen (2pc) and status effect bonus (1pc), making it useful in Eclipse Protocol builds that also need survivability. Versatile filler brand for hybrid builds."
+  },
+  "grupo_sombra": {
+    "id": "grupo_sombra",
+    "name": "Grupo Sombra S.A.",
+    "bonuses": {
+      "1pc": "+13% Critical Hit Damage",
+      "2pc": "+20% Explosives Damage",
+      "3pc": "+13% Headshot Damage"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [],
+    "meta_notes": "Critical hit and headshot damage brand. The 1pc +13% crit damage is one of the best single-piece DPS bonuses alongside \u010cesk\u00e1's crit chance. Frequently paired with \u010cesk\u00e1 V\u00fdroba and Providence Defense in crit-headshot builds."
+  },
+  "habsburg_guard": {
+    "id": "habsburg_guard",
+    "name": "Habsburg Guard",
+    "bonuses": {
+      "1pc": "+13% Headshot Damage",
+      "2pc": "+20% Marksman Rifle Damage",
+      "3pc": "+25% Status Effects"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [],
+    "meta_notes": "Marksman rifle and headshot-focused brand with status effect bonus. The 1pc headshot damage and 2pc MR damage make it a strong filler for sniper builds. The 3pc status effect bonus creates a unique hybrid headshot-status role."
+  },
+  "hana_u_corporation": {
+    "id": "hana_u_corporation",
+    "name": "Hana-U Corporation",
+    "bonuses": {
+      "1pc": "+10% Skill Haste",
+      "2pc": "+10% Skill Damage",
+      "3pc": "+15% Weapon Damage"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "hybrid",
+    "named_items": [],
+    "meta_notes": "Excellent hybrid skill-weapon brand. The 3pc +15% weapon damage combined with skill bonuses makes it very desirable in hybrid builds. Often used in Negotiator's Dilemma or skill-weapon hybrid setups where both weapon and skill damage matter."
+  },
+  "imminence_armaments": {
+    "id": "imminence_armaments",
+    "name": "Imminence Armaments",
+    "bonuses": {
+      "1pc": "+5% Weapon Damage",
+      "2pc": "+100% Increased Threat",
+      "3pc": "+60% Pistol Damage"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "tank",
+    "named_items": [],
+    "meta_notes": "Threat generation brand for tank roles. The 2pc 100% increased threat is unique and valuable in coordinated group play for tanks who want enemies to focus them. The pistol damage 3pc is niche. Primarily used in dedicated tank builds."
+  },
+  "legatus_spa": {
+    "id": "legatus_spa",
+    "name": "Legatus S.p.A.",
+    "bonuses": {
+      "1pc": "+30% Swap Speed",
+      "2pc": "+70% Optimal Range",
+      "3pc": "+15% Weapon Damage"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [],
+    "meta_notes": "Weapon swap and range-focused brand. The 2pc optimal range is excellent for mid-range weapon builds, and the 3pc weapon damage bonus is strong. Good filler brand for builds that use weapons with reduced optimal range or benefit from faster swapping."
+  },
+  "lengmo": {
+    "id": "lengmo",
+    "name": "Lengmo",
+    "bonuses": {
+      "1pc": "+20% Explosive Resistance",
+      "2pc": "+20% Skill Health",
+      "3pc": "+30% LMG Damage"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Carpenter",
+        "slot": "chest",
+        "fixed_talent": "Perfectly Mad Bomber: grenade radius +75%, grenade kills refund the grenade"
+      },
+      {
+        "name": "Backbone",
+        "slot": "backpack",
+        "fixed_talent": "Perfectly Unstoppable Force: +5% weapon damage per kill, max 7 stacks"
+      }
+    ],
+    "meta_notes": "LMG and grenade-focused brand. The 3pc LMG damage boost is a strong single-brand buff for LMG builds. Backbone (Unstoppable Force) is a powerful weapon damage multiplier for kill-heavy gameplay. Used in LMG sustained fire builds."
+  },
+  "murakami_industries": {
+    "id": "murakami_industries",
+    "name": "Murakami Industries",
+    "bonuses": {
+      "1pc": "+15% Skill Duration",
+      "2pc": "+35% Skill Repair",
+      "3pc": "+18% Skill Damage"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "skill",
+    "named_items": [
+      {
+        "name": "Emperor's Guard",
+        "slot": "kneepads",
+        "fixed_talent": "Unique attribute: +1% Armor Regeneration for sustained tank-skill hybrid survivability"
+      }
+    ],
+    "meta_notes": "Skill damage and duration brand. A common 1pc or 2pc addition to skill builds for the duration and skill repair bonuses. Competes with Alps Summit Armament for skill support roles. Often used in Turret or Drone skill damage builds."
+  },
+  "overlord_armaments": {
+    "id": "overlord_armaments",
+    "name": "Overlord Armaments",
+    "bonuses": {
+      "1pc": "+10% Rifle Damage",
+      "2pc": "+20% Accuracy",
+      "3pc": "+10% Weapon Handling"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Fox's Prayer",
+        "slot": "kneepads",
+        "fixed_talent": "Unique attribute: +8% Damage to Targets Out of Cover; the only gear piece in the game with this unique damage modifier"
+      },
+      {
+        "name": "The Closer",
+        "slot": "backpack",
+        "fixed_talent": "Perfect Adrenaline Rush: Within 10m of 2+ hostiles, gain +23% bonus armor for 5s"
+      }
+    ],
+    "meta_notes": "Rifle-focused brand. Fox's Prayer kneepads are best-in-slot for any build that fights enemies in cover, offering a unique damage-to-out-of-cover modifier not found on any other piece. The 1pc rifle damage is a common single-piece pick for rifle builds."
+  },
+  "palisade_steelworks": {
+    "id": "palisade_steelworks",
+    "name": "Palisade Steelworks",
+    "bonuses": {
+      "1pc": "+10% Armor on Kill",
+      "2pc": "+60% Health",
+      "3pc": "+1 Skill Tier"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "hybrid",
+    "named_items": [],
+    "meta_notes": "Hybrid survival-skill brand. The 1pc Armor on Kill is a strong single-piece survivability bonus for aggressive play. The 3pc +1 Skill Tier is valuable in hybrid builds trying to reach Skill Tier 6. Popular in skill-weapon hybrid loadouts."
+  },
+  "petrov_defense_group": {
+    "id": "petrov_defense_group",
+    "name": "Petrov Defense Group",
+    "bonuses": {
+      "1pc": "+10% LMG Damage",
+      "2pc": "+10% Weapon Handling",
+      "3pc": "+20% Ammo Capacity"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Contractor's Gloves",
+        "slot": "gloves",
+        "fixed_talent": "Unique attributes: +10% LMG Damage and +8% Damage to Armor combined on gloves; no traditional talent slot"
+      }
+    ],
+    "meta_notes": "LMG-focused brand. Contractor's Gloves are popular in LMG builds for their combined LMG damage and damage-to-armor attributes. The 3pc ammo capacity is valuable for extended engagements. Commonly used in Petrov or Ongoing Directive LMG builds."
+  },
+  "providence_defense": {
+    "id": "providence_defense",
+    "name": "Providence Defense",
+    "bonuses": {
+      "1pc": "+13% Headshot Damage",
+      "2pc": "+8% Critical Hit Chance",
+      "3pc": "+13% Critical Hit Damage"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "The Sacrifice",
+        "slot": "chest",
+        "fixed_talent": "Perfect Glass Cannon: Amplifies all damage you deal by 30%, amplifies all damage you take by 60%"
+      },
+      {
+        "name": "The Gift",
+        "slot": "backpack",
+        "fixed_talent": "Perfect Vigilance: Increases total weapon damage by 25%; taking damage disables this buff for 3 seconds"
+      }
+    ],
+    "meta_notes": "The most popular DPS brand in the game. Provides crit chance, crit damage, and headshot damage all from one brand, making it the meta cornerstone of virtually all crit-based DPS builds. The Gift and The Sacrifice are both best-in-slot named items for offensive loadouts."
+  },
+  "richter_kaiser": {
+    "id": "richter_kaiser",
+    "name": "Richter & Kaiser GmbH",
+    "bonuses": {
+      "1pc": "+15% Extra Incoming Repairs",
+      "2pc": "+25% Explosive Resistance",
+      "3pc": "+40% Skill Repair"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "holster"
+    ],
+    "core_focus": "skill",
+    "named_items": [],
+    "meta_notes": "Skill repair and incoming repairs brand with limited slot availability (mask, backpack, holster only). Niche use in support healer builds running Future Initiative or skill repair setups. The 3pc skill repair buff can be significant in dedicated healer roles."
+  },
+  "shiny_monkey_gear": {
+    "id": "shiny_monkey_gear",
+    "name": "Shiny Monkey Gear",
+    "bonuses": {
+      "1pc": "+15% Skill Duration",
+      "2pc": "+5% Skill Efficiency",
+      "3pc": "+52% Repair Skills"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "skill",
+    "named_items": [],
+    "meta_notes": "Dedicated healer and repair skill brand. The 3pc +52% Repair Skills is the highest raw repair multiplier of any brand set, making it ideal for Future Initiative support builds. The 2pc Skill Efficiency provides a broad bonus to all skill stats."
+  },
+  "sokolov_concern": {
+    "id": "sokolov_concern",
+    "name": "Sokolov Concern",
+    "bonuses": {
+      "1pc": "+10% SMG Damage",
+      "2pc": "+13% Critical Hit Damage",
+      "3pc": "+8% Critical Hit Chance"
+    },
+    "available_slots": [
+      "mask",
+      "chest",
+      "gloves",
+      "kneepads"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Firm Handshake",
+        "slot": "gloves",
+        "fixed_talent": "Unique attribute: +15% Status Effects"
+      }
+    ],
+    "meta_notes": "SMG and crit-focused brand with limited slot availability (mask, chest, kneepads). The 1pc SMG damage is a common single-piece pick in SMG builds. Limited slots restrict it to a filler role rather than a primary brand, but its crit synergy is strong."
+  },
+  "uzina_getica": {
+    "id": "uzina_getica",
+    "name": "Uzina Getica",
+    "bonuses": {
+      "1pc": "+5% Armor",
+      "2pc": "+10% Armor on Kill",
+      "3pc": "+30% Hazard Protection"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "tank",
+    "named_items": [
+      {
+        "name": "Closer",
+        "slot": "chest",
+        "fixed_talent": "Perfect Spotter: Amplifies total weapon and skill damage by 20% against pulsed enemies"
+      },
+      {
+        "name": "The Setup",
+        "slot": "backpack",
+        "fixed_talent": "Perfectly Opportunistic: Enemies hit with shotguns or marksman rifles take 15% amplified damage from all sources for 5 seconds"
+      }
+    ],
+    "meta_notes": "Versatile tank and utility brand. Closer (Perfect Spotter) is a best-in-slot chest for pulse-synergy builds. The Setup is strong in shotgun-sniper hybrid builds. The 2pc Armor on Kill pairs well with aggressive playstyles. Useful across tank and hybrid DPS roles."
+  },
+  "walker_harris": {
+    "id": "walker_harris",
+    "name": "Walker, Harris & Co.",
+    "bonuses": {
+      "1pc": "+5% Weapon Damage",
+      "2pc": "+5% Damage to Armor",
+      "3pc": "+10% Damage to Health"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [
+      {
+        "name": "Chainkiller",
+        "slot": "chest",
+        "fixed_talent": "Perfect Headhunter: After killing an enemy with a headshot, your next weapon hit within 30s deals 150% of that killing blow's damage in addition; capped at 1250% weapon damage"
+      },
+      {
+        "name": "Matador",
+        "slot": "backpack",
+        "fixed_talent": "Perfect Adrenaline Rush: Being within 10m of an enemy grants 23% bonus armor for 5s, stacking up to 3 times (DZ exclusive)"
+      }
+    ],
+    "meta_notes": "Weapon damage and headshot-focused brand. Chainkiller (Perfect Headhunter) is one of the most powerful named items for burst damage in headshot builds. Matador (Perfect Adrenaline Rush) is a top PvP and aggressive PvE piece. The brand's 3pc bonuses synergize well with armor-focused enemies."
+  },
+  "yaahl_gear": {
+    "id": "yaahl_gear",
+    "name": "Yaahl Gear",
+    "bonuses": {
+      "1pc": "+10% Hazard Protection",
+      "2pc": "+10% Weapon Damage",
+      "3pc": "+40% Pulse Resistance"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "utility",
+    "named_items": [],
+    "meta_notes": "Hazard protection and pulse resistance brand. The 2pc weapon damage is a solid filler bonus. The 3pc pulse resistance is primarily useful in PvP to counter enemy pulse skills. Niche in PvE but valuable in PvP builds and high-hazard content."
+  },
+  "wyvern_wear": {
+    "id": "wyvern_wear",
+    "name": "Wyvern Wear",
+    "bonuses": {
+      "1pc": "+8% Skill Damage",
+      "2pc": "+18% Status Effects",
+      "3pc": "+45% Skill Duration"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "skill",
+    "named_items": [
+      {
+        "name": "Wicked Vixen",
+        "slot": "mask",
+        "fixed_talent": "Unique attribute: +20% Skill Duration"
+      }
+    ],
+    "meta_notes": "Skill damage and duration brand. The 3pc +45% Skill Duration is the highest duration bonus of any brand, making it useful in builds relying on long-lasting deployables like turrets and shields. Pairs well with Eclipse Protocol or skill-based builds."
+  },
+  "zwiadowka": {
+    "id": "zwiadowka",
+    "name": "Zwiadowka SP. z o.o.",
+    "bonuses": {
+      "1pc": "+15% Magazine Size",
+      "2pc": "+20% Rifle Damage",
+      "3pc": "+30% Weapon Handling"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "dps",
+    "named_items": [],
+    "meta_notes": "Rifle and magazine-focused brand. The 1pc magazine size is a useful filler for weapons with small magazines. The 2pc rifle damage pairs with Overlord in rifle builds. Good secondary brand in sustained fire builds that need larger mags."
+  }
+}

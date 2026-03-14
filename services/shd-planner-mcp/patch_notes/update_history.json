@@ -1,0 +1,11 @@
+{
+    "updates": [
+        {
+            "game_version": "TU21.1",
+            "date_applied": "2026-03-01",
+            "description": "Initial knowledge base creation",
+            "files_changed": ["all"],
+            "notes": "Base data from community sources and wiki"
+        }
+    ]
+}

@@ -1,0 +1,956 @@
+{
+  "_metadata": {
+    "game_version": "TU21.1",
+    "last_updated": "2026-03-01",
+    "source": "manual"
+  },
+  "st_elmos_engine": {
+    "id": "st_elmos_engine",
+    "name": "St. Elmo's Engine",
+    "type": "weapon",
+    "category": "assault_rifle",
+    "unique_talent": {
+      "name": "Actum Est",
+      "description": "Shooting an enemy grants 1 stack per hit, up to 100 stacks. At 100 stacks the next magazine is filled with shock ammo that electrocutes enemies on hit."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (assault rifles) in Summit, Countdown, and open world. Farmable via Heroic/Legendary missions.",
+    "meta_rating": "S",
+    "best_with": [
+      "shock_build",
+      "status_effect_build",
+      "striker_build",
+      "crowd_control"
+    ],
+    "notes": "Best exotic assault rifle in the game. Shock ammo enables exceptional crowd control in PvE. Pairs with Shocker Punch holster for melee synergy. Strong in both solo and group play."
+  },
+  "eagle_bearer": {
+    "id": "eagle_bearer",
+    "name": "Eagle Bearer",
+    "type": "weapon",
+    "category": "assault_rifle",
+    "unique_talent": {
+      "name": "Eagle's Strike / Tenacity",
+      "description": "Eagle's Strike: Killing 5 enemies without reloading grants an Accuracy and Stability buff. Tenacity: Delays 20-80% of damage taken. All delayed damage is reduced by each enemy killed while the buff is active, up to 100% reduction with 5 kills."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Operation Dark Hours raid (first 8-man raid). Drop from final boss and chest.",
+    "meta_rating": "A",
+    "best_with": [
+      "dps_build",
+      "pvp_build",
+      "raid_build"
+    ],
+    "notes": "Most popular raid exotic. Tenacity makes it exceptional for survival during intense fights. Strong in PvP due to the damage mitigation. Requires completion of Operation Dark Hours to obtain."
+  },
+  "strega": {
+    "id": "strega",
+    "name": "Strega",
+    "type": "weapon",
+    "category": "assault_rifle",
+    "unique_talent": {
+      "name": "Unnerve",
+      "description": "Killing an enemy applies a mark to every enemy within 20m of the killed target. Multiple marks can be applied to the same enemy (max 5). Each mark amplifies weapon damage by +15% to marked enemies."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (assault rifles). Added in Title Update 22.",
+    "meta_rating": "A",
+    "best_with": [
+      "negotiators_dilemma_build",
+      "mark_build",
+      "dps_build"
+    ],
+    "notes": "Exotic variant of the FAL. Excellent synergy with Negotiator's Dilemma gear set, as both stack marks for amplified damage. Great for clearing groups of enemies at mid-range."
+  },
+  "capacitor": {
+    "id": "capacitor",
+    "name": "Capacitor",
+    "type": "weapon",
+    "category": "assault_rifle",
+    "unique_talent": {
+      "name": "Capacitance",
+      "description": "Shooting enemies builds stacks up to 40. Each stack grants +1.5% Skill Damage (max +60%). For each Skill core equipped, gain an additional +7.5% Weapon Damage. After 5 seconds without shooting, stacks decay 1 per second."
+    },
+    "core_attribute": "skill_damage",
+    "source": "Complete 5 Summit challenges in a single run. After first unlock: exotic cache, targeted loot (assault rifles) in Summit and Countdown.",
+    "meta_rating": "A",
+    "best_with": [
+      "hybrid_build",
+      "skill_build",
+      "turret_drone_build"
+    ],
+    "notes": "Best exotic for hybrid weapon/skill builds. High skill damage synergizes with autonomous skills like Striker Drone or Assault Turret. Scales with both weapon and skill attributes uniquely."
+  },
+  "chatterbox": {
+    "id": "chatterbox",
+    "name": "The Chatterbox",
+    "type": "weapon",
+    "category": "smg",
+    "unique_talent": {
+      "name": "Incessant Chatter / Box Magazine",
+      "description": "Incessant Chatter: Every shot that hits an enemy increases rate of fire by 1%, stacking up to 60%. Resets on reload. Box Magazine: Kills with this weapon refill 20% of the magazine and apply a 10s buff. While holstered, reloading within 5s after a kill grants +20% rate of fire for 10s."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (SMGs). Previously obtained from Hyena faction loot caches in D.C. missions.",
+    "meta_rating": "B",
+    "best_with": [
+      "smg_build",
+      "dps_build",
+      "aggressive_build"
+    ],
+    "notes": "Exotic variant of the P90. Exceptional sustained rate of fire at high stack count. Box Magazine reload synergy keeps you in the fight. Best in close-to-mid range encounters."
+  },
+  "lady_death": {
+    "id": "lady_death",
+    "name": "Lady Death",
+    "type": "weapon",
+    "category": "smg",
+    "unique_talent": {
+      "name": "Breathe Free",
+      "description": "Gain 4 stacks per second while moving (8 stacks while sprinting), up to 30 stacks. Each round fired consumes one stack and amplifies weapon damage by 75%. Kills grant +20% movement speed for 10 seconds."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (SMGs). Warlords of New York expansion required. Added in Title Update 8.",
+    "meta_rating": "A",
+    "best_with": [
+      "aggressive_close_range_build",
+      "striker_build",
+      "movement_build"
+    ],
+    "notes": "Exotic variant of the CMMG Banshee. Rewards constant movement \u2014 sprint to stack up, then unleash amplified damage. The movement speed on kill creates a fast, aggressive playstyle perfect for rushing."
+  },
+  "ouroboros": {
+    "id": "ouroboros",
+    "name": "Ouroboros",
+    "type": "weapon",
+    "category": "smg",
+    "unique_talent": {
+      "name": "Rule Them All",
+      "description": "When the agent receives a status effect, 50% of the ammo in the next magazine will apply the same status effect to targets hit."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Paradise Lost Incursion \u2014 drops from Named Cleaner bosses (Wright and The Lovebirds) or the final reward chest. Chest resets weekly. Also available during Winter Events.",
+    "meta_rating": "S",
+    "best_with": [
+      "status_effect_build",
+      "shock_build",
+      "burn_build",
+      "incursion_build"
+    ],
+    "notes": "Exotic variant of the Vector SBR 9mm. Highest RPM burst damage exotic SMG. The status application mechanic synergizes powerfully with status effect-focused builds and gear. Exclusive to Paradise Lost incursion."
+  },
+  "nemesis": {
+    "id": "nemesis",
+    "name": "Nemesis",
+    "type": "weapon",
+    "category": "mmr",
+    "unique_talent": {
+      "name": "Electromagnetic Accelerator / The Nemesis",
+      "description": "Electromagnetic Accelerator: Shots deal 0-100% weapon damage based on how long the trigger is held before releasing. The Nemesis: Marks an enemy as your nemesis for 15 seconds; shots to your nemesis gain +5% damage for each second they are marked, up to +50%."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Crafted from 4 components: The Tally (Tidal Basin), The Bridle (District Union Arena Invaded), The Scales (Roosevelt Island Invaded), The Scourge (Capitol Building Invaded). Blueprint from Grand Washington Hotel (Invaded).",
+    "meta_rating": "B",
+    "best_with": [
+      "sniper_build",
+      "headshot_build",
+      "dps_build"
+    ],
+    "notes": "The charge mechanic rewards patience \u2014 full charge plus Nemesis mark stacks delivers massive single-target burst damage. Great for picking off priority targets and named enemies at range."
+  },
+  "dread_edict": {
+    "id": "dread_edict",
+    "name": "Dread Edict",
+    "type": "weapon",
+    "category": "mmr",
+    "unique_talent": {
+      "name": "Full Stop",
+      "description": "Shooting enemies builds stacks up to 20 (headshots grant 2 stacks). Each stack grants +2% Weapon Damage and +5% Headshot Damage. On reload all stacks clear and you gain 5% of max armor as temporary armor for 10s per stack removed. Headshot kills restore the full magazine (does not count as reload)."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (marksman rifles). Added in Title Update 15.",
+    "meta_rating": "B",
+    "best_with": [
+      "headshot_build",
+      "sniper_build",
+      "survivability_build"
+    ],
+    "notes": "Exotic variant of the Paratrooper SVD. Strong combination of damage scaling and armor regen. Headshot kills refresh the magazine without losing stacks, making it very efficient against groups of enemies."
+  },
+  "diamondback": {
+    "id": "diamondback",
+    "name": "Diamondback",
+    "type": "weapon",
+    "category": "rifle",
+    "unique_talent": {
+      "name": "Agonizing Bite",
+      "description": "Randomly marks an enemy within 20m (or closest if none within range). Hitting the marked target consumes the mark, guarantees a critical hit with +20% amplified damage, and triggers 5 seconds of guaranteed critical hits on all subsequent shots. A new enemy is marked after consuming a mark or reloading."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Guaranteed first-clear reward from the Kenly College Expedition (all 3 investigation areas). After first unlock: exotic cache, targeted loot (rifles).",
+    "meta_rating": "A",
+    "best_with": [
+      "critical_hit_build",
+      "rifle_build",
+      "dps_build"
+    ],
+    "notes": "Exceptional single-target DPS. The guaranteed crit window after consuming a mark gives sustained high damage. Very consistent performer \u2014 strong against bosses and armored enemies."
+  },
+  "the_ravenous": {
+    "id": "the_ravenous",
+    "name": "The Ravenous",
+    "type": "weapon",
+    "category": "rifle",
+    "unique_talent": {
+      "name": "Onslaught",
+      "description": "Fires both barrels simultaneously. Shots from the right shoulder add Offensive Primers; shots from the left shoulder add Defensive Primers. Shots from one shoulder detonate all primers from the opposite shoulder. Each Offensive Primer detonates for 100% weapon damage. Each Defensive Primer grants 4% Bonus Armor and 10% amplified damage to enemy armor plates for 5s."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Iron Horse Raid (Operation Iron Horse). Small chance from Dark Zone or special events.",
+    "meta_rating": "A",
+    "best_with": [
+      "raid_build",
+      "dps_build",
+      "armor_damage_build"
+    ],
+    "notes": "Raid-exclusive double-barreled rifle. Alternating shoulders builds maximum primer detonation value. Strong against heavily armored enemies. Requires Iron Horse Raid access."
+  },
+  "merciless": {
+    "id": "merciless",
+    "name": "Merciless",
+    "type": "weapon",
+    "category": "rifle",
+    "unique_talent": {
+      "name": "Binary Trigger",
+      "description": "Fires on both trigger pull and release. Hitting the same enemy with both bullets grants 1 stack. At 7 stacks, the next shot deals +500% weapon damage and creates a 7m explosion dealing +500% weapon damage, consuming all stacks."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (rifles). Increased drop chance from Named Hyena bosses. Functionally identical to Ruthless (can convert between them at crafting station).",
+    "meta_rating": "B",
+    "best_with": [
+      "rifle_build",
+      "aoe_build",
+      "dps_build"
+    ],
+    "notes": "Pairs with Ruthless as a convertible exotic. The 7-stack explosion deals massive AoE damage. Takes patience to build stacks, but the payoff is significant. Hyena boss farms are most efficient for drops."
+  },
+  "ruthless": {
+    "id": "ruthless",
+    "name": "Ruthless",
+    "type": "weapon",
+    "category": "rifle",
+    "unique_talent": {
+      "name": "Binary Trigger",
+      "description": "Fires on both trigger pull and release. Hitting the same enemy with both bullets grants 1 stack. At 7 stacks, the next shot deals +500% weapon damage and creates a 7m explosion dealing +500% weapon damage, consuming all stacks."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Deluxe Pack DLC (950 Premium Credits) alongside Lullaby shotgun. Functionally identical to Merciless and can be converted between them at the crafting station.",
+    "meta_rating": "B",
+    "best_with": [
+      "rifle_build",
+      "aoe_build",
+      "dps_build"
+    ],
+    "notes": "Cosmetically distinct version of Merciless with identical mechanics. Obtained via Deluxe DLC. If you own Merciless you can craft Ruthless and vice versa using the appropriate blueprint."
+  },
+  "vindicator": {
+    "id": "vindicator",
+    "name": "Vindicator",
+    "type": "weapon",
+    "category": "rifle",
+    "unique_talent": {
+      "name": "Ortiz Assault Interface",
+      "description": "While scoped, the weapon highlights a random body section on each visible enemy. Deals +40% Weapon Damage to highlighted body sections."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (rifles). General loot pool.",
+    "meta_rating": "B",
+    "best_with": [
+      "marksman_build",
+      "precise_shooter_build",
+      "dps_build"
+    ],
+    "notes": "Rewards precise aim by highlighting weak points. The +40% damage bonus to highlighted sections provides consistent bonus damage if you can hit the targets. Best at medium range where ADS is practical."
+  },
+  "pestilence": {
+    "id": "pestilence",
+    "name": "Pestilence",
+    "type": "weapon",
+    "category": "lmg",
+    "unique_talent": {
+      "name": "Plague of the Outcasts",
+      "description": "Shots apply a debuff inflicting 100% weapon damage over 10 seconds, stacking up to 50 times. When an enemy dies while debuffed, 100% of their stacks transfer to all nearby enemies within 25m."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (LMGs). Increased drop chance from Named enemies in Dark Zones. General loot pool.",
+    "meta_rating": "C",
+    "best_with": [
+      "dot_build",
+      "status_effect_build",
+      "group_play"
+    ],
+    "notes": "Exotic variant of the M249 B. The stack transfer on death creates chain-reaction damage through enemy groups. Not a top damage dealer outright, but the sustained DoT and spread mechanic make it useful for softening large groups."
+  },
+  "bluescreen": {
+    "id": "bluescreen",
+    "name": "Bluescreen",
+    "type": "weapon",
+    "category": "lmg",
+    "unique_talent": {
+      "name": "Disruptor Rounds",
+      "description": "Shooting enemies marks them, stacking up to 50 times. Deploying a non-shield skill consumes all stacks and applies effects based on stack count: 1-10 stacks: Pulse marked targets for 5s; 11-25 stacks: Pulse and Disrupt marked targets for 5s; 26-49 stacks: Pulse, Disrupt, and Disorient marked targets for 5s; 50 stacks: Pulse, Disrupt, and Disorient all marked targets and all hostiles within 10m of marked targets for 5s (also triggers immediately if any marked target is killed)."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (LMGs). Exotic variant of the Stoner LAMG.",
+    "meta_rating": "B",
+    "best_with": [
+      "skill_build",
+      "control_build",
+      "hybrid_build",
+      "disrupt_build"
+    ],
+    "notes": "Unique crowd control LMG. Fill stacks while shooting, then deploy a skill to apply escalating debuffs. At 50 stacks the AoE disrupt effect is powerful for clearing rooms. Great with cooldown-reducing builds to trigger frequently."
+  },
+  "iron_lung": {
+    "id": "iron_lung",
+    "name": "Iron Lung",
+    "type": "weapon",
+    "category": "lmg",
+    "unique_talent": {
+      "name": "Ardent",
+      "description": "Firing heats up the weapon, filling a heat meter equivalent to 50% of the standard magazine size. When full, bullets ignite enemies on hit. The meter depletes when not shooting and fully resets on reload or weapon swap."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, mission rewards. Added in Title Update 19. Exotic variant of the MG5.",
+    "meta_rating": "B",
+    "best_with": [
+      "burn_build",
+      "status_effect_build",
+      "lmg_build"
+    ],
+    "notes": "Sustained fire ignites enemies automatically once the heat meter is full. Pairs well with status effect amplification gear. Avoid reloading to maintain the incendiary effect during engagements."
+  },
+  "bullet_king": {
+    "id": "bullet_king",
+    "name": "Bullet King",
+    "type": "weapon",
+    "category": "lmg",
+    "unique_talent": {
+      "name": "King's Ransom",
+      "description": "This weapon never needs to be reloaded. For every 100 bullets that hit an enemy, the wielder and allies replenish a portion of their ammo reserves."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Drops from final bosses Theo Parnell (The Tombs, Wall Street) and James Dragov (Lower Manhattan missions) in Warlords of New York. Drop rate: 1% Normal to 7% Heroic.",
+    "meta_rating": "C",
+    "best_with": [
+      "lmg_build",
+      "sustained_fire_build",
+      "solo_build"
+    ],
+    "notes": "The infinite magazine is a gimmick that removes the need to ever reload. Ammo refill for the team is a minor utility bonus. Outclassed by other LMGs in raw DPS, but the zero-reload mechanic is genuinely convenient for solo play."
+  },
+  "scorpio": {
+    "id": "scorpio",
+    "name": "Scorpio",
+    "type": "weapon",
+    "category": "shotgun",
+    "unique_talent": {
+      "name": "Septic Shock",
+      "description": "Hitting a target applies stacks of venom, each stack applies a different status effect in order: 1 stack = Poison (10s), 2 = Disorient (5s), 3 = Shock (5s), 4 = 20% vulnerability (5s), 5 = Paralysis (5s), 6 = Blind (5s). 5s cooldown per target."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Targeted loot / Summit / any exotic source",
+    "meta_rating": "A",
+    "best_with": [
+      "shotgun_build",
+      "status_effect_build",
+      "close_range_build",
+      "boss_melting"
+    ],
+    "notes": "Best exotic shotgun in the game. The escalating debuff chain culminating in +20% damage taken from all sources makes it exceptional for boss fights. At close range all pellets connect, rapidly reaching the 9-stack threshold."
+  },
+  "sweet_dreams": {
+    "id": "sweet_dreams",
+    "name": "Sweet Dreams",
+    "type": "weapon",
+    "category": "shotgun",
+    "unique_talent": {
+      "name": "Sweet Dreams / Sandman / Evasive",
+      "description": "Sweet Dreams: Landing a melee attack after swapping to this weapon grants +35% bonus armor. Sandman: Targets hit by this weapon cannot use armor kits or receive healing. Evasive: While this weapon is equipped, dodging reloads 1% of the current weapon magazine."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (shotguns). Increased drop chance from Named Outcast bosses and from Potomac Event Centre and Roosevelt Island missions. Drop rate improves at Hard+ difficulty.",
+    "meta_rating": "B",
+    "best_with": [
+      "tank_build",
+      "aggressive_shotgun_build",
+      "melee_hybrid"
+    ],
+    "notes": "Outcast faction exotic shotgun. Sandman talent preventing healing is strong in PvP and against self-healing bosses. The melee armor restoration loop rewards an aggressive close-quarters playstyle."
+  },
+  "lullaby": {
+    "id": "lullaby",
+    "name": "Lullaby",
+    "type": "weapon",
+    "category": "shotgun",
+    "unique_talent": {
+      "name": "Lullaby / Evasive",
+      "description": "Lullaby: Landing a melee attack after swapping to this weapon grants +35% bonus armor and applies the Sandman debuff to the target (prevents healing). Evasive: Dodging reloads 1% of the current weapon magazine. Killing an enemy afflicted with Sandman restores a large amount of bonus armor."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Deluxe Pack DLC (950 Premium Credits, alongside Ruthless rifle). Requires Sweet Dreams in possession to craft upgraded version. Also available as Reconfigure Blueprint at crafting station.",
+    "meta_rating": "B",
+    "best_with": [
+      "tank_build",
+      "aggressive_shotgun_build",
+      "melee_hybrid"
+    ],
+    "notes": "Upgraded version of Sweet Dreams \u2014 same core mechanics with additional armor restoration on Sandman kills. Functionally interchangeable with Sweet Dreams; choose based on cosmetic preference or which you can obtain."
+  },
+  "regulus": {
+    "id": "regulus",
+    "name": "Regulus",
+    "type": "weapon",
+    "category": "pistol",
+    "unique_talent": {
+      "name": "Regicide",
+      "description": "Headshot kills create a 5m explosion dealing 400% weapon damage and apply bleed to all nearby enemies caught in the explosion."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Crafted via multi-step process: Complete Operation Iron Horse Raid, then finish Foundry Bulwark and Future Initiative gear set projects, then complete the 'Rats Gnaw Our Bones' project by collecting components from all 4 raid bosses plus the final chest. Craft at station. Also available from Winter Event Gear Caches.",
+    "meta_rating": "A",
+    "best_with": [
+      "pistol_build",
+      "headshot_build",
+      "bleed_build",
+      "dps_build"
+    ],
+    "notes": "Exotic Police 686 Magnum. Best exotic pistol for DPS. The AoE headshot explosion with bleed chain is exceptional for clearing densely packed enemies. The acquisition process is lengthy but the weapon justifies the effort."
+  },
+  "liberty": {
+    "id": "liberty",
+    "name": "Liberty",
+    "type": "weapon",
+    "category": "pistol",
+    "unique_talent": {
+      "name": "Liberty or Death",
+      "description": "Hits grant +2% weapon damage per stack, up to 30 stacks. Headshots consume all stacks and repair your shield by 3% per stack consumed."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Crafted from 4 components: Captain Kendra Nelson (Capitol Building Stronghold), Captain Briggs (American History Museum), Staff Sergeant Carl Wade (ViewPoint Museum), Master Sergeant Steve Quiroz (Space Administration HQ, also drops blueprint). Requires Hard difficulty for all but Capitol Building.",
+    "meta_rating": "B",
+    "best_with": [
+      "shield_build",
+      "tank_build",
+      "ballistic_shield_build"
+    ],
+    "notes": "Exotic D50 pistol designed exclusively for shield-wielding builds. The headshot shield repair loop enables exceptional shield uptime. Essential for any ballistic shield or riot shield tank build."
+  },
+  "busy_little_bee": {
+    "id": "busy_little_bee",
+    "name": "Busy Little Bee",
+    "type": "weapon",
+    "category": "pistol",
+    "unique_talent": {
+      "name": "Busy Little Bee",
+      "description": "Each shot landing on a different target grants 1 stack, up to 10 stacks. Each stack provides +20% Weapon Damage. Stacks activate when switching weapons and last for 10 seconds. Switching weapons again during those 10 seconds cancels the buff."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, mission rewards. Originally a Season Pass Level 85 reward (Title Update 16). Exotic variant of the Custom PF45.",
+    "meta_rating": "B",
+    "best_with": [
+      "weapon_swap_build",
+      "dps_build",
+      "multi_target_build"
+    ],
+    "notes": "Reward for tagging multiple different enemies before swapping to your primary weapon. At 10 stacks provides a substantial +200% weapon damage burst window. Best used to pre-stack against groups before engaging with your main weapon."
+  },
+  "vile": {
+    "id": "vile",
+    "name": "Vile",
+    "type": "armor",
+    "category": "mask",
+    "unique_talent": {
+      "name": "Toxic Delivery",
+      "description": "Status effects applied by skills deal 50% of your total skill damage as damage over time for 10s."
+    },
+    "core_attribute": "skill_tier",
+    "source": "Season reward / targeted loot",
+    "meta_rating": "A",
+    "best_with": [
+      "status_effect_build",
+      "skill_build",
+      "condition_damage_build"
+    ],
+    "notes": "Best mask for status effect-focused builds. Converts every status application into a damage over time source. Pairs strongly with builds that apply many different status effects rapidly. Stack status effect attributes for maximum DoT damage."
+  },
+  "coyotes_mask": {
+    "id": "coyotes_mask",
+    "name": "Coyote's Mask",
+    "type": "armor",
+    "category": "mask",
+    "unique_talent": {
+      "name": "Pack Instincts",
+      "description": "Critical hits apply a buff to all team members based on distance: 0-15m: +25% CHD, 15-25m: +10% CHC + 10% CHD, 25m+: +10% CHC. Buffs last 15s."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Legendary/Heroic missions",
+    "meta_rating": "S",
+    "best_with": [
+      "critical_hit_build",
+      "dps_build",
+      "striker_build",
+      "rifle_build"
+    ],
+    "notes": "Top-tier exotic mask. The distance-based critical bonuses reward engaging at varied ranges. Long-range builds favor the +25% crit chance tier. Versatile and strong across almost any weapon damage build that crits."
+  },
+  "catharsis": {
+    "id": "catharsis",
+    "name": "Catharsis",
+    "type": "armor",
+    "category": "mask",
+    "unique_talent": {
+      "name": "Vicious Cycle",
+      "description": "Taking damage builds stacks up to 30. Each stack grants +1% Weapon Damage. Taking damage at max stacks triggers a purge: removes all stacks and status effects, drops a healing cloud that restores 5% of max armor per second for 10 seconds to all allies in the cloud."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic cache, targeted loot (masks), weekly exotic caches, Summit, Countdown, Legendary Missions. Introduced in Season 9 (Hidden Alliance).",
+    "meta_rating": "B",
+    "best_with": [
+      "aggressive_build",
+      "group_play",
+      "tanky_dps_build"
+    ],
+    "notes": "Rewards taking damage \u2014 builds to +30% weapon damage passively while fighting. The purge at max stacks clears debuffs and provides team healing. Good for aggressive playstyles and group content where consistent damage is taken."
+  },
+  "tinkerer": {
+    "id": "tinkerer",
+    "name": "Tinkerer",
+    "type": "armor",
+    "category": "mask",
+    "unique_talent": {
+      "name": "Dual Talent",
+      "description": "If your Primary and Secondary weapons are both non-Exotic, non-Named, and of the same weapon type, the Secondary Weapon's talent is also applied to the Primary Weapon. Does not apply to talents that include weapon swapping."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Guaranteed first-clear reward from the Crossroads Manhunt Climax Mission on Master difficulty. Cannot be obtained via targeted loot from Countdown or Summit. Introduced in Y7S1: Crossroads.",
+    "meta_rating": "A",
+    "best_with": [
+      "dual_talent_build",
+      "same_weapon_type_build",
+      "dps_build"
+    ],
+    "notes": "Unique talent duplication mechanic \u2014 enables running two identical powerful weapon talents simultaneously. Best used with high-value talents like Strained, Future Perfect, or Unhinged on matching weapon pairs."
+  },
+  "tardigrade_armor_system": {
+    "id": "tardigrade_armor_system",
+    "name": "Tardigrade Armor System",
+    "type": "armor",
+    "category": "chest",
+    "unique_talent": {
+      "name": "Ablative Nano-Plating",
+      "description": "When any ally's armor breaks, grant them 80% of your armor as bonus armor. 45s cooldown."
+    },
+    "core_attribute": "armor",
+    "source": "Lincoln Memorial / targeted loot",
+    "meta_rating": "S",
+    "best_with": [
+      "tank_build",
+      "group_support_build",
+      "legendary_build",
+      "armor_build"
+    ],
+    "notes": "Best exotic chest piece for group play. The armor-on-break mechanic saves allies from dying and provides a powerful armor buffer. Stack maximum armor to maximize the bonus armor granted to allies. Essential for group Legendary content."
+  },
+  "ridgeways_pride": {
+    "id": "ridgeways_pride",
+    "name": "Ridgeway's Pride",
+    "type": "armor",
+    "category": "vest",
+    "unique_talent": {
+      "name": "Bleeding Edge",
+      "description": "Shooting enemies within 15m applies bleed to the target. Repairs 3-48% of your armor per second for every bleeding enemy within 15m: 1 enemy = 3%, 2 = 6%, 3 = 12%, 4 = 24%, 5 = 48% armor regen per second."
+    },
+    "core_attribute": "armor",
+    "source": "Multi-step: Collect 5 components from locked Summit caches (between floors, requires Summit Access Keys), complete Floor 100, fire the flare to unlock the project. Project requires a weapon with Sadist talent, an exotic component, and a chest with Perfectly Unbreakable talent. Blueprint then craftable at station.",
+    "meta_rating": "A",
+    "best_with": [
+      "bleed_build",
+      "close_range_build",
+      "aggressive_tank_build",
+      "striker_build"
+    ],
+    "notes": "Exponential armor regeneration rewards staying close to multiple bleeding enemies. At 5 bleeding targets, 48% armor regen per second is near-unkillable. Best combined with weapons and talents that rapidly apply bleed to multiple targets."
+  },
+  "collector": {
+    "id": "collector",
+    "name": "Collector",
+    "type": "armor",
+    "category": "vest",
+    "unique_talent": {
+      "name": "Hoarder",
+      "description": "+3 Grenade Capacity. +50% Grenade Radius. +35% Grenade Damage. +25% additional Grenade Damage per extra enemy caught in the blast. Auto-regenerates grenades every 30 seconds if you have fewer than 2 grenades."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Targeted loot (chest pieces) in Countdown with Body Armor targeted loot. Exotic cache. General loot pool.",
+    "meta_rating": "B",
+    "best_with": [
+      "grenade_build",
+      "explosive_build",
+      "collector_acosta_build"
+    ],
+    "notes": "Grenade-focused exotic chest. The combination of expanded capacity, radius, base damage, and AoE multi-target bonus makes grenades a core damage source. Pairs excellently with Acosta's Go-Bag backpack for maximum grenade synergy."
+  },
+  "provocator": {
+    "id": "provocator",
+    "name": "Provocator",
+    "type": "armor",
+    "category": "vest",
+    "unique_talent": {
+      "name": "Challenger",
+      "description": "+25% Damage Resistance from enemies within 20m (PvE). +20% Damage Resistance from enemies within 15m (PvP)."
+    },
+    "core_attribute": "armor",
+    "source": "Guaranteed first-clear reward from Space Administration: Theo Parnell on Master difficulty. Can also drop on other difficulties. Introduced in Y6S2: Shades of Red.",
+    "meta_rating": "A",
+    "best_with": [
+      "tank_build",
+      "close_range_build",
+      "aggressive_build",
+      "legendary_build"
+    ],
+    "notes": "Exceptional survivability chest for close-range fighting. The flat 25% damage reduction from nearby enemies is one of the strongest defensive talents in the game. Excellent for Legendary missions and any build that gets into melee range."
+  },
+  "dodge_city_gunslingers_holster": {
+    "id": "dodge_city_gunslingers_holster",
+    "name": "Dodge City Gunslinger's Holster",
+    "type": "armor",
+    "category": "holster",
+    "unique_talent": {
+      "name": "Quick Draw",
+      "description": "While your pistol is holstered, gain 1 stack every 0.3 seconds up to 100 stacks. When you swap to your pistol, your first shot consumes all stacks and deals +10% damage per stack (up to +1000%), dealing headshot damage regardless of where the bullet lands."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Warlords of New York expansion projects. Targeted loot (holsters) in Summit and Countdown. Exotic caches. General loot pool.",
+    "meta_rating": "S",
+    "best_with": [
+      "pistol_build",
+      "Regulus_build",
+      "weapon_swap_build",
+      "burst_damage"
+    ],
+    "notes": "Premier exotic holster for pistol builds. At 100 stacks the one-shot pistol burst delivers +1000% damage dealing guaranteed headshot damage anywhere on the body. Stack up between engagements, swap to pistol for a massive opening shot, then swap back."
+  },
+  "imperial_dynasty": {
+    "id": "imperial_dynasty",
+    "name": "Imperial Dynasty",
+    "type": "armor",
+    "category": "holster",
+    "unique_talent": {
+      "name": "Dragon's Glare",
+      "description": "While in combat, applies burn to the enemy closest to you within 20m. Cooldown: 35 seconds."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Drops from Cleaner bosses. Targeted loot (holsters) in Summit and Countdown. Exotic caches. General loot pool.",
+    "meta_rating": "C",
+    "best_with": [
+      "burn_build",
+      "status_effect_build",
+      "fire_build"
+    ],
+    "notes": "Passive burn application to the nearest enemy. Consistent uptime ensures a target is always burning nearby. Best in builds that amplify burn damage or proc bonuses from inflicted status effects. Not as impactful as other holsters for most builds."
+  },
+  "waveform": {
+    "id": "waveform",
+    "name": "Waveform",
+    "type": "armor",
+    "category": "holster",
+    "unique_talent": {
+      "name": "Alternating Current",
+      "description": "While in combat, a pulse oscillates between skill damage and repair skills, granting +30% to the active bonus. Cycle time is 8s."
+    },
+    "core_attribute": "skill_tier",
+    "source": "Countdown / targeted loot",
+    "meta_rating": "A",
+    "best_with": [
+      "skill_build",
+      "turret_drone_build",
+      "skill_damage_build"
+    ],
+    "notes": "Best holster for skill builds. Alternating Current provides up to 30% skill damage rotating between two skills, enabling consistently high skill output across both deployables. Works best with two offensive skills that each benefit from damage bonuses."
+  },
+  "nimble": {
+    "id": "nimble",
+    "name": "Nimble",
+    "type": "armor",
+    "category": "holster",
+    "unique_talent": {
+      "name": "Bob and Weave",
+      "description": "Receive repairs of 5% of your Total Armor for every 1 meter run in cover-to-cover. Damage taken while performing a cover-to-cover is healed over 10 seconds."
+    },
+    "core_attribute": "armor",
+    "source": "Targeted loot (holsters) in Summit and Countdown. Exotic caches. Open-world activities that target holsters. Originally Rank 29 reward in Crossroads Season Pass.",
+    "meta_rating": "B",
+    "best_with": [
+      "mobile_build",
+      "cover_to_cover_build",
+      "survivability_build"
+    ],
+    "notes": "Rewards aggressive repositioning \u2014 constant cover-to-cover movement generates significant armor repair. Passive damage healing during cover-to-cover provides survivability during dashes. Best for active, mobile playstyles."
+  },
+  "shocker_punch": {
+    "id": "shocker_punch",
+    "name": "Shocker Punch",
+    "type": "armor",
+    "category": "holster",
+    "unique_talent": {
+      "name": "Shocker Punch",
+      "description": "Shock status effect duration on you is reduced by 50%. Using a shield grants +100% Melee Damage. When paired with St. Elmo's Engine: melee attacks also apply Shock to the target. When using all three items (Shocker Punch holster, St. Elmo's Engine, and a shield): Shock from melee has a 5m AoE radius from the first target."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Targeted loot (holsters) in Summit and Countdown. Exotic caches. Legendary missions. Previously available in Broken Wings Seasonal Pass.",
+    "meta_rating": "B",
+    "best_with": [
+      "shock_build",
+      "st_elmos_melee_build",
+      "shield_build",
+      "status_effect_build"
+    ],
+    "notes": "Designed around the St. Elmo's Engine synergy. The three-piece combo (holster + St. Elmo's Engine + shield) creates AoE shock on melee, enabling powerful crowd control. Without the full synergy it is situationally useful."
+  },
+  "centurions_scabbard": {
+    "id": "centurions_scabbard",
+    "name": "Centurion's Scabbard",
+    "type": "armor",
+    "category": "holster",
+    "unique_talent": {
+      "name": "Counter",
+      "description": "When swapping weapons, activate sequential bonuses that last 12 seconds (10s in PvP) or until the next weapon swap: First swap: +20% Rate of Fire (10% PvP). Second swap: +20% Weapon Damage (10% PvP). Third swap: +50% Magazine Size (same in PvP). Fourth swap: +50% Reload Speed. Swapping to your sidearm does not trigger the next group of bonuses."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Targeted loot (holsters) in Summit, Countdown, open world. Weekly exotic caches. Legendary missions. Originally Rank 29 of Shades of Red season pass. Added in Title Update 22.",
+    "meta_rating": "A",
+    "best_with": [
+      "weapon_swap_build",
+      "lmg_build",
+      "dps_build",
+      "slow_reload_weapon_build"
+    ],
+    "notes": "Powerful weapon-swapping holster. The magazine size bonus applies instantly on swap, effectively providing a free extended magazine for slow-reloading weapons like LMGs. Cycling swaps strategically keeps all four buffs active for sustained DPS."
+  },
+  "memento": {
+    "id": "memento",
+    "name": "Memento",
+    "type": "armor",
+    "category": "backpack",
+    "unique_talent": {
+      "name": "Kill Confirmed",
+      "description": "Killing enemies drops a trophy. Trophies grant: Long-term buff (+0.3% weapon damage, +0.3% armor regen, +0.3% skill efficiency per trophy, stacks up to 30). Short-term buff (+2% weapon damage, +2% armor regen, +2% skill efficiency for 10s, refreshed on pickup)."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Season reward / targeted loot",
+    "meta_rating": "S",
+    "best_with": [
+      "hybrid_build",
+      "solo_build",
+      "red_build",
+      "generalist_build"
+    ],
+    "notes": "Best exotic backpack in the game. The stacking long-term buffs reward consistent killing and looting trophies. At 30 stacks: +30% Weapon Damage, +30% Skill Efficiency, and +3% Armor Regen \u2014 all simultaneously. Excellent for solo players and hybrid builds."
+  },
+  "acostas_go_bag": {
+    "id": "acostas_go_bag",
+    "name": "Acosta's Go-Bag",
+    "type": "armor",
+    "category": "backpack",
+    "unique_talent": {
+      "name": "One in Hand...",
+      "description": "Grenade kills grant overcharge for 15s. Grenades gain +25% damage and +50% radius. Overcharge grants +100% skill damage, +100% skill repair, +300% skill haste."
+    },
+    "core_attribute": "skill_tier",
+    "source": "Targeted loot / exotic caches",
+    "meta_rating": "A",
+    "best_with": [
+      "skill_build",
+      "grenade_build",
+      "hybrid_build",
+      "collector_build"
+    ],
+    "notes": "One of the most versatile exotic backpacks. Two in the Bag provides broad passive bonuses to grenades, ammo, and skills. One in Hand enables unlimited grenade throwing while boosting Skill Tier. Pairs perfectly with the Collector chest piece."
+  },
+  "ninjabike_messenger_bag": {
+    "id": "ninjabike_messenger_bag",
+    "name": "NinjaBike Messenger Bag",
+    "type": "armor",
+    "category": "backpack",
+    "unique_talent": {
+      "name": "Resourceful",
+      "description": "Slots in with any equipped Gear Set and/or Brand Set items to fulfill a requirement towards unlocking a Gear Set's bonus. Can simultaneously unlock bonuses from multiple gear sets at once."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Level 90 reward in Season 11: Reign of Fire battle pass. After season end: exotic caches, targeted loot (backpacks). Added in Warlords of New York expansion.",
+    "meta_rating": "A",
+    "best_with": [
+      "multi_gear_set_build",
+      "hybrid_set_build",
+      "flexible_build"
+    ],
+    "notes": "The 'wild card' backpack \u2014 counts as a piece of every gear set simultaneously. Enables running partial sets from two or more gear sets at once without sacrificing set bonuses. Excellent for creative mixed gear set builds."
+  },
+  "birdies_quick_fix": {
+    "id": "birdies_quick_fix",
+    "name": "Birdie's Quick Fix Pack",
+    "type": "armor",
+    "category": "backpack",
+    "unique_talent": {
+      "name": "Combat Medic",
+      "description": "Both agents gain 50% incoming damage resistance while reviving or being revived, and for 5 seconds after a successful revive. A successful revive grants +1 Skill Tier for 30 seconds. Reviving at Skill Tier 6 grants Overcharge for 15 seconds."
+    },
+    "core_attribute": "skill_tier",
+    "source": "Guaranteed first-clear reward from Roosevelt Island: Alani Kelso on Master difficulty. Can drop at other difficulties with lower chance. Added in Y6S3: Burden of Truth.",
+    "meta_rating": "B",
+    "best_with": [
+      "medic_build",
+      "group_support_build",
+      "skill_build",
+      "healer_build"
+    ],
+    "notes": "Support-focused backpack designed for group play. Dramatically reduces revive risk for both the reviver and the downed player. The Overcharge bonus on Skill Tier 6 revives enables powerful support bursts. Essential for group healer builds."
+  },
+  "btsu_datagloves": {
+    "id": "btsu_datagloves",
+    "name": "BTSU Datagloves",
+    "type": "armor",
+    "category": "gloves",
+    "unique_talent": {
+      "name": "Elemental Gadgetry",
+      "description": "Skills that apply status effects gain +15% damage and +50% status effect duration. Detonating a status-affected enemy grants overcharge for 15s and resets skill cooldowns for all team members."
+    },
+    "core_attribute": "skill_tier",
+    "source": "Camp White Oak / targeted loot",
+    "meta_rating": "A",
+    "best_with": [
+      "hive_build",
+      "skill_build",
+      "healer_build",
+      "future_initiative_build"
+    ],
+    "notes": "Best exotic gloves for Hive-based skill builds. The Hive detonation Overcharge effect is extremely powerful \u2014 at Skill Tier 6 this applies to all allies, making it the go-to for group healer and skill-focused compositions."
+  },
+  "bloody_knuckles": {
+    "id": "bloody_knuckles",
+    "name": "Bloody Knuckles",
+    "type": "armor",
+    "category": "gloves",
+    "unique_talent": {
+      "name": "Over the Top",
+      "description": "Damaging an enemy with a grenade or striking an enemy with a melee attack activates 'Seeing Red', granting +25% Weapon Damage and +100% Melee Damage for 20 seconds. Cooldown: 60 seconds. During cooldown, landing a grenade hit or melee strike instantly completes the cooldown."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Targeted loot (gloves) in Summit and Countdown. Exotic caches. Weekly exotic caches. Legendary missions.",
+    "meta_rating": "B",
+    "best_with": [
+      "melee_build",
+      "grenade_build",
+      "aggressive_close_range_build"
+    ],
+    "notes": "Aggressive playstyle gloves. The Seeing Red buff rewards melee or grenade initiations with a strong weapon damage boost. The cooldown reset mechanic on melee/grenade hit while on cooldown provides very high uptime in close-quarters combat."
+  },
+  "rugged_gauntlets": {
+    "id": "rugged_gauntlets",
+    "name": "Rugged Gauntlets",
+    "type": "armor",
+    "category": "gloves",
+    "unique_talent": {
+      "name": "Iron Grip",
+      "description": "Rewards hip fire and firing from behind cover. Amplifies weapon damage based on hip fire accuracy and blind-fire accuracy, incentivizing aggressive unsighted shooting."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Season Pass free track (Level 85) in Y5S3: Vanguard. Targeted loot (gloves) in Summit and Countdown. Exotic caches. Introduced in Y5S3: Vanguard.",
+    "meta_rating": "C",
+    "best_with": [
+      "hip_fire_build",
+      "aggressive_build",
+      "run_and_gun_build"
+    ],
+    "notes": "Niche exotic gloves rewarding hip fire and blind fire. Best with SMGs and shotguns which naturally benefit from hip fire bonuses. Outclassed by BTSU and Bloody Knuckles for most builds, but enables a unique aggressive unsighted shooting playstyle."
+  },
+  "overdogs": {
+    "id": "overdogs",
+    "name": "Overdogs",
+    "type": "armor",
+    "category": "gloves",
+    "unique_talent": {
+      "name": "Weakest Link",
+      "description": "Amplifies Weapon Damage by +30% to the lowest ranking enemy tier in the current encounter. Enemy tiers: Tier 1 (Hunters, Rogues, Leaders, Tanks, etc.), Tier 2 (Supports, Engineers, Medics, etc.), Tier 3 (all other enemies and skill proxies)."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Y7S2: The Pact Season Pass. Targeted loot (gloves) after season ends. Introduced in Y7S2.",
+    "meta_rating": "B",
+    "best_with": [
+      "clear_speed_build",
+      "dps_build",
+      "mob_clearing_build"
+    ],
+    "notes": "Tactical damage amplification to lowest-tier enemies. Useful for clearing weaker enemies quickly to focus on elite targets. The 30% bonus is significant and always active as long as lower-tier enemies are present. Good for open-world and non-elite encounters."
+  },
+  "sawyers_kneepads": {
+    "id": "sawyers_kneepads",
+    "name": "Sawyer's Kneepads",
+    "type": "armor",
+    "category": "kneepads",
+    "unique_talent": {
+      "name": "Stand Your Ground",
+      "description": "Cannot be staggered by explosions. Gain 1 stack per second while stationary, each stack granting +3% Weapon Damage, up to 10 stacks (+30% total). Stacks stop accumulating when moving and are lost after 10 seconds of movement."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "Exotic caches. Targeted loot (kneepads). Introduced in Title Update 6. Available without Warlords of New York expansion.",
+    "meta_rating": "B",
+    "best_with": [
+      "stationary_dps_build",
+      "lmg_build",
+      "turret_build",
+      "sniper_build"
+    ],
+    "notes": "Rewards a stationary playstyle. Excellent for LMG builds and sniper builds that hold position. The explosion immunity is a secondary but valuable defensive benefit. Not ideal for mobile builds but strong for anchored DPS roles."
+  },
+  "ninjabike_messenger_kneepads": {
+    "id": "ninjabike_messenger_kneepads",
+    "name": "NinjaBike Messenger Kneepads",
+    "type": "armor",
+    "category": "kneepads",
+    "unique_talent": {
+      "name": "Parkour!",
+      "description": "Performing a cover-to-cover maneuver or vaulting reloads your drawn weapon and grants +25% Bonus Armor for 5 seconds."
+    },
+    "core_attribute": "armor",
+    "source": "Extracted from Dark Zones. Exotic caches. Targeted loot (kneepads). Added in Title Update 8 with the Warlords of New York expansion.",
+    "meta_rating": "A",
+    "best_with": [
+      "mobile_build",
+      "aggressive_build",
+      "pvp_build",
+      "cover_movement_build"
+    ],
+    "notes": "Top exotic kneepads for mobile builds. The instant reload on cover-to-cover eliminates downtime between repositions \u2014 vault or dash and reload simultaneously. The bonus armor buff provides survivability during repositioning. Excellent in PvP."
+  },
+  "acostas_kneepads": {
+    "id": "acostas_kneepads",
+    "name": "Acosta's Kneepads",
+    "type": "armor",
+    "category": "kneepads",
+    "unique_talent": {
+      "name": "Momentum",
+      "description": "Vaulting, climbing, or dropping from an object grants +10% Movement Speed for 3 seconds. After not moving for 5 seconds, gain +20% Movement Speed for 5 seconds. When affected by a Status Effect, gain +10% Movement Speed for 5 seconds. Maximum Movement Speed bonus is capped at +20%."
+    },
+    "core_attribute": "armor",
+    "source": "Targeted loot (kneepads) in Summit and Countdown. Exotic caches. Introduced in Y6S1: First Rogue.",
+    "meta_rating": "C",
+    "best_with": [
+      "movement_build",
+      "status_effect_build",
+      "mobile_build"
+    ],
+    "notes": "Movement-speed focused kneepads. The bonuses stack from multiple sources but cap at 20%. Niche compared to NinjaBike Kneepads but can be useful in builds that value mobility and are already applying status effects to themselves."
+  }
+}

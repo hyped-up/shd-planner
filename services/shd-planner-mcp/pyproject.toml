@@ -1,0 +1,46 @@
+[project]
+name = "shd-planner-cwd"
+version = "0.1.0"
+description = "MCP server for Division 2 build-crafting theory"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mcp[cli]>=1.0.0",
+]
+
+[project.optional-dependencies]
+sheets = [
+    "google-auth-oauthlib>=1.3.0",
+    "gspread>=6.2.1",
+    "gspread-formatting>=1.2.1",
+]
+scraper = [
+    "httpx>=0.27",
+]
+
+[project.scripts]
+shd-planner-cwd = "server:main"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["tools"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"server.py" = "server.py"
+"data" = "data"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.15.4",
+]

@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+dist/
+.ruff_cache/
+.pytest_cache/
+.env
+CLAUDE.md
+*_prompt.md
+!pattern/*_prompt.md

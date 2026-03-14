@@ -1,0 +1,422 @@
+{
+  "_metadata": {
+    "game_version": "TU21.1",
+    "last_updated": "2026-03-01",
+    "source": "manual"
+  },
+  "caps": {
+    "critical_hit_chance": {
+      "stat": "CHC",
+      "cap": 60,
+      "unit": "percent",
+      "notes": "Hard cap at 60%. Excess CHC above cap is wasted. Stack to exactly 60 for optimal builds."
+    },
+    "critical_hit_damage": {
+      "stat": "CHD",
+      "cap": null,
+      "unit": "percent",
+      "notes": "No hard cap. Diminishing returns are not linear, but stacking CHD is generally efficient beyond 60% CHC."
+    },
+    "skill_tier": {
+      "stat": "ST",
+      "cap": 6,
+      "unit": "tiers",
+      "notes": "Hard cap at Tier 6. Each tier boosts skill damage and repair by ~10%. Requires 6 yellow core attribute slots to reach naturally. Can also be granted by Wyvern Wear 3pc or Empress International 3pc bonuses."
+    },
+    "hazard_protection": {
+      "stat": "HZP",
+      "cap": 100,
+      "unit": "percent",
+      "notes": "Hard cap at 100%. Reduces damage from environmental hazards (fire, gas, shock). Generally a niche stat outside specific modes."
+    },
+    "explosive_resistance": {
+      "stat": "ExpRes",
+      "cap": 80,
+      "unit": "percent",
+      "notes": "Effective cap is 80%. Reduces damage from explosive-type attacks."
+    },
+    "weapon_handling": {
+      "stat": "WH",
+      "cap": 100,
+      "unit": "percent",
+      "notes": "No hard cap but effectively capped at 100%. Improves stability, accuracy, and reload speed."
+    },
+    "armor_regeneration": {
+      "stat": "ArmorRegen",
+      "cap": null,
+      "unit": "armor_per_second",
+      "notes": "No hard cap. Scales with max armor. Relevant for tanky and regen builds."
+    },
+    "skill_haste": {
+      "stat": "SH",
+      "cap": null,
+      "unit": "percent",
+      "notes": "No hard cap documented. Reduces skill cooldown time."
+    },
+    "headshot_damage": {
+      "stat": "HSD",
+      "cap": null,
+      "unit": "percent",
+      "notes": "No hard cap. Multiplicative multiplier on headshot hits. Core stat for marksman/sniper builds."
+    },
+    "max_armor": {
+      "stat": "Armor",
+      "cap": null,
+      "unit": "armor_points",
+      "notes": "No hard cap. World Tier 5 / Gear Score 500 builds typically reach 170k-350k+ armor depending on build type."
+    }
+  },
+  "core_attributes": {
+    "red": {
+      "label": "Offensive",
+      "stat": "Weapon Damage",
+      "icon_color": "red",
+      "max_roll_per_piece": 15,
+      "unit": "percent",
+      "description": "Each red core attribute point adds weapon damage. Up to 6 red core slots across all gear pieces. Stacks additively within the weapon damage bucket before applying to the base damage formula.",
+      "notes": "Glass Cannon and Obliterate talents interact with red-stack builds. 6 red = maximum raw weapon damage but sacrifices armor and skill tier."
+    },
+    "blue": {
+      "label": "Defensive",
+      "stat": "Armor",
+      "icon_color": "blue",
+      "max_roll_per_piece": 170000,
+      "unit": "armor_points",
+      "description": "Each blue core attribute adds flat armor points. Scales with gear score. Critical for survivability in legendary and raid content.",
+      "notes": "Foundry Bulwark, Yaahl Gear, and Ferro Armor sets emphasize blue builds. Armor regeneration talents become more effective with a higher armor pool."
+    },
+    "yellow": {
+      "label": "Skill",
+      "stat": "Skill Tier",
+      "icon_color": "yellow",
+      "max_roll_per_piece": 1,
+      "unit": "tier",
+      "description": "Each yellow core attribute adds 1 Skill Tier (max 6). Increases skill damage, skill repair output, and certain skill thresholds.",
+      "notes": "Tier 6 required for maximum skill performance. Wyvern Wear 3pc and Empress International 3pc brand bonuses each grant +1 Skill Tier, reducing yellow core count needed."
+    }
+  },
+  "minor_attributes": {
+    "critical_hit_chance": {
+      "stat": "CHC",
+      "max_roll": 6,
+      "unit": "percent",
+      "category": "offensive",
+      "description": "Chance to land a critical hit. Hard cap 60%. Best-in-slot minor stat for DPS builds until 60% CHC is reached."
+    },
+    "critical_hit_damage": {
+      "stat": "CHD",
+      "max_roll": 12,
+      "unit": "percent",
+      "category": "offensive",
+      "description": "Bonus damage multiplier applied on critical hits. No hard cap. Stack after reaching 60% CHC."
+    },
+    "headshot_damage": {
+      "stat": "HSD",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "offensive",
+      "description": "Bonus damage multiplier on headshots. Separate multiplicative bucket from CHD. Extremely high value for marksman builds."
+    },
+    "weapon_damage": {
+      "stat": "WD",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "offensive",
+      "description": "Flat weapon damage percentage increase. Additive with other weapon damage bonuses in the same bucket."
+    },
+    "assault_rifle_damage": {
+      "stat": "AR_DMG",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "offensive_weapon_type",
+      "description": "Bonus damage specific to assault rifles. Additive with weapon_damage and other weapon type bonuses in the additive bucket."
+    },
+    "smg_damage": {
+      "stat": "SMG_DMG",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "offensive_weapon_type",
+      "description": "Bonus damage specific to SMGs. Additive with weapon_damage."
+    },
+    "lmg_damage": {
+      "stat": "LMG_DMG",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "offensive_weapon_type",
+      "description": "Bonus damage specific to LMGs. Additive with weapon_damage."
+    },
+    "rifle_damage": {
+      "stat": "RIFLE_DMG",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "offensive_weapon_type",
+      "description": "Bonus damage specific to rifles. Additive with weapon_damage."
+    },
+    "marksman_rifle_damage": {
+      "stat": "MMR_DMG",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "offensive_weapon_type",
+      "description": "Bonus damage specific to marksman rifles. Additive with weapon_damage."
+    },
+    "shotgun_damage": {
+      "stat": "SG_DMG",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "offensive_weapon_type",
+      "description": "Bonus damage specific to shotguns. Additive with weapon_damage."
+    },
+    "pistol_damage": {
+      "stat": "PISTOL_DMG",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "offensive_weapon_type",
+      "description": "Bonus damage specific to pistols."
+    },
+    "damage_to_targets_out_of_cover": {
+      "stat": "DtTooC",
+      "max_roll": 12,
+      "unit": "percent",
+      "category": "offensive_situational",
+      "description": "Multiplicative damage bonus against enemies not in cover. Fox's Prayer kneepads talent provides this dynamically. Considered a separate multiplier bucket."
+    },
+    "damage_to_armor": {
+      "stat": "DtA",
+      "max_roll": 12,
+      "unit": "percent",
+      "category": "offensive_situational",
+      "description": "Bonus damage against armored enemies or armor plates. Situationally very useful in higher difficulties where enemies have heavy armor."
+    },
+    "damage_to_elites": {
+      "stat": "DtE",
+      "max_roll": 12,
+      "unit": "percent",
+      "category": "offensive_situational",
+      "description": "Bonus damage against elite-tier enemies (yellow health bars). High value in legendary and raid content."
+    },
+    "skill_damage": {
+      "stat": "SD",
+      "max_roll": 12,
+      "unit": "percent",
+      "category": "skill",
+      "description": "Increases damage dealt by skills. Additive with other skill damage bonuses."
+    },
+    "skill_repair": {
+      "stat": "SR",
+      "max_roll": 12,
+      "unit": "percent",
+      "category": "skill",
+      "description": "Increases repair amount from healing skills. Critical for support/healer builds."
+    },
+    "skill_duration": {
+      "stat": "SDur",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "skill",
+      "description": "Increases the active duration of deployed skills."
+    },
+    "skill_haste": {
+      "stat": "SH",
+      "max_roll": 10,
+      "unit": "percent",
+      "category": "skill",
+      "description": "Reduces skill cooldown time."
+    },
+    "armor_on_kill": {
+      "stat": "AoK",
+      "max_roll": 120000,
+      "unit": "armor_points",
+      "description": "Restores a flat amount of armor on enemy kill. High value for sustain in DPS builds.",
+      "category": "defensive"
+    },
+    "health": {
+      "stat": "HP",
+      "max_roll": 25000,
+      "unit": "hit_points",
+      "category": "defensive",
+      "description": "Increases total health pool. Rarely prioritized over armor in endgame builds."
+    },
+    "incoming_repairs": {
+      "stat": "IR",
+      "max_roll": 15,
+      "unit": "percent",
+      "category": "defensive",
+      "description": "Increases the amount of armor restored by all repair sources including skills, talents, and brand bonuses."
+    },
+    "ammo_capacity": {
+      "stat": "AC",
+      "max_roll": 25,
+      "unit": "percent",
+      "category": "utility",
+      "description": "Increases total ammo reserve for a weapon type."
+    }
+  },
+  "formulas": {
+    "weapon_damage": {
+      "description": "Base damage calculation for a single weapon hit",
+      "formula": "Final_Damage = Base_Weapon_Damage x (1 + Additive_Damage_Bucket) x Multiplicative_Multiplier_1 x Multiplicative_Multiplier_2 x ...",
+      "notes": [
+        "Base_Weapon_Damage is the weapon's listed damage value, modified by red core attributes (weapon damage %).",
+        "Additive_Damage_Bucket sums all additive bonuses: weapon_damage%, ar_damage%, rifle_damage%, etc.",
+        "Each separate multiplicative multiplier (talent, situational bonus) is its own multiplication step.",
+        "Example: Obliterate talent, Fox's Prayer DtTooC, and headshot damage are all separate multiplicative steps."
+      ]
+    },
+    "critical_hit_damage": {
+      "description": "Critical hit damage calculation",
+      "formula": "Critical_Hit_Damage = Weapon_Hit_Damage x (1 + CHD_total)",
+      "notes": [
+        "CHD is applied after all other damage multipliers.",
+        "CHD from gear, talents, and brand bonuses all stack additively within the CHD bucket.",
+        "Headshot_Damage is a separate multiplier: Headshot_Damage = Weapon_Hit_Damage x (1 + HSD_total)",
+        "Critical headshot: Final = Base x Additive x Mult1 x ... x (1 + CHD) x (1 + HSD)"
+      ]
+    },
+    "effective_hp": {
+      "description": "Effective health pool calculation",
+      "formula": "EHP = (Max_Armor + Max_Health) / (1 - Damage_Resistance)",
+      "notes": [
+        "Damage_Resistance is provided by talents like Bulwark, Unbreakable, and situational bonuses.",
+        "Armor absorbs damage first; health is only depleted after armor reaches 0.",
+        "EHP is the true survivability metric, not raw armor alone."
+      ]
+    },
+    "skill_damage": {
+      "description": "Skill damage calculation",
+      "formula": "Skill_Hit = Base_Skill_Damage x (1 + Skill_Tier_Bonus) x (1 + Skill_Damage%) x Situational_Multipliers",
+      "notes": [
+        "Skill_Tier_Bonus: each tier adds ~10% skill damage (Tier 6 = ~60% bonus).",
+        "Skill_Damage% from minor attributes and brand bonuses stack additively in their bucket.",
+        "Status Effect Damage% is a separate bucket from Skill_Damage%."
+      ]
+    },
+    "dps_estimate": {
+      "description": "Approximate DPS estimate formula",
+      "formula": "DPS = Damage_Per_Shot x Fire_Rate x ((1 - CHC) + CHC x (1 + CHD))",
+      "notes": [
+        "Fire_Rate is in rounds per second.",
+        "CHC is capped at 0.60.",
+        "Does not account for reload time, headshots, or situational multipliers.",
+        "For headshot-focused builds: replace Damage_Per_Shot with Headshot_Damage_Per_Shot."
+      ]
+    }
+  },
+  "damage_types": {
+    "description": "Division 2 damage bonuses are categorized as either additive (same bucket, add together first) or multiplicative (separate multipliers applied sequentially). Understanding this is critical for build optimization. Stacking additive bonuses has diminishing relative returns; stacking multiplicative bonuses across different buckets compounds.",
+    "additive": {
+      "description": "These all add together into a single multiplier before being applied. Stacking many of the same type yields diminishing returns relative to adding a multiplicative bonus from a different bucket.",
+      "members": [
+        "weapon_damage_percent",
+        "assault_rifle_damage_percent",
+        "smg_damage_percent",
+        "lmg_damage_percent",
+        "rifle_damage_percent",
+        "marksman_rifle_damage_percent",
+        "shotgun_damage_percent",
+        "pistol_damage_percent",
+        "brand_weapon_damage_bonuses",
+        "red_core_weapon_damage_percent"
+      ]
+    },
+    "multiplicative": {
+      "description": "Each of these is its own separate multiplier and compounds with all others. Adding a new multiplicative source is almost always more valuable than adding more additive damage.",
+      "members": [
+        {
+          "source": "obliterate_talent",
+          "description": "Chest talent: +70% weapon damage while CHC is at cap (60%). Always on in optimized builds.",
+          "bucket": "talent_multiplier"
+        },
+        {
+          "source": "glass_cannon_talent",
+          "description": "Chest talent: +25% total damage, -50% armor. High risk/reward.",
+          "bucket": "talent_multiplier"
+        },
+        {
+          "source": "vigilance_talent",
+          "description": "Backpack talent: +25% weapon damage when not taking damage. Often paired with Fox's Prayer.",
+          "bucket": "talent_multiplier"
+        },
+        {
+          "source": "foxs_prayer_dttooc",
+          "description": "Kneepads talent: +8% damage to targets out of cover. Situational but often active.",
+          "bucket": "situational_multiplier"
+        },
+        {
+          "source": "damage_to_targets_out_of_cover_stat",
+          "description": "Minor attribute: +% damage to targets out of cover. Separate from talent sources.",
+          "bucket": "situational_multiplier"
+        },
+        {
+          "source": "headshot_damage",
+          "description": "Separate multiplicative bucket applied on headshots.",
+          "bucket": "headshot_multiplier"
+        },
+        {
+          "source": "critical_hit_damage",
+          "description": "Separate multiplicative bucket applied on critical hits.",
+          "bucket": "critical_multiplier"
+        },
+        {
+          "source": "damage_to_elites",
+          "description": "Separate multiplicative bucket active against elite enemies.",
+          "bucket": "situational_multiplier"
+        },
+        {
+          "source": "damage_to_armor",
+          "description": "Separate multiplicative bucket active against armored enemies.",
+          "bucket": "situational_multiplier"
+        },
+        {
+          "source": "striker_stacks",
+          "description": "Striker set: each stack adds 0.5% weapon damage (up to 50 stacks = +25%). Multiplicative application.",
+          "bucket": "set_bonus_multiplier"
+        },
+        {
+          "source": "heartbreaker_talent",
+          "description": "Heartbreaker set bonus: massive weapon damage increase tied to set mechanic.",
+          "bucket": "set_bonus_multiplier"
+        },
+        {
+          "source": "negotiators_dilemma_talent",
+          "description": "ND set: marks enemies and applies explosive damage on mark detonation.",
+          "bucket": "set_bonus_multiplier"
+        }
+      ]
+    }
+  },
+  "recalibration": {
+    "description": "The recalibration system allows moving one attribute from a source item to a target item, storing it in the Recalibration Library.",
+    "rules": [
+      "Only ONE attribute slot per gear piece can be recalibrated.",
+      "Once an attribute is recalibrated on a piece, recalibrating it again removes the previous recalibration.",
+      "You cannot recalibrate a talent onto a piece with a brand-locked talent.",
+      "Talents on chest and backpack can be recalibrated from one piece to another (same slot type).",
+      "Attributes are saved to the Recalibration Library when you extract them. You can then apply stored attributes without needing a duplicate source item.",
+      "The library stores the max-rolled version of any extracted attribute.",
+      "SHD Tech is required as a resource for recalibration.",
+      "You can recalibrate ONE attribute OR talent per gear piece. Core attributes CAN be recalibrated, but you must replace a core with another core, a minor with another minor, or a talent with another talent.",
+      "Named items and exotic items can be recalibrated but are limited to their available attribute slots.",
+      "Optimization Station raises gear score and re-rolls attributes higher, but does not change recalibrations."
+    ],
+    "library_system": {
+      "description": "The Recalibration Library persists unlocked attribute rolls permanently.",
+      "unlock_requirement": "Extract an attribute from any gear piece that has that attribute at its maximum possible roll.",
+      "benefit": "Once unlocked in the library, you can apply that attribute to any eligible piece without needing a source item.",
+      "scope": "Library is account-wide."
+    }
+  },
+  "optimization": {
+    "description": "The Optimization Station (requires Quartermaster to be leveled up) allows improving gear score and re-rolling attributes on existing pieces.",
+    "rules": [
+      "Costs Polycarbonate, Carbon Fiber, Ceramics, and other crafting materials.",
+      "Each optimization level increases the gear score of the item.",
+      "Attributes are re-rolled toward their maximum value at each optimization level.",
+      "You cannot change which attributes are on a piece \u2014 only improve existing rolls.",
+      "Talents on the piece are NOT changed by optimization.",
+      "Exotics cannot be optimized at the Optimization Station.",
+      "Named items can be optimized.",
+      "Recalibrated attributes on a piece are also improved through optimization.",
+      "Material costs scale with gear score: optimizing from 490 to 500 costs significantly more than 480 to 490."
+    ]
+  }
+}

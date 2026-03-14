@@ -1,0 +1,707 @@
+{
+  "_metadata": {
+    "game_version": "TU21.1",
+    "last_updated": "2026-03-01",
+    "source": "manual"
+  },
+  "version": "TU21+",
+  "last_updated": "2026-03",
+  "description": "High-value build synergies for The Division 2 endgame. Each entry describes a tested combination of gear sets, brand bonuses, talents, and weapon types optimized for specific roles and modes.",
+  "synergies": [
+    {
+      "id": "dps_core_providence",
+      "name": "Providence Red DPS Core",
+      "role": "dps",
+      "tier": "S",
+      "components": [
+        "providence_defense_3pc",
+        "grupo_sombra_2pc",
+        "ceska_vyroba_1pc_or_2pc"
+      ],
+      "brands_detail": {
+        "providence_defense": {
+          "pieces": 3,
+          "key_bonus": "1pc: +13% Headshot Damage. 2pc: +8% Critical Hit Chance. 3pc: +13% Critical Hit Damage.",
+          "notes": "The most popular DPS brand in the game. Provides crit chance, crit damage, and headshot damage all from one brand."
+        },
+        "grupo_sombra": {
+          "pieces": 2,
+          "key_bonus": "1pc: +13% Critical Hit Damage. 2pc: +20% Explosives Damage.",
+          "notes": "Best 1pc brand bonus for raw crit damage. Near-universal inclusion in DPS builds."
+        },
+        "ceska_vyroba": {
+          "pieces": 1,
+          "key_bonus": "1pc: +8% Critical Hit Chance.",
+          "notes": "Most efficient CHC-per-slot brand bonus. Include to help reach 60% CHC cap."
+        }
+      },
+      "talents": [
+        "obliterate",
+        "foxs_prayer"
+      ],
+      "weapons": [
+        "assault_rifle",
+        "lmg",
+        "smg",
+        "rifle"
+      ],
+      "stat_target": {
+        "CHC": "60%",
+        "CHD": "100%+",
+        "weapon_damage": "Maximize via red cores and brand bonuses",
+        "armor_on_kill": "Recommended on one minor slot for sustain"
+      },
+      "mode": [
+        "heroic",
+        "legendary",
+        "raid",
+        "summit",
+        "countdown"
+      ],
+      "notes": "The foundational red DPS setup. Obliterate provides a large multiplicative weapon damage boost when at 60% CHC. Fox's Prayer on kneepads adds DtTooC as a second multiplicative layer. Grupo 1pc provides +13% CHD as the best single-piece crit bonus. Ceska 1pc fills CHC to cap. This core can be combined with Striker, Heartbreaker, or other set pieces."
+    },
+    {
+      "id": "striker_sustained_dps",
+      "name": "Striker Sustained DPS",
+      "role": "dps",
+      "tier": "S",
+      "components": [
+        "striker_battlegear_4pc",
+        "ceska_vyroba_1pc",
+        "grupo_sombra_1pc_or_2pc"
+      ],
+      "brands_detail": {
+        "striker_battlegear": {
+          "pieces": 4,
+          "key_bonus": "2pc: +15% Weapon Handling. 3pc: +15% Rate of Fire. 4pc: Striker's Gamble \u2014 weapon hits increase total weapon damage by 0.65%, stacking up to 100 times. 1 stack lost per second between 0-50 stacks; 2 stacks lost per second between 51-100 stacks.",
+          "notes": "4pc Striker is the best sustained DPS set in the game. Stacks build quickly with automatic weapons and headshots."
+        }
+      },
+      "talents": [
+        "obliterate_or_vigilance",
+        "foxs_prayer",
+        "strike_chest_talent"
+      ],
+      "weapons": [
+        "assault_rifle",
+        "lmg",
+        "smg"
+      ],
+      "stat_target": {
+        "CHC": "60%",
+        "CHD": "80-120%",
+        "weapon_damage": "High via brand bonuses and red cores",
+        "armor_on_kill": "Recommended"
+      },
+      "mode": [
+        "heroic",
+        "legendary",
+        "raid",
+        "countdown",
+        "summit"
+      ],
+      "notes": "Striker excels in sustained firefights where stacks can be maintained. Best with automatic weapons that generate stacks quickly. Headshots generate 3 stacks instead of 1 \u2014 pairing with good aim dramatically increases DPS. Stack decay on miss is the main weakness in cover-heavy fights."
+    },
+    {
+      "id": "eclipse_protocol_cc",
+      "name": "Eclipse Protocol Status CC",
+      "role": "cc",
+      "tier": "A",
+      "components": [
+        "eclipse_protocol_4pc",
+        "pestilence_lmg_or_exotic",
+        "ninjabike_messenger_backpack_optional"
+      ],
+      "brands_detail": {
+        "eclipse_protocol": {
+          "pieces": 4,
+          "key_bonus": "2pc: +15% Status Effects. 3pc: +15% Skill Haste, +30% Hazard Protection. 4pc: Indirect Transmission \u2014 your status effects spread on kill to all enemies within 10m and refresh 50% of the duration.",
+          "notes": "Core of all status-effect builds. 4pc Indirect Transmission is the key mechanic \u2014 kill one poisoned/burning/shocked enemy and all nearby enemies inherit the status."
+        }
+      },
+      "talents": [
+        "plague_of_the_outcasts",
+        "creeping_death_chest_talent"
+      ],
+      "weapons": [
+        "pestilence_lmg",
+        "chem_launcher",
+        "firefly"
+      ],
+      "stat_target": {
+        "CHC": "Optional \u2014 some Eclipse builds skip CHC entirely",
+        "status_effect_damage": "Maximize",
+        "skill_damage": "Stack for hybrid approach",
+        "hazard_protection": "Stack if using chem launcher gas"
+      },
+      "mode": [
+        "heroic",
+        "challenging",
+        "dark_zone",
+        "countdown"
+      ],
+      "notes": "Eclipse Protocol dominates in crowd-control scenarios. Apply a status effect to a grouped enemy, kill them, and the effect spreads to the entire group. Pestilence LMG applies poison passively. Creeping Death chest talent spreads status effects further on headshot kill. Weaker in single-target scenarios. Strong in legendary with good positioning due to the chain-reaction spread mechanic."
+    },
+    {
+      "id": "heartbreaker_ar",
+      "name": "Heartbreaker AR/LMG DPS",
+      "role": "dps",
+      "tier": "S",
+      "components": [
+        "heartbreaker_4pc",
+        "ceska_vyroba_1pc",
+        "grupo_sombra_1pc"
+      ],
+      "brands_detail": {
+        "heartbreaker": {
+          "pieces": 4,
+          "key_bonus": "2pc: +15% Assault Rifle Damage, +15% LMG Damage. 3pc: +15% Weapon Handling. 4pc: Heartstopper \u2014 headshots apply pulse to the target for 5 seconds. Weapon hits on pulsed enemies add a stack of +1% bonus armor and +1% weapon damage to pulsed enemies. Maximum 50 stacks.",
+          "notes": "The 4pc talent stacks quickly on pulsed enemies via headshots. At max stacks, provides both +50% weapon damage and +50% bonus armor. Best with sustained-fire weapons."
+        }
+      },
+      "talents": [
+        "obliterate",
+        "foxs_prayer"
+      ],
+      "weapons": [
+        "assault_rifle",
+        "lmg"
+      ],
+      "stat_target": {
+        "CHC": "60%",
+        "CHD": "100%+",
+        "AR_damage_or_LMG_damage": "Stack via brand bonuses",
+        "armor_on_kill": "Recommended"
+      },
+      "mode": [
+        "heroic",
+        "legendary",
+        "raid",
+        "countdown"
+      ],
+      "notes": "Heartbreaker rewards aggressive play with headshot accuracy. Headshots pulse targets and stacks build on pulsed enemies, providing both offensive and defensive bonuses. Works extremely well with M4/P416 ARs and M60/MG5 LMGs. Strong against single hard targets like bosses where you can sustain 50+ stacks."
+    },
+    {
+      "id": "hunters_fury_smg_shotgun",
+      "name": "Hunter's Fury SMG/Shotgun",
+      "role": "dps",
+      "tier": "A",
+      "components": [
+        "hunters_fury_4pc",
+        "ceska_vyroba_1pc",
+        "grupo_sombra_1pc"
+      ],
+      "brands_detail": {
+        "hunters_fury": {
+          "pieces": 4,
+          "key_bonus": "2pc: +15% Shotgun Damage, +15% SMG Damage. 3pc: +20% Armor on Kill, +50% Health on Kill. 4pc: Apex Predator \u2014 enemies within 15m receive a debuff that amplifies your weapon damage against them by 20%. Defeating a debuffed enemy disorients nearby enemies within 5m and increases amplified weapon damage by 5% for 10s, stacking up to 5 times.",
+          "notes": "Provides both offensive (SMG/SG damage bonuses) and defensive (armor/health on kill) benefits. The disorient on kill provides CC utility."
+        }
+      },
+      "talents": [
+        "obliterate_or_vigilance",
+        "foxs_prayer"
+      ],
+      "weapons": [
+        "smg",
+        "shotgun"
+      ],
+      "stat_target": {
+        "CHC": "60%",
+        "CHD": "80%+",
+        "SMG_damage_or_SG_damage": "Stack",
+        "bonus_armor": "Benefits from adrenaline rush stacks"
+      },
+      "mode": [
+        "heroic",
+        "challenging",
+        "dark_zone",
+        "countdown"
+      ],
+      "notes": "Hunter's Fury enables an aggressive close-range playstyle with built-in survivability from the armor bonus. The disorient on kill adds crowd control. Best on maps with tight corridors. Less effective in open areas where enemies stay at range. Vector SMG and Super 90/SPAS-12 shotgun are popular weapon choices."
+    },
+    {
+      "id": "negotiators_dilemma_dps",
+      "name": "Negotiator's Dilemma DPS",
+      "role": "dps",
+      "tier": "A",
+      "components": [
+        "negotiators_dilemma_4pc",
+        "ceska_vyroba_1pc",
+        "grupo_sombra_1pc"
+      ],
+      "brands_detail": {
+        "negotiators_dilemma": {
+          "pieces": 4,
+          "key_bonus": "2pc: +15% Critical Hit Chance. 3pc: +20% Critical Hit Damage. 4pc: Hostile Negotiations \u2014 critical hits mark enemies for 20 seconds, up to 3 marks total. When you critically hit a marked enemy, all other marked enemies take 60% of the damage dealt. Marked enemy deaths grant +2% CHD, stacking up to 20 times.",
+          "notes": "The 4pc bonus is strongest in group play and multi-target scenarios where marks spread damage across enemies. The 2pc and 3pc crit bonuses are strong standalone."
+        }
+      },
+      "talents": [
+        "obliterate",
+        "foxs_prayer"
+      ],
+      "weapons": [
+        "assault_rifle",
+        "rifle",
+        "smg"
+      ],
+      "stat_target": {
+        "CHC": "60% \u2014 critical for both marking and triggering marks",
+        "CHD": "120%+",
+        "weapon_damage": "High"
+      },
+      "mode": [
+        "heroic",
+        "legendary",
+        "raid",
+        "countdown"
+      ],
+      "notes": "ND is one of the strongest group DPS sets because marks trigger splash damage to all other marked enemies. In raids, one ND player can amplify the entire team's damage output. Solo performance is still strong due to the 2pc +15% CHC and 3pc +20% CHD bonuses. Requires maintaining high CHC for consistent marking."
+    },
+    {
+      "id": "skill_turret_drone",
+      "name": "Skill DPS \u2014 Turret + Drone",
+      "role": "skill",
+      "tier": "A",
+      "components": [
+        "empress_international_3pc",
+        "murakami_industries_2pc",
+        "wyvern_wear_2pc"
+      ],
+      "brands_detail": {
+        "empress_international": {
+          "pieces": 3,
+          "key_bonus": "1pc: +10% Skill Health. 2pc: +10% Skill Damage. 3pc: +8% Skill Efficiency.",
+          "notes": "Core skill brand. 3pc grants +8% Skill Efficiency which boosts all skill stats simultaneously."
+        },
+        "wyvern_wear": {
+          "pieces": 2,
+          "key_bonus": "1pc: +8% Skill Damage. 2pc: +18% Status Effects.",
+          "notes": "Adds skill damage and status effect bonuses. Pairs well with Empress for pure skill builds."
+        },
+        "murakami_industries": {
+          "pieces": 2,
+          "key_bonus": "1pc: +15% Skill Duration. 2pc: +35% Skill Repair.",
+          "notes": "Useful for builds combining skill damage and team repair. The 2pc +35% Skill Repair is substantial."
+        }
+      },
+      "talents": [
+        "calculated_backpack",
+        "repurpose_chest_or_creeping_death"
+      ],
+      "weapons": [
+        "any_preferred"
+      ],
+      "skills": [
+        "assault_turret",
+        "striker_drone"
+      ],
+      "stat_target": {
+        "skill_tier": "6 (required)",
+        "skill_damage": "Stack on all available minor slots",
+        "skill_haste": "Stack for faster redeployment",
+        "CHC_CHD": "Optional for hybrid builds"
+      },
+      "mode": [
+        "heroic",
+        "challenging",
+        "raid",
+        "countdown",
+        "summit"
+      ],
+      "notes": "Assault Turret + Striker Drone at Tier 6 deals massive damage. Calculated backpack talent resets skill cooldown on kill, enabling constant uptime. This combination scales dramatically with Skill Tier \u2014 Tier 6 is mandatory for endgame viability. Strong in solo and group play. Can be run as a pure skill build or hybrid with a strong weapon. Pestilence LMG's passive poison synergizes with skill damage builds."
+    },
+    {
+      "id": "healer_future_initiative",
+      "name": "Future Initiative Team Healer",
+      "role": "healer",
+      "tier": "S",
+      "components": [
+        "future_initiative_4pc",
+        "providence_defense_1pc",
+        "murakami_industries_2pc"
+      ],
+      "brands_detail": {
+        "future_initiative": {
+          "pieces": 4,
+          "key_bonus": "2pc: +30% Repair Skills. 3pc: +15% Skill Haste, +30% Skill Duration. 4pc: Ground Control \u2014 you and all allies gain +15% total weapon and skill damage while at full armor. When you repair an ally, you and all allies within 5m are also repaired for 60% of that amount.",
+          "notes": "The only set in the game with a true group healing AoE mechanic. Mandatory for dedicated healer roles in raids and legendary."
+        },
+        "murakami_industries": {
+          "pieces": 2,
+          "key_bonus": "1pc: +15% Skill Duration. 2pc: +35% Skill Repair.",
+          "notes": "Stacks with FI repair bonuses for maximum heal output."
+        }
+      },
+      "talents": [
+        "gift_chest_talent",
+        "revive_backpack_talent"
+      ],
+      "weapons": [
+        "any_preferred"
+      ],
+      "skills": [
+        "chem_launcher_repair",
+        "healing_drone",
+        "restoration_hive"
+      ],
+      "stat_target": {
+        "skill_tier": "6 (required)",
+        "skill_repair": "Maximize",
+        "incoming_repairs": "Stack on self for survivability",
+        "skill_haste": "Stack for faster heal cycling"
+      },
+      "mode": [
+        "raid_dark_hours",
+        "raid_iron_horse",
+        "legendary",
+        "countdown"
+      ],
+      "notes": "Future Initiative is the dedicated healer set. The 4pc Ground Control talent provides +15% weapon/skill damage to the whole team at full armor, and makes single-target repairs spill over to nearby allies. Run with Chem Launcher (Oxidizer or Repair) + Healing Drone for maximum uptime. At Tier 6 with stacked skill repair, a single heal pulse can restore full armor to multiple team members simultaneously. Revive backpack talent can save downed allies without leaving cover."
+    },
+    {
+      "id": "foundry_bulwark_tank",
+      "name": "Foundry Bulwark Shield Tank",
+      "role": "tank",
+      "tier": "A",
+      "components": [
+        "foundry_bulwark_4pc",
+        "yaahl_gear_2pc"
+      ],
+      "brands_detail": {
+        "foundry_bulwark": {
+          "pieces": 4,
+          "key_bonus": "2pc: +10% Total Armor. 3pc: +1% Armor Regeneration, +50% Shield Health. 4pc: Makeshift Repairs \u2014 20% of all damage taken by you and your shield is restored as armor over 15 seconds.",
+          "notes": "Best tank set for shield-based gameplay. Dramatically increases shield HP and provides passive armor restoration from damage taken."
+        },
+        "yaahl_gear": {
+          "pieces": 2,
+          "key_bonus": "1pc: +10% Hazard Protection. 2pc: +10% Weapon Damage.",
+          "notes": "Supplements hazard resistance and adds weapon damage for tank builds."
+        }
+      },
+      "talents": [
+        "unbreakable_chest_talent",
+        "bulwark_backpack_talent"
+      ],
+      "weapons": [
+        "smg",
+        "pistol"
+      ],
+      "skills": [
+        "ballistic_shield",
+        "crusader_shield"
+      ],
+      "stat_target": {
+        "armor": "Maximize (all blue cores)",
+        "shield_health": "Maximize via brand bonuses",
+        "incoming_repairs": "Stack",
+        "armor_regeneration": "Stack"
+      },
+      "mode": [
+        "legendary",
+        "raid_dark_hours",
+        "raid_iron_horse",
+        "heroic"
+      ],
+      "notes": "Foundry Bulwark enables the primary tank role in group content. The shield absorbs massive damage while teammates deal damage. Unbreakable chest talent automatically repairs armor on shield break, enabling sustained frontline presence. Best used in 4-player legendary missions and raids where a dedicated tank is needed. SMG remains accessible while shielding."
+    },
+    {
+      "id": "hybrid_memento",
+      "name": "Memento Hybrid (Any Base Build)",
+      "role": "hybrid",
+      "tier": "A",
+      "components": [
+        "memento_exotic_backpack",
+        "any_base_build"
+      ],
+      "brands_detail": {
+        "memento_exotic_backpack": {
+          "pieces": 1,
+          "key_bonus": "Memento talent: kills grant Trophies. Collecting trophies gives temporary stacking bonuses to weapon damage, skill damage, and incoming repairs. Bonuses stack up to 5 times and decay over time.",
+          "notes": "Memento's exotic bonus is independent of the rest of the build and can fit into virtually any setup."
+        }
+      },
+      "talents": [
+        "memento_exotic_talent",
+        "any_chest_talent"
+      ],
+      "weapons": [
+        "any"
+      ],
+      "stat_target": {
+        "notes": "Stat targets depend on the base build. Memento adds a universal damage/survivability layer on top of any build."
+      },
+      "mode": [
+        "heroic",
+        "legendary",
+        "countdown",
+        "summit"
+      ],
+      "notes": "Memento backpack is used in virtually every high-end build because it adds a significant multiplicative bonus on top of the base build's synergy. At full stacks (+5 trophies), it provides a substantial weapon damage, skill damage, and incoming repair bonus simultaneously. Best paired with builds that kill enemies frequently to maintain trophy stacks. Drop in trophies regeneration is the main weakness."
+    },
+    {
+      "id": "fenris_ar_red",
+      "name": "Fenris AR Sharpshooter",
+      "role": "dps",
+      "tier": "A",
+      "components": [
+        "fenris_group_ab_3pc",
+        "providence_defense_2pc",
+        "grupo_sombra_1pc"
+      ],
+      "brands_detail": {
+        "fenris_group_ab": {
+          "pieces": 3,
+          "key_bonus": "1pc: +10% Assault Rifle Damage. 2pc: +30% Reload Speed. 3pc: +50% Stability.",
+          "notes": "Best brand for AR-specific builds. The 1pc AR damage bonus is the primary draw; the 2pc reload speed enables faster burst cycling."
+        }
+      },
+      "talents": [
+        "obliterate",
+        "foxs_prayer"
+      ],
+      "weapons": [
+        "assault_rifle"
+      ],
+      "stat_target": {
+        "CHC": "60%",
+        "CHD": "100%+",
+        "AR_damage": "Stack heavily via Fenris + minor attrs",
+        "weapon_damage": "Fill remaining minor slots"
+      },
+      "mode": [
+        "heroic",
+        "legendary",
+        "summit"
+      ],
+      "notes": "Fenris 1pc provides the best single-piece AR damage bonus. The 2pc reload speed enables faster burst cycling. Best with ARs that have large magazines to maximize time between reloads, or with fast-reloading ARs to cycle the reload bonus frequently. SOCOM M4 and Carbine 7 are popular pairings."
+    },
+    {
+      "id": "ongoing_directive_lmg",
+      "name": "Ongoing Directive LMG Skill Hybrid",
+      "role": "hybrid",
+      "tier": "B",
+      "components": [
+        "ongoing_directive_4pc",
+        "grupo_sombra_1pc",
+        "ceska_vyroba_1pc"
+      ],
+      "brands_detail": {
+        "ongoing_directive": {
+          "pieces": 4,
+          "key_bonus": "2pc: +15% Status Effects. 3pc: +30% Reload Speed. 4pc: Hollow-Point Ammo \u2014 shooting a status-affected enemy marks them for 10 seconds. Killing a marked enemy grants a full clip of Hollow-Point Ammo for your active weapon and half a clip to the rest of the party. Hollow-Point Ammo amplifies weapon damage by 20% and applies bleed on hit.",
+          "notes": "The 4pc Hollow-Point Ammo bonus benefits the whole team. The 3pc reload speed helps sustain fire."
+        }
+      },
+      "talents": [
+        "vigilance",
+        "foxs_prayer"
+      ],
+      "weapons": [
+        "lmg"
+      ],
+      "skills": [
+        "chem_launcher_oxidizer",
+        "firefly_blinder"
+      ],
+      "stat_target": {
+        "CHC": "Optional",
+        "status_effect_damage": "Stack for hybrid performance",
+        "skill_damage": "Stack",
+        "weapon_damage": "Red cores"
+      },
+      "mode": [
+        "heroic",
+        "legendary",
+        "raid"
+      ],
+      "notes": "Ongoing Directive is best used in group content where the Hollow-Point Ammo 4pc talent benefits teammates. The 3pc reload speed keeps sustained fire going. Pair with Chem Launcher to apply status effects reliably. In solo play, the ammo generation is wasted \u2014 Eclipse Protocol is usually preferred for status builds."
+    },
+    {
+      "id": "true_patriot_debuffer",
+      "name": "True Patriot Team Buffer",
+      "role": "hybrid",
+      "tier": "B",
+      "components": [
+        "true_patriot_4pc",
+        "ceska_vyroba_1pc",
+        "grupo_sombra_1pc"
+      ],
+      "brands_detail": {
+        "true_patriot": {
+          "pieces": 4,
+          "key_bonus": "2pc: +30% Ammo Capacity. 3pc: +30% Magazine Size. 4pc: Red, White, and Blue \u2014 enemies you shoot receive rotating debuffs that cycle every 2 seconds. Red: amplifies enemy damage taken by 8%. White: hitting the enemy restores your and allies' armor by 2% per second. Blue: decreases enemy damage output by 8%. Full Flag: enemies that die while under all three debuffs explode.",
+          "notes": "The Full Flag explosion and Red debuff's damage amplification are powerful in group play. The rotating debuffs provide offense, defense, and sustain."
+        }
+      },
+      "talents": [
+        "obliterate",
+        "foxs_prayer"
+      ],
+      "weapons": [
+        "assault_rifle",
+        "smg"
+      ],
+      "stat_target": {
+        "CHC": "60%",
+        "CHD": "100%+",
+        "damage_to_elites": "Stack \u2014 the 2pc bonus plus minor attrs",
+        "weapon_damage": "Fill remaining slots"
+      },
+      "mode": [
+        "raid_dark_hours",
+        "raid_iron_horse",
+        "legendary"
+      ],
+      "notes": "True Patriot's primary value is the Red, White, and Blue debuff rotation. The Red debuff amplifies damage taken by 8%, the White debuff restores team armor, and the Blue debuff reduces enemy damage. In raids, a single TP player can amplify the entire team's DPS on a boss. Requires sustained fire to cycle all 3 flags. Best paired with a fast-firing AR or SMG."
+    },
+    {
+      "id": "warlords_of_new_york_mmr",
+      "name": "Warlords of New York MMR Sniper",
+      "role": "dps",
+      "tier": "A",
+      "components": [
+        "grupo_sombra_2pc",
+        "providence_defense_2pc",
+        "ceska_vyroba_1pc",
+        "aces_and_eights_named_mmr"
+      ],
+      "brands_detail": {
+        "grupo_sombra": {
+          "pieces": 2,
+          "key_bonus": "1pc: +13% Critical Hit Damage. 2pc: +20% Explosives Damage.",
+          "notes": "Strong crit damage from 1pc; the 2pc explosives bonus is situational for sniper builds."
+        },
+        "providence_defense": {
+          "pieces": 2,
+          "key_bonus": "1pc: +13% Headshot Damage. 2pc: +8% Critical Hit Chance.",
+          "notes": "Headshot damage from 1pc is essential for MMR builds; 2pc adds crit chance."
+        }
+      },
+      "talents": [
+        "obliterate_or_glass_cannon",
+        "foxs_prayer"
+      ],
+      "weapons": [
+        "marksman_rifle"
+      ],
+      "stat_target": {
+        "CHC": "60%",
+        "CHD": "100%+",
+        "headshot_damage": "Maximize \u2014 primary DPS multiplier for MMR",
+        "MMR_damage": "Stack on minor slots"
+      },
+      "mode": [
+        "heroic",
+        "legendary",
+        "summit",
+        "dark_zone"
+      ],
+      "notes": "Marksman rifle builds prioritize headshot damage as the primary multiplicative multiplier. Each headshot triggers both CHD and HSD simultaneously if it crits, making HSD extremely valuable. Aces & Eights named MMR has a built-in talent that alternates between two modes \u2014 learn the timing for maximum DPS. Best used at range in legendary missions where enemies can be engaged before they enter cover."
+    },
+    {
+      "id": "dark_zone_pvp_smg",
+      "name": "Dark Zone PvP SMG",
+      "role": "dps",
+      "tier": "A",
+      "components": [
+        "providence_defense_3pc",
+        "grupo_sombra_2pc",
+        "ceska_vyroba_1pc"
+      ],
+      "brands_detail": {
+        "providence_defense": {
+          "pieces": 3,
+          "key_bonus": "1pc: +13% Headshot Damage. 2pc: +8% Critical Hit Chance. 3pc: +13% Critical Hit Damage.",
+          "notes": "Full Providence 3pc provides the trifecta of HSD, CHC, and CHD for maximum burst."
+        },
+        "grupo_sombra": {
+          "pieces": 2,
+          "key_bonus": "1pc: +13% Critical Hit Damage. 2pc: +20% Explosives Damage.",
+          "notes": "The 1pc crit damage stacks with Providence for high burst potential."
+        }
+      },
+      "talents": [
+        "obliterate",
+        "foxs_prayer"
+      ],
+      "weapons": [
+        "smg"
+      ],
+      "stat_target": {
+        "CHC": "60%",
+        "CHD": "100%+",
+        "armor": "Balance \u2014 need survivability vs players",
+        "armor_on_kill": "Critical for DZ rogue fights"
+      },
+      "mode": [
+        "dark_zone",
+        "conflict"
+      ],
+      "notes": "PvP builds prioritize burst damage to kill players before they react. SMGs excel at close range in DZ. Unlike PvE, player armor values are lower and fights are shorter. Fox's Prayer is especially powerful in DZ because players frequently break cover. Balance red and blue cores \u2014 a slight armor investment improves survivability against other rogues without significantly reducing damage output. Armor on kill provides sustain through multi-player rogue fights."
+    },
+    {
+      "id": "spotter_flatline_dps",
+      "name": "Spotter + Flatline",
+      "role": "dps",
+      "tier": "A",
+      "components": [
+        "nightwatcher_mask",
+        "spotter_chest_talent",
+        "flatline_weapon_talent",
+        "pulse_skill"
+      ],
+      "brands_detail": {
+        "providence_defense": {
+          "pieces": 3,
+          "key_bonus": "1pc: +13% Headshot Damage. 2pc: +8% Critical Hit Chance. 3pc: +13% Critical Hit Damage.",
+          "notes": "The core DPS brand providing crit chance, crit damage, and headshot damage from one brand."
+        },
+        "grupo_sombra": {
+          "pieces": 1,
+          "key_bonus": "1pc: +13% Critical Hit Damage.",
+          "notes": "Best single-piece crit damage bonus to stack with Providence."
+        },
+        "ceska_vyroba": {
+          "pieces": 1,
+          "key_bonus": "1pc: +8% Critical Hit Chance.",
+          "notes": "Fills CHC toward the 60% cap alongside Providence 2pc."
+        },
+        "nightwatcher": {
+          "pieces": 1,
+          "key_bonus": "Exotic mask (Gila Guard brand): +100% Scanner Pulse Haste for near-permanent pulse uptime.",
+          "notes": "Enables effortless Spotter uptime by reducing Scanner Pulse cooldown to near-zero. The only required exotic in the build."
+        }
+      },
+      "talents": [
+        "spotter",
+        "flatline"
+      ],
+      "weapons": [
+        "assault_rifle",
+        "lmg",
+        "smg",
+        "rifle"
+      ],
+      "skills": [
+        "scanner_pulse"
+      ],
+      "stat_target": {
+        "CHC": "50-60%",
+        "CHD": "As high as possible",
+        "weapon_damage": "Maximize via red cores",
+        "armor_on_kill": "Recommended on one minor slot for sustain"
+      },
+      "mode": [
+        "heroic",
+        "legendary",
+        "raid",
+        "summit",
+        "countdown"
+      ],
+      "notes": "Pulsed enemies take amplified damage from Flatline, paired with Nightwatcher mask for effortless uptime. Accessible DPS build requiring only 1 named item. Spotter on chest amplifies weapon damage against pulsed targets. Flatline on weapon amplifies damage to pulsed enemies. Nightwatcher's +100% Scanner Pulse Haste makes pulse nearly permanent. One of the most played combos in Division 2 due to ease of use and consistent damage output."
+    }
+  ]
+}

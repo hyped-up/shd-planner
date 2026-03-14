@@ -1,0 +1,567 @@
+{
+  "_metadata": {
+    "game_version": "TU21.1",
+    "last_updated": "2026-03-01",
+    "source": "manual"
+  },
+  "version": "TU21+",
+  "last_updated": "2026-03",
+  "description": "Game modes in The Division 2 with build recommendations, enemy tiers, key mechanics, and tips for each mode.",
+  "modes": {
+    "challenging": {
+      "id": "challenging",
+      "name": "Challenging",
+      "category": "pve_mission",
+      "difficulty": "Moderate",
+      "players": "1-4",
+      "enemy_tier": "Red and Purple (Veteran) enemies",
+      "key_mechanics": [
+        "Enemies have increased health and damage compared to normal/hard",
+        "Elite enemies appear more frequently",
+        "Checkpoint save system allows mid-mission recovery",
+        "Gear Score 490+ recommended"
+      ],
+      "recommended_roles": {
+        "solo": [
+          "dps"
+        ],
+        "group": [
+          "dps",
+          "dps",
+          "dps_or_healer",
+          "dps_or_healer"
+        ]
+      },
+      "build_priorities": [
+        "Solid DPS with at least moderate armor",
+        "CHC/CHD stacking to around 60/100",
+        "Armor on kill for sustain",
+        "No specialized role requirements \u2014 solo DPS is viable"
+      ],
+      "recommended_builds": [
+        "dps_core_providence",
+        "striker_sustained_dps",
+        "heartbreaker_ar"
+      ],
+      "tips": [
+        "Challenging is a good entry point for testing new DPS builds before pushing to Heroic.",
+        "Enemies deal meaningful damage \u2014 don't neglect armor entirely.",
+        "A single healer or skill build player can significantly ease group play.",
+        "Learning enemy layouts here prepares you for Heroic."
+      ]
+    },
+    "heroic": {
+      "id": "heroic",
+      "name": "Heroic",
+      "category": "pve_mission",
+      "difficulty": "Hard",
+      "players": "1-4",
+      "enemy_tier": "Yellow (Elite) and Gold (Named) enemies dominate",
+      "key_mechanics": [
+        "Enemies have very high health pools and deal serious damage",
+        "Elites appear in most encounters",
+        "No checkpoint saves \u2014 dying restarts the encounter",
+        "Gear Score 500 strongly recommended",
+        "Modifiers (weekly heroic modifiers) can dramatically alter enemy behavior"
+      ],
+      "recommended_roles": {
+        "solo": [
+          "dps_high_sustain"
+        ],
+        "group": [
+          "dps",
+          "dps",
+          "dps_support",
+          "healer_or_tank"
+        ]
+      },
+      "build_priorities": [
+        "Maximize weapon damage (Obliterate + Fox's Prayer + CHC/CHD cap)",
+        "Damage to Elites is high value \u2014 most targets are elites",
+        "Armor on kill for sustain between covers",
+        "At least one healer recommended for group play",
+        "Skill builds remain viable if at Tier 6"
+      ],
+      "recommended_builds": [
+        "dps_core_providence",
+        "striker_sustained_dps",
+        "heartbreaker_ar",
+        "negotiators_dilemma_dps",
+        "skill_turret_drone"
+      ],
+      "tips": [
+        "Always check the weekly heroic modifiers before running \u2014 some modifiers drastically change strategy.",
+        "Prioritize elite enemies first; they deal the most damage and can stagger you out of cover.",
+        "Cover discipline is critical \u2014 Heroic punishes players who stand in the open.",
+        "Use Fox's Prayer to punish elites when they break cover or rush your position.",
+        "DtE (Damage to Elites) minor attribute provides a large multiplicative bonus here."
+      ]
+    },
+    "legendary": {
+      "id": "legendary",
+      "name": "Legendary",
+      "category": "pve_mission",
+      "difficulty": "Extreme",
+      "players": "4 (strongly recommended full group)",
+      "enemy_tier": "Gold (Named) enemies in large numbers, specialized enemy roles",
+      "key_mechanics": [
+        "Enemies deal massive damage and have enormous health pools",
+        "Specialized enemy roles: rushers, snipers, tanks, drone operators, grenadiers",
+        "No respawns \u2014 all 4 players must be revived by teammates or use a Revive Hive",
+        "Loot Bounty system: enemies drop better loot the longer the mission takes",
+        "Some missions have unique mechanics such as enemy reinforcement timers",
+        "Gear Score 500 mandatory"
+      ],
+      "recommended_roles": {
+        "solo": "Not recommended \u2014 technically possible with specific builds but very slow",
+        "group_4p": [
+          "dps",
+          "dps",
+          "dps_support_or_tank",
+          "healer"
+        ]
+      },
+      "build_priorities": [
+        "Revive Hive or Future Initiative healer strongly recommended",
+        "At least one tank or high-armor player to hold flanks",
+        "Maximum DPS to reduce time exposed to fire",
+        "DtE mandatory \u2014 nearly every enemy is elite tier",
+        "Skill builds with assault turret + striker drone remain strong",
+        "Team coordination: assign roles explicitly before starting"
+      ],
+      "recommended_builds": [
+        "dps_core_providence",
+        "heartbreaker_ar",
+        "negotiators_dilemma_dps",
+        "healer_future_initiative",
+        "foundry_bulwark_tank",
+        "skill_turret_drone"
+      ],
+      "tips": [
+        "Run the mission on Heroic first to learn enemy positions and spawn timers.",
+        "Designate a healer \u2014 Future Initiative 4pc is the gold standard.",
+        "Rushers will close in quickly; have your team assign one player to deal with them.",
+        "Never all push at once \u2014 at least one player should hold back to revive downed allies.",
+        "True Patriot 4pc on one DPS player amplifies the entire team's damage significantly on bosses.",
+        "Revive Hive as a second skill slot can save a mission if the healer goes down.",
+        "Communication about cover-to-cover movements prevents getting isolated and downed.",
+        "Drone snipers in legendary deal extreme damage \u2014 clear them with a skill or targeted fire immediately."
+      ]
+    },
+    "raid_dark_hours": {
+      "id": "raid_dark_hours",
+      "name": "Operation Dark Hours (Raid)",
+      "category": "raid",
+      "difficulty": "Extreme",
+      "players": "8",
+      "enemy_tier": "Raid-specific elite tiers with unique mechanics",
+      "key_mechanics": [
+        "8-player cooperative raid with multiple encounter phases",
+        "Encounters: Boomer, Warhound, Pappy, Jefferson Trade Center final boss",
+        "Each encounter requires specific role assignments and mechanic execution",
+        "No matchmaking \u2014 must organize a pre-made group of 8",
+        "Unique Raid-exclusive loot drops",
+        "Phase-based boss fights with callout mechanics (e.g., Warhound armor plates, ISAC network)"
+      ],
+      "recommended_roles": {
+        "8p_composition": [
+          "4x dps",
+          "2x dps_support_or_hybrid",
+          "1x healer",
+          "1x tank_or_second_healer"
+        ]
+      },
+      "build_priorities": [
+        "Negotiator's Dilemma and True Patriot provide massive group DPS amplification on bosses",
+        "At least one Future Initiative healer mandatory",
+        "One Foundry Bulwark tank for encounter-specific mechanics",
+        "All DPS players should be at maximum gear score with optimized builds",
+        "Revive Hive as second skill slot recommended for all non-healer players"
+      ],
+      "recommended_builds": [
+        "negotiators_dilemma_dps",
+        "true_patriot_debuffer",
+        "healer_future_initiative",
+        "foundry_bulwark_tank",
+        "heartbreaker_ar",
+        "dps_core_providence"
+      ],
+      "tips": [
+        "Use Discord or voice communication \u2014 calling out mechanics is required.",
+        "Boomer encounter: split 4v4, each side must take down Boomer's corresponding generators simultaneously.",
+        "Warhound: designate who removes each armor plate phase and when to push DPS.",
+        "Jefferson final boss: ISAC mechanic requires two players to interface with terminals simultaneously.",
+        "Bring Revive Hive on multiple players \u2014 being able to self-revive during mechanic phases saves wipes.",
+        "Practice each encounter in Normal difficulty before attempting Hard mode.",
+        "Negotiate ND marks so all 8 players are shooting the same target."
+      ]
+    },
+    "raid_iron_horse": {
+      "id": "raid_iron_horse",
+      "name": "Operation Iron Horse (Raid)",
+      "category": "raid",
+      "difficulty": "Extreme",
+      "players": "8",
+      "enemy_tier": "Raid-specific elite tiers with unique mechanics",
+      "key_mechanics": [
+        "8-player cooperative raid set in a factory/industrial environment",
+        "Encounters: Dogs, Assembly Line boss, Metal Back boss",
+        "Assembly Line: conveyor belt mechanics requiring side coordination",
+        "Metal Back: rotating phases requiring tank swaps and DPS windows",
+        "True Sons faction enemies with heavy armor focus",
+        "Unique Iron Horse Raid-exclusive gear drops"
+      ],
+      "recommended_roles": {
+        "8p_composition": [
+          "4x dps",
+          "2x dps_support",
+          "1x healer",
+          "1x tank"
+        ]
+      },
+      "build_priorities": [
+        "Damage to Armor is particularly high value \u2014 True Sons enemies use heavy armor",
+        "Tank required for Metal Back boss phase swaps",
+        "Healer mandatory",
+        "High burst DPS for Assembly Line DPS window phases",
+        "All players at GS500 with optimized builds"
+      ],
+      "recommended_builds": [
+        "heartbreaker_ar",
+        "negotiators_dilemma_dps",
+        "healer_future_initiative",
+        "foundry_bulwark_tank",
+        "true_patriot_debuffer",
+        "dps_core_providence"
+      ],
+      "tips": [
+        "Assembly Line: assign left and right sides clearly. Both sides must complete objectives simultaneously.",
+        "Metal Back: the tank must taunt aggro during phase transitions to prevent random players from being targeted.",
+        "Dogs encounter: AOE awareness \u2014 dogs can quickly swarm and down isolated players.",
+        "Damage to Armor minor attribute performs extremely well in this raid due to True Sons composition.",
+        "Metal Back DPS window is brief \u2014 ensure all DPS players are positioned and ready before triggering.",
+        "Healer should track which players are taking tank taunt damage in Metal Back phases."
+      ]
+    },
+    "countdown": {
+      "id": "countdown",
+      "name": "Countdown",
+      "category": "pve_event",
+      "difficulty": "Moderate to Hard (scales)",
+      "players": "8 (two squads of 4)",
+      "enemy_tier": "Mixed, scales with ongoing round count",
+      "key_mechanics": [
+        "Two teams of 4 complete separate objectives simultaneously before a countdown timer expires",
+        "Teams can rendezvous at extraction for the final phase",
+        "Rounds get progressively harder as the team advances",
+        "Objectives include: destroy generators, disrupt comms, eliminate HVTs",
+        "Failing to complete objectives in time ends the run",
+        "Exotic and high-tier loot available at late rounds"
+      ],
+      "recommended_roles": {
+        "each_squad_4p": [
+          "dps",
+          "dps",
+          "dps_skill_hybrid",
+          "healer_or_support"
+        ]
+      },
+      "build_priorities": [
+        "Speed and damage output \u2014 objectives have timers",
+        "Sustain is important due to the continuous nature of the mode",
+        "Skill builds perform well due to constant use between objectives",
+        "Revive Hive strongly recommended \u2014 no waiting for squad to revive you",
+        "Memento backpack synergizes well with the kill-heavy pace"
+      ],
+      "recommended_builds": [
+        "striker_sustained_dps",
+        "heartbreaker_ar",
+        "dps_core_providence",
+        "hybrid_memento",
+        "skill_turret_drone",
+        "eclipse_protocol_cc"
+      ],
+      "tips": [
+        "Split objectives efficiently \u2014 one squad member handles the objective while others clear enemies.",
+        "At late rounds, bring your best DPS build \u2014 enemy health scales significantly.",
+        "Coordinate with the other squad at extraction; timing the final phase together reduces exposure.",
+        "Eclipse Protocol CC builds can freeze or poison clusters of enemies near objectives.",
+        "Memento stacks build rapidly in Countdown due to the constant kill pace.",
+        "Don't neglect the extraction phase \u2014 enemies spawn in large numbers when the helicopter arrives."
+      ]
+    },
+    "descent": {
+      "id": "descent",
+      "name": "Descent",
+      "category": "pve_roguelike",
+      "difficulty": "Progressive (room-by-room)",
+      "players": "1-4",
+      "enemy_tier": "Scales with floor depth",
+      "key_mechanics": [
+        "Roguelike mode \u2014 start with no gear and build loadout from room drops and choices",
+        "Each room offers a choice of weapon, gear piece, or talent upgrade",
+        "No external gear brought in \u2014 builds form organically through descent choices",
+        "Boss rooms at regular intervals with unique mechanics",
+        "Death ends the current run; progress tracked via Descent score",
+        "Unlockable permanent upgrades (Directives, stash bonuses) for future runs"
+      ],
+      "recommended_roles": {
+        "notes": "Roles form dynamically based on what drops. Cannot plan a specific build pre-run.",
+        "opportunistic_strategies": [
+          "focus_smg_or_ar_early",
+          "grab_skill_talents_if_skill_heavy_loot",
+          "adapt_to_drops"
+        ]
+      },
+      "build_priorities": [
+        "Adaptability \u2014 take the best synergistic gear available, not a preset plan",
+        "Prioritize CHC and CHD on early drops to scale into mid-game",
+        "Talent synergies: if you get Obliterate early, build around CHC to enable it",
+        "Skills can carry in early floors \u2014 grab a good turret or drone if skill talents appear",
+        "Armor-on-kill is especially valuable in Descent due to no external healing"
+      ],
+      "recommended_builds": [
+        "N/A \u2014 build adapts dynamically to descent loot"
+      ],
+      "tips": [
+        "Take a weapon that matches the talents you've collected, not the other way around.",
+        "Prioritize Obliterate or Glass Cannon early if offered \u2014 they provide outsized damage gains.",
+        "Armor on kill drops should never be ignored \u2014 sustain is your lifeline without a healer.",
+        "Boss rooms telegraph attacks \u2014 move out of red zones, don't tunnel vision on damage output.",
+        "On later floors, enemies can one-shot poorly armored builds \u2014 take defensive pieces if offered.",
+        "Group play allows role specialization even within the roguelike structure.",
+        "Unlock permanent Descent bonuses by completing milestone challenges to improve future runs."
+      ]
+    },
+    "dark_zone": {
+      "id": "dark_zone",
+      "name": "Dark Zone (PvPvE)",
+      "category": "pvpve",
+      "difficulty": "Variable \u2014 depends on other players",
+      "players": "Open world (up to 12 players per DZ instance)",
+      "enemy_tier": "Contaminated NPC enemies + rogue agents",
+      "key_mechanics": [
+        "Three Dark Zone areas: DZ East, DZ West, DZ South",
+        "Contaminated loot must be extracted via helicopter \u2014 players can go rogue to steal",
+        "Going Rogue: hostile to other players; killed rogues drop valuable loot",
+        "Normalization: in non-Occupied DZ, player stats are partially normalized to reduce gear gap",
+        "Occupied Dark Zone: no normalization, PvP is full-power gear; accessible at certain hours",
+        "Landmarks: high-value PvE encounters in the DZ with better loot",
+        "Dark Zone XP for gaining DZ levels and cosmetics"
+      ],
+      "recommended_roles": {
+        "solo": [
+          "dps_with_sustain"
+        ],
+        "group_4p": [
+          "dps",
+          "dps",
+          "dps",
+          "hybrid_with_sustain"
+        ]
+      },
+      "build_priorities": [
+        "Burst damage is prioritized \u2014 player fights are short",
+        "SMG or shotgun for close-range dominance in interior DZ areas",
+        "Balance offensive and defensive stats \u2014 pure glass cannon builds die to ambushes",
+        "Armor on kill is critical for multi-player rogue fights",
+        "Fox's Prayer performs extremely well \u2014 DZ players frequently break cover",
+        "In Occupied DZ: bring your absolute best full DPS build",
+        "In normalized DZ: skill builds and balanced builds perform competitively"
+      ],
+      "recommended_builds": [
+        "dark_zone_pvp_smg",
+        "dps_core_providence",
+        "hunters_fury_smg_shotgun",
+        "hybrid_memento"
+      ],
+      "tips": [
+        "Watch extraction zones \u2014 rogues frequently camp them waiting to steal your contaminated loot.",
+        "Use the DZ map (M) to track other players near you; yellow markers indicate rogues.",
+        "Going rogue for contaminated loot can be profitable if your team can win the resulting fight.",
+        "In occupied DZ, expect coordinated full-build groups \u2014 bring your best gear.",
+        "Keener's Watch exotic pistol drops exclusively in the Dark Zone.",
+        "Landmarks respawn on a timer \u2014 cycle multiple landmarks to maximize loot per DZ session.",
+        "If you hear a helicopter call, decide quickly whether to contest it or let it go."
+      ]
+    },
+    "conflict": {
+      "id": "conflict",
+      "name": "Conflict (PvP)",
+      "category": "pvp",
+      "difficulty": "Competitive PvP",
+      "players": "4v4 or 8v8 depending on mode",
+      "enemy_tier": "N/A \u2014 player-vs-player",
+      "key_mechanics": [
+        "Structured PvP with stat normalization \u2014 all players stats are equalized to reduce gear gap",
+        "Game modes: Skirmish (team deathmatch), Domination (point capture)",
+        "Normalization makes build optimization still matter but reduces extreme gaps",
+        "Respawn timers increase as match progresses",
+        "Conflict-exclusive cosmetics and caches as rewards"
+      ],
+      "recommended_roles": {
+        "team_4p": [
+          "fragger_dps",
+          "fragger_dps",
+          "objective_holder",
+          "support_or_healer"
+        ]
+      },
+      "build_priorities": [
+        "Burst damage in SMG or shotgun for close-range encounters",
+        "Movement speed and armor are more important than in PvE due to normalization",
+        "Cover usage and positioning outweigh raw stats in Conflict",
+        "Skill builds are situationally viable \u2014 turrets and drones can hold objectives",
+        "Revive Hive is useful for supporting teammates in objective modes"
+      ],
+      "recommended_builds": [
+        "dark_zone_pvp_smg",
+        "hunters_fury_smg_shotgun",
+        "dps_core_providence"
+      ],
+      "tips": [
+        "Normalization reduces the gear gap significantly \u2014 game sense and communication matter most.",
+        "In Domination, capturing points earns more points than kills \u2014 don't over-pursue kills.",
+        "Smokes and flashbangs (Chem Launcher) can deny points or force enemies off objectives.",
+        "Learn spawn locations to anticipate enemy approaches.",
+        "SMGs dominate interior Conflict maps; rifles and ARs perform better on open maps.",
+        "Conflict is a good environment for learning PvP without the ambush risk of the Dark Zone."
+      ]
+    },
+    "summit": {
+      "id": "summit",
+      "name": "The Summit",
+      "category": "pve_roguelike_lite",
+      "difficulty": "Progressive (floor-based, scales to Heroic/Legendary)",
+      "players": "1-4",
+      "enemy_tier": "Scales with floor level and selected difficulty modifier",
+      "key_mechanics": [
+        "100-floor skyscraper with increasing difficulty",
+        "Each floor is a combat encounter with randomized enemy composition",
+        "Floor modifiers alter enemy behavior or player conditions",
+        "Faction changes every 20-25 floors (True Sons, Black Tusk, Outcasts, Hyenas)",
+        "Boss floors appear at regular intervals with unique mechanics",
+        "Summit-exclusive loot drops increase in quality with floor level",
+        "Can start from any previously reached floor checkpoint"
+      ],
+      "recommended_roles": {
+        "solo": [
+          "dps_high_sustain"
+        ],
+        "group_4p": [
+          "dps",
+          "dps",
+          "dps_support",
+          "healer_or_skill"
+        ]
+      },
+      "build_priorities": [
+        "Sustained DPS over burst \u2014 encounters chain continuously between floors",
+        "Armor on kill is extremely high value \u2014 constant kills between floors",
+        "Skill builds with low-cooldown skills perform well due to short floor transitions",
+        "Healer or Revive Hive important on floors 80-100 at legendary difficulty",
+        "Memento backpack shines in Summit due to the constant kill pace",
+        "Adapt to faction modifiers \u2014 Black Tusk floors require more DtA (Damage to Armor)"
+      ],
+      "recommended_builds": [
+        "hybrid_memento",
+        "striker_sustained_dps",
+        "heartbreaker_ar",
+        "dps_core_providence",
+        "skill_turret_drone",
+        "eclipse_protocol_cc"
+      ],
+      "tips": [
+        "Floors 1-40 can be completed casually; floors 80-100 are equivalent to legendary difficulty.",
+        "Prioritize clearing floor 100 on each faction rotation for the best loot table.",
+        "Armor on kill sustains you between medkits on high floors without a healer.",
+        "Black Tusk (floors ~60-80) use drone operators \u2014 take them out immediately to avoid drone harassment.",
+        "Outcast floors with Pestilence-type enemies can apply poison \u2014 stack some hazard protection.",
+        "Eclipse Protocol CC builds excel on floors with packed Outcast or Hyena enemy groups.",
+        "If playing solo, focus on floors where your faction counter-build is strongest.",
+        "The floor modifier UI shows the current modifier before entering \u2014 adjust positioning strategy accordingly."
+      ]
+    },
+    "incursion_clear_sky": {
+      "id": "incursion_clear_sky",
+      "name": "Clear Sky (Incursion)",
+      "category": "incursion",
+      "difficulty": "Hard",
+      "players": "1-4",
+      "enemy_tier": "Elite tier with specialized mechanics",
+      "key_mechanics": [
+        "Legacy incursion from Division 1 era; available in Division 2 as replayable content",
+        "AA gun defense mechanic \u2014 players must protect AA emplacements from waves of enemies",
+        "Final boss phase with large health pool",
+        "Rewards unique incursion caches"
+      ],
+      "recommended_roles": {
+        "group_4p": [
+          "dps",
+          "dps",
+          "dps_support",
+          "healer"
+        ]
+      },
+      "build_priorities": [
+        "Sustained DPS for wave defense phases",
+        "Crowd control for managing multiple enemy waves",
+        "Healer recommended for final boss phase",
+        "Skill builds with turrets can cover multiple AA gun positions simultaneously"
+      ],
+      "recommended_builds": [
+        "dps_core_providence",
+        "eclipse_protocol_cc",
+        "skill_turret_drone"
+      ],
+      "tips": [
+        "Assign each player a specific AA gun to defend during wave phases.",
+        "Skill builds with assault turrets can autonomously defend a position during AA waves.",
+        "In the final boss phase, avoid being caught in the open \u2014 maintain cover discipline.",
+        "Eclipse Protocol CC builds can manage multiple enemy clusters near AA emplacements effectively."
+      ]
+    },
+    "incursion_dragons_nest": {
+      "id": "incursion_dragons_nest",
+      "name": "Dragon's Nest (Incursion)",
+      "category": "incursion",
+      "difficulty": "Hard",
+      "players": "1-4",
+      "enemy_tier": "Elite Black Tusk enemies with armored unit focus",
+      "key_mechanics": [
+        "Black Tusk-themed incursion in Division 2",
+        "Heavy armored enemy presence \u2014 Damage to Armor highly effective",
+        "Multi-phase encounter with objective-based progression",
+        "Aerial drone threats in later phases",
+        "Unique incursion rewards including named items"
+      ],
+      "recommended_roles": {
+        "group_4p": [
+          "dps",
+          "dps",
+          "skill_dps",
+          "healer_or_support"
+        ]
+      },
+      "build_priorities": [
+        "Damage to Armor minor attribute highly recommended \u2014 Black Tusk uses heavy armor extensively",
+        "Anti-drone capability \u2014 skill builds with Firefly or Seeker Mines effective against drones",
+        "Sustained DPS for armor-plated enemies",
+        "Healer helps in later phases where drone swarms increase pressure"
+      ],
+      "recommended_builds": [
+        "dps_core_providence",
+        "heartbreaker_ar",
+        "skill_turret_drone",
+        "ongoing_directive_lmg"
+      ],
+      "tips": [
+        "Stack Damage to Armor on minor attribute slots \u2014 Black Tusk armor plates absorb large amounts of damage.",
+        "Firefly skill set to Blinder variant can neutralize drone threats before they overwhelm the team.",
+        "Use cover aggressively \u2014 Black Tusk enemies flank more intelligently than other factions.",
+        "In the final phase, prioritize armor-plate enemies over standard enemies to clear the pressure quickly.",
+        "Assault Turret at Tier 6 can sustain significant damage against armored Black Tusk units autonomously."
+      ]
+    }
+  }
+}

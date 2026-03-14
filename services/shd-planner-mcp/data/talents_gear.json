@@ -1,0 +1,867 @@
+{
+  "_metadata": {
+    "game_version": "TU21.1",
+    "last_updated": "2026-03-01",
+    "source": "manual"
+  },
+  "obliterate": {
+    "id": "obliterate",
+    "name": "Obliterate",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Critical hits increase total weapon damage by 1% for 5 seconds. Stacks up to 25 times.",
+    "perfect_version": {
+      "name": "Perfect Obliterate",
+      "description": "Critical hits increase total weapon damage by 1% for 10 seconds. Stacks up to 25 times.",
+      "found_on": "Equalizer (named chest)"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Striker's Battlegear (stacks naturally during sustained fire)",
+      "Coyote's Mask (feeds off crit synergy)",
+      "Eagle Bearer builds",
+      "Any high crit chance build (AR, LMG, SMG)",
+      "Vigilance backpack pairing"
+    ],
+    "meta_rating": "S",
+    "notes": "The premier offensive chest talent for sustained DPS. Pairs with Vigilance backpack for a classic high-damage combo. Perfect Obliterate on Equalizer extends stack duration to 10s, making it easier to maintain near-max stacks."
+  },
+  "glass_cannon": {
+    "id": "glass_cannon",
+    "name": "Glass Cannon",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "All damage you deal is amplified by 25%. All damage you take is amplified by 50%.",
+    "perfect_version": {
+      "name": "Perfect Glass Cannon",
+      "description": "All damage you deal is amplified by 30%. All damage you take is amplified by 60%.",
+      "found_on": "The Sacrifice (Providence Defense chest)"
+    },
+    "pvp_modifier": "Incoming damage amplification is reduced in PvP; damage output amplification remains.",
+    "synergies": [
+      "Unbreakable backpack (armor recovery offsets the risk)",
+      "High-armor builds with bonus armor",
+      "Striker's Battlegear",
+      "Max-offense DPS builds",
+      "Headhunter combos"
+    ],
+    "meta_rating": "A",
+    "notes": "Glass Cannon is the highest raw damage amplifier on a chest but requires careful play to avoid being one-shotted. Best paired with shields, Unbreakable, or very high max armor to survive the incoming damage penalty."
+  },
+  "intimidate": {
+    "id": "intimidate",
+    "name": "Intimidate",
+    "slot": "chest",
+    "requirement": "Requires bonus armor to be active",
+    "description": "While you have bonus armor, amplifies total weapon damage by 35% to enemies within 10 meters.",
+    "perfect_version": {
+      "name": "Perfect Intimidate",
+      "description": "While you have bonus armor, amplifies total weapon damage by 40% to enemies within 10 meters.",
+      "found_on": "Various named chests"
+    },
+    "pvp_modifier": "Range and effectiveness may be reduced in Dark Zone/Conflict.",
+    "synergies": [
+      "Adrenaline Rush backpack (generates bonus armor near enemies)",
+      "Bloodsucker backpack (keeps bonus armor stacks up)",
+      "Hunter's Fury gear set",
+      "SMG or shotgun CQC builds",
+      "Striker's Battlegear with bonus armor maintenance"
+    ],
+    "meta_rating": "A",
+    "notes": "Extremely strong for aggressive close-range play. Must maintain bonus armor for the buff to be active \u2014 pair with Adrenaline Rush or Bloodsucker. The 10-meter range restriction limits it to CQC builds."
+  },
+  "spotter": {
+    "id": "spotter",
+    "name": "Spotter",
+    "slot": "chest",
+    "requirement": "Enemy must be pulsed",
+    "description": "Amplifies total weapon and skill damage by 15% to pulsed enemies.",
+    "perfect_version": {
+      "name": "Perfect Spotter",
+      "description": "Amplifies total weapon and skill damage by 20% to pulsed enemies.",
+      "found_on": "Closer (named chest)"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Flatline weapon talent (self-pulses on kills)",
+      "Heartbreaker gear set",
+      "Drone Pulse or Remote Pulse skill",
+      "Skill builds with pulse uptime",
+      "Tech Support backpack"
+    ],
+    "meta_rating": "A",
+    "notes": "Excellent when paired with Flatline weapon talent since Flatline self-applies pulse after 2-3 kills. Works well in group play where a teammate maintains pulse uptime. Both weapon and skill damage benefit."
+  },
+  "unbreakable": {
+    "id": "unbreakable",
+    "name": "Unbreakable",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "When your armor is depleted, repair 95% of your armor. Cooldown: 60 seconds.",
+    "perfect_version": {
+      "name": "Perfect Unbreakable",
+      "description": "When your armor is depleted, repair 100% of your armor. Cooldown: 55 seconds.",
+      "found_on": "Zero F's (named chest)"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Glass Cannon chest (offsetting the risk)",
+      "Clutch backpack (low-armor synergy)",
+      "Strained weapon talent (benefits from low armor)",
+      "Armor-on-kill builds",
+      "Solo Legendary content"
+    ],
+    "meta_rating": "A",
+    "notes": "A lifesaver in high-difficulty content. The 60-second cooldown is long but the 95% repair is enormous. Often paired with Clutch backpack or Strained weapon talent to intentionally leverage low-armor states. Near-mandatory for some solo builds."
+  },
+  "overwatch": {
+    "id": "overwatch",
+    "name": "Overwatch",
+    "slot": "chest",
+    "requirement": "Must remain in cover for 10 seconds",
+    "description": "After staying in cover for 10 seconds, you and your allies within 30 meters gain 12% bonus weapon and skill damage as long as you remain in cover or perform cover-to-cover movements.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Composure backpack (stacks with cover bonuses)",
+      "Calculated backpack (covers cooldown reduction)",
+      "Rifle or marksman rifle builds",
+      "Support/team play",
+      "Directive or hard content group builds"
+    ],
+    "meta_rating": "B",
+    "notes": "Niche but strong for group play in content where you can hold cover. The 10-second ramp-up is punishing in mobile fights. Works better on designated marksman roles. Less useful in solo or aggressive builds."
+  },
+  "kinetic_momentum": {
+    "id": "kinetic_momentum",
+    "name": "Kinetic Momentum",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "While in combat, each skill active or not on cooldown generates stacks. Each stack increases skill damage by 1% and skill repair by 2% up to 15 stacks per skill. Stacks are lost when the skill goes on cooldown.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill builds with multiple active skills",
+      "Technician specialization",
+      "Capacitor exotic AR",
+      "Artificer Hive",
+      "Tech Support backpack"
+    ],
+    "meta_rating": "B",
+    "notes": "Best on pure skill builds that keep skills off cooldown. Up to 15% skill damage and 30% skill repair per skill is substantial. Loses stacks whenever skills recharge, so not ideal for builds with low-cooldown rapid-use skills."
+  },
+  "headhunter": {
+    "id": "headhunter",
+    "name": "Headhunter",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "After killing an enemy with a headshot, your next weapon hit within 45 seconds deals an additional 125% of that killing blow's damage, capped at 800% weapon damage. This cap is raised to 1250% if your headshot damage is greater than 150%.",
+    "perfect_version": {
+      "name": "Perfect Headhunter",
+      "description": "After killing an enemy with a headshot, your next weapon hit within 45 seconds deals an additional 125% of that killing blow's damage, capped at 1250% weapon damage (always, regardless of headshot damage stat).",
+      "found_on": "Chainkiller (named chest)"
+    },
+    "pvp_modifier": "Cap significantly reduced in PvP to prevent one-shot kills.",
+    "synergies": [
+      "Marksman rifles with First Blood talent",
+      "Shotgun builds (to dump Headhunter proc)",
+      "High headshot damage builds",
+      "Crit-heavy rifle builds",
+      "Breadbasket weapon talent"
+    ],
+    "meta_rating": "A",
+    "notes": "Headhunter enables massive burst damage. The classic combo is getting a headshot kill then swapping to a shotgun to dump the buffed shot. Requires consistent headshot kills to maintain uptime. Perfect Headhunter removes the headshot damage threshold requirement for the higher cap."
+  },
+  "vanguard": {
+    "id": "vanguard",
+    "name": "Vanguard",
+    "slot": "chest",
+    "requirement": "Must have a shield equipped",
+    "description": "Deploying your shield grants 45% bonus armor to you and all allies within 20 meters for 20 seconds. Cooldown: 25 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Support/tank builds",
+      "Group play",
+      "Protector backpack",
+      "Any shield variant (Ballistic, Crusader, Deflector)"
+    ],
+    "meta_rating": "B",
+    "notes": "Strong team support talent. 45% bonus armor to all nearby allies on shield deployment is very potent in group content. Less valuable in solo play or non-shield builds."
+  },
+  "braced": {
+    "id": "braced",
+    "name": "Braced",
+    "slot": "chest",
+    "requirement": "Must be in cover",
+    "description": "While in cover, weapon handling is increased by 45%.",
+    "perfect_version": {
+      "name": "Perfect Braced",
+      "description": "While in cover, weapon handling is increased by 50%.",
+      "found_on": "Certain named chests"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Composure backpack",
+      "Cover-based builds",
+      "LMG or AR builds that fire from cover"
+    ],
+    "meta_rating": "C",
+    "notes": "A decent quality-of-life talent for cover-heavy playstyles. Weapon handling affects bloom and stability, so it can improve sustained accuracy at range. Outclassed by damage-focused talents in most builds."
+  },
+  "efficient": {
+    "id": "efficient",
+    "name": "Efficient",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Using an armor kit has a 50% chance to not consume the armor kit. Specialization armor kit bonuses are increased by 100%.",
+    "perfect_version": {
+      "name": "Perfect Efficient",
+      "description": "Using an armor kit has a 75% chance to not consume the armor kit. Specialization armor kit bonuses are increased by 100%.",
+      "found_on": "Various named chests"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Survivalist specialization (field strip bonuses)",
+      "Solo legendary runs",
+      "Builds focused on armor kit charges"
+    ],
+    "meta_rating": "C",
+    "notes": "Niche survivability talent. The 50% non-consume chance is nice for long solo sessions but does not compete with offensive chest talents in most build scenarios. Good for beginners."
+  },
+  "empathic_resolve": {
+    "id": "empathic_resolve",
+    "name": "Empathic Resolve",
+    "slot": "chest",
+    "requirement": "Must repair an ally",
+    "description": "Repairing an ally grants them a damage bonus. The bonus scales from 3% at skill tier 0 to 15% at skill tier 6.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Support healer builds",
+      "Group play with Restorer Hive or Healing Seeker Mine",
+      "Tech Support backpack"
+    ],
+    "meta_rating": "C",
+    "notes": "Pure group support talent. Rewards active healing of allies with a damage buff to them. Scales well with skill tier but is niche outside of dedicated support roles."
+  },
+  "entrench": {
+    "id": "entrench",
+    "name": "Entrench",
+    "slot": "chest",
+    "requirement": "Must be in cover with low armor",
+    "description": "Headshots from cover repair 20% of your armor. Cooldown: 20 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Marksman rifle or rifle builds",
+      "Cover-based playstyles",
+      "Builds with consistent headshot capability"
+    ],
+    "meta_rating": "C",
+    "notes": "Passive armor recovery for headshot-focused builds in cover. The 20-second cooldown limits uptime. Outcompeted by more impactful chest talents in most scenarios."
+  },
+  "explosive_delivery": {
+    "id": "explosive_delivery",
+    "name": "Explosive Delivery",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "When you deploy a skill it lands with a bang, dealing explosive damage in an area. Damage scales with skill tier from 25% to 100% of the skill's damage.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill damage builds",
+      "Seeker Mine builds",
+      "Exotic Artificer Hive or Stinger Hive"
+    ],
+    "meta_rating": "C",
+    "notes": "Interesting utility for skill builds that deploy frequently. The explosion can interrupt enemy animations and deal meaningful bonus damage at higher skill tiers."
+  },
+  "focus": {
+    "id": "focus",
+    "name": "Focus",
+    "slot": "chest",
+    "requirement": "Requires 8x scope or higher",
+    "description": "While aiming, gain +5% weapon damage every second, up to a maximum of +50%. Buff is lost when you stop aiming.",
+    "perfect_version": {
+      "name": "Perfect Focus",
+      "description": "While aiming, gain +6% weapon damage every second, up to a maximum of +60%.",
+      "found_on": "Various named chests"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Marksman rifle builds",
+      "Rifle builds with high-magnification scopes",
+      "First Blood weapon talent",
+      "Naked weapon talent",
+      "Long-range sniper builds"
+    ],
+    "meta_rating": "B",
+    "notes": "Very strong for dedicated marksman/sniper builds that ads-camp in longer engagements. Requires 8x scope or higher, restricting use cases. The stacking buff becomes powerful after a few seconds of sustained aiming."
+  },
+  "gunslinger": {
+    "id": "gunslinger",
+    "name": "Gunslinger",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Swapping weapons grants +20% weapon damage for 5 seconds. The buff is removed if you swap again.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Weapon-swap builds",
+      "Finisher pistol talent",
+      "Versatile backpack",
+      "Headhunter (dump the proc on a second weapon)"
+    ],
+    "meta_rating": "B",
+    "notes": "Enables weapon-swap damage windows. Common in builds that alternate between a damage dealer and a finisher. Works well with Headhunter \u2014 shoot a headshot kill, swap for +20% on the Headhunter proc."
+  },
+  "mad_bomber": {
+    "id": "mad_bomber",
+    "name": "Mad Bomber",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Grenades have +2m radius and can be cooked. Lethal grenades refund the grenade on a kill.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Survivalist specialization",
+      "Any build that uses grenades frequently",
+      "Directive modifiers that restrict skill use"
+    ],
+    "meta_rating": "C",
+    "notes": "Niche talent for grenade-focused play. The refund mechanic is nice but grenades are not a primary damage source in most builds."
+  },
+  "reassigned": {
+    "id": "reassigned",
+    "name": "Reassigned",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Killing an enemy adds special ammo to your sidearm: armor-piercing, incendiary, or hollow point. Cooldown: 15 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Pistol builds",
+      "Finisher pistol talent",
+      "Headhunter combos using pistol as dump weapon"
+    ],
+    "meta_rating": "C",
+    "notes": "Adds a fun layer to pistol play. Not a meta talent but useful for builds that use sidearms as a secondary damage source."
+  },
+  "skilled": {
+    "id": "skilled",
+    "name": "Skilled",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Skill kills have a 25% chance to reset skill cooldowns. If the skill is already active, this refreshes its duration instead.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill builds that deal direct damage",
+      "Seeker Mine builds",
+      "Turret or Drone skill builds",
+      "Tech Support backpack"
+    ],
+    "meta_rating": "B",
+    "notes": "Strong for skill-damage builds. A 25% reset chance generates a lot of extra uptime in dense enemy encounters. Works best with skills that kill frequently such as the Explosive Seeker Mine."
+  },
+  "spark": {
+    "id": "spark",
+    "name": "Spark",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Dealing skill damage to an enemy increases total weapon damage by 15% for 15 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Hybrid weapon-skill builds",
+      "In Sync weapon talent",
+      "Technician specialization",
+      "Capacitor exotic AR"
+    ],
+    "meta_rating": "B",
+    "notes": "Good for hybrid builds that mix skill and weapon damage. Easy to proc with damage-dealing skills like turrets, drones, or mines. A more accessible version of the In Sync weapon talent mechanic."
+  },
+  "tag_team": {
+    "id": "tag_team",
+    "name": "Tag Team",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Hitting an enemy with a skill marks them for 5 seconds. Shooting a marked enemy with a weapon reduces the skill's remaining cooldown by 6 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill builds needing cooldown reduction",
+      "Booster Hive builds",
+      "Chem Launcher",
+      "Hybrid builds"
+    ],
+    "meta_rating": "C",
+    "notes": "Niche cooldown management tool. Works best when you apply skill effects that tag many targets so you can chain weapon shots for rapid cooldown recovery."
+  },
+  "tamper_proof": {
+    "id": "tamper_proof",
+    "name": "Tamper Proof",
+    "slot": "chest",
+    "requirement": "Must have a deployed skill",
+    "description": "Enemies who approach within 4 meters of your deployed skills are shocked for 2 seconds. Cooldown: 10 seconds per skill.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill builds that deploy static skills",
+      "Hive, Turret, or Trophy System",
+      "Status effect builds with Wicked or Shock & Awe"
+    ],
+    "meta_rating": "C",
+    "notes": "Defensive utility talent for skill builds. The shock can interrupt rushers but 10-second cooldown limits reliability. Interesting synergy with Shock & Awe backpack."
+  },
+  "trauma": {
+    "id": "trauma",
+    "name": "Trauma",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Headshots apply blind to the target for 3 seconds (cooldown: 30 seconds). Chest shots apply bleed to the target for 10 seconds (cooldown: 30 seconds).",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Status effect builds",
+      "Wicked backpack",
+      "Creeping Death backpack",
+      "Eyeless or Sadist weapon talents"
+    ],
+    "meta_rating": "C",
+    "notes": "Dual status effect applicator. Good for status builds that need consistent bleed or blind application without relying entirely on weapon talents. The 30-second cooldowns limit high uptime."
+  },
+  "protected_reload": {
+    "id": "protected_reload",
+    "name": "Protected Reload",
+    "slot": "chest",
+    "requirement": "none",
+    "description": "Reloading grants 20% bonus armor for 5 seconds. Allies within 10 meters also receive 0-18% bonus armor based on your defensive core attributes.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Group play support builds",
+      "Blue-core defensive builds",
+      "Juggler/reload-heavy builds",
+      "Protector backpack"
+    ],
+    "meta_rating": "C",
+    "notes": "Team support talent that rewards frequent reloading. The ally armor scales with your own defensive cores, making it most effective on blue-focused support characters."
+  },
+  "vigilance": {
+    "id": "vigilance",
+    "name": "Vigilance",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "Increases total weapon damage by 25%. Taking damage removes this buff for 4 seconds.",
+    "perfect_version": {
+      "name": "Perfect Vigilance",
+      "description": "Increases total weapon damage by 25%. Taking damage removes this buff for 3 seconds.",
+      "found_on": "The Gift (named backpack by Providence Defense)"
+    },
+    "pvp_modifier": "Damage bonus reduced to approximately 12% in PvP.",
+    "synergies": [
+      "Obliterate chest (classic pairing)",
+      "Glass Cannon chest (maximizing damage output)",
+      "Builds that can avoid taking damage",
+      "Cover-heavy marksman playstyle",
+      "Coyote's Mask exotic"
+    ],
+    "meta_rating": "S",
+    "notes": "The most universally used backpack talent in the game. A flat 25% weapon damage boost is enormous. Perfect Vigilance reduces the downtime from 4s to 3s after being hit. Pairs with Obliterate for the definitive DPS chest/backpack combo."
+  },
+  "adrenaline_rush": {
+    "id": "adrenaline_rush",
+    "name": "Adrenaline Rush",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "When within 10 meters of an enemy, gain stacking bonus armor. Each stack grants 20% bonus armor, up to 3 stacks. Stacks are applied every 2 seconds while the condition is met.",
+    "perfect_version": {
+      "name": "Perfect Adrenaline Rush",
+      "description": "When within 10 meters of an enemy, gain stacking bonus armor. Each stack grants 23% bonus armor, up to 3 stacks.",
+      "found_on": "Various named backpacks"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Intimidate chest (requires bonus armor to activate)",
+      "SMG or shotgun CQC builds",
+      "Hunter's Fury gear set",
+      "Bloodsucker chest pairing",
+      "Strained weapon talent builds"
+    ],
+    "meta_rating": "A",
+    "notes": "Essential backpack for aggressive CQC builds. The bonus armor enables Intimidate chest and provides passive survivability. Up to 69% total bonus armor at 3 stacks is very tanky. Works seamlessly with Hunter's Fury set."
+  },
+  "wicked": {
+    "id": "wicked",
+    "name": "Wicked",
+    "slot": "backpack",
+    "requirement": "Must apply a status effect",
+    "description": "Applying a status effect increases total weapon damage by 18% for 20 seconds.",
+    "perfect_version": {
+      "name": "Perfect Wicked",
+      "description": "Applying a status effect increases total weapon damage by 18% for 23 seconds.",
+      "found_on": "Anarchist's Cookbook (named backpack)"
+    },
+    "pvp_modifier": "Damage bonus reduced in PvP.",
+    "synergies": [
+      "Status effect builds (bleed, burn, shock, blind)",
+      "Trauma chest",
+      "Sadist or Eyeless weapon talents",
+      "Creeping Death pairing",
+      "Shock & Awe pairing",
+      "Eclipse Protocol gear set"
+    ],
+    "meta_rating": "A",
+    "notes": "Powerful offensive backpack for any build that consistently applies status effects. Easy to maintain uptime with status-effect weapon talents like Sadist (bleed), Ignited (burn), or Eyeless (blind). Perfect Wicked's 23-second duration improves uptime."
+  },
+  "opportunistic": {
+    "id": "opportunistic",
+    "name": "Opportunistic",
+    "slot": "backpack",
+    "requirement": "Must have marksman rifle or shotgun drawn",
+    "description": "Enemies hit with a shotgun or marksman rifle amplify damage from all sources to that enemy by 10% for 5 seconds.",
+    "perfect_version": {
+      "name": "Perfect Opportunistic",
+      "description": "Enemies hit with a shotgun or marksman rifle amplify damage from all sources by 15% for 5 seconds.",
+      "found_on": "Various named backpacks"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Shotgun builds",
+      "Marksman rifle builds",
+      "Headhunter chest (combined burst)",
+      "Group play (team benefits from the debuff)",
+      "Explosive Seeker Mine for burst windows"
+    ],
+    "meta_rating": "A",
+    "notes": "Very strong in group content as all damage sources benefit from the debuff applied to enemies. Solo it is excellent on shotgun/marksman builds. The debuff from all sources includes skills and teammates."
+  },
+  "combined_arms": {
+    "id": "combined_arms",
+    "name": "Combined Arms",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "Shooting an enemy increases total skill damage and healing by 25% for 3 seconds.",
+    "perfect_version": {
+      "name": "Perfect Combined Arms",
+      "description": "Shooting an enemy increases total skill damage and healing by 30% for 3 seconds.",
+      "found_on": "Various named backpacks"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Hybrid weapon-skill builds",
+      "In Sync weapon talent",
+      "Spark chest talent",
+      "Capacitor exotic AR",
+      "Technician specialization"
+    ],
+    "meta_rating": "A",
+    "notes": "Core backpack for hybrid builds. The 3-second window is short but easy to maintain with any weapon that fires continuously. Pairs with Spark chest for mutual weapon/skill damage buffing."
+  },
+  "tech_support": {
+    "id": "tech_support",
+    "name": "Tech Support",
+    "slot": "backpack",
+    "requirement": "Must get a skill kill",
+    "description": "Skill kills increase total skill damage by 25% for 20 seconds.",
+    "perfect_version": {
+      "name": "Perfect Tech Support",
+      "description": "Skill kills increase total skill damage by 25% for 27 seconds.",
+      "found_on": "Various named backpacks"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill damage builds",
+      "Kinetic Momentum chest",
+      "Skilled chest",
+      "Seeker Mine or Turret builds",
+      "Technician specialization"
+    ],
+    "meta_rating": "A",
+    "notes": "The go-to backpack for pure skill damage builds. Skill kills are plentiful with explosive mines or drones. The 20-27 second duration means even a single skill kill per cycle keeps the buff running."
+  },
+  "composure": {
+    "id": "composure",
+    "name": "Composure",
+    "slot": "backpack",
+    "requirement": "Must be in cover",
+    "description": "While in cover, increases total weapon damage by 15%.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Overwatch chest",
+      "Cover-based DPS builds",
+      "Rifle or marksman rifle builds",
+      "Lucky Shot weapon talent"
+    ],
+    "meta_rating": "B",
+    "notes": "Simple cover-based damage bonus. Not as impactful as Vigilance but has no deactivation mechanic. Best in builds where you consistently fight from cover."
+  },
+  "companion": {
+    "id": "companion",
+    "name": "Companion",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "When within 10 meters of an ally or a deployed skill, gain +15% weapon damage.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Group play",
+      "Skill builds with static deployables",
+      "Support builds",
+      "Turret or Hive nearby"
+    ],
+    "meta_rating": "B",
+    "notes": "Easy to trigger with static skills like turrets or hives deployed near you. In group content, proximity to allies keeps it active. Less reliable in solo without skill deployment."
+  },
+  "bloodsucker": {
+    "id": "bloodsucker",
+    "name": "Bloodsucker",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "Killing an enemy adds and refreshes a stack of +10% bonus armor for 10 seconds. Maximum 10 stacks.",
+    "perfect_version": {
+      "name": "Perfect Bloodsucker",
+      "description": "Killing an enemy adds and refreshes a stack of +12% bonus armor for 10 seconds. Maximum 10 stacks.",
+      "found_on": "Liquid Engineer (named backpack)"
+    },
+    "pvp_modifier": null,
+    "synergies": [
+      "Intimidate chest (bonus armor activates the talent)",
+      "Adrenaline Rush chest pairing",
+      "Kill-heavy builds",
+      "Strained weapon talent builds",
+      "Striker's Battlegear"
+    ],
+    "meta_rating": "A",
+    "notes": "Provides a huge armor buffer in packs of enemies. Up to 100% (or 120% Perfect) bonus armor with 10 stacks. Enables Intimidate chest in kill-rich scenarios. Excellent for open-world and Countdown."
+  },
+  "clutch": {
+    "id": "clutch",
+    "name": "Clutch",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "While your armor is below 15%, critical hits repair 2% of your max armor. Kills while below 15% armor fully repair your armor over 4-10 seconds based on offensive cores.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Unbreakable chest (survive the depletion, then Clutch keeps you going)",
+      "Strained weapon talent (benefits from low armor)",
+      "High crit chance builds",
+      "Glass Cannon high-risk builds"
+    ],
+    "meta_rating": "B",
+    "notes": "Great safety net for aggressive builds that run low on armor. Clutch and Unbreakable together give two layers of low-armor recovery. The kill repair scales with red cores, favoring offensive builds."
+  },
+  "calculated": {
+    "id": "calculated",
+    "name": "Calculated",
+    "slot": "backpack",
+    "requirement": "Must be in cover",
+    "description": "Killing an enemy from cover reduces the cooldown of your skills by 10-15% based on skill tier.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill builds needing cooldown reduction",
+      "Cover-play skill hybrids",
+      "Tag Team chest",
+      "Skilled chest"
+    ],
+    "meta_rating": "C",
+    "notes": "Good for skill-reliant builds that fight from cover. Cover is a restriction but covers most content. 10-15% CDR per kill stacks up quickly in dense encounters."
+  },
+  "creeping_death": {
+    "id": "creeping_death",
+    "name": "Creeping Death",
+    "slot": "backpack",
+    "requirement": "Must apply a status effect",
+    "description": "Applying a status effect to an enemy spreads it to all enemies within 5 meters. Cooldown: 15 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Eclipse Protocol gear set",
+      "Trauma chest",
+      "Status effect weapon talents (Sadist, Eyeless, Ignited)",
+      "Shock & Awe"
+    ],
+    "meta_rating": "B",
+    "notes": "Essential for status effect build AOE. Spreading burn, bleed, or shock to groups dramatically increases status effect uptime and DPS. Best in Eclipse Protocol builds."
+  },
+  "energize": {
+    "id": "energize",
+    "name": "Energize",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "Using an armor kit increases your skill tier by 1 for 20 seconds, or triggers Skill Overcharge if already at tier 6. Cooldown: 60 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill builds near tier 6",
+      "Overcharge-capable builds",
+      "Technician specialization",
+      "Efficient chest pairing"
+    ],
+    "meta_rating": "C",
+    "notes": "Interesting skill tier manipulation. The Overcharge proc at tier 6 is powerful but requires careful timing. The 60-second cooldown means it's a once-per-fight tool in most engagements."
+  },
+  "leadership": {
+    "id": "leadership",
+    "name": "Leadership",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "Performing a cover-to-cover movement grants 15% of your armor as bonus armor to you and all allies within 30 meters. The bonus is tripled if you end within 10 meters of an enemy.",
+    "perfect_version": {
+      "name": "Perfect Leadership",
+      "description": "Performing cover-to-cover grants 20% of your armor as bonus armor to you and all allies within 30 meters. The bonus is tripled if you end within 10 meters of an enemy.",
+      "found_on": "Cap'n (named backpack)"
+    },
+    "pvp_modifier": "Armor transfer reduced in PvP.",
+    "synergies": [
+      "Group play",
+      "Tank or support builds with high max armor",
+      "Vanguard chest",
+      "Cover-heavy playstyle"
+    ],
+    "meta_rating": "B",
+    "notes": "Strong team support tool in group play. Higher max armor means bigger bonus armor grants to allies. Tripling the bonus near enemies rewards aggressive cover movement."
+  },
+  "overclock": {
+    "id": "overclock",
+    "name": "Overclock",
+    "slot": "backpack",
+    "requirement": "Must have a deployed skill",
+    "description": "Deploying a skill increases reload speed by 15% and reduces skill cooldowns by 15% for all allies within 10 meters for 15 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Group play",
+      "Support builds",
+      "Vanguard or Overwatch chest",
+      "Hive or Turret support deployments"
+    ],
+    "meta_rating": "C",
+    "notes": "Team CDR and reload speed buff on skill deploy. Useful in organized group content where multiple players benefit from coordinated skill use."
+  },
+  "protector": {
+    "id": "protector",
+    "name": "Protector",
+    "slot": "backpack",
+    "requirement": "Must have a shield equipped",
+    "description": "When your shield takes damage, grant 15% of your shield's max armor as bonus armor to all allies within 10 meters. Cooldown: 3 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Shield builds",
+      "Vanguard chest",
+      "Group tank support",
+      "Crusader or Ballistic Shield"
+    ],
+    "meta_rating": "C",
+    "notes": "Passive group armor distribution while tanking hits on a shield. Works with Vanguard chest for layered group armor support."
+  },
+  "safeguard": {
+    "id": "safeguard",
+    "name": "Safeguard",
+    "slot": "backpack",
+    "requirement": "Must be at full armor",
+    "description": "While at full armor, skill repair and healing to you is doubled.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill healer builds",
+      "Restorer Hive",
+      "Chem Launcher healer",
+      "Empathic Resolve chest"
+    ],
+    "meta_rating": "C",
+    "notes": "Niche healer talent. Doubles incoming skill repairs at full armor, which is situational since healing is most needed when damaged. Best in coordinated group play where armor is maintained."
+  },
+  "shock_and_awe": {
+    "id": "shock_and_awe",
+    "name": "Shock and Awe",
+    "slot": "backpack",
+    "requirement": "Must apply a status effect",
+    "description": "Applying a status effect to an enemy increases total skill damage and repair by 20% for 20 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Skill-damage hybrid builds",
+      "Tamper Proof chest",
+      "Status effect weapon talents",
+      "Eclipse Protocol gear set",
+      "Tech Support pairing"
+    ],
+    "meta_rating": "B",
+    "notes": "Good for skill builds that can apply status effects passively. Unlike Wicked, this buffs skill damage rather than weapon damage \u2014 ideal for pure skill or hybrid setups."
+  },
+  "unstoppable_force": {
+    "id": "unstoppable_force",
+    "name": "Unstoppable Force",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "Kills grant +5% total weapon damage for 15 seconds. Stacks up to 5 times.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Kill-heavy builds",
+      "AR or SMG builds with high kill rate",
+      "Striker's Battlegear",
+      "Wicked backpack for dual stacking"
+    ],
+    "meta_rating": "B",
+    "notes": "Ramps up to 25% weapon damage bonus with 5 stacks of kills. In dense content the stacks build quickly. Less efficient in boss-only fights. Competing backpack option against Vigilance."
+  },
+  "versatile": {
+    "id": "versatile",
+    "name": "Versatile",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "Swapping weapons grants +35% weapon damage at close range to the weapon you swap to, scaling down to +10% at maximum range. Duration: 5 seconds.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Weapon-swap builds",
+      "Gunslinger chest",
+      "Finisher pistol talent",
+      "Close & Personal builds"
+    ],
+    "meta_rating": "B",
+    "notes": "Good for weapon-swap builds that exploit Gunslinger and Headhunter. The range scaling rewards keeping swapped weapons in optimal engagement range."
+  },
+  "concussion": {
+    "id": "concussion",
+    "name": "Concussion",
+    "slot": "backpack",
+    "requirement": "none",
+    "description": "Headshots grant +15% weapon damage for 10 seconds. Marksman rifle or rifle kills reset the duration.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Marksman rifle builds",
+      "Rifle builds",
+      "Focus chest",
+      "First Blood weapon talent"
+    ],
+    "meta_rating": "B",
+    "notes": "Consistent weapon damage buff for headshot-focused builds. The kill duration reset makes it very easy to maintain with marksman rifles."
+  },
+  "galvanize": {
+    "id": "galvanize",
+    "name": "Galvanize",
+    "slot": "backpack",
+    "requirement": "Must apply a CC status effect",
+    "description": "Applying blind, ensnare, or confused to an enemy grants 40% bonus armor to you and allies within 10 meters.",
+    "perfect_version": null,
+    "pvp_modifier": null,
+    "synergies": [
+      "Status effect builds",
+      "Trauma chest (blind application)",
+      "Sniper or Chem Launcher with snare",
+      "PvP builds using CC"
+    ],
+    "meta_rating": "C",
+    "notes": "Niche but powerful when CC is reliably applied. 40% bonus armor for the team on CC application is very strong in PvP. Less consistent in PvE where CC is not always available."
+  }
+}

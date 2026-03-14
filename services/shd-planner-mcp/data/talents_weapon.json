@@ -1,0 +1,930 @@
+{
+  "_metadata": {
+    "game_version": "TU21.1",
+    "last_updated": "2026-03-01",
+    "source": "manual"
+  },
+  "ranger": {
+    "id": "ranger",
+    "name": "Ranger",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Every 5 meters you are from the target grants +2% weapon damage. Maximum +40% at 100 meters.",
+    "perfect_version": {
+      "name": "Perfect Ranger",
+      "description": "Every 4 meters you are from the target grants +2% weapon damage.",
+      "found_on": "Certain named weapons"
+    },
+    "meta_notes": "S-tier for long-range builds. Requires no attribute investment to proc \u2014 just engage at range. Scales naturally on marksman rifles and rifles. The 40% maximum is achievable at 100m. Less useful in CQC scenarios."
+  },
+  "close_and_personal": {
+    "id": "close_and_personal",
+    "name": "Close & Personal",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Killing a target within 7 meters grants +50% weapon damage for 5 seconds.",
+    "perfect_version": {
+      "name": "Perfect Close & Personal",
+      "description": "Killing a target within 7 meters grants +65% weapon damage for 5 seconds.",
+      "found_on": "Various named weapons"
+    },
+    "meta_notes": "S-tier for CQC builds. A flat +50% after a kill within 7m is enormous. Best on SMGs and shotguns due to natural engagement range. Chains exceptionally well in dense enemy packs. One of the most widely used offensive weapon talents."
+  },
+  "strained": {
+    "id": "strained",
+    "name": "Strained",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Gain +10% critical hit damage for every 0.5 seconds you are continuously firing. Stacks up to 5 times for a maximum of +50% critical hit damage.",
+    "perfect_version": {
+      "name": "Perfect Strained",
+      "description": "Gain +10% critical hit damage for every 0.5 seconds you are continuously firing. Stacks up to 8 times for a maximum of +80% critical hit damage.",
+      "found_on": "Cold Relations (exotic SMG)"
+    },
+    "meta_notes": "S-tier for sustained-fire crit builds. No attribute requirement. Rewards full-auto fire with rapidly scaling crit damage. Perfect Strained on Cold Relations reaches +80% crit damage at max stacks \u2014 one of the highest raw crit damage talents available."
+  },
+  "measured": {
+    "id": "measured",
+    "name": "Measured",
+    "weapon_types": [
+      "assault_rifles",
+      "lmgs",
+      "smgs"
+    ],
+    "description": "The top half of the magazine has +15% rate of fire and -20% weapon damage. The bottom half of the magazine has -25% rate of fire and +20% weapon damage.",
+    "perfect_version": null,
+    "meta_notes": "B/C-tier general use. Provides burst damage in the second half of the magazine. Works well on weapons where you naturally fire through large magazines. The first-half fire rate bonus can help in spray-and-pray scenarios. Less synergistic with crit builds that prefer sustained fire. Underrated for LMGs."
+  },
+  "flatline": {
+    "id": "flatline",
+    "name": "Flatline",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Amplifies weapon damage by 15% to pulsed enemies. After 3 kills, applies pulse to the next enemy you hit.",
+    "perfect_version": {
+      "name": "Perfect Flatline",
+      "description": "Amplifies weapon damage by 20% to pulsed enemies. After 2 kills, applies pulse to the next enemy you hit.",
+      "found_on": "Kingbreaker (assault rifle), Dare (LMG)"
+    },
+    "meta_notes": "A-tier especially with Spotter chest. The self-pulse mechanic makes it self-sufficient \u2014 no external pulse skill needed. Perfect Flatline drops the kill requirement to 2, providing near-constant pulse uptime. Excellent for long engagements and pairs with Heartbreaker set."
+  },
+  "in_sync": {
+    "id": "in_sync",
+    "name": "In Sync",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Hitting an enemy grants +15% skill damage for 5 seconds. Using a non-shield skill or dealing skill damage to an enemy grants +15% weapon damage for 5 seconds. When both buffs are simultaneously active, both bonuses are doubled to +30% each.",
+    "perfect_version": {
+      "name": "Perfectly In Sync",
+      "description": "Hitting an enemy grants +20% skill damage for 5 seconds. Using a non-shield skill or dealing skill damage grants +20% weapon damage for 5 seconds. Both bonuses double to +40% each when both are active simultaneously.",
+      "found_on": "Harmony (rifle), Test Subject (assault rifle)"
+    },
+    "meta_notes": "S-tier for hybrid weapon-skill builds. When both buffs stack, the weapon and skill damage bonus doubles \u2014 Perfectly In Sync reaches +40% each, totaling an effective +80% across both damage types. Core talent for Technician and hybrid Capacitor builds."
+  },
+  "pummel": {
+    "id": "pummel",
+    "name": "Pummel",
+    "weapon_types": [
+      "shotguns"
+    ],
+    "description": "Three consecutive body shot kills with a shotgun refill the magazine and grant +50% weapon damage for 7 seconds.",
+    "perfect_version": null,
+    "meta_notes": "B-tier shotgun-exclusive talent. The three consecutive kill requirement is achievable in dense packs. +50% weapon damage and a free reload enables a powerful chain-killing loop. Excellent on high-capacity shotguns like the SPAS-12."
+  },
+  "killer": {
+    "id": "killer",
+    "name": "Killer",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Killing an enemy with a critical hit grants +70% critical hit damage for 10 seconds.",
+    "perfect_version": {
+      "name": "Perfect Killer",
+      "description": "Killing an enemy with a critical hit grants +90% critical hit damage for 10 seconds.",
+      "found_on": "Dark Winter (exotic SMG)"
+    },
+    "meta_notes": "B/A-tier for crit builds. The +70% (or +90% Perfect) CHD reward for crit kills is powerful but requires a crit kill to proc. Chains well when enemies are plentiful. Dark Winter's Perfect Killer is among the best per-kill crit damage rewards in the game."
+  },
+  "preservation": {
+    "id": "preservation",
+    "name": "Preservation",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Killing an enemy repairs 10% of your armor over 5 seconds. Headshot kills increase this to 20%.",
+    "perfect_version": {
+      "name": "Perfect Preservation",
+      "description": "Killing an enemy repairs 12% of your armor over 5 seconds. Headshot kills increase this to 24%.",
+      "found_on": "Various named weapons"
+    },
+    "meta_notes": "A-tier survivability talent. Passive armor recovery on kills is extremely strong in dense content. Headshot kills double the repair, rewarding accurate play. One of the best self-sustain weapon talents, effectively reducing armor kit usage."
+  },
+  "reformation": {
+    "id": "reformation",
+    "name": "Reformation",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Headshot kills increase skill repair and healing applied to you by 30% for 25 seconds.",
+    "perfect_version": {
+      "name": "Perfect Reformation",
+      "description": "Headshot kills increase skill repair and healing applied to you by 40% for 25 seconds.",
+      "found_on": "Various named weapons"
+    },
+    "meta_notes": "A-tier for skill-support builds. +30% to all incoming skill repairs is substantial and easy to trigger with headshot kills. Great on skill builds that use Hive or Chem Launcher heals. The 25-second duration keeps it effectively permanent in combat."
+  },
+  "boomerang": {
+    "id": "boomerang",
+    "name": "Boomerang",
+    "weapon_types": [
+      "rifles"
+    ],
+    "description": "Critical hits have a 50% chance to return the bullet to the magazine. The returned bullet deals +20% increased damage.",
+    "perfect_version": {
+      "name": "Perfect Boomerang",
+      "description": "Critical hits have a 50% chance to return the bullet to the magazine. The returned bullet deals +50% increased damage.",
+      "found_on": "Various named rifles"
+    },
+    "meta_notes": "B-tier rifle-exclusive talent. Effective magazine extension and a nice damage bonus on returned shots. Works well with high crit chance builds on rifles. Less impactful at low crit chance. Perfect Boomerang's +50% returned-bullet bonus is very strong."
+  },
+  "breadbasket": {
+    "id": "breadbasket",
+    "name": "Breadbasket",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Landing body shots adds a stack of +5% bonus headshot damage to the next headshot for 10 seconds. Maximum 10 stacks (+50% bonus headshot damage).",
+    "perfect_version": null,
+    "meta_notes": "B-tier for headshot builds. A smart mechanical interaction: body shots build up headshot damage stacks, rewarding the transition to precision aim. Works on all weapons but most effective on burst-fire or semi-auto platforms that allow controlled body-to-head transitions."
+  },
+  "fast_hands": {
+    "id": "fast_hands",
+    "name": "Fast Hands",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Critical hits add a 3% reload speed stack for 5 seconds. Maximum 20 stacks (+60% total reload speed).",
+    "perfect_version": null,
+    "meta_notes": "A-tier quality-of-life talent. +60% reload speed at max stacks makes reloads near-instant, enabling very high sustained DPS. Especially good on slow-reloading weapons like LMGs and marksman rifles. Easy to maintain with moderate crit chance."
+  },
+  "frenzy": {
+    "id": "frenzy",
+    "name": "Frenzy",
+    "weapon_types": [
+      "lmgs"
+    ],
+    "description": "Reloading from an empty magazine grants +20% weapon damage and +35% rate of fire for 7 seconds.",
+    "perfect_version": null,
+    "meta_notes": "S-tier LMG talent. The combination of +20% damage and +35% fire rate after an empty reload is very powerful. Running LMGs to empty is intentional with this talent. Pairs with Unhinged for maximum LMG damage output. One of the best weapon-class-specific talents in the game."
+  },
+  "first_blood": {
+    "id": "first_blood",
+    "name": "First Blood",
+    "weapon_types": [
+      "marksman_rifles"
+    ],
+    "description": "Requires 8x or higher scope. The first bullet fired from a full magazine deals headshot damage regardless of where it hits.",
+    "perfect_version": null,
+    "meta_notes": "A-tier marksman rifle talent. Guarantees a headshot-damage shot even on body hits, enabling huge burst damage and instant Headhunter procs. Excellent for sniper and burst builds. The scope requirement limits weapon choice."
+  },
+  "optimist": {
+    "id": "optimist",
+    "name": "Optimist",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Weapon damage is increased by +3% for every 10% of the magazine that is missing. Maximum +30% at an empty magazine.",
+    "perfect_version": {
+      "name": "Perfect Optimist",
+      "description": "Weapon damage is increased by +4% for every 10% of the magazine that is missing. Maximum +40% at an empty magazine.",
+      "found_on": "Various named weapons"
+    },
+    "meta_notes": "A-tier general damage talent. Builds a damage bonus as ammo depletes, rewarding running magazines low before reloading. Works on all weapon types and has no attribute requirement. Perfect Optimist reaches +40%, making it one of the highest flat damage bonuses available on a weapon."
+  },
+  "spike": {
+    "id": "spike",
+    "name": "Spike",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Headshot kills grant +25% skill damage for 10 seconds.",
+    "perfect_version": {
+      "name": "Perfect Spike",
+      "description": "Headshot kills grant +30% skill damage for 10 seconds.",
+      "found_on": "Various named weapons"
+    },
+    "meta_notes": "C/B-tier for hybrid builds. Headshot kills feeding skill damage is a good bridge talent for weapon/skill hybrids. Limited if headshot kills are not consistent. Competes with Reformation for the headshot-kill reward slot."
+  },
+  "vindictive": {
+    "id": "vindictive",
+    "name": "Vindictive",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Killing an enemy with a status effect applied to them grants +20% critical hit chance to you and allies within 15 meters for 10 seconds.",
+    "perfect_version": null,
+    "meta_notes": "C-tier niche team buff. +20% crit chance to allies on a status-effect kill is meaningful in group content. Requires reliable status effects and kills, making it situational. Best in Eclipse Protocol or status builds in groups."
+  },
+  "sadist": {
+    "id": "sadist",
+    "name": "Sadist",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Bleeding enemies take +20% weapon damage from this weapon. Hits also have a chance to apply bleed.",
+    "perfect_version": {
+      "name": "Perfect Sadist",
+      "description": "Bleeding enemies take +25% weapon damage from this weapon. Hits have an increased chance to apply bleed.",
+      "found_on": "Various named weapons"
+    },
+    "meta_notes": "B-tier status-effect damage talent. Self-applies bleed and rewards it with a damage amp. Easy to sustain the buff once bleed is applied. Great synergy with Wicked backpack. Best on builds that commit to bleed uptime."
+  },
+  "ignited": {
+    "id": "ignited",
+    "name": "Ignited",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Burning enemies take +20% weapon damage from this weapon. Hits also have a chance to apply burn.",
+    "perfect_version": {
+      "name": "Perfect Ignited",
+      "description": "Burning enemies take +25% weapon damage from this weapon. Hits have an increased chance to apply burn.",
+      "found_on": "Various named weapons"
+    },
+    "meta_notes": "B-tier status-effect damage talent. Mirror of Sadist but for burn. Self-procs the burn status, enabling the damage amp. Combines well with Wicked backpack and Trauma chest (which applies burn on body shots). Best on fire-themed builds."
+  },
+  "eyeless": {
+    "id": "eyeless",
+    "name": "Eyeless",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Blinded enemies take +20% weapon damage from this weapon. Hits also have a chance to apply blind.",
+    "perfect_version": {
+      "name": "Perfect Eyeless",
+      "description": "Blinded enemies take +25% weapon damage from this weapon. Hits have an increased chance to apply blind.",
+      "found_on": "Various named weapons"
+    },
+    "meta_notes": "B-tier status talent. The blind also prevents enemies from shooting, adding survivability on top of the damage bonus. Pairs well with Trauma chest's headshot-blind application for near-permanent blind uptime."
+  },
+  "perpetuation": {
+    "id": "perpetuation",
+    "name": "Perpetuation",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Headshot kills grant the next skill you use +5% duration, ammo, and charges. Stacks up to 10 times. Cooldown: 15 seconds.",
+    "perfect_version": {
+      "name": "Perfect Perpetuation",
+      "description": "Headshot kills grant the next skill you use +5% duration, ammo, and charges. Stacks up to 10 times. Cooldown: 10 seconds.",
+      "found_on": "Various named weapons"
+    },
+    "meta_notes": "C-tier niche skill support talent. Headshot kills building skill resource stacks is a niche playstyle. Best on builds that rely on Hive charges, Seeker Mine ammo, or extended Turret duration. Not a primary DPS talent."
+  },
+  "rifleman": {
+    "id": "rifleman",
+    "name": "Rifleman",
+    "weapon_types": [
+      "rifles"
+    ],
+    "description": "Headshots grant a stack of +10% weapon damage for 5 seconds. Maximum 5 stacks (+50% weapon damage).",
+    "perfect_version": {
+      "name": "Perfect Rifleman",
+      "description": "Headshots grant a stack of +12% weapon damage for 5 seconds. Maximum 5 stacks (+60% weapon damage).",
+      "found_on": "Various named rifles"
+    },
+    "meta_notes": "A-tier rifle talent. Up to +50% (or +60% Perfect) weapon damage for landing headshots rewards accurate play. Extremely strong on semi-auto rifles with consistent headshot aim. One of the best rifle-specific talents."
+  },
+  "steady_handed": {
+    "id": "steady_handed",
+    "name": "Steady Handed",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Landing shots adds a stack of +2% weapon handling. At 15 stacks (+30% handling), the next shot has a 5% chance to refill the magazine.",
+    "perfect_version": null,
+    "meta_notes": "B-tier QoL talent. The stacking weapon handling improves accuracy and stability over time. The magazine refill at max stacks is a bonus. Most useful on weapons that benefit from handling improvements like LMGs."
+  },
+  "on_empty": {
+    "id": "on_empty",
+    "name": "On Empty",
+    "weapon_types": [
+      "assault_rifles"
+    ],
+    "description": "Reloading from an empty magazine grants +30% weapon handling for 10 seconds.",
+    "perfect_version": {
+      "name": "Perfect On Empty",
+      "description": "Reloading from an empty magazine grants +40% weapon handling for 10 seconds.",
+      "found_on": "Various named ARs"
+    },
+    "meta_notes": "C-tier AR-specific QoL talent. Weapon handling boosts accuracy, stability, and reload speed. Less impactful for damage than offensive talents. Decent on high-bloom ARs that benefit from accuracy improvements after emptying."
+  },
+  "overflowing": {
+    "id": "overflowing",
+    "name": "Overflowing",
+    "weapon_types": [
+      "assault_rifles"
+    ],
+    "description": "Every empty magazine reload adds one round to the next magazine. Maximum magazine size increases are uncapped.",
+    "perfect_version": null,
+    "meta_notes": "B-tier AR talent for sustained fire. The magazine size increase compounds with each empty reload, eventually creating very large magazines. Works well in long encounters. Not impactful in burst engagements."
+  },
+  "near_sighted": {
+    "id": "near_sighted",
+    "name": "Near Sighted",
+    "weapon_types": [
+      "assault_rifles"
+    ],
+    "description": "Weapon stability is increased by +80%. Critical hit chance range and optimal range are decreased by 20%.",
+    "perfect_version": {
+      "name": "Perfect Near Sighted",
+      "description": "Weapon stability is increased by +100%. Critical hit chance range and optimal range are decreased by 20%.",
+      "found_on": "Various named ARs"
+    },
+    "meta_notes": "C-tier niche AR talent. Very high stability at a range penalty. Suited for close-range AR builds that do not rely on optimal range or crit range. Limited use cases compared to damage-focused talents."
+  },
+  "outsider": {
+    "id": "outsider",
+    "name": "Outsider",
+    "weapon_types": [
+      "smgs"
+    ],
+    "description": "As you fire, weapon accuracy and range decrease while rate of fire increases. Kills reset these changes.",
+    "perfect_version": null,
+    "meta_notes": "C-tier SMG talent. The fire-rate ramp paired with range decrease rewards staying close and chaining kills. Does not provide direct damage bonuses. More of a playstyle modifier than a pure damage talent."
+  },
+  "overwhelming": {
+    "id": "overwhelming",
+    "name": "Overwhelming",
+    "weapon_types": [
+      "lmgs"
+    ],
+    "description": "Suppressed enemies take +10% weapon damage per stack. Stacks up to 4 times. Applying suppression adds a stack.",
+    "perfect_version": {
+      "name": "Perfect Overwhelming",
+      "description": "Suppressed enemies take +12% weapon damage per stack. Stacks up to 4 times.",
+      "found_on": "Various named LMGs"
+    },
+    "meta_notes": "C-tier LMG suppression talent. Suppression is inconsistent as a damage trigger in fast combat. The stacking damage bonus is nice but requires keeping enemies suppressed. More of a team-support bonus in coordinated play."
+  },
+  "unhinged": {
+    "id": "unhinged",
+    "name": "Unhinged",
+    "weapon_types": [
+      "lmgs"
+    ],
+    "description": "Grants +25% weapon damage at the cost of -35% weapon handling.",
+    "perfect_version": null,
+    "meta_notes": "S-tier LMG talent. A flat +25% weapon damage with no activation requirement is among the best passive damage increases available. The handling penalty can be mitigated through attributes and mods. Pairs with Frenzy for maximum LMG damage. Best on M60 and M249 builds."
+  },
+  "unwavering": {
+    "id": "unwavering",
+    "name": "Unwavering",
+    "weapon_types": [
+      "smgs"
+    ],
+    "description": "Swapping to this weapon grants maximum weapon handling for 5 seconds. Kills while active refresh the duration.",
+    "perfect_version": {
+      "name": "Perfect Unwavering",
+      "description": "Swapping to this weapon grants maximum weapon handling for 5 seconds, with increased handling values.",
+      "found_on": "Various named SMGs"
+    },
+    "meta_notes": "C-tier SMG QoL talent. Maximum handling on swap is good for SMGs that need accuracy/stability out of the gate. Kills refreshing it makes it easy to maintain in combat. Useful but not as impactful as damage talents."
+  },
+  "finisher": {
+    "id": "finisher",
+    "name": "Finisher",
+    "weapon_types": [
+      "pistols"
+    ],
+    "description": "Swapping to this weapon within 3 seconds of a kill grants +30% critical hit chance for 15 seconds. Kills with this weapon while active grant an additional +30% critical hit damage.",
+    "perfect_version": {
+      "name": "Perfect Finisher",
+      "description": "Swapping to this weapon within 3 seconds of a kill grants +40% critical hit chance for 15 seconds. Kills with this weapon while active grant an additional +50% critical hit damage.",
+      "found_on": "Various named pistols"
+    },
+    "meta_notes": "B-tier pistol talent. Enables a strong crit window on weapon swap to a sidearm. Works well with Headhunter and Gunslinger chest builds where you dump a buffed shot with a pistol. The 15-second duration is generous."
+  },
+  "salvage": {
+    "id": "salvage",
+    "name": "Salvage",
+    "weapon_types": [
+      "pistols"
+    ],
+    "description": "Kills with this weapon have a 70% chance to refill the magazine from reserves.",
+    "perfect_version": {
+      "name": "Perfect Salvage",
+      "description": "Kills with this weapon have an 85% chance to refill the magazine from reserves.",
+      "found_on": "Various named pistols"
+    },
+    "meta_notes": "B-tier pistol talent. Near-constant magazine for a sidearm that kills frequently. Best on pistol-heavy builds or in situations where pistol ammo would otherwise run out quickly."
+  },
+  "future_perfect": {
+    "id": "future_perfect",
+    "name": "Future Perfect",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Weapon kills grant +1 skill tier until you reach tier 6, at which point they trigger Skill Overcharge for 15 seconds. Cooldown: 30 seconds for the overcharge.",
+    "perfect_version": null,
+    "meta_notes": "B-tier hybrid weapon-skill talent. Killing enemies to build toward Skill Overcharge bridges weapon and skill damage builds. On skill-tier-6 builds, weapon kills regularly trigger Overcharge. Strong for builds that can maintain constant kills."
+  },
+  "lucky_shot": {
+    "id": "lucky_shot",
+    "name": "Lucky Shot",
+    "weapon_types": [
+      "rifles",
+      "marksman_rifles",
+      "pistols"
+    ],
+    "description": "Magazine capacity is increased by 20%. Shots fired from cover have a 25% chance to return to the magazine on a miss.",
+    "perfect_version": null,
+    "meta_notes": "A-tier for cover-based marksman builds. The magazine increase plus ammo conservation on missed shots makes this very resource-efficient. The 25% return chance adds up significantly in long engagements. Combined with First Blood, it enables extended sniper uptime."
+  },
+  "naked": {
+    "id": "naked",
+    "name": "Naked",
+    "weapon_types": [
+      "marksman_rifles"
+    ],
+    "description": "Requires 8x scope or higher. While your armor is fully depleted, gain +50% headshot damage.",
+    "perfect_version": null,
+    "meta_notes": "C-tier marksman niche talent. Requires being at zero armor, which is an extreme risk. Sometimes paired with Glass Cannon chest and armor-depletion builds intentionally. Not mainstream but enables very high headshot damage in the right build."
+  },
+  "premeditated": {
+    "id": "premeditated",
+    "name": "Premeditated",
+    "weapon_types": [
+      "shotguns"
+    ],
+    "description": "Manually loading shells grants +10% weapon damage per shell loaded, up to +35%. If you load a full magazine, gain an additional +50% weapon damage for 10 seconds.",
+    "perfect_version": null,
+    "meta_notes": "S-tier shotgun talent. Manually loading shells (common with pump and lever-action shotguns) stacks a damage buff peaking at +35%, with a massive +50% bonus for a full reload. Transforms shotguns into extreme burst damage platforms. One of the strongest shotgun talents available."
+  },
+  "allegro": {
+    "id": "allegro",
+    "name": "Allegro",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "+10% rate of fire.",
+    "perfect_version": null,
+    "meta_notes": "A-tier passive handling talent. A flat +10% fire rate passively improves DPS on any weapon. No condition to maintain. Universally applicable and stacks additively with other modifiers. Among the best passive handling talents."
+  },
+  "extra": {
+    "id": "extra",
+    "name": "Extra",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "+20% magazine capacity.",
+    "perfect_version": null,
+    "meta_notes": "B-tier passive QoL talent. More ammo per magazine means more sustained DPS before reloading. Especially useful on weapons without extended mag options or on LMGs that benefit from maximizing mag size. Synergizes with Overflowing AR talent."
+  },
+  "stable": {
+    "id": "stable",
+    "name": "Stable",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "+15% stability.",
+    "perfect_version": null,
+    "meta_notes": "B-tier passive handling talent. Stability directly reduces recoil, improving sustained accuracy. Most useful on weapons with high recoil like certain LMGs and AR builds with low handling attributes."
+  },
+  "distance": {
+    "id": "distance",
+    "name": "Distance",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "+15% optimal range.",
+    "perfect_version": null,
+    "meta_notes": "C-tier passive talent. Extends the range at which the weapon deals full damage. Useful on builds where you regularly engage slightly outside optimal range. Outcompeted by damage-focused passive talents in most scenarios."
+  },
+  "accurate": {
+    "id": "accurate",
+    "name": "Accurate",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "+15% accuracy.",
+    "perfect_version": null,
+    "meta_notes": "C-tier passive talent. Reduces bloom and shot dispersion. Useful on weapons with poor accuracy but generally outclassed by damage or rate of fire talents."
+  },
+  "jazz_hands": {
+    "id": "jazz_hands",
+    "name": "Jazz Hands",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "+10% reload speed.",
+    "perfect_version": null,
+    "meta_notes": "C-tier passive talent. Faster reloads reduce DPS downtime. Fast Hands provides much more reload speed at the cost of requiring crits. Jazz Hands is passive and always active. Solid on LMGs that have slow base reload times."
+  },
+  "optimized": {
+    "id": "optimized",
+    "name": "Optimized",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "+15% weapon handling.",
+    "perfect_version": null,
+    "meta_notes": "C-tier passive talent. Handling affects accuracy, stability, and reload speed. A general improvement but not as targeted as individual stat passives. Decent on builds with poor base handling stats."
+  },
+  "in_rhythm": {
+    "id": "in_rhythm",
+    "name": "In Rhythm",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Enemy kills have a 5% chance to refresh active skill cooldowns. Holstered talent. Cooldown: 60 seconds.",
+    "perfect_version": null,
+    "meta_notes": "A-tier holstered passive. A 5% chance to fully refresh skills on kills is extremely powerful over many kills. In dense content, this procs regularly. Works while the weapon is holstered \u2014 very low investment for potentially high returns in skill-heavy builds."
+  },
+  "stop_drop_and_roll": {
+    "id": "stop_drop_and_roll",
+    "name": "Stop, Drop, and Roll",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "Rolling removes the burn, bleed, and poisoned status effects. Holstered talent. Cooldown: 60 seconds.",
+    "perfect_version": null,
+    "meta_notes": "A-tier holstered survivability talent. Negating dangerous status effects by rolling is hugely impactful in Legendary and Heroic content. The 60-second cooldown is a limitation but the effect is game-changing when status effects would otherwise kill you."
+  },
+  "rooted": {
+    "id": "rooted",
+    "name": "Rooted",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "While in cover, skill damage and healing are increased by +25% for 10 seconds. Holstered talent. Cooldown: 25 seconds.",
+    "perfect_version": null,
+    "meta_notes": "A-tier holstered skill talent. +25% skill damage and healing while in cover on a 25-second cooldown is reliable in cover-heavy play. Excellent on skill builds that naturally fight from cover."
+  },
+  "protected_deploy": {
+    "id": "protected_deploy",
+    "name": "Protected Deploy",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "+10% bonus armor while deploying a skill. Holstered talent.",
+    "perfect_version": null,
+    "meta_notes": "A-tier holstered passive. Passive bonus armor while deploying skills reduces damage taken at a vulnerable moment. Always active. Pairs well with skill builds that frequently deploy."
+  },
+  "protected_reload_weapon": {
+    "id": "protected_reload_weapon",
+    "name": "Protected Reload",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "+10% bonus armor while reloading. Holstered talent.",
+    "perfect_version": null,
+    "meta_notes": "A-tier holstered passive. Passive bonus armor during reloads reduces damage during the vulnerable reload animation. Works while the weapon is holstered. Nearly always useful in any build."
+  },
+  "recharged": {
+    "id": "recharged",
+    "name": "Recharged",
+    "weapon_types": [
+      "assault_rifles",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "smgs",
+      "lmgs"
+    ],
+    "description": "Skills deployed while at full armor have +25% additional duration, charges, and ammo. Holstered talent.",
+    "perfect_version": null,
+    "meta_notes": "B-tier holstered skill talent. Rewarding skill deployment at full armor with extended duration and charges is strong for skill builds with high max armor. Requires full armor at deployment \u2014 pairs with survivability builds."
+  },
+  "wascally": {
+    "id": "wascally",
+    "name": "Wascally",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "While holstered, resist 5 ensnare attempts before this talent is consumed. Holstered talent. Cooldown: 60 seconds.",
+    "perfect_version": null,
+    "meta_notes": "A-tier holstered survivability talent. Ensnare immunity is hugely valuable in PvP and against enemies with snare abilities (e.g., Rikers, certain raid mechanics). Passive and requires no interaction."
+  },
+  "everlasting": {
+    "id": "everlasting",
+    "name": "Everlasting",
+    "weapon_types": [
+      "assault_rifles",
+      "rifles",
+      "marksman_rifles",
+      "smgs",
+      "lmgs",
+      "shotguns"
+    ],
+    "description": "While holstered and in cover, the weapon regenerates 2 ammo every 5 seconds. Holstered talent.",
+    "perfect_version": null,
+    "meta_notes": "C-tier holstered utility. Passive ammo regeneration in cover slowly recovers ammo. Most useful on weapons with limited reserve ammo or in extremely long sustained engagements. Niche outside of that use case."
+  },
+  "overlap": {
+    "id": "overlap",
+    "name": "Overlap",
+    "weapon_types": [
+      "assault_rifles",
+      "rifles",
+      "marksman_rifles",
+      "smgs",
+      "lmgs",
+      "shotguns"
+    ],
+    "description": "While holstered, the equipped weapon gains a weapon-type-specific handling bonus. Holstered talent.",
+    "perfect_version": null,
+    "meta_notes": "C-tier holstered handling talent. Passively improves the equipped weapon's handling attribute based on the holstered weapon type. Low-impact compared to more aggressive holstered talents."
+  },
+  "transmission": {
+    "id": "transmission",
+    "name": "Transmission",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "While holstered, if you are shocked, the shock is transferred to the nearest enemy within 10 meters. Holstered talent. Cooldown: 60 seconds.",
+    "perfect_version": null,
+    "meta_notes": "C-tier holstered utility. Redirecting shock from yourself to enemies is useful but extremely situational. Only procs when you would otherwise be shocked. Very niche."
+  },
+  "greased": {
+    "id": "greased",
+    "name": "Greased",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "While holstered, weapon swap speed is increased by 10%. Holstered talent.",
+    "perfect_version": null,
+    "meta_notes": "C-tier holstered utility. Faster weapon swaps marginally improve fluidity in weapon-swap builds. Outcompeted by more impactful holstered talents like In Rhythm or Stop Drop and Roll."
+  },
+  "double_duty": {
+    "id": "double_duty",
+    "name": "Double Duty",
+    "weapon_types": [
+      "shotguns",
+      "lmgs",
+      "smgs",
+      "assault_rifles",
+      "rifles",
+      "marksman_rifles"
+    ],
+    "description": "While holstered, reloading from an empty magazine grants 20% of the magazine as bonus free ammo once every 30 seconds. Holstered talent.",
+    "perfect_version": null,
+    "meta_notes": "C-tier holstered ammo talent. Passive free ammo on empty reloads. Useful in prolonged engagements where ammo management matters. Niche but practical on LMG or shotgun builds."
+  },
+  "zen": {
+    "id": "zen",
+    "name": "Zen",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs",
+      "lmgs",
+      "rifles",
+      "marksman_rifles",
+      "shotguns",
+      "pistols"
+    ],
+    "description": "While equipped and in cover for 3 seconds, removes the blind and disorient status effects from you.",
+    "perfect_version": null,
+    "meta_notes": "C-tier holstered survivability. Cleansing blind and disorient is niche but can be impactful in specific encounters (e.g., True Sons with flashbang grenades). Less broadly useful than Stop Drop and Roll."
+  },
+  "determined": {
+    "id": "determined",
+    "name": "Determined",
+    "weapon_types": [
+      "rifles",
+      "marksman_rifles",
+      "pistols"
+    ],
+    "description": "Headshot kills have a chance to guarantee the next shot is a critical hit.",
+    "perfect_version": null,
+    "meta_notes": "A-tier precision talent. Guaranteeing a critical hit after a headshot kill is powerful for burst builds. On marksman rifles, this chains with First Blood and Headhunter for enormous burst cycles."
+  },
+  "pumped_up": {
+    "id": "pumped_up",
+    "name": "Pumped Up",
+    "weapon_types": [
+      "shotguns"
+    ],
+    "description": "Reloading grants +1% weapon damage for 10 seconds.",
+    "perfect_version": null,
+    "meta_notes": "C-tier shotgun passive. The +1% per reload stacks up over time but is overshadowed by Premeditated or Pummel for direct damage. A marginal DPS improvement in extended fights."
+  },
+  "sport_mode": {
+    "id": "sport_mode",
+    "name": "Sport Mode",
+    "weapon_types": [
+      "pistols"
+    ],
+    "description": "While this weapon is unholstered, movement speed is increased by 20%. Does not stack with other movement speed bonuses.",
+    "perfect_version": null,
+    "meta_notes": "A-tier unique pistol talent. +20% movement speed with no kill or proc requirement is extremely strong for repositioning, PvP engagements, and aggressive playstyles. Unique to the Quickstep named pistol. Does not stack with other speed buffs."
+  }
+}

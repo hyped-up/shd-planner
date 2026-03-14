@@ -1,0 +1,752 @@
+{
+  "_metadata": {
+    "game_version": "TU21.1",
+    "last_updated": "2026-03-01",
+    "source": "manual"
+  },
+  "assault_rifles": {
+    "class": "Assault Rifles",
+    "core_bonus": "Weapon Damage (Health Damage)",
+    "archetypes": {
+      "pof_p416": {
+        "name": "POF P416",
+        "rpm": 850,
+        "magazine": 30,
+        "reload_s": 2.34,
+        "optimal_range_m": 26,
+        "variants": [
+          "Military P416",
+          "Custom P416 G3"
+        ],
+        "named_variant": "Glory Daze",
+        "exotic_variant": "Eagle Bearer",
+        "meta_tier": "S",
+        "meta_notes": "Balanced all-rounder; Eagle Bearer is arguably best AR in game \u2014 strong sustained DPS and survivability via Tenacity talent; default starter weapon"
+      },
+      "m4": {
+        "name": "M4",
+        "rpm": 850,
+        "magazine": 30,
+        "reload_s": 2.24,
+        "optimal_range_m": 31,
+        "variants": [
+          "Police M4",
+          "Lexington (Named)",
+          "Pyromaniac (Named)"
+        ],
+        "named_variant": "Lexington",
+        "exotic_variant": null,
+        "meta_tier": "A",
+        "meta_notes": "High stability and accuracy; excellent general-purpose AR; popular in burn/Ignited talent builds via Pyromaniac"
+      },
+      "g36": {
+        "name": "G36",
+        "rpm": 750,
+        "magazine": 30,
+        "reload_s": 2.34,
+        "optimal_range_m": 35,
+        "variants": [
+          "Military G36",
+          "G36C",
+          "G36 Enhanced",
+          "Born Great (Named)"
+        ],
+        "named_variant": "Born Great",
+        "exotic_variant": null,
+        "meta_tier": "A",
+        "meta_notes": "Longest range among standard ARs; slightly lower RPM; Born Great named variant features Perfect Stabilize talent"
+      },
+      "ak_m": {
+        "name": "AK-M",
+        "rpm": 600,
+        "magazine": 30,
+        "reload_s": 2.5,
+        "optimal_range_m": 35,
+        "variants": [
+          "AK-M",
+          "Military AK-M",
+          "Black Market AK-M"
+        ],
+        "named_variant": null,
+        "exotic_variant": "Merciless",
+        "meta_tier": "A",
+        "meta_notes": "Slower fire rate but high per-shot damage; Merciless exotic is one of the best burst-damage weapons in the game"
+      },
+      "pdr_c": {
+        "name": "PDR-C",
+        "rpm": 700,
+        "magazine": 30,
+        "reload_s": 2.04,
+        "optimal_range_m": 31,
+        "variants": [
+          "PDR-C",
+          "Test Subject (Named)"
+        ],
+        "named_variant": "Test Subject",
+        "exotic_variant": "Capacitor",
+        "meta_tier": "B",
+        "meta_notes": "Compact bullpup AR; Capacitor exotic excels in skill-damage hybrid builds stacking +1.5% Skill Damage per shot"
+      },
+      "lvoa_c": {
+        "name": "LVOA-C (Rifle Platform)",
+        "rpm": 380,
+        "magazine": 30,
+        "reload_s": 2.08,
+        "optimal_range_m": 55,
+        "variants": [
+          "LVOA-C",
+          "Surge (Named)"
+        ],
+        "named_variant": "Surge",
+        "exotic_variant": "St. Elmo's Engine",
+        "meta_tier": "B",
+        "meta_notes": "Semi-auto rifle platform; St. Elmo's Engine exotic (70+1 mag, shock ammo) is sought-after for shock build synergies"
+      },
+      "chameleon": {
+        "name": "Chameleon",
+        "rpm": 900,
+        "magazine": 30,
+        "reload_s": 2.4,
+        "optimal_range_m": 20,
+        "variants": [],
+        "named_variant": null,
+        "exotic_variant": "Chameleon",
+        "meta_tier": "B",
+        "meta_notes": "Exotic only; adaptive talent rewards specific hit-zone streaks (heads/body/legs); effective range is SMG-like; niche use"
+      },
+      "fal": {
+        "name": "FAL SA-58",
+        "rpm": 450,
+        "magazine": 20,
+        "reload_s": 2.8,
+        "optimal_range_m": 32,
+        "variants": [
+          "FAL",
+          "FAL SA-58",
+          "FAL SA-58 Para",
+          "Goalie (Named)"
+        ],
+        "named_variant": "Goalie",
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Burst-fire or semi; lower RPM but high per-burst damage; Para variant useful for run-and-gun due to reduced size"
+      }
+    }
+  },
+  "smgs": {
+    "class": "Submachine Guns",
+    "core_bonus": "Critical Hit Chance",
+    "archetypes": {
+      "sig_mpx": {
+        "name": "SIG MPX",
+        "rpm": 850,
+        "magazine": 30,
+        "reload_s": 2.09,
+        "optimal_range_m": 22,
+        "variants": [
+          "MPX",
+          "MPX (Specialized)",
+          "The Apartment (Named)",
+          "Safety Distance (Named)"
+        ],
+        "named_variant": "The Apartment",
+        "exotic_variant": "Backfire",
+        "meta_tier": "S",
+        "meta_notes": "Backfire exotic stacks up to +200% crit damage; excellent crit build platform; high stability"
+      },
+      "cmmg_banshee": {
+        "name": "CMMG Banshee",
+        "rpm": 900,
+        "magazine": 32,
+        "reload_s": 1.92,
+        "optimal_range_m": 21,
+        "variants": [
+          "CMMG Banshee",
+          "The Grudge (Named)"
+        ],
+        "named_variant": "The Grudge",
+        "exotic_variant": "Lady Death",
+        "meta_tier": "S",
+        "meta_notes": "Lady Death exotic is widely considered the best SMG in the game; high DPS, close-range specialist"
+      },
+      "p90": {
+        "name": "P90",
+        "rpm": 1100,
+        "magazine": 50,
+        "reload_s": 1.57,
+        "optimal_range_m": 21,
+        "variants": [
+          "P90",
+          "Emeline's Guard (Named)"
+        ],
+        "named_variant": "Emeline's Guard",
+        "exotic_variant": "The Chatterbox",
+        "meta_tier": "A",
+        "meta_notes": "Highest RPM SMG; The Chatterbox exotic provides magazine refill on kills and stacking fire rate; excellent for Hyena-themed builds"
+      },
+      "mp7": {
+        "name": "MP7",
+        "rpm": 950,
+        "magazine": 40,
+        "reload_s": 1.6,
+        "optimal_range_m": 21,
+        "variants": [
+          "MP7",
+          "Swap Chain (Named)"
+        ],
+        "named_variant": "Swap Chain",
+        "exotic_variant": "Oxpecker",
+        "meta_tier": "A",
+        "meta_notes": "Very fast reload; cannot equip magazine mods; Oxpecker exotic synergizes with Ballistic Shield skill builds"
+      },
+      "pp_19": {
+        "name": "PP-19",
+        "rpm": 700,
+        "magazine": 53,
+        "reload_s": 1.46,
+        "optimal_range_m": 21,
+        "variants": [
+          "PP-19",
+          "Enhanced PP-19",
+          "Cold Relations (Named)"
+        ],
+        "named_variant": "Cold Relations",
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Largest SMG magazine (53 rounds); low accuracy limits effectiveness at range; niche sustained-fire role"
+      },
+      "mp5": {
+        "name": "MP5",
+        "rpm": 800,
+        "magazine": 30,
+        "reload_s": 2.1,
+        "optimal_range_m": 20,
+        "variants": [
+          "Navy MP5 N",
+          "Burst Fire MP-5 A4",
+          "MP5 ST"
+        ],
+        "named_variant": null,
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Reliable mid-tier SMG; burst-fire variant offers different playstyle; no exotic or standout named variant limits ceiling"
+      },
+      "aug_a3_para": {
+        "name": "AUG A3 Para",
+        "rpm": 700,
+        "magazine": 25,
+        "reload_s": 2.0,
+        "optimal_range_m": 22,
+        "variants": [
+          "AUG A3 Para XS",
+          "Tactical AUG A3 Para",
+          "Tactical AUG A3 M"
+        ],
+        "named_variant": null,
+        "exotic_variant": null,
+        "meta_tier": "C",
+        "meta_notes": "Lower RPM and magazine vs peers; compact but outclassed by newer SMGs; no exotic variant"
+      }
+    }
+  },
+  "lmgs": {
+    "class": "Light Machine Guns",
+    "core_bonus": "Damage to Targets out of Cover",
+    "archetypes": {
+      "m249_b": {
+        "name": "M249 B / Mk46",
+        "rpm": 850,
+        "magazine": 100,
+        "reload_s": 4.54,
+        "optimal_range_m": 35,
+        "variants": [
+          "M249 B",
+          "Military Mk46",
+          "Black Friday (Named)",
+          "The Stinger (Named)"
+        ],
+        "named_variant": "Black Friday",
+        "exotic_variant": "Pestilence",
+        "meta_tier": "S",
+        "meta_notes": "Pestilence exotic is meta for DoT/debuff builds; 100-round belt, high RPM; Black Friday named variant with Perfect Unhinged is top-tier DPS"
+      },
+      "mg5": {
+        "name": "MG5",
+        "rpm": 800,
+        "magazine": 50,
+        "reload_s": 2.96,
+        "optimal_range_m": 35,
+        "variants": [
+          "MG5",
+          "Infantry MG5",
+          "Big Show (Named)",
+          "Sleipnir (Named)"
+        ],
+        "named_variant": "Big Show",
+        "exotic_variant": "Iron Lung",
+        "meta_tier": "A",
+        "meta_notes": "Fast reload for an LMG (2.96s); Iron Lung exotic is a newer dragon-themed weapon with strong sustained fire; Infantry MG5 improves stability"
+      },
+      "m60": {
+        "name": "M60",
+        "rpm": 600,
+        "magazine": 100,
+        "reload_s": 3.75,
+        "optimal_range_m": 40,
+        "variants": [
+          "Classic M60",
+          "Military M60 E4",
+          "Black Market M60 E6",
+          "Good Times (Named)"
+        ],
+        "named_variant": "Good Times",
+        "exotic_variant": null,
+        "meta_tier": "A",
+        "meta_notes": "Longest effective range of LMGs (40m); Good Times named with Perfect Fast Hands; excellent damage-at-range platform; no exotic limits top-end"
+      },
+      "negev": {
+        "name": "Negev NG7",
+        "rpm": 850,
+        "magazine": 150,
+        "reload_s": 5.2,
+        "optimal_range_m": 35,
+        "variants": [
+          "Negev NG7",
+          "Black Market Negev NG7"
+        ],
+        "named_variant": null,
+        "exotic_variant": "Bullet King",
+        "meta_tier": "B",
+        "meta_notes": "Bullet King exotic features infinite ammo (regenerating magazine on kills); niche but beloved for wave-clear and lazy builds"
+      }
+    }
+  },
+  "rifles": {
+    "class": "Rifles",
+    "core_bonus": "Critical Hit Damage",
+    "archetypes": {
+      "1886": {
+        "name": "1886",
+        "rpm": 100,
+        "magazine": 8,
+        "reload_s": 3.47,
+        "optimal_range_m": 35,
+        "variants": [
+          "1886",
+          "The Virginian (Named)"
+        ],
+        "named_variant": "The Virginian",
+        "exotic_variant": "Diamondback",
+        "meta_tier": "S",
+        "meta_notes": "Diamondback exotic provides guaranteed crits and 20% amp damage on marked targets; top-tier for crit-stacking striker builds"
+      },
+      "sig_716": {
+        "name": "SIG 716",
+        "rpm": 320,
+        "magazine": 20,
+        "reload_s": 2.68,
+        "optimal_range_m": 45,
+        "variants": [
+          "SIG 716",
+          "SIG 716 CQB",
+          "Artist's Tool (Named)"
+        ],
+        "named_variant": "Artist's Tool",
+        "exotic_variant": null,
+        "meta_tier": "A",
+        "meta_notes": "Solid semi-auto rifle; long 45m range; CQB variant trades range for damage; Artist's Tool with Perfect Rifleman is versatile"
+      },
+      "lvoa_c_rifle": {
+        "name": "LVOA-C",
+        "rpm": 380,
+        "magazine": 30,
+        "reload_s": 2.08,
+        "optimal_range_m": 55,
+        "variants": [
+          "LVOA-C",
+          "Surge (Named)"
+        ],
+        "named_variant": "Surge",
+        "exotic_variant": "St. Elmo's Engine",
+        "meta_tier": "A",
+        "meta_notes": "Fastest-firing rifle; 55m range; St. Elmo's Engine exotic stacks shock rounds for AoE damage; Surge named with Perfect Spike"
+      },
+      "lightweight_m4": {
+        "name": "Lightweight M4",
+        "rpm": 360,
+        "magazine": 30,
+        "reload_s": 2.03,
+        "optimal_range_m": 55,
+        "variants": [
+          "Lightweight M4",
+          "Competition Lightweight M4"
+        ],
+        "named_variant": null,
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Fast-firing rifle alongside LVOA-C; 55m range; no exotic/named variant limits its ceiling vs other archetypes"
+      },
+      "merciless_ruthless": {
+        "name": "AK-M Rifle (Merciless / Ruthless)",
+        "rpm": 400,
+        "magazine": 30,
+        "reload_s": 2.17,
+        "optimal_range_m": 35,
+        "variants": [
+          "AK-M (base for exotic)"
+        ],
+        "named_variant": null,
+        "exotic_variant": "Merciless / Ruthless",
+        "meta_tier": "S",
+        "meta_notes": "Merciless/Ruthless exotic has binary trigger \u2014 fires on both pull and release; stacks grant +500% damage explosion at 7 stacks; extremely powerful burst"
+      },
+      "the_ravenous": {
+        "name": "The Ravenous (Custom P416 G3 Rifle)",
+        "rpm": 240,
+        "magazine": 60,
+        "reload_s": 2.4,
+        "optimal_range_m": 50,
+        "variants": [],
+        "named_variant": null,
+        "exotic_variant": "The Ravenous",
+        "meta_tier": "A",
+        "meta_notes": "Dual-barrel exotic from Iron Horse Raid; fires both barrels simultaneously; offensive/defensive primer mechanic rewards shoulder-swapping playstyle"
+      },
+      "acr_ss": {
+        "name": "ACR SS",
+        "rpm": 400,
+        "magazine": 30,
+        "reload_s": 2.2,
+        "optimal_range_m": 50,
+        "variants": [
+          "ACR",
+          "ACR SS",
+          "Military ACR"
+        ],
+        "named_variant": null,
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Versatile semi-auto; decent range; commonly used in rifle-focused skill builds; no exotic/strong named limits top tier"
+      }
+    }
+  },
+  "marksman_rifles": {
+    "class": "Marksman Rifles",
+    "core_bonus": "Headshot Damage",
+    "archetypes": {
+      "m700": {
+        "name": "M700 / Model 700",
+        "rpm": 55,
+        "magazine": 7,
+        "reload_s": 7.05,
+        "optimal_range_m": 50,
+        "variants": [
+          "Model 700",
+          "M700 Tactical",
+          "M700 Carbon",
+          "Ekim's Long Stick (Named)",
+          "Brutus (Named)"
+        ],
+        "named_variant": "Ekim's Long Stick",
+        "exotic_variant": null,
+        "meta_tier": "A",
+        "meta_notes": "Bolt-action bolt with large 7-round mag; Ekim's Long Stick with Perfect Ranger is strong for headshot builds; reliable all-rounder MMR"
+      },
+      "sr_1": {
+        "name": "SR-1",
+        "rpm": 60,
+        "magazine": 5,
+        "reload_s": 3.15,
+        "optimal_range_m": 50,
+        "variants": [
+          "SR-1",
+          "Designated Hitter (Named)",
+          "Adrestia SR-1 (Named, craft component)"
+        ],
+        "named_variant": "Designated Hitter",
+        "exotic_variant": "Nemesis",
+        "meta_tier": "S",
+        "meta_notes": "Adrestia SR-1 is required crafting component for Nemesis exotic; Nemesis is top-tier MMR with charge mechanic dealing massive mark-based damage"
+      },
+      "m44": {
+        "name": "M44",
+        "rpm": 55,
+        "magazine": 5,
+        "reload_s": 4.2,
+        "optimal_range_m": 60,
+        "variants": [
+          "Classic M44 Carbine",
+          "Hunting M44 Carbine",
+          "Custom M44"
+        ],
+        "named_variant": null,
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Bolt-action with 60m range \u2014 longest stock range of any MMR; Hunting variant has highest damage; Custom M44 offers fastest reload via detachable mag"
+      },
+      "m1a": {
+        "name": "M1A",
+        "rpm": 180,
+        "magazine": 10,
+        "reload_s": 3.5,
+        "optimal_range_m": 60,
+        "variants": [
+          "M1A",
+          "Military M1A",
+          "Classic M1A CQB",
+          "Blind Justice (Named)",
+          "Shield Splitter (Named)"
+        ],
+        "named_variant": "Blind Justice",
+        "exotic_variant": null,
+        "meta_tier": "A",
+        "meta_notes": "Semi-auto MMR; fast 180 RPM for MMR class; 10-round mag; Blind Justice named features Perfect Eyeless talent; excellent versatility"
+      },
+      "srs_a1": {
+        "name": "SRS A1",
+        "rpm": 45,
+        "magazine": 10,
+        "reload_s": 4.0,
+        "optimal_range_m": 50,
+        "variants": [
+          "SRS A1",
+          "Custom SRS",
+          "Hide and Seek (Named)"
+        ],
+        "named_variant": "Hide and Seek",
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Bolt-action with 10-round mag; slower RPM but larger capacity vs M700; Hide and Seek named for crit-based builds"
+      },
+      "g28": {
+        "name": "G28",
+        "rpm": 180,
+        "magazine": 20,
+        "reload_s": 2.5,
+        "optimal_range_m": 45,
+        "variants": [
+          "G28",
+          "Military G28",
+          "Future Perfect (Named)"
+        ],
+        "named_variant": "Future Perfect",
+        "exotic_variant": null,
+        "meta_tier": "A",
+        "meta_notes": "Fastest semi-auto MMR with 20-round mag; excellent choice for aggressive/sustained fire headshot builds; Future Perfect named with Perfect Vigilance"
+      },
+      "coil": {
+        "name": "Coil",
+        "rpm": 60,
+        "magazine": 6,
+        "reload_s": 3.0,
+        "optimal_range_m": 50,
+        "variants": [],
+        "named_variant": null,
+        "exotic_variant": "Coil",
+        "meta_tier": "S",
+        "meta_notes": "Exotic MMR; Coil talent amplifies damage with each kill up to a high multiplier; strong for high-level content and headshot-focused builds"
+      }
+    }
+  },
+  "shotguns": {
+    "class": "Shotguns",
+    "core_bonus": "Melee Damage",
+    "archetypes": {
+      "spas_12": {
+        "name": "SPAS-12",
+        "rpm": 70,
+        "magazine": 8,
+        "reload_s": 5.5,
+        "optimal_range_m": 16,
+        "variants": [
+          "SPAS-12",
+          "Thorn (Named)"
+        ],
+        "named_variant": "Thorn",
+        "exotic_variant": "Sweet Dreams / Lullaby",
+        "meta_tier": "S",
+        "meta_notes": "Sweet Dreams exotic enables one-shot melee kill on non-elites (Sandman talent); top-tier for melee-rush builds; Lullaby is identical alternate skin"
+      },
+      "m870": {
+        "name": "M870",
+        "rpm": 75,
+        "magazine": 5,
+        "reload_s": 3.35,
+        "optimal_range_m": 11,
+        "variants": [
+          "M870 Express",
+          "Military M870",
+          "Custom M870 MCS",
+          "Cuel\u00e9bre (Named)"
+        ],
+        "named_variant": "Cuel\u00e9bre",
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Standard pump-action; fastest pump shotgun; low 5-shell capacity and 11m range limits effectiveness; most modifiable platform"
+      },
+      "ksg": {
+        "name": "KSG",
+        "rpm": 70,
+        "magazine": 12,
+        "reload_s": 7.99,
+        "optimal_range_m": 16,
+        "variants": [
+          "KSG Shotgun",
+          "The Send-Off (Named)"
+        ],
+        "named_variant": "The Send-Off",
+        "exotic_variant": "Overlord",
+        "meta_tier": "A",
+        "meta_notes": "Largest shotgun magazine (12 rounds) via dual tube design; Overlord exotic applies movement speed debuff stacks; The Send-Off named with Perfect Distance"
+      },
+      "super_90": {
+        "name": "SASG-12 / Super 90",
+        "rpm": 180,
+        "magazine": 8,
+        "reload_s": 3.2,
+        "optimal_range_m": 16,
+        "variants": [
+          "SASG-12",
+          "SASG-12 S",
+          "Kard Custom (Named)"
+        ],
+        "named_variant": "Kard Custom",
+        "exotic_variant": null,
+        "meta_tier": "A",
+        "meta_notes": "Only semi-auto shotgun; highest shotgun RPM (180); best for aggressive close-range DPS; Kard Custom named variant is strong"
+      },
+      "double_barrel": {
+        "name": "Double Barrel Shotgun",
+        "rpm": 200,
+        "magazine": 2,
+        "reload_s": 2.2,
+        "optimal_range_m": 11,
+        "variants": [
+          "Double Barrel Shotgun",
+          "Sawed-Off Shotgun"
+        ],
+        "named_variant": null,
+        "exotic_variant": "Cassidy / Defiler",
+        "meta_tier": "B",
+        "meta_notes": "Two-shot burst capability; extreme burst at point blank; Cassidy/Defiler exotic fires both barrels at once; extremely high alpha but constant reloading"
+      }
+    }
+  },
+  "pistols": {
+    "class": "Pistols",
+    "core_bonus": "Damage to Targets out of Cover (varies by variant)",
+    "archetypes": {
+      "d50": {
+        "name": "D50",
+        "rpm": 200,
+        "magazine": 8,
+        "reload_s": 2.24,
+        "optimal_range_m": 18,
+        "variants": [
+          "D50",
+          "Survivalist D50 (Named)"
+        ],
+        "named_variant": "Survivalist D50",
+        "exotic_variant": "Liberty",
+        "meta_tier": "S",
+        "meta_notes": "Liberty exotic synergizes with Eagle Bearer \u2014 shooting enemies reduces EC cooldown and marks them; ideal for AR/pistol hybrid builds"
+      },
+      "model_686_magnum": {
+        "name": "Model 686 Magnum",
+        "rpm": 160,
+        "magazine": 6,
+        "reload_s": 2.54,
+        "optimal_range_m": 16,
+        "variants": [
+          "Police 686 Magnum",
+          "586 Magnum",
+          "The Harvest (Named)",
+          "Orbit (Named)",
+          "Prophet (Named)"
+        ],
+        "named_variant": "The Harvest",
+        "exotic_variant": "Regulus",
+        "meta_tier": "S",
+        "meta_notes": "Regulus exotic is top-tier pistol \u2014 fires explosive headshot rounds that chain kills; used in pistol and Gunslinger builds; 100% headshot damage multiplier"
+      },
+      "m9": {
+        "name": "M9",
+        "rpm": 350,
+        "magazine": 15,
+        "reload_s": 1.9,
+        "optimal_range_m": 16,
+        "variants": [
+          "Military M9",
+          "Officer's M9 A1"
+        ],
+        "named_variant": null,
+        "exotic_variant": "Mosquito",
+        "meta_tier": "B",
+        "meta_notes": "Jack-of-all-trades semi-auto; largest standard pistol magazine; Mosquito exotic features unique drain/sustain mechanic; good secondary for many builds"
+      },
+      "m1911": {
+        "name": "M1911",
+        "rpm": 310,
+        "magazine": 7,
+        "reload_s": 2.24,
+        "optimal_range_m": 12,
+        "variants": [
+          "M1911",
+          "Tactical M1911",
+          "M45A1",
+          "Mozambique Special (Named)"
+        ],
+        "named_variant": "Mozambique Special",
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Highest single-shot damage among standard pistols; very small 7-round mag and short 12m range; Mozambique Special with Perfect Breadbasket"
+      },
+      "93r": {
+        "name": "93R",
+        "rpm": 1100,
+        "magazine": 20,
+        "reload_s": 1.6,
+        "optimal_range_m": 19,
+        "variants": [
+          "93R",
+          "Custom 93R"
+        ],
+        "named_variant": null,
+        "exotic_variant": null,
+        "meta_tier": "A",
+        "meta_notes": "Only burst-fire pistol; 3-round burst at 1100 RPM; excellent sustained DPS for a sidearm; large 20-round mag; popular in aggressive pistol builds"
+      },
+      "pf45": {
+        "name": "PF45",
+        "rpm": 320,
+        "magazine": 15,
+        "reload_s": 2.0,
+        "optimal_range_m": 16,
+        "variants": [
+          "PF45",
+          "Military PF45",
+          "Banshee (Named)"
+        ],
+        "named_variant": "Banshee",
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "Well-rounded semi-auto pistol; Banshee named variant popular in aggressive sidearm builds; solid balance of damage and capacity"
+      },
+      "p320_xcompact": {
+        "name": "P320 XCompact",
+        "rpm": 400,
+        "magazine": 17,
+        "reload_s": 1.8,
+        "optimal_range_m": 16,
+        "variants": [
+          "P320 XCompact",
+          "Tactical P320 XCompact"
+        ],
+        "named_variant": null,
+        "exotic_variant": null,
+        "meta_tier": "B",
+        "meta_notes": "High RPM for a pistol; generous magazine; newer addition to roster; lacks exotic but useful as a fast-firing sidearm"
+      }
+    }
+  }
+}
