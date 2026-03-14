@@ -82,7 +82,7 @@ services:
       - GOOGLE_APPLICATION_CREDENTIALS=/keys/google-sa.json
     volumes:
       - shd-data:/app/data
-      - /opt/docker/shd-planner/services/shd-planner-mcp:/app/services/shd-planner-mcp:ro
+      - /opt/docker/shd-planner/services/shd-planner-mcp:/shd-planner-cwd:ro
       - /opt/docker/shd-planner/keys/google-sa.json:/keys/google-sa.json:ro
 
 networks:
