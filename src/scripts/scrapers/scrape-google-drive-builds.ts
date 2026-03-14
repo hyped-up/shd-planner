@@ -2,11 +2,12 @@
  * scrape-google-drive-builds.ts
  *
  * Scrapes public Google Drive folders for build images/docs metadata.
- * Outputs raw/builds-guides-raw.json
+ * Uses Drive API if GOOGLE_APPLICATION_CREDENTIALS is set.
  */
 
-import { writeFileSync, mkdirSync } from "fs";
+import { writeFileSync, mkdirSync, readFileSync } from "fs";
 import { resolve, dirname } from "path";
+import { google } from "googleapis";
 
 const OUTPUT_PATH = resolve(
   dirname(new URL(import.meta.url).pathname),
@@ -20,6 +21,7 @@ const BUILD_FOLDERS = [
 ].filter(Boolean);
 
 const BUILDS_DOC_ID = process.env.DIV2_BUILDS_DOC_ID ?? "1-nOwUSECa-1iLhET-mW04u6oMBdIdMjFjB2Ie25ziEA";
+const GOOGLE_CREDS = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 
 function extractFolderId(urlOrId: string): string {
   if (urlOrId.includes("/folders/")) {
@@ -27,26 +29,6 @@ function extractFolderId(urlOrId: string): string {
     if (m) return m[1];
   }
   return urlOrId;
-}
-
-async function fetchText(url: string): Promise<string> {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res.text();
-}
-
-function parseDriveFolder(html: string): Array<{ id: string; name: string; mime: string }>{
-  // Very simple heuristic parsing for public Drive folder pages.
-  const results: Array<{ id: string; name: string; mime: string }> = [];
-  const re = /\["([a-zA-Z0-9_-]{10,})",\["([^"]+)"\],[^\]]*\],\s*"([^"]+)"/g;
-  let m: RegExpExecArray | null;
-  while ((m = re.exec(html))) {
-    const id = m[1];
-    const name = m[2];
-    const mime = m[3];
-    if (!results.find((r) => r.id === id)) results.push({ id, name, mime });
-  }
-  return results;
 }
 
 function driveThumb(id: string): string {
@@ -57,21 +39,44 @@ function driveFileUrl(id: string): string {
   return `https://drive.google.com/file/d/${id}/view`;
 }
 
+async function listDriveFolder(folderId: string) {
+  if (!GOOGLE_CREDS) throw new Error("Missing GOOGLE_APPLICATION_CREDENTIALS");
+  const creds = JSON.parse(readFileSync(GOOGLE_CREDS, "utf-8"));
+  const auth = new google.auth.JWT({
+    email: creds.client_email,
+    key: creds.private_key,
+    scopes: ["https://www.googleapis.com/auth/drive.readonly"],
+  });
+  const drive = google.drive({ version: "v3", auth });
+  const items: any[] = [];
+  let pageToken: string | undefined = undefined;
+  do {
+    const res = await drive.files.list({
+      q: `'${folderId}' in parents and trashed=false`,
+      fields: "nextPageToken, files(id,name,mimeType,modifiedTime,webViewLink,thumbnailLink)",
+      pageToken,
+    });
+    items.push(...(res.data.files ?? []));
+    pageToken = res.data.nextPageToken ?? undefined;
+  } while (pageToken);
+  return items.map((f) => ({
+    id: f.id,
+    name: f.name,
+    mime: f.mimeType,
+    modifiedTime: f.modifiedTime,
+    url: f.webViewLink ?? driveFileUrl(f.id!),
+    thumbnail: f.thumbnailLink ?? driveThumb(f.id!),
+  }));
+}
+
 async function main() {
   const folders = BUILD_FOLDERS.map(extractFolderId);
   const outputs: any[] = [];
 
   for (const folderId of folders) {
-    const url = `https://drive.google.com/drive/folders/${folderId}`;
     try {
-      const html = await fetchText(url);
-      const items = parseDriveFolder(html).map((item) => ({
-        ...item,
-        url: driveFileUrl(item.id),
-        thumbnail: driveThumb(item.id),
-        folderId,
-      }));
-      outputs.push({ folderId, sourceUrl: url, items });
+      const items = await listDriveFolder(folderId);
+      outputs.push({ folderId, sourceUrl: `https://drive.google.com/drive/folders/${folderId}`, items });
     } catch (err: any) {
       outputs.push({ folderId, error: err?.message ?? String(err) });
     }

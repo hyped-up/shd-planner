@@ -8,9 +8,10 @@
  * Usage: npx tsx src/scripts/scrapers/scrape-community-spreadsheet.ts
  */
 
-import { writeFileSync, mkdirSync } from "fs";
+import { writeFileSync, mkdirSync, readFileSync } from "fs";
 import { resolve, dirname } from "path";
 import { parse } from "csv-parse/sync";
+import { google } from "googleapis";
 
 // --- Types ---
 
@@ -45,6 +46,7 @@ const SPREADSHEET_ID = process.env.DIV2_SHEET_ID ?? DEFAULT_SHEET_ID;
 const SPREADSHEET_URL = process.env.DIV2_SHEET_URL ?? `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}`;
 const CSV_EXPORT_BASE = `${SPREADSHEET_URL}/export?format=csv`;
 const HTML_URL = `${SPREADSHEET_URL}/edit`;
+const GOOGLE_CREDS = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 
 // Rate limit delay in milliseconds
 const RATE_LIMIT_MS = 1500;
@@ -96,6 +98,51 @@ async function fetchText(url: string): Promise<string | null> {
   }
 }
 
+function toCsv(rows: string[][]): string {
+  return rows
+    .map((row) =>
+      row
+        .map((cell) => {
+          const v = cell ?? "";
+          if (v.includes("\"") || v.includes(",") || v.includes("\n")) {
+            return `"${v.replace(/\"/g, '""')}"`;
+          }
+          return v;
+        })
+        .join(",")
+    )
+    .join("\n");
+}
+
+async function fetchSheetsViaApi(): Promise<Record<string, string> | null> {
+  if (!GOOGLE_CREDS) return null;
+  try {
+    const creds = JSON.parse(readFileSync(GOOGLE_CREDS, "utf-8"));
+    const auth = new google.auth.JWT({
+      email: creds.client_email,
+      key: creds.private_key,
+      scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+    });
+    const sheets = google.sheets({ version: "v4", auth });
+    const meta = await sheets.spreadsheets.get({ spreadsheetId: SPREADSHEET_ID });
+    const sheetInfos = meta.data.sheets ?? [];
+    const out: Record<string, string> = {};
+    for (const s of sheetInfos) {
+      const title = s.properties?.title;
+      if (!title) continue;
+      const values = await sheets.spreadsheets.values.get({
+        spreadsheetId: SPREADSHEET_ID,
+        range: title,
+      });
+      const rows = (values.data.values as string[][] | undefined) ?? [];
+      out[title] = toCsv(rows.map((r) => r.map((c) => (c ?? "").toString())));
+    }
+    return out;
+  } catch (err) {
+    return null;
+  }
+}
+
 /**
  * Discover sheet GIDs by fetching the HTML version of the spreadsheet.
  * Google Sheets embeds sheet names and GIDs in the page HTML.
@@ -103,7 +150,12 @@ async function fetchText(url: string): Promise<string | null> {
 async function discoverSheets(): Promise<
   { name: string; gid: string }[]
 > {
-  console.log("Discovering sheet tabs from HTML...");
+  console.log("Discovering sheet tabs...");
+  // Try Sheets API first if creds present
+  const apiSheets = await fetchSheetsViaApi();
+  if (apiSheets) {
+    return Object.keys(apiSheets).map((name, idx) => ({ name, gid: String(idx) }));
+  }
   const html = await fetchText(HTML_URL);
   if (!html) {
     console.warn("Could not fetch spreadsheet HTML. Using fallback GIDs.");
@@ -245,8 +297,20 @@ async function main(): Promise<void> {
   console.log();
 
   // Fetch and parse each sheet
+  let apiSheetCsv: Record<string, string> | null = null;
+  if (GOOGLE_CREDS) {
+    apiSheetCsv = await fetchSheetsViaApi();
+  }
+
   for (const sheet of sheets) {
-    const { info, rows } = await fetchSheet(sheet.gid, sheet.name);
+    const csvOverride = apiSheetCsv?.[sheet.name];
+    const { info, rows } = csvOverride
+      ? {
+          info: { name: sheet.name, gid: sheet.gid, status: "success", rowCount: parseCsv(csvOverride).length },
+          rows: parseCsv(csvOverride),
+        }
+      : await fetchSheet(sheet.gid, sheet.name);
+
     result.sheets.push(info);
 
     if (rows.length === 0) continue;
