@@ -49,6 +49,7 @@ const CSV_EXPORT_BASE = `${SPREADSHEET_URL}/export?format=csv`;
 const HTML_URL = `${SPREADSHEET_URL}/edit`;
 const GOOGLE_CREDS = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 const PRIMARY_GID = process.env.DIV2_PRIMARY_GID ?? "0";
+const STRICT_PRIMARY = (process.env.DIV2_STRICT_PRIMARY ?? "false").toLowerCase() === "true";
 
 // Rate limit delay in milliseconds
 const RATE_LIMIT_MS = 1500;
@@ -313,6 +314,10 @@ async function main(): Promise<void> {
       : await fetchSheet(sheet.gid, sheet.name);
 
     result.sheets.push(info);
+
+    if (sheet.gid === PRIMARY_GID && info.status === "success" && rows.length > 0) {
+      primarySheetOk = true;
+    }
 
     if (rows.length === 0) continue;
 

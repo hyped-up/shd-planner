@@ -77,6 +77,7 @@ services:
       - DIV2_SHEET_ID=1nrPBmOrtpkEW1j5fbcRT7L-AXgsGOqMqxXoVtopsiGM
       - DIV2_SHEET_URL=https://docs.google.com/spreadsheets/d/1nrPBmOrtpkEW1j5fbcRT7L-AXgsGOqMqxXoVtopsiGM/edit
       - DIV2_PRIMARY_GID=1380412817
+      - DIV2_STRICT_PRIMARY=true
     volumes:
       - shd-data:/app/data
       - /opt/docker/shd-planner/services/shd-planner-mcp:/shd-planner-cwd:ro
