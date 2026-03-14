@@ -331,13 +331,13 @@ function updateManifest(): void {
   manifest.entityCounts.exoticGear = count("exotics-gear.json");
   manifest.entityCounts.exoticWeapons = count("exotics-weapons.json");
   // For weapons, count total archetypes across all weapon type objects
-  const weaponsData = JSON.parse(fs.readFileSync(path.join(WEB_DATA_DIR, "weapons.json"), "utf-8"));
-  manifest.entityCounts.weapons = weaponsData.reduce((sum: number, wt: unknown) => sum + wt.archetypes.length, 0);
+  const weaponsData = JSON.parse(fs.readFileSync(path.join(WEB_DATA_DIR, "weapons.json"), "utf-8")) as any[];
+  manifest.entityCounts.weapons = weaponsData.reduce((sum: number, wt: any) => sum + (wt.archetypes?.length ?? 0), 0);
   manifest.entityCounts.weaponTalents = count("weapon-talents.json");
   manifest.entityCounts.gearTalents = count("gear-talents.json");
   // Count skill variants, not families
-  const skillsData = JSON.parse(fs.readFileSync(path.join(WEB_DATA_DIR, "skills.json"), "utf-8"));
-  manifest.entityCounts.skills = skillsData.reduce((sum: number, s: unknown) => sum + s.variants.length, 0);
+  const skillsData = JSON.parse(fs.readFileSync(path.join(WEB_DATA_DIR, "skills.json"), "utf-8")) as any[];
+  manifest.entityCounts.skills = skillsData.reduce((sum: number, s: any) => sum + (s.variants?.length ?? 0), 0);
   manifest.entityCounts.specializations = count("specializations.json");
   manifest.lastDataUpdate = new Date().toISOString();
   manifest.sources = [...new Set([...(manifest.sources || []), "mcp-import"])];
