@@ -1111,7 +1111,9 @@ function main(): void {
   writeDataFile("shd-watch.json", shdWatch);
 
   console.log("[step 14/14] Merging builds/guides...");
-  const buildsGuidesSeed = readRawFile("builds-guides-raw.json");
+  const buildsGuidesSeed = readRawFile("builds-guides-raw.json") as
+    | { scrapedAt?: string; sources?: unknown }
+    | null;
   if (buildsGuidesSeed) {
     writeDataFile("builds-guides.json", {
       scrapedAt: buildsGuidesSeed.scrapedAt,
