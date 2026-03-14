@@ -242,7 +242,7 @@ async function runUpdate(): Promise<void> {
       if (!hasChanges) {
         console.log("[auto-update] No wiki changes detected, skipping update");
         status.status = "idle";
-        status.nextCheck = getNextCheckTime(cronExpression);
+        status.nextCheck = getNextCheckTime();
         writeStatus(status);
         isUpdating = false;
         if (fs.existsSync(LOCK_FILE)) fs.unlinkSync(LOCK_FILE);
@@ -319,7 +319,7 @@ async function runUpdate(): Promise<void> {
 
     const duration = Date.now() - startTime;
     status.lastUpdate = new Date().toISOString();
-    status.nextCheck = getNextCheckTime(cronExpression);
+    status.nextCheck = getNextCheckTime();
     status.status = "idle";
     status.lastResult = {
       success: true,
@@ -451,7 +451,7 @@ async function main(): Promise<void> {
   if (status.status !== "error") {
     status.status = "idle";
   }
-  status.nextCheck = getNextCheckTime(cronExpression);
+  status.nextCheck = getNextCheckTime();
   writeStatus(status);
 
   console.log("[server] Ready.");
