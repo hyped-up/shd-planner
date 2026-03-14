@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "game_version": "TU21.1",
-    "last_updated": "2026-03-01",
+    "last_updated": "2026-03-14",
     "source": "manual"
   },
   "ranger": {
@@ -926,5 +926,47 @@
     "description": "While this weapon is unholstered, movement speed is increased by 20%. Does not stack with other movement speed bonuses.",
     "perfect_version": null,
     "meta_notes": "A-tier unique pistol talent. +20% movement speed with no kill or proc requirement is extremely strong for repositioning, PvP engagements, and aggressive playstyles. Unique to the Quickstep named pistol. Does not stack with other speed buffs."
+  },
+  "streamline": {
+    "id": "streamline",
+    "name": "Streamline",
+    "weapon_types": [
+      "assault_rifles",
+      "smgs"
+    ],
+    "description": "PvE: +42% weapon damage when no skills deployed or on cooldown. PvP: +32%.",
+    "perfect_version": {
+      "name": "Perfect Streamline",
+      "description": "PvE: +47% weapon damage; PvP: +37% under same condition.",
+      "found_on": "Lud, Purist"
+    }
+  },
+  "soft_spot": {
+    "id": "soft_spot",
+    "name": "Soft Spot",
+    "weapon_types": [
+      "pistols",
+      "marksman_rifles"
+    ],
+    "description": "Destroying a weakpoint grants +27% weapon damage for 15s.",
+    "perfect_version": {
+      "name": "Perfect Soft Spot",
+      "description": "Destroying a weakpoint grants +32% weapon damage for 15s.",
+      "found_on": "Achilles, Instigator"
+    }
+  },
+  "immobilize": {
+    "id": "immobilize",
+    "name": "Immobilize",
+    "weapon_types": [
+      "shotguns",
+      "smgs"
+    ],
+    "description": "PvE: +20% weapon damage to ensnared. After 4 kills, ensnare next hit. PvP: +10%.",
+    "perfect_version": {
+      "name": "Perfect Immobilize",
+      "description": "PvE: +25% weapon damage to ensnared. After 3 kills, ensnare next hit. PvP: +15%.",
+      "found_on": "Lockdown, Froth"
+    }
   }
 }

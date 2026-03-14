@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "game_version": "TU21.1",
-    "last_updated": "2026-03-01",
+    "last_updated": "2026-03-14",
     "source": "manual"
   },
   "strikers_battlegear": {
@@ -1288,5 +1288,118 @@
       "The +25% bonus armor on far kills is valuable self-sustain during aggressive pushes.",
       "Best in environments with mixed enemy ranges like Summit or open-world missions."
     ]
+  },
+  "measured_assembly": {
+    "id": "measured_assembly",
+    "name": "Measured Assembly",
+    "abbreviation": "MA",
+    "bonuses": {
+      "2pc": "+15% Skill Haste",
+      "3pc": "+60% Repair Skills, +40% Explosive Resistance",
+      "4pc": {
+        "name": "Huddle",
+        "description": "+1 Skill Tier per ally in Hive range. At Skill Tier 6 with ally in range for 4s grants Overcharge for 15s (40s CD). Destroys mortars/enemy skills in Hive/Smart Cover range (10s CD, faster with allies)."
+      }
+    },
+    "chest_talent": {
+      "name": "Hivemind",
+      "description": "Overcharge cooldown reduced from 40s to 25s."
+    },
+    "backpack_talent": {
+      "name": "Smart Cooperation",
+      "description": "Destroy-skills cooldown reduced from 10s to 1s."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "smg",
+      "lmg"
+    ],
+    "playstyle": [
+      "support",
+      "skills"
+    ],
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/HP67k5N5kneQmSCVlVMmi/the-division-2-crossroads"
+  },
+  "tipping_scales": {
+    "id": "tipping_scales",
+    "name": "Tipping Scales",
+    "abbreviation": "TS",
+    "bonuses": {
+      "2pc": "+30% Magazine Size",
+      "3pc": "+30% LMG Damage",
+      "4pc": {
+        "name": "Throttle Control",
+        "description": "Shooting builds stacks (max 50). Each stack: +0.5% weapon handling +4% CHD. Lose 6 stacks/sec when not shooting; no loss while enemy suppressed."
+      }
+    },
+    "chest_talent": {
+      "name": "Sustainability",
+      "description": "Max stacks increased 50 \u2192 75."
+    },
+    "backpack_talent": {
+      "name": "Snowball",
+      "description": "CHD per stack increased 4% \u2192 7%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "lmg"
+    ],
+    "playstyle": [
+      "dps"
+    ],
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/3DFEM2OnnbfRsDrQWXsbbO/the-division-2-the-pact"
+  },
+  "concentrated_company": {
+    "id": "concentrated_company",
+    "name": "Concentrated Company",
+    "abbreviation": "CC",
+    "bonuses": {
+      "2pc": "+10% Weapon Damage",
+      "3pc": "+30% Weapon Handling",
+      "4pc": {
+        "name": "Camaraderie",
+        "description": "Mark enemies (max 4). When a marked enemy dies, gain stacks of +3% weapon damage +2% CHD per ally/skill contributing. Max 35 stacks; stacks decay every 10s."
+      }
+    },
+    "chest_talent": {
+      "name": "All for One",
+      "description": "Max marks increased 4 \u2192 8."
+    },
+    "backpack_talent": {
+      "name": "One for All",
+      "description": "Weapon damage per stack increased 3% \u2192 5%."
+    },
+    "gear_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "holster",
+      "kneepads"
+    ],
+    "optimal_weapons": [
+      "assault_rifle",
+      "smg"
+    ],
+    "playstyle": [
+      "dps",
+      "group"
+    ],
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/5fLsSWyLeFsYWiBxlByY4K/the-division-2-mutiny"
   }
 }

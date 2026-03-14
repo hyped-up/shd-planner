@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "game_version": "TU21.1",
-    "last_updated": "2026-03-01",
+    "last_updated": "2026-03-14",
     "source": "manual"
   },
   "st_elmos_engine": {
@@ -952,5 +952,93 @@
       "mobile_build"
     ],
     "notes": "Movement-speed focused kneepads. The bonuses stack from multiple sources but cap at 20%. Niche compared to NinjaBike Kneepads but can be useful in builds that value mobility and are already applying status effects to themselves."
+  },
+  "pakhan": {
+    "id": "pakhan",
+    "name": "Pakhan",
+    "type": "weapon",
+    "category": "lmg",
+    "unique_talent": {
+      "name": "Pakhan",
+      "description": "Each kill grants a stack of +75% magazine size to the next magazine, stacking up to 4."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/HP67k5N5kneQmSCVlVMmi/the-division-2-crossroads",
+    "meta_rating": "A",
+    "best_with": [
+      "dps_build",
+      "lmg_build"
+    ],
+    "notes": "Added in Crossroads. Verify stats in-game if needed."
+  },
+  "shroud": {
+    "id": "shroud",
+    "name": "Shroud",
+    "type": "weapon",
+    "category": "marksman_rifle",
+    "unique_talent": {
+      "name": "High Priority Target",
+      "description": "+125% weapon damage vs highest-tier enemies (per tier list)."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/3DFEM2OnnbfRsDrQWXsbbO/the-division-2-the-pact",
+    "meta_rating": "A",
+    "best_with": [
+      "mmr_build",
+      "boss_killer"
+    ],
+    "notes": "Added in The Pact."
+  },
+  "bittersweet": {
+    "id": "bittersweet",
+    "name": "Bittersweet",
+    "type": "weapon",
+    "category": "rifle",
+    "unique_talent": {
+      "name": "Transfusion",
+      "description": "Headshots build stacks (max 8). Shooting ally/skill repairs 50% shot damage per stack; healed allies gain 200% Repair Skills bonus as bonus armor per stack for 10s. At max stacks, next heal grants guaranteed headshots for 8s."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/5fLsSWyLeFsYWiBxlByY4K/the-division-2-mutiny",
+    "meta_rating": "A",
+    "best_with": [
+      "support_build",
+      "healer"
+    ],
+    "notes": "Added in Mutiny."
+  },
+  "nimble_holster": {
+    "id": "nimble_holster",
+    "name": "Nimble Holster",
+    "type": "gear",
+    "slot": "holster",
+    "unique_talent": {
+      "name": "Bob and Weave",
+      "description": "PvE: +5% repairs per 1m cover-to-cover. PvP: +3% repairs per 1m. Damage taken during cover-to-cover is healed over 10s."
+    },
+    "core_attribute": "skill_tier",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/HP67k5N5kneQmSCVlVMmi/the-division-2-crossroads",
+    "meta_rating": "B",
+    "best_with": [
+      "support_build"
+    ],
+    "notes": "Added in Crossroads."
+  },
+  "beacon": {
+    "id": "beacon",
+    "name": "Beacon",
+    "type": "gear",
+    "slot": "chest",
+    "unique_talent": {
+      "name": "Bond",
+      "description": "Ally within 10m: +30% CHD, +15% Skill Efficiency, +2% Armor Regen. Skill within 10m: +15% CHD, +7.5% Skill Efficiency, +1% Armor Regen. Highest buff only."
+    },
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/5fLsSWyLeFsYWiBxlByY4K/the-division-2-mutiny",
+    "meta_rating": "A",
+    "best_with": [
+      "hybrid_build"
+    ],
+    "notes": "Added in Mutiny."
   }
 }

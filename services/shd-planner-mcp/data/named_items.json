@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "game_version": "TU21.1",
-    "last_updated": "2026-03-01",
+    "last_updated": "2026-03-14",
     "source": "manual"
   },
   "foxs_prayer": {
@@ -698,6 +698,126 @@
     "core_attribute": "Pistol Damage",
     "source": "Event-Limited: Halloween 2025 Project Chain, Winter Gameplay Caches, Seasonal Event Rewards",
     "meta_rating": "A",
-    "notes": "Named Tactical M1911 added in Y7S2.2. Sport Mode's +20% movement speed is unique and always active while the pistol is out — no kills or procs needed. Extremely strong for PvP repositioning and aggressive PvE play. Event-limited item; not in the standard targeted loot pool."
+    "notes": "Named Tactical M1911 added in Y7S2.2. Sport Mode's +20% movement speed is unique and always active while the pistol is out \u2014 no kills or procs needed. Extremely strong for PvP repositioning and aggressive PvE play. Event-limited item; not in the standard targeted loot pool."
+  },
+  "capn": {
+    "id": "capn",
+    "name": "Cap'n",
+    "brand": "Imminence Armaments",
+    "type": "gear",
+    "slot": "backpack",
+    "fixed_attribute": "Perfect Leadership: cover-to-cover grants 20% bonus armor to self+allies for 10s (tripled if end within 10m of enemy). 10s CD.",
+    "core_attribute": "armor",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/HP67k5N5kneQmSCVlVMmi/the-division-2-crossroads"
+  },
+  "cloak": {
+    "id": "cloak",
+    "name": "Cloak",
+    "brand": "Imminence Armaments",
+    "type": "gear",
+    "slot": "kneepads",
+    "fixed_attribute": "Perfect Attribute: +50% Reduced Threat",
+    "core_attribute": "armor",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/HP67k5N5kneQmSCVlVMmi/the-division-2-crossroads"
+  },
+  "sleight": {
+    "id": "sleight",
+    "name": "Sleight",
+    "brand": "Urban Lookout",
+    "type": "gear",
+    "slot": "chest",
+    "fixed_attribute": "Perfect Protected Reload: +40% bonus armor while reloading; allies gain 0\u201330% bonus armor while they reload (scales by blue core).",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/3DFEM2OnnbfRsDrQWXsbbO/the-division-2-the-pact"
+  },
+  "spot_on": {
+    "id": "spot_on",
+    "name": "Spot-on",
+    "brand": "Urban Lookout",
+    "type": "gear",
+    "slot": "holster",
+    "fixed_attribute": "Perfect Attribute: +38% Accuracy",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/3DFEM2OnnbfRsDrQWXsbbO/the-division-2-the-pact"
+  },
+  "equalizer": {
+    "id": "equalizer",
+    "name": "Equalizer",
+    "brand": "Unit Alloys",
+    "type": "gear",
+    "slot": "chest",
+    "fixed_attribute": "Perfect Obliterate: crits add +1% total weapon damage for 10s, stacks to 24.",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/5fLsSWyLeFsYWiBxlByY4K/the-division-2-mutiny"
+  },
+  "salvo": {
+    "id": "salvo",
+    "name": "Salvo",
+    "brand": "Unit Alloys",
+    "type": "gear",
+    "slot": "holster",
+    "fixed_attribute": "Perfect Attribute: +5% Rate of Fire",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/5fLsSWyLeFsYWiBxlByY4K/the-division-2-mutiny"
+  },
+  "lud": {
+    "id": "lud",
+    "name": "Lud",
+    "brand": "",
+    "type": "weapon",
+    "weapon_type": "assault_rifle",
+    "fixed_attribute": "Perfect Streamline",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/HP67k5N5kneQmSCVlVMmi/the-division-2-crossroads"
+  },
+  "purist": {
+    "id": "purist",
+    "name": "Purist",
+    "brand": "",
+    "type": "weapon",
+    "weapon_type": "smg",
+    "fixed_attribute": "Perfect Streamline",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/HP67k5N5kneQmSCVlVMmi/the-division-2-crossroads"
+  },
+  "achilles": {
+    "id": "achilles",
+    "name": "Achilles",
+    "brand": "",
+    "type": "weapon",
+    "weapon_type": "pistol",
+    "fixed_attribute": "Perfect Soft Spot",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/3DFEM2OnnbfRsDrQWXsbbO/the-division-2-the-pact"
+  },
+  "instigator": {
+    "id": "instigator",
+    "name": "Instigator",
+    "brand": "",
+    "type": "weapon",
+    "weapon_type": "marksman_rifle",
+    "fixed_attribute": "Perfect Soft Spot",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/3DFEM2OnnbfRsDrQWXsbbO/the-division-2-the-pact"
+  },
+  "lockdown": {
+    "id": "lockdown",
+    "name": "Lockdown",
+    "brand": "",
+    "type": "weapon",
+    "weapon_type": "shotgun",
+    "fixed_attribute": "Perfect Immobilize",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/5fLsSWyLeFsYWiBxlByY4K/the-division-2-mutiny"
+  },
+  "froth": {
+    "id": "froth",
+    "name": "Froth",
+    "brand": "",
+    "type": "weapon",
+    "weapon_type": "smg",
+    "fixed_attribute": "Perfect Immobilize",
+    "core_attribute": "weapon_damage",
+    "source": "https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/5fLsSWyLeFsYWiBxlByY4K/the-division-2-mutiny"
   }
 }

@@ -1,7 +1,7 @@
 {
   "_metadata": {
     "game_version": "TU21.1",
-    "last_updated": "2026-03-01",
+    "last_updated": "2026-03-14",
     "source": "manual"
   },
   "five_eleven_tactical": {
@@ -835,5 +835,67 @@
     "core_focus": "dps",
     "named_items": [],
     "meta_notes": "Rifle and magazine-focused brand. The 1pc magazine size is a useful filler for weapons with small magazines. The 2pc rifle damage pairs with Overlord in rifle builds. Good secondary brand in sustained fire builds that need larger mags."
+  },
+  "urban_lookout": {
+    "id": "urban_lookout",
+    "name": "Urban Lookout",
+    "bonuses": {
+      "1pc": "+10% Accuracy",
+      "2pc": "+30% Skill Duration",
+      "3pc": "+30% MMR Damage"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "marksman",
+    "named_items": [
+      {
+        "name": "Sleight",
+        "slot": "chest",
+        "fixed_talent": "Perfect Protected Reload"
+      },
+      {
+        "name": "Spot-on",
+        "slot": "holster",
+        "fixed_talent": "Perfect Attribute: +38% Accuracy"
+      }
+    ],
+    "meta_notes": "Added in The Pact."
+  },
+  "unit_alloys": {
+    "id": "unit_alloys",
+    "name": "Unit Alloys",
+    "bonuses": {
+      "1pc": "+5% Rate of Fire",
+      "2pc": "+20% Assault Rifle Damage",
+      "3pc": "+50% Magazine Size"
+    },
+    "available_slots": [
+      "mask",
+      "backpack",
+      "chest",
+      "gloves",
+      "kneepads",
+      "holster"
+    ],
+    "core_focus": "assault_rifle",
+    "named_items": [
+      {
+        "name": "Equalizer",
+        "slot": "chest",
+        "fixed_talent": "Perfect Obliterate"
+      },
+      {
+        "name": "Salvo",
+        "slot": "holster",
+        "fixed_talent": "Perfect Attribute: +5% Rate of Fire"
+      }
+    ],
+    "meta_notes": "Added in Mutiny."
   }
 }
