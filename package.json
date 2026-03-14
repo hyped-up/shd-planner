@@ -12,6 +12,8 @@
     "scrape:nightfall": "npx tsx src/scripts/scrapers/scrape-nightfall-guard.ts",
     "scrape:spreadsheet": "npx tsx src/scripts/scrapers/scrape-community-spreadsheet.ts",
     "scrape:wiki": "npx tsx src/scripts/scrapers/scrape-wiki-fandom.ts",
+    "scrape:patch-notes": "npx tsx src/scripts/scrapers/check-patch-notes.ts",
+    "scrape:google-drive-builds": "npx tsx src/scripts/scrapers/scrape-google-drive-builds.ts",
     "scrape:icons": "npx tsx src/scripts/scrapers/scrape-icons.ts",
     "data:merge": "npx tsx src/scripts/transforms/normalize-and-merge.ts",
     "data:merge-icons": "npx tsx src/scripts/transforms/merge-icons.ts",
