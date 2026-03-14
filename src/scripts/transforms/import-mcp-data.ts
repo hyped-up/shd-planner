@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 #!/usr/bin/env npx tsx
 /**
  * import-mcp-data.ts
@@ -89,7 +90,7 @@ function weaponTypeDisplay(snakeCase: string): string {
 /** 1. brand_sets.json → gear-brands.json */
 function transformBrandSets(): void {
   const data = readMcpFile("brand_sets.json");
-  const result = Object.values(data).map((entry: unknown) =>
+  const result = Object.values(data).map((entry: any) =>
     addProvenance({
       id: `brand-${slugify(entry.name)}`,
       name: entry.name,
@@ -105,7 +106,7 @@ function transformBrandSets(): void {
 /** 2. gear_sets.json → gear-sets.json */
 function transformGearSets(): void {
   const data = readMcpFile("gear_sets.json");
-  const result = Object.values(data).map((entry: unknown) =>
+  const result = Object.values(data).map((entry: any) =>
     addProvenance({
       id: `gearset-${slugify(entry.name)}`,
       name: entry.name,
@@ -123,10 +124,10 @@ function transformGearSets(): void {
 /** 3. exotics.json → exotics-gear.json + exotics-weapons.json (split by type) */
 function transformExotics(): void {
   const data = readMcpFile("exotics.json");
-  const gearItems: unknown[] = [];
-  const weaponItems: unknown[] = [];
+  const gearItems: any[] = [];
+  const weaponItems: any[] = [];
 
-  for (const entry of Object.values(data) as unknown[]) {
+  for (const entry of Object.values(data) as any[]) {
     if (entry.type === "gear" || entry.type === "armor") {
       gearItems.push(
         addProvenance({
@@ -162,7 +163,7 @@ function transformExotics(): void {
 /** 4. named_items.json → named-items.json */
 function transformNamedItems(): void {
   const data = readMcpFile("named_items.json");
-  const result = Object.values(data).map((entry: unknown) =>
+  const result = Object.values(data).map((entry: any) =>
     addProvenance({
       id: `named-${slugify(entry.name)}`,
       name: entry.name,
@@ -180,9 +181,9 @@ function transformNamedItems(): void {
 /** 5. weapons.json → weapons.json */
 function transformWeapons(): void {
   const data = readMcpFile("weapons.json");
-  const result = Object.entries(data).map(([, classData]: [string, unknown]) => {
+  const result = Object.entries(data).map(([, classData]: [string, any]) => {
     const className = classData.class;
-    const archetypes = Object.entries(classData.archetypes || {}).map(([, arch]: [string, unknown]) =>
+    const archetypes = Object.entries(classData.archetypes || {}).map(([, arch]: [string, any]) =>
       addProvenance({
         id: `weapon-${slugify(className)}-${slugify(arch.name)}`,
         name: arch.name,
@@ -214,7 +215,7 @@ function transformWeapons(): void {
 /** 6. talents_gear.json → gear-talents.json */
 function transformGearTalents(): void {
   const data = readMcpFile("talents_gear.json");
-  const result = Object.values(data).map((entry: unknown) =>
+  const result = Object.values(data).map((entry: any) =>
     addProvenance({
       id: `talent-${slugify(entry.name)}`,
       name: entry.name,
@@ -237,7 +238,7 @@ function transformGearTalents(): void {
 /** 7. talents_weapon.json → weapon-talents.json */
 function transformWeaponTalents(): void {
   const data = readMcpFile("talents_weapon.json");
-  const result = Object.values(data).map((entry: unknown) =>
+  const result = Object.values(data).map((entry: any) =>
     addProvenance({
       id: `talent-${slugify(entry.name)}`,
       name: entry.name,
@@ -260,9 +261,9 @@ function transformWeaponTalents(): void {
 /** 8. skills.json → skills.json */
 function transformSkills(): void {
   const data = readMcpFile("skills.json");
-  const result = Object.entries(data).map(([, familyData]: [string, unknown]) => {
+  const result = Object.entries(data).map(([, familyData]: [string, any]) => {
     const familyName = familyData.name;
-    const variants = Object.entries(familyData.variants || {}).map(([, variant]: [string, unknown]) =>
+    const variants = Object.entries(familyData.variants || {}).map(([, variant]: [string, any]) =>
       addProvenance({
         id: `skill-${slugify(familyName)}-${slugify(variant.name)}`,
         name: variant.name,
@@ -296,7 +297,7 @@ function transformSkills(): void {
 /** 9. specializations.json → specializations.json */
 function transformSpecializations(): void {
   const data = readMcpFile("specializations.json");
-  const result = Object.values(data).map((entry: unknown) =>
+  const result = Object.values(data).map((entry: any) =>
     addProvenance({
       id: `spec-${slugify(entry.name)}`,
       name: entry.name,
