@@ -895,7 +895,7 @@ function main(): void {
     }
 
     // Merge each entity type: generate seed, then overlay scraped data
-    console.log("[step 1/13] Merging brand sets...");
+    console.log("[step 1/14] Merging brand sets...");
     const scrapedBrands = collectFromSources("brandSets");
     const brandSetsRaw = generateBrandSets();
     const brandSets = scrapedBrands.length > 0
@@ -903,7 +903,7 @@ function main(): void {
       : brandSetsRaw;
     writeDataFile("gear-brands.json", brandSets);
 
-    console.log("[step 2/13] Merging gear sets...");
+    console.log("[step 2/14] Merging gear sets...");
     const scrapedGearSets = collectFromSources("gearSets");
     const gearSetsRaw = generateGearSets();
     const gearSets = scrapedGearSets.length > 0
@@ -911,7 +911,7 @@ function main(): void {
       : gearSetsRaw;
     writeDataFile("gear-sets.json", gearSets);
 
-    console.log("[step 3/13] Merging named items...");
+    console.log("[step 3/14] Merging named items...");
     const scrapedNamed = collectFromSources("namedItems");
     const namedItemsRaw = generateNamedItems();
     const namedItems = scrapedNamed.length > 0
@@ -919,7 +919,7 @@ function main(): void {
       : namedItemsRaw;
     writeDataFile("named-items.json", namedItems);
 
-    console.log("[step 4/13] Merging exotic gear...");
+    console.log("[step 4/14] Merging exotic gear...");
     const scrapedExoticGear = collectFromSources("exotics").filter(
       (e) => (e as Record<string, unknown>).slot !== undefined
     );
@@ -929,7 +929,7 @@ function main(): void {
       : exoticGearRaw;
     writeDataFile("exotics-gear.json", exoticGear);
 
-    console.log("[step 5/13] Merging exotic weapons...");
+    console.log("[step 5/14] Merging exotic weapons...");
     const scrapedExoticWeapons = collectFromSources("exotics").filter(
       (e) => (e as Record<string, unknown>).category !== undefined
     );
@@ -939,11 +939,11 @@ function main(): void {
       : exoticWeaponsRaw;
     writeDataFile("exotics-weapons.json", exoticWeapons);
 
-    console.log("[step 6/13] Merging weapons...");
+    console.log("[step 6/14] Merging weapons...");
     const weapons = generateWeapons();
     writeDataFile("weapons.json", weapons);
 
-    console.log("[step 7/13] Merging weapon talents...");
+    console.log("[step 7/14] Merging weapon talents...");
     const scrapedWeaponTalents = collectFromSources("talents").filter(
       (t) => Array.isArray((t as Record<string, unknown>).weaponTypes)
     );
@@ -953,7 +953,7 @@ function main(): void {
       : weaponTalentsRaw;
     writeDataFile("weapon-talents.json", weaponTalents);
 
-    console.log("[step 8/13] Merging gear talents...");
+    console.log("[step 8/14] Merging gear talents...");
     const scrapedGearTalents = collectFromSources("talents").filter(
       (t) => !Array.isArray((t as Record<string, unknown>).weaponTypes)
     );
@@ -963,25 +963,34 @@ function main(): void {
       : gearTalentsRaw;
     writeDataFile("gear-talents.json", gearTalents);
 
-    console.log("[step 9/13] Generating gear attributes...");
+    console.log("[step 9/14] Generating gear attributes...");
     const gearAttributes = generateGearAttributes();
     writeDataFile("gear-attributes.json", gearAttributes);
 
-    console.log("[step 10/13] Merging skills...");
+    console.log("[step 10/14] Merging skills...");
     const skills = generateSkills();
     writeDataFile("skills.json", skills);
 
-    console.log("[step 11/13] Generating skill mods...");
+    console.log("[step 11/14] Generating skill mods...");
     const skillMods = generateSkillMods();
     writeDataFile("skill-mods.json", skillMods);
 
-    console.log("[step 12/13] Generating specializations...");
+    console.log("[step 12/14] Generating specializations...");
     const specializations = generateSpecializations();
     writeDataFile("specializations.json", specializations);
 
-    console.log("[step 13/13] Generating SHD Watch...");
+    console.log("[step 13/14] Generating SHD Watch...");
     const shdWatch = generateSHDWatch();
     writeDataFile("shd-watch.json", shdWatch);
+
+    console.log("[step 14/14] Merging builds/guides...");
+    const buildsGuides = readRawFile("builds-guides-raw.json");
+    if (buildsGuides) {
+      writeDataFile("builds-guides.json", {
+        scrapedAt: buildsGuides.scrapedAt,
+        sources: buildsGuides.sources,
+      });
+    }
 
     // Data quality report
     const totalEntities =
@@ -1027,6 +1036,7 @@ function main(): void {
         skillMods: skillMods.length,
         specializations: specializations.length,
         shdWatch: shdWatch.length,
+        buildsGuides: buildsGuides ? 1 : 0,
       },
     };
 
@@ -1046,57 +1056,66 @@ function main(): void {
   }
 
   // Generate seed data
-  console.log("[step 1/13] Generating brand sets...");
+  console.log("[step 1/14] Generating brand sets...");
   const brandSets = generateBrandSets();
   writeDataFile("gear-brands.json", brandSets);
 
-  console.log("[step 2/13] Generating gear sets...");
+  console.log("[step 2/14] Generating gear sets...");
   const gearSets = generateGearSets();
   writeDataFile("gear-sets.json", gearSets);
 
-  console.log("[step 3/13] Generating named items...");
+  console.log("[step 3/14] Generating named items...");
   const namedItems = generateNamedItems();
   writeDataFile("named-items.json", namedItems);
 
-  console.log("[step 4/13] Generating exotic gear...");
+  console.log("[step 4/14] Generating exotic gear...");
   const exoticGear = generateExoticGear();
   writeDataFile("exotics-gear.json", exoticGear);
 
-  console.log("[step 5/13] Generating exotic weapons...");
+  console.log("[step 5/14] Generating exotic weapons...");
   const exoticWeapons = generateExoticWeapons();
   writeDataFile("exotics-weapons.json", exoticWeapons);
 
-  console.log("[step 6/13] Generating weapons...");
+  console.log("[step 6/14] Generating weapons...");
   const weapons = generateWeapons();
   writeDataFile("weapons.json", weapons);
 
-  console.log("[step 7/13] Generating weapon talents...");
+  console.log("[step 7/14] Generating weapon talents...");
   const weaponTalents = generateWeaponTalents();
   writeDataFile("weapon-talents.json", weaponTalents);
 
-  console.log("[step 8/13] Generating gear talents...");
+  console.log("[step 8/14] Generating gear talents...");
   const gearTalents = generateGearTalents();
   writeDataFile("gear-talents.json", gearTalents);
 
-  console.log("[step 9/13] Generating gear attributes...");
+  console.log("[step 9/14] Generating gear attributes...");
   const gearAttributes = generateGearAttributes();
   writeDataFile("gear-attributes.json", gearAttributes);
 
-  console.log("[step 10/13] Generating skills...");
+  console.log("[step 10/14] Generating skills...");
   const skills = generateSkills();
   writeDataFile("skills.json", skills);
 
-  console.log("[step 11/13] Generating skill mods...");
+  console.log("[step 11/14] Generating skill mods...");
   const skillMods = generateSkillMods();
   writeDataFile("skill-mods.json", skillMods);
 
-  console.log("[step 12/13] Generating specializations...");
+  console.log("[step 12/14] Generating specializations...");
   const specializations = generateSpecializations();
   writeDataFile("specializations.json", specializations);
 
-  console.log("[step 13/13] Generating SHD Watch...");
+  console.log("[step 13/14] Generating SHD Watch...");
   const shdWatch = generateSHDWatch();
   writeDataFile("shd-watch.json", shdWatch);
+
+  console.log("[step 14/14] Merging builds/guides...");
+  const buildsGuidesSeed = readRawFile("builds-guides-raw.json");
+  if (buildsGuidesSeed) {
+    writeDataFile("builds-guides.json", {
+      scrapedAt: buildsGuidesSeed.scrapedAt,
+      sources: buildsGuidesSeed.sources,
+    });
+  }
 
   // Data quality report
   const totalEntities =
