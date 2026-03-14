@@ -5,15 +5,11 @@ WORKDIR /app
 # Install uv for dependency management
 RUN pip install --no-cache-dir uv
 
-# Ensure expected package paths exist
-RUN mkdir -p /app/data
-
-# Install dependencies first (cache layer)
-COPY pyproject.toml uv.lock README.md /app/
-RUN uv sync --frozen --no-install-project
-
-# Copy the rest of the app
+# Copy the app first so all referenced files exist
 COPY . /app
+
+# Install dependencies (includes project)
+RUN uv sync --frozen
 
 ENV PYTHONUNBUFFERED=1
 
