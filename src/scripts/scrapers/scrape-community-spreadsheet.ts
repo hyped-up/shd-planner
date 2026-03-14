@@ -40,8 +40,9 @@ interface SpreadsheetData {
 
 // --- Constants ---
 
-const SPREADSHEET_ID = "1nrPBmOrtpkEW1j5fbcRT7L-AXgsGOqMqxXoVtopsiGM";
-const SPREADSHEET_URL = `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}`;
+const DEFAULT_SHEET_ID = "1nrPBmOrtpkEW1j5fbcRT7L-AXgsGOqMqxXoVtopsiGM";
+const SPREADSHEET_ID = process.env.DIV2_SHEET_ID ?? DEFAULT_SHEET_ID;
+const SPREADSHEET_URL = process.env.DIV2_SHEET_URL ?? `https://docs.google.com/spreadsheets/d/${SPREADSHEET_ID}`;
 const CSV_EXPORT_BASE = `${SPREADSHEET_URL}/export?format=csv`;
 const HTML_URL = `${SPREADSHEET_URL}/edit`;
 
