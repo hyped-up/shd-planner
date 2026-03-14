@@ -296,6 +296,7 @@ async function main(): Promise<void> {
 
   // Discover available sheets
   const sheets = await discoverSheets();
+  let primarySheetOk = false;
   console.log();
 
   // Fetch and parse each sheet
@@ -342,6 +343,11 @@ async function main(): Promise<void> {
     console.log(
       `  Categorized ${rows.length} rows -> ${category}`
     );
+  }
+
+  if (STRICT_PRIMARY && !primarySheetOk) {
+    console.error(`Strict-primary enabled: primary gid ${PRIMARY_GID} failed or returned no rows.`);
+    process.exit(2);
   }
 
   // Print summary
