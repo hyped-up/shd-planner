@@ -60,6 +60,7 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
 
   // Talent slot eligibility (only Chest and Backpack)
   const hasTalentSlot = slot === "Chest" || slot === "Backpack";
+  const canEditTalent = hasTalentSlot && source === "brand";
 
   const [itemOptions, setItemOptions] = useState<GearPickerOption[]>([]);
   const [talentOptions, setTalentOptions] = useState<SearchableSelectOption[]>([]);
@@ -106,6 +107,7 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
     loadTalents();
   }, [slot, hasTalentSlot]);
 
+
   // Load minor attributes from data
   useEffect(() => {
     async function loadAttrs() {
@@ -139,7 +141,7 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
       coreAttribute: { type: coreType, value: coreValue },
       minorAttributes: minorAttrs,
       modSlot,
-      talent: talentId ? { talentId } : null,
+      talent: canEditTalent && talentId ? { talentId } : null,
     };
     setGearPiece(slot, piece);
     onClose();
@@ -373,12 +375,18 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
           {hasTalentSlot && (
             <div>
               <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Talent</div>
-              <SearchableSelect
-                options={talentOptions}
-                value={talentId}
-                onChange={(id) => setTalentId(id)}
-                placeholder="Search talents..."
-              />
+              {canEditTalent ? (
+                <SearchableSelect
+                  options={talentOptions}
+                  value={talentId}
+                  onChange={(id) => setTalentId(id)}
+                  placeholder="Search talents..."
+                />
+              ) : (
+                <div className="rounded border border-border bg-background-tertiary text-foreground-secondary text-sm px-3 py-2">
+                  Talent is fixed for this item type.
+                </div>
+              )}
             </div>
           )}
         </div>
