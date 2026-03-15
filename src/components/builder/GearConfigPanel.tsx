@@ -66,6 +66,14 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
   const [talentOptions, setTalentOptions] = useState<SearchableSelectOption[]>([]);
   const [minorAttributeData, setMinorAttributeData] = useState<IGearAttribute[]>([]);
 
+  const selectedOptionLabel = useMemo(
+    () => itemOptions.find((o) => o.value === itemId)?.label ?? "",
+    [itemOptions, itemId]
+  );
+  const isImprovisedItem = /improvised/i.test(selectedOptionLabel);
+  const hasModSlot =
+    slot === "Mask" || slot === "Chest" || slot === "Backpack" || isImprovisedItem;
+
   // Load unified item options for this slot
   useEffect(() => {
     async function loadItems() {
@@ -108,6 +116,7 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
   }, [slot, hasTalentSlot]);
 
 
+
   // Load minor attributes from data
   useEffect(() => {
     async function loadAttrs() {
@@ -140,7 +149,7 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
       itemId: itemId.trim(),
       coreAttribute: { type: coreType, value: coreValue },
       minorAttributes: minorAttrs,
-      modSlot,
+      modSlot: hasModSlot ? modSlot : null,
       talent: canEditTalent && talentId ? { talentId } : null,
     };
     setGearPiece(slot, piece);
@@ -356,20 +365,22 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
           </div>
 
           {/* Mod Slot */}
-          <div>
-            <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Mod Slot</div>
-            <div className="flex items-center gap-2">
-              <input
-                type="text"
-                value={modSlot?.modId ?? ""}
-                onChange={(e) =>
-                  setModSlot(e.target.value ? { modId: e.target.value, value: modSlot?.value ?? 0 } : null)
-                }
-                placeholder="Enter mod name (optional)..."
-                className="flex-1 rounded border border-border bg-background-tertiary text-foreground text-sm px-3 py-2 placeholder:text-foreground-secondary focus:outline-none focus:border-shd-orange transition-colors"
-              />
+          {hasModSlot && (
+            <div>
+              <div className="text-xs uppercase tracking-wider text-foreground-secondary mb-2">Mod Slot</div>
+              <div className="flex items-center gap-2">
+                <input
+                  type="text"
+                  value={modSlot?.modId ?? ""}
+                  onChange={(e) =>
+                    setModSlot(e.target.value ? { modId: e.target.value, value: modSlot?.value ?? 0 } : null)
+                  }
+                  placeholder="Enter mod name (optional)..."
+                  className="flex-1 rounded border border-border bg-background-tertiary text-foreground text-sm px-3 py-2 placeholder:text-foreground-secondary focus:outline-none focus:border-shd-orange transition-colors"
+                />
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Talent (Chest/Backpack only) */}
           {hasTalentSlot && (
