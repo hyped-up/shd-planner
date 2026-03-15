@@ -1,7 +1,7 @@
 // Gear configuration panel — slide-out modal for configuring a gear piece
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
 import type { GearSlot, CoreAttributeType, IBuildGearPiece } from "@/lib/types";
 import { composeGearSlotOptions, type GearPickerOption, type GearSource } from "@/lib/gear-slot-picker";
 import { useBuildStore } from "@/hooks/use-build-store";
