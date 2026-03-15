@@ -67,7 +67,7 @@ function GearConfigPanelInner({ slot, onClose }: { slot: GearSlot; onClose: () =
   const [minorAttributeData, setMinorAttributeData] = useState<IGearAttribute[]>([]);
 
   const selectedOptionLabel = useMemo(
-    () => itemOptions.find((o) => o.value === itemId)?.label ?? "",
+    () => itemOptions.find((o) => o.id === itemId)?.name ?? "",
     [itemOptions, itemId]
   );
   const isImprovisedItem = /improvised/i.test(selectedOptionLabel);
